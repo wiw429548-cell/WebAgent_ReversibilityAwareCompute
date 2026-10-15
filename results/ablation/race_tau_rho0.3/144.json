@@ -1,0 +1,379 @@
+{
+  "task_id": 144,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "How much I spent on food shopping during from mid Jan to the end Jan 2023",
+  "template": 162,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 4,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 12,
+  "prompt_tokens": 33914,
+  "completion_tokens": 1040,
+  "llm_by_tag": {
+    "policy": [
+      4,
+      20151,
+      738
+    ],
+    "wm": [
+      3,
+      7778,
+      194
+    ],
+    "value": [
+      3,
+      613,
+      24
+    ],
+    "form": [
+      1,
+      3463,
+      80
+    ],
+    "progress": [
+      1,
+      1909,
+      4
+    ]
+  },
+  "llm_cache_hits": 6,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 1,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 31.101198196411133,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.00778931282239435,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5770,
+        "completion_tokens": 155
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1614')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.007392945220335631,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1614')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:orders": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "My Orders",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4425,
+        "completion_tokens": 175
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('380')",
+          1
+        ],
+        [
+          "report_infeasible(\"The order history page does not provide a way to filter orders by date range or category like 'food shopping'.\")",
+          1
+        ],
+        [
+          "click('1600')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.4409119973820693,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('380')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.01,
+        2.01,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the combobox element with id '380' will likely open a dropdown or autocomplete list based on the user's input for searching. No data will be created, modified, or deleted on the website at this action; it merely prepares the interface for a search query to be entered and executed.",
+        "The agent will report that the current order history page lacks functionality to filter orders by specific criteria such as date range or category, like 'food shopping'. No page change will occur, and no data on the website will be created, modified, or deleted as a result of this report; it merely ",
+        "Clicking on the element with the ID '1600' will likely navigate to the \"View Order\" page for one of the orders listed in the table. This action will not create, modify, or delete any data on the website; it will simply display detailed information about the selected order."
+      ],
+      "m2_cands": [
+        "click('380')",
+        "report_infeasible(\"The order history page does not provide a way to filter orders by date range or category like 'food shopping'.\")",
+        "click('1600')"
+      ],
+      "m2_choice": "click('380')",
+      "rho_choice": 0.4409119973820693,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 16827,
+        "completion_tokens": 530
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1618')",
+          1
+        ],
+        [
+          "report_infeasible(\"There is no way to filter orders by date on this page.\")",
+          1
+        ],
+        [
+          "click('380')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.006132854041038122,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1618')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:page": 1.0,
+            "name:next": 1.0,
+            "ctx:page": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "link",
+            "name": " Page Next",
+            "context": "Page",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sales/order/history/?p=2",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        },
+        {
+          "action": "report_infeasible(\"There is no way to filter orders by date on this page.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.006132854041038122,
+        0.026582942605875307
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6892,
+        "completion_tokens": 180
+      }
+    }
+  ],
+  "method": "race_tau_rho0.3",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 06:20:09 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 06:21:51"
+}

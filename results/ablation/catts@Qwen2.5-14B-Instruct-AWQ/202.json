@@ -1,0 +1,409 @@
+{
+  "task_id": 202,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Get the date of the most recent canlled order",
+  "template": 366,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 5,
+  "n_env_actions": 5,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 10,
+  "prompt_tokens": 46935,
+  "completion_tokens": 907,
+  "llm_by_tag": {
+    "policy": [
+      5,
+      25562,
+      727
+    ],
+    "arbiter": [
+      5,
+      21373,
+      180
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 5,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 5,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "The most recent cancelled order was on May 23, 2023, 9:20:01 PM.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "the most recent cancelled order was on may 23, 2023, 9:20:01 pm.",
+        "ref": "May 23 2023",
+        "question": "Get the date of the most recent canlled order",
+        "src": "string",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "**Judgement: Partially Correct**\n\nExplanation:\nThe student's answer includes the correct date (May 23, 2023) for the most recent cancelled order, which aligns with the reference answer. However, the student also provided additional information about the time (9:20:01 pm), which was not requested in ",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 33.48484134674072,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('156', button='left')",
+          2
+        ],
+        [
+          "click('156')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('156', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sales": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " SALES",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7694,
+        "completion_tokens": 143
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('168', button='left')",
+          2
+        ],
+        [
+          "click('168')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('168', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:orders": 1.0,
+            "ctx:sales": 0.5,
+            "ctx:orders": 0.5,
+            "ctx:invoices": 0.5,
+            "ctx:shipments": 0.5,
+            "ctx:credit": 0.5,
+            "ctx:memos": 0.5,
+            "ctx:billing": 0.5,
+            "ctx:agreements": 0.5,
+            "ctx:transactions": 0.5,
+            "ctx:braintree": 0.5,
+            "ctx:virtual": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Orders",
+            "context": " SALES Sales  Orders Invoices Shipments Credit Memos Billing Agreements Transactions Braintree Virtual Terminal",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 202,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8140,
+        "completion_tokens": 106
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1534')",
+          2
+        ],
+        [
+          "click('1534', button='left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1534')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:view": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "gridcell",
+            "name": "View",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 213,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 11103,
+        "completion_tokens": 170
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2388', button='left')",
+          2
+        ],
+        [
+          "click('753', button='left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('753', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=rowheader": 1.0,
+            "name:order": 1.0,
+            "name:date": 1.0,
+            "ctx:information": 0.5,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/136/",
+          "element": {
+            "role": "rowheader",
+            "name": "Order Date",
+            "context": "Information",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 1,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 10024,
+        "completion_tokens": 261
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"The most recent cancelled order was on May 23, 2023, 9:20:01 PM.\")",
+          2
+        ],
+        [
+          "send_msg_to_user(\"The most recent cancelled order was on May 23, 2023, 9:20:01 PM.\");",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"The most recent cancelled order was on May 23, 2023, 9:20:01 PM.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/136/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 9974,
+        "completion_tokens": 227
+      }
+    }
+  ],
+  "method": "catts",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:02:42",
+  "reward_provisional": 0.0,
+  "eval_provisional": {
+    "answer": "The most recent cancelled order was on May 23, 2023, 9:20:01 PM.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "the most recent cancelled order was on may 23, 2023, 9:20:01 pm.",
+        "ref": "May 23 2023",
+        "question": "Get the date of the most recent canlled order",
+        "src": "string",
+        "pending": true,
+        "score": 0.0
+      }
+    ],
+    "score": 0.0
+  },
+  "rejudged": {
+    "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+  }
+}

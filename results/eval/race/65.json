@@ -1,0 +1,909 @@
+{
+  "task_id": 65,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Which customer has completed the fifth most number of orders in the entire history?",
+  "template": 276,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 17,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 19,
+  "prompt_tokens": 75140,
+  "completion_tokens": 2117,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      67048,
+      2101
+    ],
+    "progress": [
+      4,
+      8092,
+      16
+    ]
+  },
+  "llm_cache_hits": 19,
+  "mode_counts": {
+    "M0": 11,
+    "M1": 4,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 47.3005166053772,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('207')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0024026724623539748,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:customers": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CUSTOMERS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4261,
+        "completion_tokens": 103
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('214')",
+          2
+        ],
+        [
+          "click('772')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0025814424143353635,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('214')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:all": 1.0,
+            "name:customers": 1.0,
+            "ctx:customers": 0.5,
+            "ctx:all": 0.5,
+            "ctx:now": 0.5,
+            "ctx:online": 0.5,
+            "ctx:login": 0.5,
+            "ctx:as": 0.5,
+            "ctx:customer": 0.5,
+            "ctx:log": 0.5,
+            "ctx:groups": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "All Customers",
+            "context": " CUSTOMERS Customers  All Customers Now Online Login as Customer Log Customer Groups Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 206,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:customer": 0.5,
+            "path:index": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/customer/index/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 151,
+          "server_error": false
+        },
+        {
+          "action": "click('772')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:the": 1.0,
+            "name:information": 1.0,
+            "name:in": 1.0,
+            "name:this": 1.0,
+            "name:tab": 1.0,
+            "name:has": 1.0,
+            "name:been": 1.0,
+            "name:changed": 1.0,
+            "name:contains": 1.0,
+            "name:invalid": 1.0,
+            "ctx:the": 0.5,
+            "ctx:information": 0.5,
+            "ctx:in": 0.5,
+            "ctx:this": 0.5,
+            "ctx:tab": 0.5,
+            "ctx:has": 0.5,
+            "ctx:been": 0.5,
+            "ctx:changed": 0.5,
+            "ctx:contains": 0.5,
+            "ctx:invalid": 0.5,
+            "kw:change": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "The information in this tab has been changed. This tab contains invalid data. Please resolve this before saving. Loading... New Customers",
+            "context": "The information in this tab has been changed. This tab contains invalid data. Please resolve this before saving. Loading... New Customers",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0025814424143353635,
+        0.0023138707069418627
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6491,
+        "completion_tokens": 168
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('207')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0024026724623539748,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:customers": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CUSTOMERS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4365,
+        "completion_tokens": 135
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('207')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0024026724623539748,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:customers": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CUSTOMERS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4510,
+        "completion_tokens": 127
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('207')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0024026724623539748,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:customers": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CUSTOMERS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4381,
+        "completion_tokens": 149
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('207')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0024026724623539748,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:customers": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CUSTOMERS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4518,
+        "completion_tokens": 140
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('207')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0024026724623539748,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:customers": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CUSTOMERS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4381,
+        "completion_tokens": 152
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('780')",
+          2
+        ],
+        [
+          "click('207')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0023138707069418627,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('780')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:the": 1.0,
+            "name:information": 1.0,
+            "name:in": 1.0,
+            "name:this": 1.0,
+            "name:tab": 1.0,
+            "name:has": 1.0,
+            "name:been": 1.0,
+            "name:changed": 1.0,
+            "name:contains": 1.0,
+            "name:invalid": 1.0,
+            "ctx:the": 0.5,
+            "ctx:information": 0.5,
+            "ctx:in": 0.5,
+            "ctx:this": 0.5,
+            "ctx:tab": 0.5,
+            "ctx:has": 0.5,
+            "ctx:been": 0.5,
+            "ctx:changed": 0.5,
+            "ctx:contains": 0.5,
+            "ctx:invalid": 0.5,
+            "kw:change": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "The information in this tab has been changed. This tab contains invalid data. Please resolve this before saving. Loading... Customers",
+            "context": "The information in this tab has been changed. This tab contains invalid data. Please resolve this before saving. Loading... Customers",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0023138707069418627,
+        0.0024026724623539748
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6520,
+        "completion_tokens": 133
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('950')",
+          1
+        ],
+        [
+          "click('207')",
+          1
+        ],
+        [
+          "click('780')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.015573619447037914,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('950')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=generic": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "generic",
+            "name": "",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.015573619447037914,
+        0.0024026724623539748
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7029,
+        "completion_tokens": 163
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('207')",
+          2
+        ],
+        [
+          "click('780')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0024026724623539748,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:customers": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CUSTOMERS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0024026724623539748,
+        0.0023138707069418627
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6378,
+        "completion_tokens": 135
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('207')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0024026724623539748,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:customers": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CUSTOMERS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4516,
+        "completion_tokens": 147
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('207')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0024026724623539748,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:customers": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CUSTOMERS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4379,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('207')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0024026724623539748,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:customers": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CUSTOMERS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4516,
+        "completion_tokens": 137
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('207')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0024026724623539748,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:customers": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CUSTOMERS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4379,
+        "completion_tokens": 136
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('207')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0024026724623539748,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:customers": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CUSTOMERS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4516,
+        "completion_tokens": 128
+      }
+    }
+  ],
+  "method": "race",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 00:11:47"
+}

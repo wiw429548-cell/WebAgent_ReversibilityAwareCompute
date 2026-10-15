@@ -1,0 +1,851 @@
+{
+  "task_id": 440,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "I previously ordered some a make up removal kit during summer 2022 and later cancelled. Can you reorder it for me?",
+  "template": 156,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 6,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 19,
+  "prompt_tokens": 72183,
+  "completion_tokens": 2467,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      67290,
+      2312
+    ],
+    "wm": [
+      2,
+      4463,
+      139
+    ],
+    "value": [
+      2,
+      430,
+      16
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 14,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 139.4534080028534,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.22299277171104492,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5776,
+        "completion_tokens": 111
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1555')",
+          1
+        ],
+        [
+          "click('1530')",
+          1
+        ],
+        [
+          "click('1552')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1555')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reorder": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:recent": 0.5,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "Reorder",
+            "context": "View OrderReorder Recent Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 562,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.867860100871436,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4431,
+        "completion_tokens": 189
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('227')",
+          2
+        ],
+        [
+          "goto('http://localhost:7770/catalogsearch/result/')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.35999214575062055,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4268,
+        "completion_tokens": 131
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          1
+        ],
+        [
+          "fill('479', 'makeup removal kit')",
+          1
+        ],
+        [
+          "focus('479')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.4499117637010954,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4549,
+        "completion_tokens": 184
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1555')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1555')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reorder": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:recent": 0.5,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "Reorder",
+            "context": "View OrderReorder Recent Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 562,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9000810015319267,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4456,
+        "completion_tokens": 117
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          1
+        ],
+        [
+          "click('227')",
+          1
+        ],
+        [
+          "click('494')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.2575399082619114,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4303,
+        "completion_tokens": 120
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1555')",
+          2
+        ],
+        [
+          "click('1530')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1555')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reorder": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:recent": 0.5,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "Reorder",
+            "context": "View OrderReorder Recent Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 562,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.4818403987257298,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4473,
+        "completion_tokens": 171
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          2
+        ],
+        [
+          "click('494')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.24479808547651416,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4320,
+        "completion_tokens": 125
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1555')",
+          2
+        ],
+        [
+          "click('1530')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1555')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reorder": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:recent": 0.5,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "Reorder",
+            "context": "View OrderReorder Recent Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 562,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.34422518530294255,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4477,
+        "completion_tokens": 166
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('479')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('479')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.1813239093818062,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4320,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.660497676291655,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4322,
+        "completion_tokens": 135
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1555')",
+          2
+        ],
+        [
+          "click('1530')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1555')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reorder": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:recent": 0.5,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "Reorder",
+            "context": "View OrderReorder Recent Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 562,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6292003072062968,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4477,
+        "completion_tokens": 151
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('479')",
+          2
+        ],
+        [
+          "report_infeasible(\"There is no information about a previous order for a makeup removal kit on the current page.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "focus('479')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.03640107366210188,
+      "wm_scores": [
+        3.02,
+        3.01
+      ],
+      "outcomes": [
+        "Focusing on the element with ID `479` will bring the search combobox into focus, allowing the user to input search terms directly. No data on the website will be created, modified, or deleted by this action; it merely shifts the user's interaction point to the search field.",
+        "The agent will report that there is no information about a previous order for a makeup removal kit on the current page, as the page content does not contain such details. No new pages will be shown, and no data on the website will be created, modified, or deleted as a result of this action. The repo"
+      ],
+      "m2_cands": [
+        "focus('479')",
+        "report_infeasible(\"There is no information about a previous order for a makeup removal kit on the current page.\")"
+      ],
+      "m2_choice": "focus('479')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9213,
+        "completion_tokens": 351
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          2
+        ],
+        [
+          "report_infeasible(\"There is no information on the current page about a previously ordered and cancelled make up removal kit. It may be necessary to check order history or contact customer support for assistance.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6825048565942922,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4321,
+        "completion_tokens": 217
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1555')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1555')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reorder": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:recent": 0.5,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "Reorder",
+            "context": "View OrderReorder Recent Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 562,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.17535556790038598,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4477,
+        "completion_tokens": 171
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:30:59"
+}

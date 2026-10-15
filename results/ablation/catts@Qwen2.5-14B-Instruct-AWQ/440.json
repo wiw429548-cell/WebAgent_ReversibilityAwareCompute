@@ -1,0 +1,527 @@
+{
+  "task_id": 440,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "I previously ordered some a make up removal kit during summer 2022 and later cancelled. Can you reorder it for me?",
+  "template": 156,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 8,
+  "n_env_actions": 8,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 16,
+  "prompt_tokens": 62445,
+  "completion_tokens": 1524,
+  "llm_by_tag": {
+    "policy": [
+      8,
+      34487,
+      1129
+    ],
+    "arbiter": [
+      8,
+      27958,
+      395
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 8,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 8,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 77.31137561798096,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227', 'left')",
+          2
+        ],
+        [
+          "click('227', button='left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": false
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 10736,
+        "completion_tokens": 251
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1555', 'left')",
+          2
+        ],
+        [
+          "click('1555')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1555', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reorder": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:recent": 0.5,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "Reorder",
+            "context": "View OrderReorder Recent Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 562,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8048,
+        "completion_tokens": 141
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:7770/account/')",
+          1
+        ],
+        [
+          "click('1555', 'left')",
+          1
+        ],
+        [
+          "click('227', 'left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:7770/account/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 438,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7748,
+        "completion_tokens": 227
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          2
+        ],
+        [
+          "goto('http://localhost:7770/catalogsearch/result/')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:account": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/account/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 559,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5387,
+        "completion_tokens": 229
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:7770/account/history/')",
+          1
+        ],
+        [
+          "goto('http://localhost:7770/catalogsearch/result/?q=makeup+removal+kit')",
+          1
+        ],
+        [
+          "goto('http://localhost:7770/catalogsearch/result/')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:7770/catalogsearch/result/?q=makeup+removal+kit')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 459,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 1,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7806,
+        "completion_tokens": 198
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1547', 'left')",
+          2
+        ],
+        [
+          "click('1518', 'left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1547', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:uzza": 1.0,
+            "name:lash": 1.0,
+            "name:double": 1.0,
+            "name:duty": 1.0,
+            "name:eye": 1.0,
+            "name:makeup": 1.0,
+            "name:remover": 1.0,
+            "name:kit": 1.0,
+            "name:liquid": 1.0,
+            "kw:remove": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=makeup+removal+kit",
+          "element": {
+            "role": "link",
+            "name": "UZZA Lash Double Duty Eye Makeup Remover Kit – Eye Makeup Remover Liquid, Eyelash Brush, Reusable Pads – Natural Ingredients With Aloe Vera and vitamin E, Nourishing and Gentle Makeup Eraser, 1oz",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 481,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 10296,
+        "completion_tokens": 120
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:7770/account/orderhistory/')",
+          1
+        ],
+        [
+          "goto('http://localhost:7770/account/')",
+          1
+        ],
+        [
+          "click('264', 'left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:7770/account/orderhistory/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:uzza": 0.5,
+            "path:lash": 0.5,
+            "path:double": 0.5,
+            "path:duty": 0.5,
+            "path:eye": 0.5,
+            "path:makeup": 0.5,
+            "path:remover": 0.5,
+            "path:kit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/uzza-lash-double-duty-eye-makeup-remover-kit-eye-makeup-remover-liquid-eyelash-brush-reusable-pads-natural-ingredients-with-aloe-vera-and-vitamin-e-nourishing-and-gentle-makeup-eraser-1oz.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 438,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6926,
+        "completion_tokens": 188
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          2
+        ],
+        [
+          "report_infeasible('The page seems to be experiencing an error and does not contain the order history as expected.')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "report_infeasible('The page seems to be experiencing an error and does not contain the order history as expected.')",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:account": 0.5,
+            "path:orderhistory": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/account/orderhistory/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 1,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5498,
+        "completion_tokens": 170
+      }
+    }
+  ],
+  "method": "catts",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:11:39"
+}

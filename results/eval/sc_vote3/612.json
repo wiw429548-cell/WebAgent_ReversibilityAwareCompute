@@ -1,0 +1,618 @@
+{
+  "task_id": 612,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Post a review of my recent reading \"big little lies\" in the r/books with my comment \"can't stop it\".",
+  "template": 9,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 11,
+  "n_env_actions": 11,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 11,
+  "prompt_tokens": 23225,
+  "completion_tokens": 1377,
+  "llm_by_tag": {
+    "policy": [
+      11,
+      23225,
+      1377
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 11,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 1.0,
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 108.95704770088196,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('62')",
+          2
+        ],
+        [
+          "click('42')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1523,
+        "completion_tokens": 95
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('127', 'big little lies')",
+          1
+        ],
+        [
+          "select_option('378', 'r/books')",
+          1
+        ],
+        [
+          "click('378')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('127', 'big little lies')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.075,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1601,
+        "completion_tokens": 119
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('137', 'big little lies')",
+          1
+        ],
+        [
+          "fill('137', '\"big little lies\" book review')",
+          1
+        ],
+        [
+          "fill('137', 'Review of big little lies')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('137', 'big little lies')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "name:is": 1.0,
+            "name:required": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "typed_len": 0.075,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Title This field is required.",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1631,
+        "completion_tokens": 106
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1659,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'books')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('378', 'books')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4015,
+        "completion_tokens": 91
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('451')",
+          1
+        ],
+        [
+          "click('551')",
+          1
+        ],
+        [
+          "click('378')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('451')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:books": 1.0,
+            "ctx:choose": 0.5,
+            "ctx:one": 0.5,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "option",
+            "name": "books",
+            "context": "Choose one…",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4113,
+        "completion_tokens": 137
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('142', 'can\\'t stop it')",
+          2
+        ],
+        [
+          "fill('142', \"can't stop it\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('142', 'can\\'t stop it')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:body": 1.0,
+            "typed_len": 0.07,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Body",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1677,
+        "completion_tokens": 118
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('395')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('395')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 47,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1732,
+        "completion_tokens": 108
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('400')",
+          2
+        ],
+        [
+          "click('123')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('400')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 47,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1767,
+        "completion_tokens": 132
+      }
+    },
+    {
+      "candidates": [
+        [
+          "clear('131')",
+          1
+        ],
+        [
+          "fill('131', 'http://big-little-lies')",
+          1
+        ],
+        [
+          "fill('131', 'http://big%20little%20lies')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "clear('131')",
+          "rollback": false,
+          "feat": {
+            "act=clear": 1.0,
+            "role=textbox": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1762,
+        "completion_tokens": 150
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('400')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('400')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 39,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1745,
+        "completion_tokens": 157
+      }
+    }
+  ],
+  "method": "sc_vote3",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 19:13:28"
+}

@@ -1,0 +1,1087 @@
+{
+  "task_id": 514,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Add a white desk to my wish list.",
+  "template": 189,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 13,
+  "n_env_actions": 23,
+  "n_state_changes": 2,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 5,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 47,
+  "prompt_tokens": 121792,
+  "completion_tokens": 3412,
+  "llm_by_tag": {
+    "policy": [
+      13,
+      67709,
+      1930
+    ],
+    "m2more": [
+      1,
+      4493,
+      93
+    ],
+    "wm": [
+      13,
+      30926,
+      1106
+    ],
+    "value": [
+      13,
+      2744,
+      104
+    ],
+    "form": [
+      2,
+      6484,
+      159
+    ],
+    "progress": [
+      5,
+      9436,
+      20
+    ]
+  },
+  "llm_cache_hits": 2,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 5,
+    "M2": 6
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 2,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 208.83945727348328,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('424', 'white desk', True)",
+          2
+        ],
+        [
+          "report_infeasible(\"There is no product related to a 'white desk' available on the current page.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.6676666089135647,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('424', 'white desk')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.05,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 224,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        3.01
+      ],
+      "outcomes": [
+        "The agent will attempt to fill the search combobox with the query \"white desk\". Since the combobox supports autocomplete, it may display a dropdown list of suggested items related to \"white desk\" that are available in the store. No data will be created, modified, or deleted on the website until an e",
+        "The agent will report that there is no product related to a 'white desk' available on the current page, indicating that the search or action cannot be completed as requested. No new pages will be shown, and no data on the website will be created, modified, or deleted as a result of this report. The "
+      ],
+      "m2_cands": [
+        "fill('424', 'white desk', True)",
+        "report_infeasible(\"There is no product related to a 'white desk' available on the current page.\")"
+      ],
+      "m2_choice": "fill('424', 'white desk', True)",
+      "rho_choice": 0.6676666089135647,
+      "form_fix": "fill('424', 'white desk')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 14384,
+        "completion_tokens": 404
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('429')",
+          2
+        ],
+        [
+          "scroll(0, 500)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.40653450861884005,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('429')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 462,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=white+desk",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        },
+        {
+          "action": "scroll(0, 500)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.40653450861884005,
+        0.043878705085772504
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7662,
+        "completion_tokens": 129
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('746')",
+          1
+        ],
+        [
+          "click('873')",
+          1
+        ],
+        [
+          "fill('424', 'white desk')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03693515723427114,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('746')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:home": 1.0,
+            "name:kitchen": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "menuitem",
+            "name": " Home & Kitchen",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 463,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        },
+        {
+          "action": "click('873')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:office": 1.0,
+            "name:products": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "menuitem",
+            "name": " Office Products",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 463,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03693515723427114,
+        0.038277752271154854
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7699,
+        "completion_tokens": 163
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('426', 'white desk')",
+          2
+        ],
+        [
+          "focus('426')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.6031415421349244,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('426', 'white desk')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.05,
+            "path:office": 0.5,
+            "path:products": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/office-products.html",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 224,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        5.01
+      ],
+      "outcomes": [
+        "After executing the command `fill('426', 'white desk')`, the search field on the current page will be populated with the term \"white desk\". Upon submitting the search, the page will reload or transition to a new page displaying search results for \"white desk\" within the Office Products category. No ",
+        "Focusing on the element with the ID `426` will bring the search combobox into focus, allowing the user to input search terms directly into it. No data on the website will be created, modified, or deleted by this action; it merely prepares the search field for user interaction."
+      ],
+      "m2_cands": [
+        "fill('426', 'white desk')",
+        "focus('426')"
+      ],
+      "m2_choice": "fill('426', 'white desk')",
+      "rho_choice": 0.6031415421349244,
+      "form_fix": "fill('426', 'white desk')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13889,
+        "completion_tokens": 402
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('431')",
+          1
+        ],
+        [
+          "click('2141')",
+          1
+        ],
+        [
+          "click('429')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.34132652744568337,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('431')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:office": 0.5,
+            "path:products": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/office-products.html",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 464,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=white+desk",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 463,
+          "server_error": false
+        },
+        {
+          "action": "click('2141')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:office": 0.5,
+            "path:products": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/office-products.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.34132652744568337,
+        0.03890419231516222
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7505,
+        "completion_tokens": 126
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('426', 'white desk')",
+          2
+        ],
+        [
+          "click('1931')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.6031415421349244,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('426', 'white desk')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.05,
+            "path:office": 0.5,
+            "path:products": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/office-products.html",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 224,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        6.01
+      ],
+      "outcomes": [
+        "After executing the command `fill('426', 'white desk')`, the search field on the current page will be populated with the term \"white desk\". Upon submitting the search, the page will reload or transition to a new page displaying search results for \"white desk\" within the Office Products category. No ",
+        "Clicking on element '1931' will likely navigate to the product details page of the corresponding office product listed on the current page. No data will be created, modified, or deleted on the website itself; however, the URL and displayed content will change to reflect the new page showing detailed"
+      ],
+      "m2_cands": [
+        "fill('426', 'white desk')",
+        "click('1931')"
+      ],
+      "m2_choice": "fill('426', 'white desk')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10747,
+        "completion_tokens": 326
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2141')",
+          1
+        ],
+        [
+          "click('1583')",
+          1
+        ],
+        [
+          "click('1962')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03890419231516222,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('2141')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:white": 1.0,
+            "name:desk": 1.0,
+            "path:office": 0.5,
+            "path:products": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/office-products.html",
+          "element": {
+            "role": "option",
+            "name": "white desk",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 464,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=+white+desk",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 463,
+          "server_error": false
+        },
+        {
+          "action": "click('1583')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:to": 1.0,
+            "name:wish": 1.0,
+            "name:list": 1.0,
+            "kw:add to wish": 1.0,
+            "kw:add": 1.0,
+            "path:office": 0.5,
+            "path:products": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/office-products.html",
+          "element": {
+            "role": "button",
+            "name": "Add to Wish List",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 452,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03890419231516222,
+        0.07494190416476011
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7507,
+        "completion_tokens": 165
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('419', 'white desk', True)",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.6334009621339426,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "focus('419')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "path:wishlist": 0.5,
+            "path:index": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/wishlist/index/index/wishlist_id/5/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 225,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.04,
+        2.01,
+        6.01
+      ],
+      "outcomes": [
+        "The agent will attempt to fill the search combobox with the query \"white desk\". However, since the search functionality is currently disabled (as indicated by the `disabled=True` attribute of the search button), no search results page will be shown, and no data on the website will be created, modifi",
+        "The action `fill('426', 'white desk', True)` suggests an attempt to interact with an element identified by '426' and input the text 'white desk'. However, based on the provided accessibility tree, there is no element with the identifier '426'. Therefore, this action will likely not change any data o",
+        "Focusing on the element with ID `419` will bring the search combobox into focus, allowing the user to input search terms directly. No data on the website will be created, modified, or deleted as a result of this action; it merely prepares the search field for user interaction."
+      ],
+      "m2_cands": [
+        "fill('419', 'white desk', True)",
+        "fill('426', 'white desk', True)",
+        "focus('419')"
+      ],
+      "m2_choice": "focus('419')",
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 16728,
+        "completion_tokens": 457
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('419', 'white desk')",
+          2
+        ],
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.6334009621339426,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('419', 'white desk')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.05,
+            "path:wishlist": 0.5,
+            "path:index": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/wishlist/index/index/wishlist_id/5/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 226,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        2.01
+      ],
+      "outcomes": [
+        "The command `fill('419', 'white desk')` suggests an attempt to input \"white desk\" into an element with ID `419`. However, based on the provided accessibility tree, there is no element with this ID that accepts text input; ID `419` corresponds to a combobox used for searching. Therefore, attempting t",
+        "Executing `go_back()` will navigate the user to the previous page in the browser's history, which could be any page visited before the current wish list page, depending on the user's navigation history. No data on the website will be created, modified, or deleted as a result of this action; it merel"
+      ],
+      "m2_cands": [
+        "fill('419', 'white desk')",
+        "go_back()"
+      ],
+      "m2_choice": "fill('419', 'white desk')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9670,
+        "completion_tokens": 377
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('424')",
+          2
+        ],
+        [
+          "select_option('1853', 'white desk')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.3707208477858108,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('424')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:wishlist": 0.5,
+            "path:index": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/wishlist/index/index/wishlist_id/5/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 467,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=white+desk",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 450,
+          "server_error": false
+        },
+        {
+          "action": "select_option('1853', 'white desk')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=": 1.0,
+            "path:wishlist": 0.5,
+            "path:index": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/wishlist/index/index/wishlist_id/5/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 225,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.3707208477858108,
+        0.03763597874875467
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6439,
+        "completion_tokens": 186
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('419', 'white desk', True)",
+          2
+        ],
+        [
+          "click('741')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.6334009621339426,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('419', 'white desk', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.05,
+            "path:wishlist": 0.5,
+            "path:index": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/wishlist/index/index/wishlist_id/5/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 227,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        3.01
+      ],
+      "outcomes": [
+        "The action `fill('419', 'white desk', True)` suggests an attempt to interact with element `419`, which is described as a combobox for searching. However, based on the provided accessibility tree, there's no direct match for `419` being a search field related to \"white desk\". Assuming this is a typo ",
+        "Clicking on the 'Home & Kitchen' menu item (ID 741) will navigate to the Home & Kitchen category page, displaying products related to home and kitchen items. No data on the website will be created, modified, or deleted as a result of this action; it is solely for browsing purposes."
+      ],
+      "m2_cands": [
+        "fill('419', 'white desk', True)",
+        "click('741')"
+      ],
+      "m2_choice": "fill('419', 'white desk', True)",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9670,
+        "completion_tokens": 353
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('424')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.3707208477858108,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('424')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:wishlist": 0.5,
+            "path:index": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/wishlist/index/index/wishlist_id/5/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 467,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4455,
+        "completion_tokens": 195
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1588')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08646362406208294,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1588')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:to": 1.0,
+            "name:wish": 1.0,
+            "name:list": 1.0,
+            "kw:add to wish": 1.0,
+            "kw:add": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=white+desk",
+          "element": {
+            "role": "button",
+            "name": "Add to Wish List",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 456,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5437,
+        "completion_tokens": 129
+      }
+    }
+  ],
+  "method": "race",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 00:47:57"
+}

@@ -1,0 +1,312 @@
+{
+  "task_id": 423,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Mark all Hollister shirts on sale",
+  "template": 237,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 4,
+  "n_env_actions": 4,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 7,
+  "prompt_tokens": 33484,
+  "completion_tokens": 639,
+  "llm_by_tag": {
+    "policy": [
+      5,
+      25851,
+      624
+    ],
+    "arbiter": [
+      4,
+      18244,
+      159
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 3,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 69.69912910461426,
+  "started": true,
+  "error": "call last):\n  File \"<repo>/race/runner.py\", line 232, in run_episode\n    obs, reward, done, log = agent.step(env, goal, obs, history, state)\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<repo>/race/agent.py\", line 239, in step\n    return self._execute(env, top, axmap, url, obs, history, log)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<repo>/race/agent.py\", line 245, in _execute\n    obs1, reward, term, trunc, info, side = env.step(action)\n                                            ^^^^^^^^^^^^^^^^\n  File \"<repo>/race/env.py\", line 363, in step\n    obs, reward, terminated, truncated, info = self.env.step(\"noop()\" if blocked else action)\n                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/.local/lib/python3.12/site-packages/browsergym/core/env.py\", line 465, in step\n    return self.post_step(info)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/.local/lib/python3.12/site-packages/browsergym/core/env.py\", line 529, in post_step\n    obs = self._get_obs()\n          ^^^^^^^^^^^^^^^\n  File \"/home/user/.local/lib/python3.12/site-packages/browsergym/core/env.py\", line 663, in _get_obs\n    raise e\n  File \"/home/user/.local/lib/python3.12/site-packages/browsergym/core/env.py\", line 637, in _get_obs\n    _pre_extract(self.page, tags_to_mark=self.tags_to_mark, lenient=(retries_left == 0))\n  File \"/home/user/.local/lib/python3.12/site-packages/browsergym/core/observation.py\", line 79, in _pre_extract\n    mark_frames_recursive(page.main_frame, frame_bid=\"\")\n  File \"/home/user/.local/lib/python3.12/site-packages/browsergym/core/observation.py\", line 45, in mark_frames_recursive\n    warning_msgs = frame.evaluate(\n                   ^^^^^^^^^^^^^^^\n  File \"/home/user/.local/lib/python3.12/site-packages/playwright/sync_api/_generated.py\", line 3491, in evaluate\n    self._sync(\n  File \"/home/user/.local/lib/python3.12/site-packages/playwright/_impl/_sync_base.py\", line 115, in _sync\n    return task.result()\n           ^^^^^^^^^^^^^\n  File \"/home/user/.local/lib/python3.12/site-packages/playwright/_impl/_frame.py\", line 278, in evaluate\n    await self._channel.send(\n  File \"/home/user/.local/lib/python3.12/site-packages/playwright/_impl/_connection.py\", line 59, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/.local/lib/python3.12/site-packages/playwright/_impl/_connection.py\", line 514, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.Error: Frame.evaluate: Target crashed \n",
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('189')",
+          1
+        ],
+        [
+          "goto('http://localhost:7780/admin/catalog/products/')",
+          1
+        ],
+        [
+          "click('189', button='left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('189')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:catalog": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CATALOG",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7707,
+        "completion_tokens": 169
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('201')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('201')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:products": 1.0,
+            "ctx:catalog": 0.5,
+            "ctx:products": 0.5,
+            "ctx:categories": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Products",
+            "context": " CATALOG Catalog  Products Categories",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 593,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4363,
+        "completion_tokens": 76
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('890')",
+          2
+        ],
+        [
+          "click('1769')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('890')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:filters": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": "Filters",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 385,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 10821,
+        "completion_tokens": 222
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1375')",
+          1
+        ],
+        [
+          "click('987')",
+          1
+        ],
+        [
+          "fill('987', 'Hollister')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('987', 'Hollister')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:name": 1.0,
+            "typed_len": 0.045,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "textbox",
+            "name": "Name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 2,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 10593,
+        "completion_tokens": 172
+      }
+    }
+  ],
+  "env_failure": true,
+  "method": "catts",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:27:58"
+}

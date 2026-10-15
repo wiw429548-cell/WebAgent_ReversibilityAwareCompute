@@ -1,0 +1,941 @@
+{
+  "task_id": 354,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "List products from living room furtniture category by descending price",
+  "template": 137,
+  "eval_types": [
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 19,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 2,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 23,
+  "prompt_tokens": 102980,
+  "completion_tokens": 6486,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      86254,
+      6454
+    ],
+    "progress": [
+      8,
+      16726,
+      32
+    ]
+  },
+  "llm_cache_hits": 23,
+  "mode_counts": {
+    "M0": 7,
+    "M1": 8,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 51.08916640281677,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('745')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03693515723427114,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('745')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:home": 1.0,
+            "name:kitchen": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "menuitem",
+            "name": " Home & Kitchen",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5762,
+        "completion_tokens": 110
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1941')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.005543667096275514,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1941')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:furniture": 1.0,
+            "name:item": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html",
+          "element": {
+            "role": "link",
+            "name": "Furniture( 10537 item )",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5425,
+        "completion_tokens": 123
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1952')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.005543667096275514,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1952')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:living": 1.0,
+            "name:room": 1.0,
+            "name:furniture": 1.0,
+            "name:item": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=34",
+          "element": {
+            "role": "link",
+            "name": "Living Room Furniture( 3138 item )",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5429,
+        "completion_tokens": 123
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1537')",
+          2
+        ],
+        [
+          "select_option('1537', 'Price')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.13531110335761617,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1537')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.13531110335761617,
+        0.10063790685979451
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7384,
+        "completion_tokens": 105
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1537')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.13531110335761617,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1537')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5486,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1537')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.13531110335761617,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1537')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5494,
+        "completion_tokens": 105
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1537')",
+          2
+        ],
+        [
+          "select_option('1537', 'Price')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.13531110335761617,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1537')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.13531110335761617,
+        0.10063790685979451
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7411,
+        "completion_tokens": 168
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1537')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.13531110335761617,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1537')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5504,
+        "completion_tokens": 116
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1537', 'Price')",
+          2
+        ],
+        [
+          "click('1537')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.10063790685979451,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('1537', 'Price')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154&product_list_order=price",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        },
+        {
+          "action": "click('1537')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.10063790685979451,
+        0.13531110335761617
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7422,
+        "completion_tokens": 184
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1541')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.00525810835621503,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1541')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:set": 1.0,
+            "name:descending": 1.0,
+            "name:direction": 1.0,
+            "kw:set": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154",
+          "element": {
+            "role": "link",
+            "name": " Set Descending Direction",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5511,
+        "completion_tokens": 135
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - HIFIT End Table Set of 2",
+          1
+        ],
+        [
+          "send_msg_to_user(\"$969.00, $809.88, $549.99, $442.62, $345.99, $302.99, $199.99, $168.95, $149.99, $79.99, $63.69, $23.99\")",
+          1
+        ],
+        [
+          "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - HIFIT End Table Set of",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.15898707116895341,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - HIFIT End Table Set of 2",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154&product_list_dir=desc",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15898707116895341,
+        0.023456424447998732
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7795,
+        "completion_tokens": 890
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - HIFIT End Table Set",
+          2
+        ],
+        [
+          "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - HIFIT End",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.15898707116895341,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - HIFIT End Table Set",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154&product_list_dir=desc",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15898707116895341,
+        0.15898707116895341
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8158,
+        "completion_tokens": 1156
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - H",
+          1
+        ],
+        [
+          "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (",
+          1
+        ],
+        [
+          "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - HIFIT End Table Set\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.15898707116895341,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - H",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154&product_list_dir=desc",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15898707116895341,
+        0.15898707116895341
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8505,
+        "completion_tokens": 1156
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - H",
+          1
+        ],
+        [
+          "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - HIFIT End Table Set of",
+          1
+        ],
+        [
+          "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - HIFIT End Table",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.15898707116895341,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - H",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154&product_list_dir=desc",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15898707116895341,
+        0.15898707116895341
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8848,
+        "completion_tokens": 1156
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1963')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - HIFIT End",
+          1
+        ],
+        [
+          "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Re",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.004103833103897306,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1963')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:remove": 1.0,
+            "name:this": 1.0,
+            "name:item": 1.0,
+            "kw:remove": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154&product_list_dir=desc",
+          "element": {
+            "role": "link",
+            "name": "Remove This Item",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=34&product_list_dir=desc",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        },
+        {
+          "action": "send_msg_to_user(\"$969.00 - Bone Inlay Round Drum Side Table Black Geometric Pattern L End Table for Sofa Couch and Bed, Oak Home Decor Coffee Tea for Home Decor Furniture by A.S Industries.\\n$809.88 - Mid-Century Modern Velvet Upholstered Sofa Couch, 3 Seat Tufted Back Chesterfield Couches with Flared Arms & Metal Legs, Sleeper Sofa for Living Room, Compact Living Space, Apartment,Bonus Room,Orange\\n$549.99 - FXJPQJD Wooden Console Table, Narrow Side Table, Versatile Hallway Sofa Table with 4 Drawer and 2 Open Shelves, Writing Desk for Lving Room and Corridor, Sturdy and Easy Assembly\\n$442.62 - Christopher Knight Home Genevieve Augustus Traditional Fabric Loveseat, Beige, Dark Brown\\n$345.99 - Pemberly Row 70\\\" Farmhouse Barn Door Rustic Wood TV Stand Console with Storage in Rustic Gray Wash\\n$302.99 - Coffee Table Set 3 Pieces | Nesting End Table Set | Set of 3 Modern Accent Furniture | Unique Design Coffee Table | Leisure Table Minimalist Side Table for Living Room | Brown and Black\\n$199.99 - Bonzy Home Glossy LED TV Stand, Black TV Stand with LED RGB Lights, Wood Media Storage Console for 65 Inch TV, Flat Screen TV Cabinet, Gaming Consoles - in Lounge Room, Living Room and Bedroom (Black)\\n$168.95 - Leick Delton Recliner Wedge End Table\\n$149.99 - HIFIT End",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html?cat=154&product_list_dir=desc",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004103833103897306,
+        0.15898707116895341
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8846,
+        "completion_tokens": 845
+      }
+    }
+  ],
+  "method": "race",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 00:25:05"
+}

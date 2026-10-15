@@ -1,0 +1,868 @@
+{
+  "task_id": 631,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Ask for product recommendations for running shoes within a budget of $100 in r/sports",
+  "template": 15,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 29,
+  "prompt_tokens": 81907,
+  "completion_tokens": 2891,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      61347,
+      2179
+    ],
+    "m2more": [
+      1,
+      4492,
+      132
+    ],
+    "wm": [
+      5,
+      8236,
+      344
+    ],
+    "value": [
+      5,
+      1000,
+      40
+    ],
+    "form": [
+      3,
+      6832,
+      196
+    ]
+  },
+  "llm_cache_hits": 9,
+  "mode_counts": {
+    "M0": 12,
+    "M1": 0,
+    "M2": 3
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 0.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 146.6243770122528,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "focus('54')",
+          1
+        ],
+        [
+          "click('54')",
+          1
+        ],
+        [
+          "fill('54', 'r/sports')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('54')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7485443281454458,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1518,
+        "completion_tokens": 168
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('54', 'r/sports')",
+          2
+        ],
+        [
+          "click('42')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('42')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.0748947704964884,
+      "wm_scores": [
+        3.02,
+        5.01
+      ],
+      "outcomes": [
+        "After filling the search box with \"r/sports\" and presumably submitting the search, the page will reload or navigate to a results page displaying forums or submissions related to \"r/sports\". No data will be created, modified, or deleted on the website itself as a result of this action; it merely quer",
+        "Upon clicking the \"Forums\" link (ID 42), the page will navigate to the Forums section of the website. No data will be created, modified, or deleted as a result of this action; the navigation simply changes the displayed content to show the available forums."
+      ],
+      "m2_cands": [
+        "fill('54', 'r/sports')",
+        "click('42')"
+      ],
+      "m2_choice": "click('42')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 3941,
+        "completion_tokens": 292
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          2
+        ],
+        [
+          "click('144')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6400104864596443,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4458,
+        "completion_tokens": 146
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          2
+        ],
+        [
+          "report_infeasible(\"There is no forum named r/sports on the current page.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.10974680469656306,
+      "wm_scores": [
+        2.02,
+        2.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Forums' link at position [113] will likely refresh or reaffirm the current view of the forums list page since the user is already on the forums page. No data will be created, modified, or deleted as a result of this action; it simply navigates to the same section of the site.",
+        "The agent will report that there is no forum named \"r/sports\" on the current page, indicating that such a forum does not exist within the visible content. No page change will occur, and no data on the website will be created, modified, or deleted as a result of this action. The user remains on the \""
+      ],
+      "m2_cands": [
+        "click('113')",
+        "report_infeasible(\"There is no forum named r/sports on the current page.\")"
+      ],
+      "m2_choice": "click('113')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 12558,
+        "completion_tokens": 436
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8455662952401504,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4474,
+        "completion_tokens": 148
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          2
+        ],
+        [
+          "report_infeasible(\"There is no sports forum listed on the current page.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.965174702015144,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4482,
+        "completion_tokens": 175
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          2
+        ],
+        [
+          "click('113') # Navigate to the Forums section to look for 'r/sports'.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7029027706486808,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4490,
+        "completion_tokens": 147
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.1655219728355739,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4491,
+        "completion_tokens": 152
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          2
+        ],
+        [
+          "click('184')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7095564139318888,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4492,
+        "completion_tokens": 148
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9359500744835287,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4492,
+        "completion_tokens": 108
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          2
+        ],
+        [
+          "report_infeasible(\"There is no r/sports forum available in the list.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8383717403255382,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4492,
+        "completion_tokens": 150
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.08124307823765875,
+      "wm_scores": [
+        2.06
+      ],
+      "outcomes": [
+        "Clicking on the 'Forums' link at position [113] will likely refresh or reaffirm the current view of the forums list page since the user is already on the forums page. No data will be created, modified, or deleted as a result of this action; it simply navigates to the same section of the site."
+      ],
+      "m2_cands": [
+        "click('113')"
+      ],
+      "m2_choice": "click('113')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 14543,
+        "completion_tokens": 396
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7906076529416843,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4492,
+        "completion_tokens": 158
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.18436548888279347,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4492,
+        "completion_tokens": 140
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          2
+        ],
+        [
+          "report_infeasible(\"There is no r/sports forum available to post the request.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8756683145886761,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4492,
+        "completion_tokens": 127
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:28:11"
+}

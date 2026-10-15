@@ -1,0 +1,1202 @@
+{
+  "task_id": 714,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Thumbs down the top 1 post ever in gadgets.",
+  "template": 24,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 29,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 7,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 27,
+  "prompt_tokens": 90648,
+  "completion_tokens": 2401,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      66366,
+      2353
+    ],
+    "progress": [
+      12,
+      24282,
+      48
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 3,
+    "M1": 12,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 289.26036977767944,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('42')",
+          2
+        ],
+        [
+          "click('26') # Navigate to the sidebar which might contain a link to the forums.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.007668884798031235,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('42')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        },
+        {
+          "action": "click('26') # Navigate to the sidebar which might contain a link to the forums.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007668884798031235,
+        0.2051992694821977
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3116,
+        "completion_tokens": 169
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('42')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.007668884798031235,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('42')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1957,
+        "completion_tokens": 122
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('50')",
+          1
+        ],
+        [
+          "click('26') # Navigate to the 'Forums' link to try to access the gadgets forum.",
+          1
+        ],
+        [
+          "click('26') # Navigate to the 'Forums' section to try and find the gadgets forum.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.09565141582827036,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "focus('50')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.09565141582827036,
+        0.2049028367834602
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6477,
+        "completion_tokens": 230
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('284')",
+          1
+        ],
+        [
+          "click('283')",
+          1
+        ],
+        [
+          "click('120')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.008019621759178835,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('284')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:gaming": 1.0,
+            "ctx:gaming": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "gaming — gaming",
+            "context": "gaming — gaming",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:gaming": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/gaming",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        },
+        {
+          "action": "click('283')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=heading": 1.0,
+            "name:gaming": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "heading",
+            "name": "gaming — gaming",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008019621759178835,
+        0.048675332620461274
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6568,
+        "completion_tokens": 171
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('45')",
+          2
+        ],
+        [
+          "click('45') # Navigate to the Forums to look for the gadgets section.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.009542955657312792,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('45')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:gaming": 0.5,
+            "path:f": 0.5,
+            "path:gaming": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/gaming",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "gaming",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false
+        },
+        {
+          "action": "click('45') # Navigate to the Forums to look for the gadgets section.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:gaming": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/gaming",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.009542955657312792,
+        0.2370964081660484
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7785,
+        "completion_tokens": 194
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('284')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.008019621759178835,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('284')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:gaming": 1.0,
+            "ctx:gaming": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "gaming — gaming",
+            "context": "gaming — gaming",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4498,
+        "completion_tokens": 107
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('45')",
+          2
+        ],
+        [
+          "click('45') # Navigate to the Forums to look for the gadgets section.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.009542955657312792,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('45')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:gaming": 0.5,
+            "path:f": 0.5,
+            "path:gaming": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/gaming",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "gaming",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false
+        },
+        {
+          "action": "click('45') # Navigate to the Forums to look for the gadgets section.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:gaming": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/gaming",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.009542955657312792,
+        0.2370964081660484
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7786,
+        "completion_tokens": 106
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('284')",
+          2
+        ],
+        [
+          "click('284') # Click on the 'gaming' forum as an example to check how the forums are structured. If 'gadgets' isn't listed, I'll have to find another way to access it.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.008019621759178835,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('284')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:gaming": 1.0,
+            "ctx:gaming": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "gaming — gaming",
+            "context": "gaming — gaming",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:gaming": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/gaming",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        },
+        {
+          "action": "click('284') # Click on the 'gaming' forum as an example to check how the forums are structured. If 'gadgets' isn't listed, I'll have to find another way to access it.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008019621759178835,
+        0.2049028367834602
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6589,
+        "completion_tokens": 184
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('45') # Navigate to the Forums to look for the gadgets section.",
+          2
+        ],
+        [
+          "click('45') # Navigate to the Forums to find the gadgets section.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.2370964081660484,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('45') # Navigate to the Forums to look for the gadgets section.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:gaming": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/gaming",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false
+        },
+        {
+          "action": "click('45') # Navigate to the Forums to find the gadgets section.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:gaming": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/gaming",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.2370964081660484,
+        0.2370964081660484
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7839,
+        "completion_tokens": 155
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('117')",
+          1
+        ],
+        [
+          "click('120')",
+          1
+        ],
+        [
+          "click('50') # Click on the search box to search for the gadgets forum.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.007888513171907212,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('117')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:alphabetical": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Alphabetical",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "path:all": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums/all",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        },
+        {
+          "action": "click('120')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "name:submissions": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "button",
+            "name": "Sort by: Submissions",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007888513171907212,
+        0.14912117424243845
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6754,
+        "completion_tokens": 143
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('50', 'gadgets')",
+          1
+        ],
+        [
+          "click('655') # Click on 'Next' to navigate to the next page of forums to look for the gadgets section.",
+          1
+        ],
+        [
+          "click('655') # Click on 'Next' to check if gadgets forum is in another page.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.19029303539964865,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('50', 'gadgets')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "typed_len": 0.035,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.19029303539964865,
+        0.2049028367834602
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6654,
+        "completion_tokens": 232
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('50', 'gadgets')",
+          2
+        ],
+        [
+          "click('120') # Attempt to open the dropdown menu to see if there's a way to filter or sort to find the gadgets section.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.19029303539964865,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('50', 'gadgets')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "typed_len": 0.035,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.19029303539964865,
+        0.2049028367834602
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6661,
+        "completion_tokens": 179
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('50', 'gadgets')",
+          2
+        ],
+        [
+          "click('120')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.19029303539964865,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('50', 'gadgets')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "typed_len": 0.035,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.19029303539964865,
+        0.14912117424243845
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6663,
+        "completion_tokens": 135
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('50', 'gadgets')",
+          2
+        ],
+        [
+          "click('120')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.19029303539964865,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('50', 'gadgets')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "typed_len": 0.035,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.19029303539964865,
+        0.14912117424243845
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6657,
+        "completion_tokens": 123
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('50', 'gadgets')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.19029303539964865,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('50', 'gadgets')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "typed_len": 0.035,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4644,
+        "completion_tokens": 151
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": 2027,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 06:20:09 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 07:55:19"
+}

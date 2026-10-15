@@ -1,0 +1,414 @@
+{
+  "task_id": 225,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "What do customers say about brush from sephora",
+  "template": 135,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 10,
+  "prompt_tokens": 42129,
+  "completion_tokens": 1131,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      28502,
+      865
+    ],
+    "arbiter": [
+      4,
+      13627,
+      266
+    ]
+  },
+  "llm_cache_hits": 6,
+  "mode_counts": {
+    "M0": 6,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 4,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 1.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "n/a",
+        "ref": "No reviews available for the sephora brushes.",
+        "question": "What do customers say about brush from sephora",
+        "pending": false,
+        "score": 1.0,
+        "parsable": true,
+        "response": "Judgement: Correct\n\nExplanation: The student's answer \"n/a\" is semantically equivalent to the reference answer \"No reviews available for the sephora brushes.\" Both convey the same meaning, which is that there are no reviews to refer to regarding the Sephora brushes. The notation \"n/a\" is commonly us",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 36.342665910720825,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('386', 'Sephora brush', True)",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('386', 'Sephora brush', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.065,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5760,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('391')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('391')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5778,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1586')",
+          2
+        ],
+        [
+          "click('1518')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1586')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reviews": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush",
+          "element": {
+            "role": "link",
+            "name": "12  Reviews",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 262,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 10225,
+        "completion_tokens": 225
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('420', 'Sephora brush', True)",
+          2
+        ],
+        [
+          "click('1586')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('420', 'Sephora brush', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.065,
+            "path:sephora": 0.5,
+            "path:collection": 0.5,
+            "path:waterproof": 0.5,
+            "path:eye": 0.5,
+            "path:makeup": 0.5,
+            "path:remover": 0.5,
+            "path:oz": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sephora-collection-waterproof-eye-makeup-remover-4-2-oz.html#reviews",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": false
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5101,
+        "completion_tokens": 299
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1657')",
+          2
+        ],
+        [
+          "click('1656')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1657')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reviews": 1.0,
+            "ctx:reviews": 0.5,
+            "path:sephora": 0.5,
+            "path:collection": 0.5,
+            "path:waterproof": 0.5,
+            "path:eye": 0.5,
+            "path:makeup": 0.5,
+            "path:remover": 0.5,
+            "path:oz": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sephora-collection-waterproof-eye-makeup-remover-4-2-oz.html#reviews",
+          "element": {
+            "role": "link",
+            "name": "Reviews (12)",
+            "context": "Reviews (12)",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5252,
+        "completion_tokens": 149
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1914')",
+          2
+        ],
+        [
+          "report_infeasible(\"The reviews on the current page do not mention a brush from Sephora.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The reviews on the current page do not mention a brush from Sephora.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:sephora": 0.5,
+            "path:collection": 0.5,
+            "path:waterproof": 0.5,
+            "path:eye": 0.5,
+            "path:makeup": 0.5,
+            "path:remover": 0.5,
+            "path:oz": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sephora-collection-waterproof-eye-makeup-remover-4-2-oz.html#reviews",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 1,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 10013,
+        "completion_tokens": 194
+      }
+    }
+  ],
+  "method": "catts",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:01:43"
+}

@@ -1,0 +1,663 @@
+{
+  "task_id": 641,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Post a notice on a virtual meetup for Harry Potter enthusiasts on July 8th in the books subreddit",
+  "template": 16,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 12,
+  "n_env_actions": 12,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 16,
+  "prompt_tokens": 34210,
+  "completion_tokens": 745,
+  "llm_by_tag": {
+    "policy": [
+      12,
+      30409,
+      524
+    ],
+    "m2more": [
+      1,
+      1799,
+      115
+    ],
+    "wm": [
+      1,
+      864,
+      96
+    ],
+    "value": [
+      1,
+      226,
+      8
+    ],
+    "form": [
+      1,
+      912,
+      2
+    ]
+  },
+  "llm_cache_hits": 11,
+  "mode_counts": {
+    "M0": 11,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "done",
+    "scores": {
+      "URLEvaluator": 1.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "Harry Potter Enthusiasts Meetup on July 8th\n\nSubmitted by MarvelsGrantMan136 9 seconds ago in books\n\nJoin us for a virtual meetup to discuss all things Harry Potter! Date: July 8th. See you there!\n\nNo comments\nEdit\nDelete",
+        "ref": "Harry Potter, July 8th, virtual meetup",
+        "question": "Post a notice on a virtual meetup for Harry Potter enthusiasts on July 8th in the books subreddit",
+        "src": "html",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "The student's answer is **partially correct**.\n\nHere’s why:\n- The student correctly mentions \"Harry Potter\" and the date \"July 8th,\" which align with the key elements of the reference answer.\n- However, the student provides additional details such as a call-to-action (\"Join us...\") and a context (\"i",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 98.79860830307007,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('62')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1519,
+        "completion_tokens": 27
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('137', 'Harry Potter Enthusiasts Meetup on July 8th')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('137', 'Harry Potter Enthusiasts Meetup on July 8th')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "name:is": 1.0,
+            "name:required": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "typed_len": 0.215,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Title This field is required.",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1597,
+        "completion_tokens": 43
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1657,
+        "completion_tokens": 49
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'books')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('378', 'books')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4013,
+        "completion_tokens": 31
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4111,
+        "completion_tokens": 58
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1685,
+        "completion_tokens": 28
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'books')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('378', 'books')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4087,
+        "completion_tokens": 29
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('835')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('835')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:books": 1.0,
+            "ctx:choose": 0.5,
+            "ctx:one": 0.5,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "option",
+            "name": "books",
+            "context": "Choose one…",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4178,
+        "completion_tokens": 46
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('142')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('142')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=textbox": 1.0,
+            "name:body": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Body",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1673,
+        "completion_tokens": 33
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('142', 'Join us for a virtual meetup to discuss all things Harry Potter! Date: July 8th. See you there!')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('142', 'Join us for a virtual meetup to discuss all things Harry Potter! Date: July 8th. See you there!')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:body": 1.0,
+            "typed_len": 0.475,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Body",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1673,
+        "completion_tokens": 58
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('395')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.8,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('395')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 39,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.04
+      ],
+      "outcomes": [
+        "Upon clicking the \"Create submission\" button, the website will process the form data submitted, including the title \"Harry Potter Enthusiasts Meetup on July 8th\" and the body text about the virtual meetup. A new submission will be created under the \"books\" forum category, and the user will likely be"
+      ],
+      "m2_cands": [
+        "click('395')"
+      ],
+      "m2_choice": "click('395')",
+      "rho_choice": 0.8,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 5600,
+        "completion_tokens": 263
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"done\");",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"done\");",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "path:harry": 0.5,
+            "path:potter": 0.5,
+            "path:enthusiasts": 0.5,
+            "path:meetup": 0.5,
+            "path:on": 0.5,
+            "path:july": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/books/4/harry-potter-enthusiasts-meetup-on-july-8th",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2417,
+        "completion_tokens": 80
+      }
+    }
+  ],
+  "method": "confirm_rule",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "heuristic"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 23:45:42"
+}

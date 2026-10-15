@@ -1,0 +1,1135 @@
+{
+  "task_id": 509,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Buy the best rating product from \"Men's shoe\" category with at least 5 reviews and the product is least expensive",
+  "template": 216,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 25,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 5,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 24,
+  "prompt_tokens": 104576,
+  "completion_tokens": 1758,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      87039,
+      1722
+    ],
+    "progress": [
+      9,
+      17537,
+      36
+    ]
+  },
+  "llm_cache_hits": 4,
+  "mode_counts": {
+    "M0": 6,
+    "M1": 9,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 230.2195179462433,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('811', 'left')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0278373648040842,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('811', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:clothing": 1.0,
+            "name:shoes": 1.0,
+            "name:jewelry": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "menuitem",
+            "name": " Clothing, Shoes & Jewelry",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5778,
+        "completion_tokens": 87
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2070', 'left')",
+          2
+        ],
+        [
+          "click('1655', 'left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004522726742000476,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('2070', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:men": 1.0,
+            "name:item": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": "link",
+            "name": "Men( 7648 item )",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        },
+        {
+          "action": "click('1655', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004522726742000476,
+        0.11381262163157993
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7519,
+        "completion_tokens": 98
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2070', 'left')",
+          2
+        ],
+        [
+          "select_option('1655', 'Product Name')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004522726742000476,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('2070', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:men": 1.0,
+            "name:item": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": "link",
+            "name": "Men( 7648 item )",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        },
+        {
+          "action": "select_option('1655', 'Product Name')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004522726742000476,
+        0.08411248601260712
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7553,
+        "completion_tokens": 86
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2081', 'left')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004522726742000476,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('2081', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:men": 1.0,
+            "name:item": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?product_list_order=name",
+          "element": {
+            "role": "link",
+            "name": "Men( 7648 item )",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5695,
+        "completion_tokens": 90
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1655', 'Rating')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08411248601260712,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('1655', 'Rating')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5701,
+        "completion_tokens": 91
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1655', 'Rating')",
+          1
+        ],
+        [
+          "select_option('1655', 'Price')",
+          1
+        ],
+        [
+          "select_option('1655', 'Rating', wait_ms=1000)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.08411248601260712,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('1655', 'Rating')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.08411248601260712,
+        0.08411248601260712
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7932,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1655', 'Price')",
+          1
+        ],
+        [
+          "click('1703', 'left')",
+          1
+        ],
+        [
+          "select_option('1655', ['Price', 'Low to High'])",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.08411248601260712,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('1655', 'Price')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=price",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        },
+        {
+          "action": "click('1703', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=listitem": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": "listitem",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 496,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.08411248601260712,
+        0.03475989683294905
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7934,
+        "completion_tokens": 159
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.019058321780265747,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:md": 0.5,
+            "path:pack": 0.5,
+            "path:soft": 0.5,
+            "path:mens": 0.5,
+            "path:and": 0.5,
+            "path:womens": 0.5,
+            "path:bamboo": 0.5,
+            "path:crew": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/md-6-pack-soft-mens-and-womens-bamboo-crew-socks-smell-control-cushioned-dress-casual-socks.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5372,
+        "completion_tokens": 83
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1655', 'Rating')",
+          2
+        ],
+        [
+          "click('1665', 'left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.08411248601260712,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('1655', 'Rating')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.08411248601260712,
+        0.004843561788940992
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7650,
+        "completion_tokens": 122
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1655', 'Price')",
+          1
+        ],
+        [
+          "select_option('1655', 'Rating')",
+          1
+        ],
+        [
+          "click('1659', 'left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.08411248601260712,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('1655', 'Price')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=price",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        },
+        {
+          "action": "select_option('1655', 'Rating')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.08411248601260712,
+        0.08411248601260712
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7929,
+        "completion_tokens": 118
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1655', 'Rating')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08411248601260712,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('1655', 'Rating')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5979,
+        "completion_tokens": 146
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1655', 'Rating')",
+          2
+        ],
+        [
+          "click('1655', 'left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.08411248601260712,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('1655', 'Rating')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.08411248601260712,
+        0.11381262163157993
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7929,
+        "completion_tokens": 135
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1655', 'Product Name')",
+          1
+        ],
+        [
+          "select_option('1655', 'Price')",
+          1
+        ],
+        [
+          "select_option('1655', 'Rating')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.08411248601260712,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('1655', 'Product Name')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.08411248601260712,
+        0.08411248601260712
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7938,
+        "completion_tokens": 131
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1655', 'Rating')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08411248601260712,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('1655', 'Rating')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5707,
+        "completion_tokens": 103
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name&view=grid')",
+          1
+        ],
+        [
+          "click('1659')",
+          1
+        ],
+        [
+          "select_option('1655', 'Rating')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.024598086396192414,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name&view=grid')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name&view=grid",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        },
+        {
+          "action": "click('1659')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:set": 1.0,
+            "name:descending": 1.0,
+            "name:direction": 1.0,
+            "kw:set": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26&product_list_order=name",
+          "element": {
+            "role": "link",
+            "name": " Set Descending Direction",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 460,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.024598086396192414,
+        0.004319469905421907
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7960,
+        "completion_tokens": 145
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:55:34"
+}

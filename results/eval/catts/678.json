@@ -1,0 +1,383 @@
+{
+  "task_id": 678,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Lookup orders that are canceled",
+  "template": 253,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 7,
+  "prompt_tokens": 24139,
+  "completion_tokens": 697,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      21532,
+      667
+    ],
+    "arbiter": [
+      1,
+      2607,
+      30
+    ]
+  },
+  "llm_cache_hits": 2,
+  "mode_counts": {
+    "M0": 6,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 1,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "There are no canceled orders.",
+    "scores": {
+      "URLEvaluator": 1.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 28.39376211166382,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('156')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('156')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sales": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " SALES",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4252,
+        "completion_tokens": 95
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('168')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('168')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:orders": 1.0,
+            "ctx:sales": 0.5,
+            "ctx:orders": 0.5,
+            "ctx:invoices": 0.5,
+            "ctx:shipments": 0.5,
+            "ctx:credit": 0.5,
+            "ctx:memos": 0.5,
+            "ctx:billing": 0.5,
+            "ctx:agreements": 0.5,
+            "ctx:transactions": 0.5,
+            "ctx:braintree": 0.5,
+            "ctx:virtual": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Orders",
+            "context": " SALES Sales  Orders Invoices Shipments Credit Memos Billing Agreements Transactions Braintree Virtual Terminal",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 197,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4471,
+        "completion_tokens": 105
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('845')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('845')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:filters": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "button",
+            "name": "Filters",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2565,
+        "completion_tokens": 102
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('972')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('972')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:notice": 1.0,
+            "name:xmxdvmh": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "combobox",
+            "name": "notice-XMXDVMH",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3404,
+        "completion_tokens": 100
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('972', 'Canceled')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('972', 'Canceled')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:notice": 1.0,
+            "name:xmxdvmh": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "combobox",
+            "name": "notice-XMXDVMH",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3412,
+        "completion_tokens": 102
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"There are no canceled orders.\")",
+          2
+        ],
+        [
+          "click('1065')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"There are no canceled orders.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6035,
+        "completion_tokens": 193
+      }
+    }
+  ],
+  "method": "catts",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:36:57"
+}

@@ -1,0 +1,1144 @@
+{
+  "task_id": 534,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Follow ['Jakub Klinkovský', 'Koushik', 'Vinta Chen'] on Gitlab",
+  "template": 330,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 25,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 5,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 30,
+  "prompt_tokens": 54294,
+  "completion_tokens": 2916,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      37671,
+      2716
+    ],
+    "progress": [
+      11,
+      11018,
+      36
+    ],
+    "wm": [
+      2,
+      5181,
+      151
+    ],
+    "value": [
+      2,
+      424,
+      13
+    ]
+  },
+  "llm_cache_hits": 4,
+  "mode_counts": {
+    "M0": 3,
+    "M1": 11,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 193.6890823841095,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('127')",
+          2
+        ],
+        [
+          "fill('129', 'Jakub Klinkovský')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.8276099690000306,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('127')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=Section": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "Section",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        0.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '127' will likely trigger a search action on the GitLab dashboard, as this element contains a search box labeled 'Search GitLab'. This action will not create, modify, or delete any data on the website but will navigate to a results page displaying projects that match ",
+        "Filling in the field identified by '129' with the text 'Jakub Klinkovský' does not seem to correspond to an input field based on the provided accessibility tree. The element '129' is described as an image, which cannot accept input. Therefore, no action will occur, and there will be no change to the"
+      ],
+      "m2_cands": [
+        "click('127')",
+        "fill('129', 'Jakub Klinkovský')"
+      ],
+      "m2_choice": "click('127')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10858,
+        "completion_tokens": 307
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          1
+        ],
+        [
+          "fill('898', 'Jakub Klinkovský')",
+          1
+        ],
+        [
+          "click('264')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false
+        },
+        {
+          "action": "fill('898', 'Jakub Klinkovský')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.08,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.11082558015390714
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6890,
+        "completion_tokens": 137
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          1
+        ],
+        [
+          "fill('129', 'Jakub Klinkovský')",
+          1
+        ],
+        [
+          "click('127')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        },
+        {
+          "action": "fill('129', 'Jakub Klinkovský')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=image": 1.0,
+            "typed_len": 0.08,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "image",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.12415760744940721
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6757,
+        "completion_tokens": 125
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.040274651136156685,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5465,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          2
+        ],
+        [
+          "click('15')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040207547922405835,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040207547922405835,
+        0.07341666520959364
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1940,
+        "completion_tokens": 258
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('15', 'Jakub Klinkovský')",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.16340382042751686,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('15', 'Jakub Klinkovský')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:for": 1.0,
+            "name:projects": 1.0,
+            "name:issues": 1.0,
+            "name:etc": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "typed_len": 0.08,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": "searchbox",
+            "name": "Search for projects, issues, etc.",
+            "context": "Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.16340382042751686,
+        0.040207547922405835
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1971,
+        "completion_tokens": 210
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('16')",
+          2
+        ],
+        [
+          "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.4061153931521345,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('16')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 46,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:search": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/search?search=Jakub+Klinkovsk%C3%BD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.4061153931521345,
+        0.040207547922405835
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2621,
+        "completion_tokens": 162
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/')",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/u/Koushik')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.040207547922405835,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040207547922405835,
+        0.040207547922405835
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2748,
+        "completion_tokens": 189
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          2
+        ],
+        [
+          "goto('http://localhost:8023/')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040207547922405835,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040207547922405835,
+        0.040207547922405835
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1926,
+        "completion_tokens": 220
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          1
+        ],
+        [
+          "click('21')",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/u/Koushik')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.040207547922405835,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040207547922405835,
+        0.0077559869199493635
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1947,
+        "completion_tokens": 212
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          2
+        ],
+        [
+          "goto('http://localhost:8023/')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040207547922405835,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040207547922405835,
+        0.040207547922405835
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1965,
+        "completion_tokens": 288
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('15', 'Jakub Klinkovský')",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/u/Koushik')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.16340382042751686,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('15', 'Jakub Klinkovský')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:for": 1.0,
+            "name:projects": 1.0,
+            "name:issues": 1.0,
+            "name:etc": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "typed_len": 0.08,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": "searchbox",
+            "name": "Search for projects, issues, etc.",
+            "context": "Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.16340382042751686,
+        0.040207547922405835
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1978,
+        "completion_tokens": 261
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('16')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.4061153931521345,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('16')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 46,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1381,
+        "completion_tokens": 141
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          2
+        ],
+        [
+          "click('301')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.007851112440665175,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:milestones": 1.0,
+            "path:search": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/search?search=Jakub+Klinkovsk%C3%BD",
+          "element": {
+            "role": "link",
+            "name": "Milestones 0",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:search": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/search?scope=milestones&search=Jakub+Klinkovsk%C3%BD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        },
+        {
+          "action": "click('301')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:users": 1.0,
+            "path:search": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/search?search=Jakub+Klinkovsk%C3%BD",
+          "element": {
+            "role": "link",
+            "name": "Users 1",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 46,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007851112440665175,
+        0.007945746934014647
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3855,
+        "completion_tokens": 137
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('313')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.007945746934014647,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('313')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:jakub": 1.0,
+            "name:klinkovsk": 1.0,
+            "name:lahwaacz": 1.0,
+            "path:search": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/search?scope=users&search=Jakub+Klinkovsk%C3%BD",
+          "element": {
+            "role": "link",
+            "name": "Jakub Klinkovský @lahwaacz",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1992,
+        "completion_tokens": 105
+      }
+    }
+  ],
+  "method": "race_no_formcheck",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 03:33:45"
+}

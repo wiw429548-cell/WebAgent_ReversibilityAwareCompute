@@ -1,0 +1,604 @@
+{
+  "task_id": 631,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Ask for product recommendations for running shoes within a budget of $100 in r/sports",
+  "template": 15,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 10,
+  "n_env_actions": 10,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 18,
+  "prompt_tokens": 26033,
+  "completion_tokens": 1956,
+  "llm_by_tag": {
+    "policy": [
+      10,
+      20646,
+      1471
+    ],
+    "wm": [
+      3,
+      2271,
+      246
+    ],
+    "value": [
+      3,
+      646,
+      24
+    ],
+    "form": [
+      1,
+      800,
+      2
+    ],
+    "m2more": [
+      1,
+      1670,
+      213
+    ]
+  },
+  "llm_cache_hits": 18,
+  "mode_counts": {
+    "M0": 9,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 1.0,
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 78.83259057998657,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "focus('54')",
+          1
+        ],
+        [
+          "click('54')",
+          1
+        ],
+        [
+          "fill('54', 'r/sports')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.09422141208550523,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('54')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1518,
+        "completion_tokens": 168
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('54', 'r/sports')",
+          2
+        ],
+        [
+          "click('42')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.18779937581983822,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('54', 'r/sports')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "typed_len": 0.04,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1524,
+        "completion_tokens": 115
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('57')",
+          2
+        ],
+        [
+          "click('54')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.007728815081755151,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('57')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:notifications": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Notifications (0)",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1551,
+        "completion_tokens": 121
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          2
+        ],
+        [
+          "click('56')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.01910305642060867,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:notifications": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/notifications",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1392,
+        "completion_tokens": 142
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('62')",
+          2
+        ],
+        [
+          "click('57')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.005067546045833567,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1546,
+        "completion_tokens": 184
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('137', 'Product Recommendations: Running Shoes under $100')",
+          1
+        ],
+        [
+          "fill('137', 'Recommendations for running shoes under $100')",
+          1
+        ],
+        [
+          "fill('137', 'Product Recommendations for Running Shoes under $100')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.019890478843838984,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('137', 'Product Recommendations: Running Shoes under $100')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "name:is": 1.0,
+            "name:required": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "typed_len": 0.245,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Title This field is required.",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1627,
+        "completion_tokens": 227
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          2
+        ],
+        [
+          "click('395')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.07010907429540121,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1678,
+        "completion_tokens": 156
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'sports')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.05115532088842839,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('378', 'sports')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4027,
+        "completion_tokens": 91
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('731')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.04792025499329894,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('731')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:sports": 1.0,
+            "ctx:choose": 0.5,
+            "ctx:one": 0.5,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "option",
+            "name": "sports",
+            "context": "Choose one…",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4113,
+        "completion_tokens": 146
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('395')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.9825400828844786,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('395')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 39,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.03,
+        8.01,
+        2.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Create submission\" button, the website will process the form data including the title \"Product Recommendations: Running Shoes under $100\", the body text, and the selected forum category \"sports\". If the submission meets all validation criteria, a new submission will be created wit",
+        "The agent will fill in the \"Body\" textbox with the text \"Can anyone recommend some good running shoes under $100?\". No immediate page change is expected; the user remains on the submission creation page. The action itself does not create, modify, or delete any data on the website until the \"Create s",
+        "Executing `go_back()` will navigate the user to the previous page in the browser's history, without creating, modifying, or deleting any data on the website. The current submission form data entered on the \"Create submission\" page will remain in the browser but will not be saved to the website's dat"
+      ],
+      "m2_cands": [
+        "click('395')",
+        "fill('142', 'Can anyone recommend some good running shoes under $100?')",
+        "go_back()"
+      ],
+      "m2_choice": "click('395')",
+      "rho_choice": 0.9825400828844786,
+      "llm": {
+        "calls": 9,
+        "prompt_tokens": 7057,
+        "completion_tokens": 606
+      }
+    }
+  ],
+  "method": "race_no_m1",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 03:02:09"
+}

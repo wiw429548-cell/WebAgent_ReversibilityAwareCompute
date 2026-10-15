@@ -1,0 +1,555 @@
+{
+  "task_id": 809,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Create an issue in a11yproject repo with title \"404 for many URLs\". Assign the issue to myself. Set due date to be 2030-1-3",
+  "template": 327,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 9,
+  "n_env_actions": 9,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 9,
+  "prompt_tokens": 40788,
+  "completion_tokens": 1029,
+  "llm_by_tag": {
+    "policy": [
+      9,
+      40788,
+      1029
+    ]
+  },
+  "llm_cache_hits": 8,
+  "mode_counts": {
+    "M0": 9,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 1.0,
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 31.068814516067505,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('394')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('394')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:the": 1.0,
+            "name:a": 1.0,
+            "name:y": 1.0,
+            "name:project": 1.0,
+            "name:yproject": 1.0,
+            "name:com": 1.0,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:project": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "The A11Y Project / a11yproject.com",
+            "context": "The A11Y Project / a11yproject.com",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 43,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7467116431440672,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5721,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('330')",
+          2
+        ],
+        [
+          "click('328')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('330')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=image": 1.0,
+            "ctx:issues": 0.5,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "image",
+            "name": "",
+            "context": "Issues Project navigation",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.483800519529904,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5950,
+        "completion_tokens": 84
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('638')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('638')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:new": 1.0,
+            "name:issue": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+          "element": {
+            "role": "link",
+            "name": "New issue",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 31,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.721075571044473,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5482,
+        "completion_tokens": 82
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('605', '404 for many URLs')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('605', '404 for many URLs')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:required": 1.0,
+            "typed_len": 0.085,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues/new",
+          "element": {
+            "role": "textbox",
+            "name": "Title (required)",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.3307863567673621,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3278,
+        "completion_tokens": 95
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('755')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('755')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:assign": 1.0,
+            "name:to": 1.0,
+            "name:me": 1.0,
+            "kw:assign": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues/new",
+          "element": {
+            "role": "link",
+            "name": "Assign to me",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8640721236606197,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3541,
+        "completion_tokens": 66
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('739')",
+          2
+        ],
+        [
+          "fill('849', '2030-1-3')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('739')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues/new",
+          "element": {
+            "role": "button",
+            "name": "Byte Blaze",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 5,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.15406368893577138,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3534,
+        "completion_tokens": 146
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('849', '2030-1-3')",
+          1
+        ],
+        [
+          "click('739')",
+          1
+        ],
+        [
+          "click('849')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('849', '2030-1-3')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:select": 1.0,
+            "name:due": 1.0,
+            "name:date": 1.0,
+            "typed_len": 0.04,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues/new",
+          "element": {
+            "role": "textbox",
+            "name": "Select due date",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8642678866659956,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3891,
+        "completion_tokens": 131
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('739')",
+          2
+        ],
+        [
+          "click('1117')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('739')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues/new",
+          "element": {
+            "role": "button",
+            "name": "Byte Blaze",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.3043045916277265,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5800,
+        "completion_tokens": 140
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('853')",
+          2
+        ],
+        [
+          "click('739')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('853')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:issue": 1.0,
+            "kw:create": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues/new",
+          "element": {
+            "role": "button",
+            "name": "Create issue",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 59,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8015975018245278,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3591,
+        "completion_tokens": 121
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:45:23"
+}

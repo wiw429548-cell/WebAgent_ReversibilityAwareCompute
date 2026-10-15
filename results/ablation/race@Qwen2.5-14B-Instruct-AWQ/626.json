@@ -1,0 +1,1292 @@
+{
+  "task_id": 626,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Create a discussion post about \"Iphone 14\" in a relevant subreddit and ask users for their opinions with the simple prompt, \"your opinion\"",
+  "template": 13,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 33,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 9,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 28,
+  "prompt_tokens": 25718,
+  "completion_tokens": 2045,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      17664,
+      1993
+    ],
+    "progress": [
+      13,
+      8054,
+      52
+    ]
+  },
+  "llm_cache_hits": 7,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 13,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 0.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 275.8522675037384,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('62')",
+          2
+        ],
+        [
+          "goto('http://localhost:9999/submission/new')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.005067546045833567,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:9999/submission/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.005067546045833567,
+        0.040274651136156685
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2833,
+        "completion_tokens": 82
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('12')",
+          2
+        ],
+        [
+          "goto('http://localhost:9999/submission/new')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.009093085199397718,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('12')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:go": 1.0,
+            "name:to": 1.0,
+            "name:home": 1.0,
+            "name:page": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "path:submission": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submission/new",
+          "element": {
+            "role": "link",
+            "name": "Go to home page",
+            "context": "404 Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:9999/submission/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:submission": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submission/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.009093085199397718,
+        0.058534030436836026
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1836,
+        "completion_tokens": 146
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('12')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.009093085199397718,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('12')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:go": 1.0,
+            "name:to": 1.0,
+            "name:home": 1.0,
+            "name:page": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "path:submission": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submission/new",
+          "element": {
+            "role": "link",
+            "name": "Go to home page",
+            "context": "404 Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1116,
+        "completion_tokens": 118
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('62')",
+          2
+        ],
+        [
+          "goto('http://localhost:9999/submission/new')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.005067546045833567,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:9999/submission/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.005067546045833567,
+        0.040274651136156685
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2896,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/submission/new')",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/r/apple')",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/subreddit/apple')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.058534030436836026,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/submission/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:submission": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submission/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.058534030436836026,
+        0.058534030436836026
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1398,
+        "completion_tokens": 175
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('12')",
+          2
+        ],
+        [
+          "goto('http://localhost:9999/submission/new')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.009093085199397718,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('12')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:go": 1.0,
+            "name:to": 1.0,
+            "name:home": 1.0,
+            "name:page": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "path:submission": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submission/new",
+          "element": {
+            "role": "link",
+            "name": "Go to home page",
+            "context": "404 Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:9999/submission/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:submission": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submission/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.009093085199397718,
+        0.058534030436836026
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1875,
+        "completion_tokens": 129
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('12')",
+          2
+        ],
+        [
+          "goto('http://localhost:9999/r/apple/new')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.009093085199397718,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('12')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:go": 1.0,
+            "name:to": 1.0,
+            "name:home": 1.0,
+            "name:page": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "path:submission": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submission/new",
+          "element": {
+            "role": "link",
+            "name": "Go to home page",
+            "context": "404 Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:9999/r/apple/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:submission": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submission/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.009093085199397718,
+        0.058534030436836026
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1878,
+        "completion_tokens": 119
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/r/apple/new')",
+          2
+        ],
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.058534030436836026,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/r/apple/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:r": 0.5,
+            "path:apple": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/r/apple/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.058534030436836026,
+        0.02811183014772916
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1398,
+        "completion_tokens": 132
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/r/apple/new')",
+          2
+        ],
+        [
+          "goto('http://localhost:9999/r/apple')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.058534030436836026,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/r/apple/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:r": 0.5,
+            "path:apple": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/r/apple/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.058534030436836026,
+        0.058534030436836026
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1407,
+        "completion_tokens": 159
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/submission/new')",
+          1
+        ],
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/r/apple/new')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.058534030436836026,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/submission/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:r": 0.5,
+            "path:apple": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/r/apple/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:submission": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submission/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        },
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:r": 0.5,
+            "path:apple": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/r/apple/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.058534030436836026,
+        0.02811183014772916
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1413,
+        "completion_tokens": 162
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/r/apple/new')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.058534030436836026,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/r/apple/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:submission": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submission/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1129,
+        "completion_tokens": 157
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/r/apple/new')",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/submission/new')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02811183014772916,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:r": 0.5,
+            "path:apple": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/r/apple/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:submission": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submission/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:9999/r/apple/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02811183014772916,
+        0.058534030436836026
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1400,
+        "completion_tokens": 123
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('12')",
+          2
+        ],
+        [
+          "goto('http://localhost:9999/r/apple/new')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.009093085199397718,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('12')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:go": 1.0,
+            "name:to": 1.0,
+            "name:home": 1.0,
+            "name:page": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "path:r": 0.5,
+            "path:apple": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/r/apple/new",
+          "element": {
+            "role": "link",
+            "name": "Go to home page",
+            "context": "404 Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:9999/r/apple/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:r": 0.5,
+            "path:apple": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/r/apple/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.009093085199397718,
+        0.058534030436836026
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1865,
+        "completion_tokens": 147
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/r/apple/new')",
+          2
+        ],
+        [
+          "click('12')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.058534030436836026,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/r/apple/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:r": 0.5,
+            "path:apple": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/r/apple/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.058534030436836026,
+        0.009093085199397718
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1396,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('12')",
+          2
+        ],
+        [
+          "goto('http://localhost:9999/r/apple/new')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.009093085199397718,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('12')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:go": 1.0,
+            "name:to": 1.0,
+            "name:home": 1.0,
+            "name:page": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "path:r": 0.5,
+            "path:apple": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/r/apple/new",
+          "element": {
+            "role": "link",
+            "name": "Go to home page",
+            "context": "404 Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:9999/r/apple/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:r": 0.5,
+            "path:apple": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/r/apple/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.009093085199397718,
+        0.058534030436836026
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1878,
+        "completion_tokens": 137
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:49:19"
+}

@@ -1,0 +1,487 @@
+{
+  "task_id": 623,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Ask for advice about gift for birthday in a subreddit for relations",
+  "template": 12,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 8,
+  "n_env_actions": 8,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 11,
+  "prompt_tokens": 34056,
+  "completion_tokens": 1180,
+  "llm_by_tag": {
+    "policy": [
+      8,
+      28669,
+      1168
+    ],
+    "progress": [
+      3,
+      5387,
+      12
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 5,
+    "M1": 3,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 1.0,
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 122.16513061523438,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('42')",
+          2
+        ],
+        [
+          "click('62')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('42')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3118,
+        "completion_tokens": 178
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('164')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('164')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:relationship": 1.0,
+            "name:advice": 1.0,
+            "ctx:relationship": 0.5,
+            "ctx:advice": 0.5,
+            "kw:ship": 1.0,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "relationship_advice — relationship_advice",
+            "context": "relationship_advice — relationship_advice",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4444,
+        "completion_tokens": 176
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('65')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('65')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:relationship": 0.5,
+            "ctx:advice": 0.5,
+            "kw:submit": 1.0,
+            "path:f": 0.5,
+            "path:relationship": 0.5,
+            "path:advice": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/relationship_advice",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "relationship_advice",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5645,
+        "completion_tokens": 118
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('379', 'relationship_advice')",
+          1
+        ],
+        [
+          "fill('138', 'Advice on birthday gift for relation')",
+          1
+        ],
+        [
+          "fill('138', 'Advice on a birthday gift for a relative')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('379', 'relationship_advice')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:relationship": 1.0,
+            "name:advice": 1.0,
+            "kw:ship": 1.0,
+            "path:submit": 0.5,
+            "path:relationship": 0.5,
+            "path:advice": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit/relationship_advice",
+          "element": {
+            "role": "combobox",
+            "name": "relationship_advice",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3902,
+        "completion_tokens": 178
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('379')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('379')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:relationship": 1.0,
+            "name:advice": 1.0,
+            "kw:ship": 1.0,
+            "path:submit": 0.5,
+            "path:relationship": 0.5,
+            "path:advice": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit/relationship_advice",
+          "element": {
+            "role": "combobox",
+            "name": "relationship_advice",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2034,
+        "completion_tokens": 143
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('138', 'Advice needed: Gift for birthday')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('138', 'Advice needed: Gift for birthday')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "name:is": 1.0,
+            "name:required": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "typed_len": 0.16,
+            "path:submit": 0.5,
+            "path:relationship": 0.5,
+            "path:advice": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit/relationship_advice",
+          "element": {
+            "role": "textbox",
+            "name": "Title This field is required.",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4306,
+        "completion_tokens": 126
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('143', 'I need advice on what to get as a gift for someone\\'s birthday. Any suggestions?', True)",
+          1
+        ],
+        [
+          "fill('143', 'I need some advice on what to get for someone\\'s birthday. Any suggestions?', False)",
+          1
+        ],
+        [
+          "fill('143', 'I need some advice on what kind of gift I should get for a relative’s birthday. Any suggestions?')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('143', 'I need advice on what to get as a gift for someone\\'s birthday. Any suggestions?', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:body": 1.0,
+            "typed_len": 0.4,
+            "path:submit": 0.5,
+            "path:relationship": 0.5,
+            "path:advice": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit/relationship_advice",
+          "element": {
+            "role": "textbox",
+            "name": "Body",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6155,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('396')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('396')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "path:relationship": 0.5,
+            "path:advice": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit/relationship_advice",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 39,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4452,
+        "completion_tokens": 97
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "collect",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 17:00:51"
+}

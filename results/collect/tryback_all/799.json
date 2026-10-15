@@ -1,0 +1,229 @@
+{
+  "task_id": 799,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "create a new group \"n-lab\" with members patou, egpast, westurner, jontutcher",
+  "template": 600,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 3,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 3,
+  "prompt_tokens": 12136,
+  "completion_tokens": 476,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      12136,
+      476
+    ]
+  },
+  "llm_cache_hits": 1,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 1,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 33.72783899307251,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('141')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('141')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:create": 1.0,
+            "name:new": 1.0,
+            "kw:create": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "Create new...",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5241,
+        "completion_tokens": 96
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('149')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('149')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:new": 1.0,
+            "name:group": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "New group",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5354,
+        "completion_tokens": 97
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The current page does not provide the necessary fields or options to create a group or add members.\")",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/groups')",
+          1
+        ],
+        [
+          "report_infeasible(\"The current page does not contain the necessary elements to create a group or add members.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The current page does not provide the necessary fields or options to create a group or add members.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:groups": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/groups/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1541,
+        "completion_tokens": 283
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "collect",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 17:53:27"
+}

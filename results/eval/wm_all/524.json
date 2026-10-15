@@ -1,0 +1,1031 @@
+{
+  "task_id": 524,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Star the top eight most stared repos in Gitlab",
+  "template": 354,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 86,
+  "prompt_tokens": 196810,
+  "completion_tokens": 6274,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      78992,
+      3183
+    ],
+    "wm": [
+      33,
+      85669,
+      2219
+    ],
+    "value": [
+      33,
+      6355,
+      264
+    ],
+    "m2more": [
+      5,
+      25794,
+      608
+    ]
+  },
+  "llm_cache_hits": 48,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 15
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 160.41017842292786,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('261')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('261')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:starred": 1.0,
+            "kw:star": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "Starred 3",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 35,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.08
+      ],
+      "outcomes": [
+        "After executing the command `click('261')`, the user will be directed to a page displaying the projects the user has starred. No data on the website will be created, modified, or deleted; this action simply navigates to a different section of the dashboard to view starred projects."
+      ],
+      "m2_cands": [
+        "click('261')"
+      ],
+      "m2_choice": "click('261')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 13698,
+        "completion_tokens": 346
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('259')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('261')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=listitem": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "path:starred": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects/starred",
+          "element": {
+            "role": "listitem",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.07,
+        4.01
+      ],
+      "outcomes": [
+        "Clicking on the \"Starred 3\" link will navigate to a page that displays a list of the user's starred projects. No data will be created, modified, or deleted; the action simply changes the view to show the user's starred projects.",
+        "Clicking on the \"Explore\" link (element [261]) will navigate to the Explore page of the projects section, likely displaying a broader list of available projects beyond just the starred ones. No data will be created, modified, or deleted with this action; it is purely navigational."
+      ],
+      "m2_cands": [
+        "click('259')",
+        "click('261')"
+      ],
+      "m2_choice": "click('261')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 8150,
+        "completion_tokens": 408
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('290')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('290')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:most": 1.0,
+            "name:stars": 1.0,
+            "kw:star": 1.0,
+            "path:explore": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/explore",
+          "element": {
+            "role": "link",
+            "name": "Most stars",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.08
+      ],
+      "outcomes": [
+        "After executing the command `click('290')`, the page will reload and display a list of projects sorted by \"Most stars\". No data on the website will be created, modified, or deleted; this action only changes the sorting criteria of the displayed projects."
+      ],
+      "m2_cands": [
+        "click('290')"
+      ],
+      "m2_choice": "click('290')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 14881,
+        "completion_tokens": 401
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('308')",
+          4
+        ],
+        [
+          "click('366')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('308')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:most": 1.0,
+            "name:stars": 1.0,
+            "kw:star": 1.0,
+            "path:explore": 0.5,
+            "path:projects": 0.5,
+            "path:starred": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/explore/projects/starred",
+          "element": {
+            "role": "link",
+            "name": "Most stars",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.04,
+        7.01
+      ],
+      "outcomes": [
+        "After clicking on the 'Most stars' link (ID 308), the page will refresh and display a list of projects sorted by the number of stars they have received, showing the most popular ones at the top. No data will be created, modified, or deleted on the website as a result of this action; it merely change",
+        "Clicking on the element with ID '366' will likely sort the projects list by the number of stars, as it seems to represent a clickable star count. This action will refresh the current page with the projects sorted in descending order based on their star counts, without creating, modifying, or deletin"
+      ],
+      "m2_cands": [
+        "click('308')",
+        "click('366')"
+      ],
+      "m2_choice": "click('308')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 11653,
+        "completion_tokens": 394
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('366')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('366')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "path:explore": 0.5,
+            "path:projects": 0.5,
+            "path:starred": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/explore/projects/starred",
+          "element": {
+            "role": "link",
+            "name": "55",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.07,
+        2.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '366' will likely sort the projects list by the number of stars, as it seems to represent a clickable star count. This action will refresh the current page with the projects sorted in descending order based on their star counts, without creating, modifying, or deletin",
+        "Clicking on the link with the identifier '347' will navigate to the detailed page of the project \"Umano: News Read To You / AndroidSlidingUpPanel\". This action will not create, modify, or delete any data on the website; it will simply display more information about the selected project."
+      ],
+      "m2_cands": [
+        "click('366')",
+        "click('347')"
+      ],
+      "m2_choice": "click('366')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 17474,
+        "completion_tokens": 579
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          4
+        ],
+        [
+          "click('281')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:umano": 0.5,
+            "path:androidslidinguppanel": 0.5,
+            "path:starrers": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/umano/AndroidSlidingUpPanel/-/starrers",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.04,
+        2.01
+      ],
+      "outcomes": [
+        "After executing `go_back()`, the previous page in the browser history will be displayed. No data on the website will be created, modified, or deleted; the action simply navigates back through the browser's history.",
+        "After clicking on the 'Repository' link (ID 281), the page will navigate to the repository section of the 'AndroidSlidingUpPanel' project. This action will not create, modify, or delete any data; it will simply display the files, branches, and other repository-related details for the specified proje"
+      ],
+      "m2_cands": [
+        "go_back()",
+        "click('281')"
+      ],
+      "m2_choice": "go_back()",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9944,
+        "completion_tokens": 348
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('366')",
+          3
+        ],
+        [
+          "click('367')",
+          1
+        ],
+        [
+          "hover('346')",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('366')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "path:explore": 0.5,
+            "path:projects": 0.5,
+            "path:starred": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/explore/projects/starred",
+          "element": {
+            "role": "link",
+            "name": "55",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.03,
+        7.01,
+        2.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '366' will likely sort the projects list by the number of stars, as it seems to represent a clickable star count. This action will refresh the current page with the projects sorted in descending order based on their star counts, without creating, modifying, or deletin",
+        "Clicking on element '367' will likely sort the projects list by the number of stars, as it is associated with an image within a link labeled '55', which appears to represent star counts. This action will refresh the current page with the projects sorted in descending order based on their star counts",
+        "Hovering over the element with ID '346' will likely display additional information or a tooltip about the project \"Umano: News Read To You / AndroidSlidingUpPanel\". No data on the website will be created, modified, or deleted as a result of this action; it is purely an interactive feature for user c"
+      ],
+      "m2_cands": [
+        "click('366')",
+        "click('367')",
+        "hover('346')"
+      ],
+      "m2_choice": "click('366')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 14354,
+        "completion_tokens": 496
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          3
+        ],
+        [
+          "click('281')",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/explore')",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/explore')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:umano": 0.5,
+            "path:androidslidinguppanel": 0.5,
+            "path:starrers": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/umano/AndroidSlidingUpPanel/-/starrers",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.03,
+        2.01,
+        7.01
+      ],
+      "outcomes": [
+        "After executing `go_back()`, the previous page in the browser history will be displayed. No data on the website will be created, modified, or deleted; the action simply navigates back through the browser's history.",
+        "After clicking on the 'Repository' link (ID 281), the page will navigate to the repository section of the 'AndroidSlidingUpPanel' project. This action will not create, modify, or delete any data; it will simply display the files, branches, and other repository-related details for the specified proje",
+        "Navigating to `http://localhost:8023/explore` will display the explore page of the GitLab instance, likely showing a list of projects, repositories, or recent activities available for exploration. No data on the website will be created, modified, or deleted as this action only involves navigating to"
+      ],
+      "m2_cands": [
+        "go_back()",
+        "click('281')",
+        "goto('http://localhost:8023/explore')"
+      ],
+      "m2_choice": "goto('http://localhost:8023/explore')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13054,
+        "completion_tokens": 441
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('328')",
+          1
+        ],
+        [
+          "click('290')",
+          1
+        ],
+        [
+          "click('323')",
+          1
+        ],
+        [
+          "click('346')",
+          1
+        ],
+        [
+          "click('347')",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('290')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:most": 1.0,
+            "name:stars": 1.0,
+            "kw:star": 1.0,
+            "path:explore": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/explore",
+          "element": {
+            "role": "link",
+            "name": "Most stars",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.01,
+        7.01,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the link 'yjlou / 2019-nCov' (ID 328) will navigate to the project details page for 'yjlou / 2019-nCov'. This action will not create, modify, or delete any data on the website; it will simply display more detailed information about the selected project.",
+        "After executing the command `click('290')`, the page will reload and display a list of projects sorted by \"Most stars\". No data on the website will be created, modified, or deleted; this action only changes the sorting criteria of the displayed projects.",
+        "Clicking on the element with ID '323' will navigate to the project details page for \"yjlou / 2019-nCov\". This action will not create, modify, or delete any data on the website; it will simply display more detailed information about the selected project."
+      ],
+      "m2_cands": [
+        "click('328')",
+        "click('290')",
+        "click('323')"
+      ],
+      "m2_choice": "click('290')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 14351,
+        "completion_tokens": 422
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('366')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('308')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:most": 1.0,
+            "name:stars": 1.0,
+            "kw:star": 1.0,
+            "path:explore": 0.5,
+            "path:projects": 0.5,
+            "path:starred": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/explore/projects/starred",
+          "element": {
+            "role": "link",
+            "name": "Most stars",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.07,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '366' will likely sort the projects list by the number of stars, as it seems to represent a clickable star count. This action will refresh the current page with the projects sorted in descending order based on their star counts, without creating, modifying, or deletin",
+        "After clicking on the 'Most stars' link (ID 308), the page will refresh and display a list of projects sorted by the number of stars they have received, showing the most popular ones at the top. No data will be created, modified, or deleted on the website as a result of this action; it merely change"
+      ],
+      "m2_cands": [
+        "click('366')",
+        "click('308')"
+      ],
+      "m2_choice": "click('308')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 17525,
+        "completion_tokens": 490
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('366')",
+          3
+        ],
+        [
+          "click('366') # Clicking on the first star count to identify the star icon for the repository.",
+          1
+        ],
+        [
+          "click('308')",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('308')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:most": 1.0,
+            "name:stars": 1.0,
+            "kw:star": 1.0,
+            "path:explore": 0.5,
+            "path:projects": 0.5,
+            "path:starred": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/explore/projects/starred",
+          "element": {
+            "role": "link",
+            "name": "Most stars",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.03,
+        2.01,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '366' will likely sort the projects list by the number of stars, as it seems to represent a clickable star count. This action will refresh the current page with the projects sorted in descending order based on their star counts, without creating, modifying, or deletin",
+        "Clicking on the star count (element '366') for the repository \"Umano: News Read To You / AndroidSlidingUpPanel\" will likely toggle the star status of the project. If the project is currently starred, it will be unstarred, and vice versa. This action will modify the star status of the project on the ",
+        "After clicking on the 'Most stars' link (ID 308), the page will refresh and display a list of projects sorted by the number of stars they have received, showing the most popular ones at the top. No data will be created, modified, or deleted on the website as a result of this action; it merely change"
+      ],
+      "m2_cands": [
+        "click('366')",
+        "click('366') # Clicking on the first star count to identify the star icon for the repository.",
+        "click('308')"
+      ],
+      "m2_choice": "click('308')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 14431,
+        "completion_tokens": 500
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('366')",
+          4
+        ],
+        [
+          "click('347')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('366')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "path:explore": 0.5,
+            "path:projects": 0.5,
+            "path:starred": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/explore/projects/starred",
+          "element": {
+            "role": "link",
+            "name": "55",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.04,
+        2.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '366' will likely sort the projects list by the number of stars, as it seems to represent a clickable star count. This action will refresh the current page with the projects sorted in descending order based on their star counts, without creating, modifying, or deletin",
+        "Clicking on the link with the identifier '347' will navigate to the detailed page of the project \"Umano: News Read To You / AndroidSlidingUpPanel\". This action will not create, modify, or delete any data on the website; it will simply display more information about the selected project."
+      ],
+      "m2_cands": [
+        "click('366')",
+        "click('347')"
+      ],
+      "m2_choice": "click('366')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 11552,
+        "completion_tokens": 330
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          4
+        ],
+        [
+          "goto('http://localhost:8023/explore')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/explore')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:umano": 0.5,
+            "path:androidslidinguppanel": 0.5,
+            "path:starrers": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/umano/AndroidSlidingUpPanel/-/starrers",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.04,
+        7.01
+      ],
+      "outcomes": [
+        "After executing `go_back()`, the previous page in the browser history will be displayed. No data on the website will be created, modified, or deleted; the action simply navigates back through the browser's history.",
+        "Navigating to `http://localhost:8023/explore` will display the explore page of the GitLab instance, likely showing a list of projects, repositories, or recent activities available for exploration. No data on the website will be created, modified, or deleted as this action only involves navigating to"
+      ],
+      "m2_cands": [
+        "go_back()",
+        "goto('http://localhost:8023/explore')"
+      ],
+      "m2_choice": "goto('http://localhost:8023/explore')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9974,
+        "completion_tokens": 373
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('323')",
+          1
+        ],
+        [
+          "click('352')",
+          1
+        ],
+        [
+          "click('328')",
+          1
+        ],
+        [
+          "click('346')",
+          1
+        ],
+        [
+          "click('290')",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('328')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=heading": 1.0,
+            "name:yjlou": 1.0,
+            "name:ncov": 1.0,
+            "path:explore": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/explore",
+          "element": {
+            "role": "heading",
+            "name": "yjlou / 2019-nCov",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 60,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.01,
+        2.01,
+        5.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '323' will navigate to the project details page for \"yjlou / 2019-nCov\". This action will not create, modify, or delete any data on the website; it will simply display more detailed information about the selected project.",
+        "Clicking on the element identified by '352' will likely navigate to the page detailing the \"Watchers\" count for the repository 'yjlou / 2019-nCov'. This action will not create, modify, or delete any data on the website; it will simply display additional information related to the watchers of the spe",
+        "Clicking on the link 'yjlou / 2019-nCov' (ID 328) will navigate to the project details page for 'yjlou / 2019-nCov'. This action will not create, modify, or delete any data on the website; it will simply display more detailed information about the selected project."
+      ],
+      "m2_cands": [
+        "click('323')",
+        "click('352')",
+        "click('328')"
+      ],
+      "m2_choice": "click('328')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 14380,
+        "completion_tokens": 388
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          4
+        ],
+        [
+          "goto('http://localhost:8023/explore')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/explore')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:yjlou": 0.5,
+            "path:ncov": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/yjlou/2019-nCov",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.04,
+        7.01
+      ],
+      "outcomes": [
+        "Executing `go_back()` will navigate the user to the previous page in the browser's history, meaning the current page at URL `http://localhost:8023/yjlou/2019-nCov` will no longer be displayed. No data on the website will be created, modified, or deleted as a result of this action; it simply changes ",
+        "Navigating to `http://localhost:8023/explore` will display the explore page of the GitLab instance, likely showing a list of projects, groups, or trending activities available within the platform. No data on the website will be created, modified, or deleted as this action only involves navigating to"
+      ],
+      "m2_cands": [
+        "go_back()",
+        "goto('http://localhost:8023/explore')"
+      ],
+      "m2_choice": "goto('http://localhost:8023/explore')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 11389,
+        "completion_tokens": 358
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 21:13:43"
+}

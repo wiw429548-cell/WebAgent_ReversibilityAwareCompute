@@ -1,0 +1,424 @@
+{
+  "task_id": 637,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Post in the most appropriate subreddit and ask for recommendations for sony headphones products within a budget of $500",
+  "template": 6100,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 7,
+  "n_env_actions": 7,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 10,
+  "prompt_tokens": 21243,
+  "completion_tokens": 997,
+  "llm_by_tag": {
+    "policy": [
+      7,
+      16390,
+      985
+    ],
+    "progress": [
+      3,
+      4853,
+      12
+    ]
+  },
+  "llm_cache_hits": 10,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 3,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 1.0,
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 59.344260931015015,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('62')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1522,
+        "completion_tokens": 169
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          2
+        ],
+        [
+          "click('378', button='left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3214,
+        "completion_tokens": 158
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'headphones')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('378', 'headphones')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3958,
+        "completion_tokens": 117
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('546')",
+          2
+        ],
+        [
+          "click('542')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('546')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:headphones": 1.0,
+            "ctx:choose": 0.5,
+            "ctx:one": 0.5,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "option",
+            "name": "headphones",
+            "context": "Choose one…",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5668,
+        "completion_tokens": 112
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('137', 'Recommendations for Sony Headphones under $500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('137', 'Recommendations for Sony Headphones under $500')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "name:is": 1.0,
+            "name:required": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "typed_len": 0.23,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Title This field is required.",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1626,
+        "completion_tokens": 111
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('142', 'Hi everyone,\\n\\nI am looking for recommendations for Sony headphones within a budget of $500. Could you please suggest some models that are highly rated and fit within this price range?\\n\\nThank you!')",
+          1
+        ],
+        [
+          "fill('142', 'Looking for recommendations on Sony headphones within a $500 budget. Any suggestions appreciated!')",
+          1
+        ],
+        [
+          "click('395')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('142', 'Hi everyone,\\n\\nI am looking for recommendations for Sony headphones within a budget of $500. Could you please suggest some models that are highly rated and fit within this price range?\\n\\nThank you!')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:body": 1.0,
+            "typed_len": 0.995,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Body",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3306,
+        "completion_tokens": 204
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('395')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('395')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 39,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1949,
+        "completion_tokens": 126
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "collect",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 17:09:44"
+}

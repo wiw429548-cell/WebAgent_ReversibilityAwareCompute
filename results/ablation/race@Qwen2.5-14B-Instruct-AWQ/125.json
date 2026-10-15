@@ -1,0 +1,326 @@
+{
+  "task_id": 125,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "What is the price range of teeth grinding mouth guard in the One Stop Market?",
+  "template": 159,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 5,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 11,
+  "prompt_tokens": 30311,
+  "completion_tokens": 709,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      17119,
+      333
+    ],
+    "progress": [
+      1,
+      1909,
+      4
+    ],
+    "wm": [
+      3,
+      7310,
+      268
+    ],
+    "value": [
+      3,
+      651,
+      24
+    ],
+    "form": [
+      1,
+      3322,
+      80
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 1,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "The price range of teeth grinding mouth guards in the One Stop Market is $7.99 to $49.99.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 27.496689319610596,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('386', 'teeth grinding mouth guard')",
+          1
+        ],
+        [
+          "click('386', 'left')",
+          1
+        ],
+        [
+          "click('596', button='left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.6690041604870651,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('386', 'teeth grinding mouth guard')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.13,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.01,
+        0.01,
+        2.01
+      ],
+      "outcomes": [
+        "When the agent executes `fill('386', 'teeth grinding mouth guard')`, it will input \"teeth grinding mouth guard\" into the search combobox identified by `[386]`. This action will not create, modify, or delete any data on the website but will trigger a search for products related to \"teeth grinding mou",
+        "When the agent clicks on the element with ID '386', which is the autocomplete search box, it will likely expand to show a dropdown list of suggested search terms or previously searched items. No data will be created, modified, or deleted as a result of this action; the interaction is primarily for u",
+        "Clicking the element at position '596' with the left mouse button will likely trigger an action such as adding a product to the cart or navigating to another section of the website. Without more specific information about the element at position '596', it's not possible to determine exactly which pa"
+      ],
+      "m2_cands": [
+        "fill('386', 'teeth grinding mouth guard')",
+        "click('386', 'left')",
+        "click('596', button='left')"
+      ],
+      "m2_choice": "fill('386', 'teeth grinding mouth guard')",
+      "rho_choice": 0.6690041604870651,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 17048,
+        "completion_tokens": 482
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('391', 'left')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.40653450861884005,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('391', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5778,
+        "completion_tokens": 84
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1500', 'Price')",
+          2
+        ],
+        [
+          "send_msg_to_user('The price range of teeth grinding mouth guards in the One Stop Market is $7.99 to $49.99.')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.1189913527403678,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('1500', 'Price')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=teeth+grinding+mouth+guard",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "path:index": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/index/?q=teeth%20grinding%20mouth%20guard&product_list_order=price",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 240,
+          "server_error": false
+        },
+        {
+          "action": "send_msg_to_user('The price range of teeth grinding mouth guards in the One Stop Market is $7.99 to $49.99.')",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=teeth+grinding+mouth+guard",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1189913527403678,
+        0.028175160183071948
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7485,
+        "completion_tokens": 143
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:35:24"
+}

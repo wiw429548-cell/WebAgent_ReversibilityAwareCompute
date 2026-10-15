@@ -1,0 +1,496 @@
+{
+  "task_id": 225,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "What do customers say about brush from sephora",
+  "template": 135,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 10,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 2,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 8,
+  "prompt_tokens": 34989,
+  "completion_tokens": 1032,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      31178,
+      1024
+    ],
+    "progress": [
+      2,
+      3811,
+      8
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 3,
+    "M1": 3,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 1.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "n/a",
+        "ref": "No reviews available for the sephora brushes.",
+        "question": "What do customers say about brush from sephora",
+        "src": "string",
+        "pending": false,
+        "score": 1.0,
+        "parsable": true,
+        "response": "Judgement: Correct\n\nExplanation: The student's answer \"n/a\" is semantically equivalent to the reference answer \"No reviews available for the sephora brushes.\" Both convey the same meaning, which is that there are no reviews to refer to regarding the Sephora brushes. The notation \"n/a\" is commonly us",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 43.469170331954956,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('386', 'Sephora brush', True)",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('386', 'Sephora brush', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.065,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5760,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('391')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('391')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5778,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1586')",
+          2
+        ],
+        [
+          "click('1518')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1586')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reviews": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush",
+          "element": {
+            "role": "link",
+            "name": "12  Reviews",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 262,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sephora": 0.5,
+            "path:collection": 0.5,
+            "path:waterproof": 0.5,
+            "path:eye": 0.5,
+            "path:makeup": 0.5,
+            "path:remover": 0.5,
+            "path:oz": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sephora-collection-waterproof-eye-makeup-remover-4-2-oz.html#reviews",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 240,
+          "server_error": false
+        },
+        {
+          "action": "click('1518')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=strong": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7438,
+        "completion_tokens": 202
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1518')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1518')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=strong": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5556,
+        "completion_tokens": 160
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1519')",
+          2
+        ],
+        [
+          "click('1587')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1519')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sephora": 1.0,
+            "name:collection": 1.0,
+            "name:skin": 1.0,
+            "name:perfecting": 1.0,
+            "name:brush": 1.0,
+            "name:set": 1.0,
+            "kw:set": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush",
+          "element": {
+            "role": "link",
+            "name": "Sephora Collection Skin Perfecting Brush Set",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 257,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sephora": 0.5,
+            "path:collection": 0.5,
+            "path:skin": 0.5,
+            "path:perfecting": 0.5,
+            "path:brush": 0.5,
+            "path:set": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sephora-collection-skin-perfecting-brush-set.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 240,
+          "server_error": false
+        },
+        {
+          "action": "click('1587')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reviews": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush",
+          "element": {
+            "role": "link",
+            "name": "12  Reviews",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 262,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7466,
+        "completion_tokens": 154
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The current page is about a waterproof eye makeup remover and does not contain any reviews for a brush product from Sephora.\")",
+          1
+        ],
+        [
+          "click('1657')",
+          1
+        ],
+        [
+          "report_infeasible(\"There is no information about brushes on this page, only a waterproof eye makeup remover.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The current page is about a waterproof eye makeup remover and does not contain any reviews for a brush product from Sephora.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:sephora": 0.5,
+            "path:collection": 0.5,
+            "path:waterproof": 0.5,
+            "path:eye": 0.5,
+            "path:makeup": 0.5,
+            "path:remover": 0.5,
+            "path:oz": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sephora-collection-waterproof-eye-makeup-remover-4-2-oz.html#reviews",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2991,
+        "completion_tokens": 252
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 22:30:10"
+}

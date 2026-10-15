@@ -1,0 +1,924 @@
+{
+  "task_id": 599,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Open the thread of a trending post on the forum \"machine learning\" and subscribe.",
+  "template": 4,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 15,
+  "prompt_tokens": 57139,
+  "completion_tokens": 2968,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      57139,
+      2968
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 15,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 1.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 180.43586921691895,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('42')",
+          2
+        ],
+        [
+          "report_infeasible(\"There are no featured forums or posts related to 'machine learning' available on the current page.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('42')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1515,
+        "completion_tokens": 212
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('50', 'machine learning')",
+          2
+        ],
+        [
+          "focus('50')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('50', 'machine learning')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "typed_len": 0.08,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4448,
+        "completion_tokens": 155
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('655')",
+          1
+        ],
+        [
+          "click('304')",
+          1
+        ],
+        [
+          "report_infeasible('The search for \"machine learning\" did not return any relevant forum.')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('655')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:next": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Next",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4474,
+        "completion_tokens": 150
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('656')",
+          2
+        ],
+        [
+          "click('59')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('656')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:next": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "path:by": 0.5,
+            "path:submissions": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums/by_submissions/2",
+          "element": {
+            "role": "link",
+            "name": "Next",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4485,
+        "completion_tokens": 129
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('325')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('325')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:machinelearning": 1.0,
+            "ctx:machinelearning": 0.5,
+            "path:forums": 0.5,
+            "path:by": 0.5,
+            "path:submissions": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums/by_submissions/3",
+          "element": {
+            "role": "link",
+            "name": "MachineLearning — MachineLearning",
+            "context": "MachineLearning — MachineLearning",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 59,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4479,
+        "completion_tokens": 127
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('194')",
+          2
+        ],
+        [
+          "click('194') # Click on the trending post \"[P] I made a command-line tool that explains your errors using ChatGPT (link in comments)\"",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('194')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:p": 1.0,
+            "name:i": 1.0,
+            "name:made": 1.0,
+            "name:a": 1.0,
+            "name:command": 1.0,
+            "name:line": 1.0,
+            "name:tool": 1.0,
+            "name:that": 1.0,
+            "name:explains": 1.0,
+            "name:your": 1.0,
+            "name:errors": 1.0,
+            "name:using": 1.0,
+            "ctx:p": 0.5,
+            "ctx:i": 0.5,
+            "ctx:made": 0.5,
+            "ctx:a": 0.5,
+            "ctx:command": 0.5,
+            "ctx:line": 0.5,
+            "ctx:tool": 0.5,
+            "ctx:that": 0.5,
+            "ctx:explains": 0.5,
+            "ctx:your": 0.5,
+            "ctx:errors": 0.5,
+            "ctx:using": 0.5,
+            "kw:comment": 1.0,
+            "path:f": 0.5,
+            "path:machinelearning": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/MachineLearning",
+          "element": {
+            "role": "link",
+            "name": "[P] I made a command-line tool that explains your errors using ChatGPT (link in comments)",
+            "context": "[P] I made a command-line tool that explains your errors using ChatGPT (link in comments)",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5583,
+        "completion_tokens": 304
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:submission": 0.5,
+            "path:images": 0.5,
+            "path:c": 0.5,
+            "path:baabe": 0.5,
+            "path:d": 0.5,
+            "path:e": 0.5,
+            "path:bdf": 0.5,
+            "path:aa": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submission_images/c5baabe3d849e5940bdf4aa2093a81fbb30cef546ca57df3c26b56739e2a5f71.gif",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 60,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1199,
+        "completion_tokens": 238
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('194')",
+          2
+        ],
+        [
+          "click('611')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('194')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:p": 1.0,
+            "name:i": 1.0,
+            "name:made": 1.0,
+            "name:a": 1.0,
+            "name:command": 1.0,
+            "name:line": 1.0,
+            "name:tool": 1.0,
+            "name:that": 1.0,
+            "name:explains": 1.0,
+            "name:your": 1.0,
+            "name:errors": 1.0,
+            "name:using": 1.0,
+            "ctx:p": 0.5,
+            "ctx:i": 0.5,
+            "ctx:made": 0.5,
+            "ctx:a": 0.5,
+            "ctx:command": 0.5,
+            "ctx:line": 0.5,
+            "ctx:tool": 0.5,
+            "ctx:that": 0.5,
+            "ctx:explains": 0.5,
+            "ctx:your": 0.5,
+            "ctx:errors": 0.5,
+            "ctx:using": 0.5,
+            "kw:comment": 1.0,
+            "path:f": 0.5,
+            "path:machinelearning": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/MachineLearning",
+          "element": {
+            "role": "link",
+            "name": "[P] I made a command-line tool that explains your errors using ChatGPT (link in comments)",
+            "context": "[P] I made a command-line tool that explains your errors using ChatGPT (link in comments)",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5589,
+        "completion_tokens": 246
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:submission": 0.5,
+            "path:images": 0.5,
+            "path:c": 0.5,
+            "path:baabe": 0.5,
+            "path:d": 0.5,
+            "path:e": 0.5,
+            "path:bdf": 0.5,
+            "path:aa": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submission_images/c5baabe3d849e5940bdf4aa2093a81fbb30cef546ca57df3c26b56739e2a5f71.gif",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 59,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1194,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('194')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('194')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:p": 1.0,
+            "name:i": 1.0,
+            "name:made": 1.0,
+            "name:a": 1.0,
+            "name:command": 1.0,
+            "name:line": 1.0,
+            "name:tool": 1.0,
+            "name:that": 1.0,
+            "name:explains": 1.0,
+            "name:your": 1.0,
+            "name:errors": 1.0,
+            "name:using": 1.0,
+            "ctx:p": 0.5,
+            "ctx:i": 0.5,
+            "ctx:made": 0.5,
+            "ctx:a": 0.5,
+            "ctx:command": 0.5,
+            "ctx:line": 0.5,
+            "ctx:tool": 0.5,
+            "ctx:that": 0.5,
+            "ctx:explains": 0.5,
+            "ctx:your": 0.5,
+            "ctx:errors": 0.5,
+            "ctx:using": 0.5,
+            "kw:comment": 1.0,
+            "path:f": 0.5,
+            "path:machinelearning": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/MachineLearning",
+          "element": {
+            "role": "link",
+            "name": "[P] I made a command-line tool that explains your errors using ChatGPT (link in comments)",
+            "context": "[P] I made a command-line tool that explains your errors using ChatGPT (link in comments)",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5583,
+        "completion_tokens": 290
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:submission": 0.5,
+            "path:images": 0.5,
+            "path:c": 0.5,
+            "path:baabe": 0.5,
+            "path:d": 0.5,
+            "path:e": 0.5,
+            "path:bdf": 0.5,
+            "path:aa": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submission_images/c5baabe3d849e5940bdf4aa2093a81fbb30cef546ca57df3c26b56739e2a5f71.gif",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 60,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1191,
+        "completion_tokens": 119
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('611')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('611')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:d": 1.0,
+            "name:how": 1.0,
+            "name:frustrating": 1.0,
+            "name:are": 1.0,
+            "name:the": 1.0,
+            "name:ml": 1.0,
+            "name:interviews": 1.0,
+            "name:these": 1.0,
+            "name:days": 1.0,
+            "name:top": 1.0,
+            "name:interview": 1.0,
+            "name:joke": 1.0,
+            "ctx:d": 0.5,
+            "ctx:how": 0.5,
+            "ctx:frustrating": 0.5,
+            "ctx:are": 0.5,
+            "ctx:the": 0.5,
+            "ctx:ml": 0.5,
+            "ctx:interviews": 0.5,
+            "ctx:these": 0.5,
+            "ctx:days": 0.5,
+            "ctx:top": 0.5,
+            "ctx:interview": 0.5,
+            "ctx:joke": 0.5,
+            "path:f": 0.5,
+            "path:machinelearning": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/MachineLearning",
+          "element": {
+            "role": "link",
+            "name": "[D] How frustrating are the ML interviews these days!!! TOP 3% interview joke",
+            "context": "[D] How frustrating are the ML interviews these days!!! TOP 3% interview joke",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5580,
+        "completion_tokens": 209
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "click('161') # Click on the Upvote button to locate the subscription area near it.",
+          1
+        ],
+        [
+          "scroll(0, 200)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:machinelearning": 0.5,
+            "path:d": 0.5,
+            "path:how": 0.5,
+            "path:frustrating": 0.5,
+            "path:are": 0.5,
+            "path:the": 0.5,
+            "path:ml": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/MachineLearning/14011/d-how-frustrating-are-the-ml-interviews-these-days-top-3",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 59,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5051,
+        "completion_tokens": 248
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('194')",
+          2
+        ],
+        [
+          "click('611')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('194')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:p": 1.0,
+            "name:i": 1.0,
+            "name:made": 1.0,
+            "name:a": 1.0,
+            "name:command": 1.0,
+            "name:line": 1.0,
+            "name:tool": 1.0,
+            "name:that": 1.0,
+            "name:explains": 1.0,
+            "name:your": 1.0,
+            "name:errors": 1.0,
+            "name:using": 1.0,
+            "ctx:p": 0.5,
+            "ctx:i": 0.5,
+            "ctx:made": 0.5,
+            "ctx:a": 0.5,
+            "ctx:command": 0.5,
+            "ctx:line": 0.5,
+            "ctx:tool": 0.5,
+            "ctx:that": 0.5,
+            "ctx:explains": 0.5,
+            "ctx:your": 0.5,
+            "ctx:errors": 0.5,
+            "ctx:using": 0.5,
+            "kw:comment": 1.0,
+            "path:f": 0.5,
+            "path:machinelearning": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/MachineLearning",
+          "element": {
+            "role": "link",
+            "name": "[P] I made a command-line tool that explains your errors using ChatGPT (link in comments)",
+            "context": "[P] I made a command-line tool that explains your errors using ChatGPT (link in comments)",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5580,
+        "completion_tokens": 288
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:submission": 0.5,
+            "path:images": 0.5,
+            "path:c": 0.5,
+            "path:baabe": 0.5,
+            "path:d": 0.5,
+            "path:e": 0.5,
+            "path:bdf": 0.5,
+            "path:aa": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submission_images/c5baabe3d849e5940bdf4aa2093a81fbb30cef546ca57df3c26b56739e2a5f71.gif",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 59,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1188,
+        "completion_tokens": 125
+      }
+    }
+  ],
+  "method": "sc_vote3",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 19:08:15"
+}

@@ -1,0 +1,1159 @@
+{
+  "task_id": 182,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Open my latest created issue that has homepage content in its title to check if it is closed",
+  "template": 500,
+  "eval_types": [
+    "string_match",
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 14,
+  "n_env_actions": 26,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 6,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 25,
+  "prompt_tokens": 103632,
+  "completion_tokens": 2246,
+  "llm_by_tag": {
+    "policy": [
+      14,
+      80113,
+      2202
+    ],
+    "progress": [
+      11,
+      23519,
+      44
+    ]
+  },
+  "llm_cache_hits": 25,
+  "mode_counts": {
+    "M0": 3,
+    "M1": 11,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 0.0,
+      "URLEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 67.26726484298706,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('153')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.007509910222962057,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('153')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:issues": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "Issues",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 32,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5247,
+        "completion_tokens": 107
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('314', 'homepage content')",
+          1
+        ],
+        [
+          "click('897')",
+          1
+        ],
+        [
+          "click('565')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.20753752379786525,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('314', 'homepage content')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=button": 1.0,
+            "name:assignee": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "kw:assign": 1.0,
+            "typed_len": 0.08,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "button",
+            "name": "Assignee = Byte Blaze",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.20753752379786525,
+        0.004446589407618766
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7840,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('314')",
+          2
+        ],
+        [
+          "click('323')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.09603576721505336,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('314')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:assignee": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "kw:assign": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "button",
+            "name": "Assignee = Byte Blaze",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 22,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.09603576721505336,
+        0.006775252880815482
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7976,
+        "completion_tokens": 148
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('314')",
+          1
+        ],
+        [
+          "click('515')",
+          1
+        ],
+        [
+          "click('1016') # This bid corresponds to the first item in the list of issues, which is likely the most recent one based on the search. However, the actual bid for the link needs to be determined from the full list. Given the truncated nature of the data, I'll proceed with a bid that seems plausible for the most recent issue's link.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.01951501259749156,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('314')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.01951501259749156,
+        0.3308342765132979
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8253,
+        "completion_tokens": 263
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('323', 'homepage content')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.016537578101398644,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('323', 'homepage content')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.08,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6074,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('927')",
+          1
+        ],
+        [
+          "click('323')",
+          1
+        ],
+        [
+          "click('840')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.003505503726137952,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('927')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:feature": 1.0,
+            "name:suggestion": 1.0,
+            "name:support": 1.0,
+            "name:linking": 1.0,
+            "name:to": 1.0,
+            "name:an": 1.0,
+            "name:accessibility": 1.0,
+            "name:statement": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "link",
+            "name": "[Feature suggestion] Support linking to an accessibility statement",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:webring": 0.5,
+            "path:club": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-webring.club/-/issues/71",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 33,
+          "server_error": false
+        },
+        {
+          "action": "click('323')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=textbox": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.003505503726137952,
+        0.006775252880815482
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7811,
+        "completion_tokens": 148
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('927')",
+          2
+        ],
+        [
+          "fill('323', 'homepage content')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.003505503726137952,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('927')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:feature": 1.0,
+            "name:suggestion": 1.0,
+            "name:support": 1.0,
+            "name:linking": 1.0,
+            "name:to": 1.0,
+            "name:an": 1.0,
+            "name:accessibility": 1.0,
+            "name:statement": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "link",
+            "name": "[Feature suggestion] Support linking to an accessibility statement",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 61,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:webring": 0.5,
+            "path:club": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-webring.club/-/issues/71",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 33,
+          "server_error": false
+        },
+        {
+          "action": "fill('323', 'homepage content')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.08,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.003505503726137952,
+        0.016537578101398644
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7959,
+        "completion_tokens": 193
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('927')",
+          2
+        ],
+        [
+          "click('323')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.003505503726137952,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('927')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:feature": 1.0,
+            "name:suggestion": 1.0,
+            "name:support": 1.0,
+            "name:linking": 1.0,
+            "name:to": 1.0,
+            "name:an": 1.0,
+            "name:accessibility": 1.0,
+            "name:statement": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "link",
+            "name": "[Feature suggestion] Support linking to an accessibility statement",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 62,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:webring": 0.5,
+            "path:club": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-webring.club/-/issues/71",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 32,
+          "server_error": false
+        },
+        {
+          "action": "click('323')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=textbox": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.003505503726137952,
+        0.006775252880815482
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7913,
+        "completion_tokens": 131
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('927')",
+          2
+        ],
+        [
+          "fill('323', 'homepage content')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.003505503726137952,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('927')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:feature": 1.0,
+            "name:suggestion": 1.0,
+            "name:support": 1.0,
+            "name:linking": 1.0,
+            "name:to": 1.0,
+            "name:an": 1.0,
+            "name:accessibility": 1.0,
+            "name:statement": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "link",
+            "name": "[Feature suggestion] Support linking to an accessibility statement",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 61,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:webring": 0.5,
+            "path:club": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-webring.club/-/issues/71",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 33,
+          "server_error": false
+        },
+        {
+          "action": "fill('323', 'homepage content')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.08,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.003505503726137952,
+        0.016537578101398644
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7961,
+        "completion_tokens": 160
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('515')",
+          1
+        ],
+        [
+          "fill('323', 'homepage content')",
+          1
+        ],
+        [
+          "click('927')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.3308342765132979,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('515')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:created": 1.0,
+            "name:date": 1.0,
+            "kw:create": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "button",
+            "name": "Created date",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.3308342765132979,
+        0.016537578101398644
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7885,
+        "completion_tokens": 135
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1016')",
+          2
+        ],
+        [
+          "fill('323', 'homepage content')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0319898361717684,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1016')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=listitem": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "listitem",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0319898361717684,
+        0.016537578101398644
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7835,
+        "completion_tokens": 142
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('827')",
+          1
+        ],
+        [
+          "click('927')",
+          1
+        ],
+        [
+          "click('840')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.002829380558267555,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('827')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:assigned": 1.0,
+            "name:to": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "kw:assign": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "link",
+            "name": "Assigned to Byte Blaze",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 32,
+          "server_error": false
+        },
+        {
+          "action": "click('927')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:feature": 1.0,
+            "name:suggestion": 1.0,
+            "name:support": 1.0,
+            "name:linking": 1.0,
+            "name:to": 1.0,
+            "name:an": 1.0,
+            "name:accessibility": 1.0,
+            "name:statement": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "link",
+            "name": "[Feature suggestion] Support linking to an accessibility statement",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 61,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.002829380558267555,
+        0.003505503726137952
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7939,
+        "completion_tokens": 178
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.022206438328953863,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:webring": 0.5,
+            "path:club": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-webring.club/-/issues/71",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 33,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5084,
+        "completion_tokens": 189
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('570')",
+          1
+        ],
+        [
+          "report_infeasible(\"There is no issue with 'homepage content' in its title among the listed issues.\")",
+          1
+        ],
+        [
+          "click('927')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.004446589407618766,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('570')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:better": 1.0,
+            "name:sharing": 1.0,
+            "name:solution": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "link",
+            "name": "Better sharing solution",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 59,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:empathy": 0.5,
+            "path:prompts": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/empathy-prompts/-/issues/6",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 33,
+          "server_error": false
+        },
+        {
+          "action": "report_infeasible(\"There is no issue with 'homepage content' in its title among the listed issues.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004446589407618766,
+        0.015359050600795307
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7855,
+        "completion_tokens": 179
+      }
+    }
+  ],
+  "method": "race",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 00:15:50"
+}

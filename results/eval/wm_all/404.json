@@ -1,0 +1,251 @@
+{
+  "task_id": 404,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Upvote the newest post in books subreddit",
+  "template": 22,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 2,
+  "n_env_actions": 2,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 14,
+  "prompt_tokens": 6415,
+  "completion_tokens": 1109,
+  "llm_by_tag": {
+    "policy": [
+      2,
+      2548,
+      619
+    ],
+    "wm": [
+      6,
+      2621,
+      442
+    ],
+    "value": [
+      6,
+      1246,
+      48
+    ]
+  },
+  "llm_cache_hits": 5,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 2
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 34.969385623931885,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('117')",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/r/books')",
+          1
+        ],
+        [
+          "click('117') # Clicking on 'Submissions' might take us to a place where we can see all submissions and find the books subreddit. If not, it will give us more context about the structure of the site.",
+          1
+        ],
+        [
+          "click('42')",
+          1
+        ],
+        [
+          "click('117') # Navigate to Submissions to find the forum list.",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/r/books')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.01,
+        8.01,
+        3.01
+      ],
+      "outcomes": [
+        "After clicking on the \"Submissions\" link (ID 117), the page will likely transition to a submissions overview or listing page where users can view their submitted posts or content. No data will be created, modified, or deleted with this action; it is purely navigational.",
+        "Navigating to `http://localhost:9999/r/books` will load a new page dedicated to books-related content, likely displaying forums, discussions, or submissions related to books. No data on the website will be created, modified, or deleted as a result of this navigation action; it will simply present ex",
+        "After clicking on 'Submissions', the page will likely transition to a submissions overview page where all user-submitted content is listed. No data will be created, modified, or deleted with this action; the change will only affect the displayed content, showing a list of recent or notable submissio"
+      ],
+      "m2_cands": [
+        "click('117')",
+        "goto('http://localhost:9999/r/books')",
+        "click('117') # Clicking on 'Submissions' might take us to a place where we can see all submissions and find the books subreddit. If not, it will give us more context about the structure of the site."
+      ],
+      "m2_choice": "goto('http://localhost:9999/r/books')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 4127,
+        "completion_tokens": 538
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The requested subreddit page is not accessible as a 404 error page is displayed.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"The subreddit page is not found, as the server returned a 404 error.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"The requested subreddit page is not available as a 404 Not Found error is displayed.\")",
+          1
+        ],
+        [
+          "report_infeasible('The requested subreddit page is not accessible, resulting in a 404 error.')",
+          1
+        ],
+        [
+          "report_infeasible('The subreddit /r/books is not accessible as it leads to a 404 Not Found error.')",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The requested subreddit page is not accessible as a 404 error page is displayed.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:r": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/r/books",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.01,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "Given the current scenario, the agent will report that the requested page is inaccessible due to a 404 error being displayed. No page other than the 404 error page will be shown, and no data on the website will be created, modified, or deleted as a result of this action. The report will simply indic",
+        "Given the scenario, the agent will report that the requested page is not found due to a 404 error. The current page displayed is a 404 error page located at `http://localhost:9999/r/books`, indicating that no data on the website will be created, modified, or deleted as a result of this action. The u",
+        "Given the current scenario, the agent will report that the requested page is not available due to a 404 Not Found error being displayed. No page change will occur as a result of this action, and no data on the website will be created, modified, or deleted; the website remains in its current state wi"
+      ],
+      "m2_cands": [
+        "report_infeasible(\"The requested subreddit page is not accessible as a 404 error page is displayed.\")",
+        "report_infeasible(\"The subreddit page is not found, as the server returned a 404 error.\")",
+        "report_infeasible(\"The requested subreddit page is not available as a 404 Not Found error is displayed.\")"
+      ],
+      "m2_choice": "report_infeasible(\"The requested subreddit page is not accessible as a 404 error page is displayed.\")",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 2288,
+        "completion_tokens": 571
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:48:47"
+}

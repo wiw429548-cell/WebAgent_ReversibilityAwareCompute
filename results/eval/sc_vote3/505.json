@@ -1,0 +1,843 @@
+{
+  "task_id": 505,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Make all Aeno capri as out of stock",
+  "template": 287,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 15,
+  "prompt_tokens": 89193,
+  "completion_tokens": 2190,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      89193,
+      2190
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 15,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 232.50153970718384,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('189')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('189')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:catalog": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CATALOG",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4257,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('201')",
+          2
+        ],
+        [
+          "click('189')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('201')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:products": 1.0,
+            "ctx:catalog": 0.5,
+            "ctx:products": 0.5,
+            "ctx:categories": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Products",
+            "context": " CATALOG Catalog  Products Categories",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 593,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4366,
+        "completion_tokens": 105
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1380', 'Aeno capri')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1380', 'Aeno capri')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:by": 1.0,
+            "name:keyword": 1.0,
+            "typed_len": 0.05,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "textbox",
+            "name": "Search by keyword",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5842,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1776')",
+          1
+        ],
+        [
+          "click('1381')",
+          1
+        ],
+        [
+          "click('1801')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1776')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=image": 1.0,
+            "name:orestes": 1.0,
+            "name:yoga": 1.0,
+            "name:pant": 1.0,
+            "ctx:orestes": 0.5,
+            "ctx:yoga": 0.5,
+            "ctx:pant": 0.5,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "image",
+            "name": "Orestes Yoga Pant ",
+            "context": "Orestes Yoga Pant ",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 385,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5859,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1776')",
+          1
+        ],
+        [
+          "click('1448')",
+          1
+        ],
+        [
+          "click('1800')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1776')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=image": 1.0,
+            "name:orestes": 1.0,
+            "name:yoga": 1.0,
+            "name:pant": 1.0,
+            "ctx:orestes": 0.5,
+            "ctx:yoga": 0.5,
+            "ctx:pant": 0.5,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "image",
+            "name": "Orestes Yoga Pant ",
+            "context": "Orestes Yoga Pant ",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5869,
+        "completion_tokens": 181
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1776')",
+          1
+        ],
+        [
+          "noop(500)",
+          1
+        ],
+        [
+          "fill('1492', 'Aeno capri')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1776')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=image": 1.0,
+            "name:orestes": 1.0,
+            "name:yoga": 1.0,
+            "name:pant": 1.0,
+            "ctx:orestes": 0.5,
+            "ctx:yoga": 0.5,
+            "ctx:pant": 0.5,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "image",
+            "name": "Orestes Yoga Pant ",
+            "context": "Orestes Yoga Pant ",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6464,
+        "completion_tokens": 129
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1776')",
+          2
+        ],
+        [
+          "click('1485')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1776')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=image": 1.0,
+            "name:orestes": 1.0,
+            "name:yoga": 1.0,
+            "name:pant": 1.0,
+            "ctx:orestes": 0.5,
+            "ctx:yoga": 0.5,
+            "ctx:pant": 0.5,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "image",
+            "name": "Orestes Yoga Pant ",
+            "context": "Orestes Yoga Pant ",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6351,
+        "completion_tokens": 161
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('9459')",
+          2
+        ],
+        [
+          "fill('1492', 'Aeno capri')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('9459')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=dialog": 1.0,
+            "name:orestes": 1.0,
+            "name:yoga": 1.0,
+            "name:pant": 1.0,
+            "ctx:products": 0.5,
+            "ctx:inventory": 0.5,
+            "ctx:catalog": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "dialog",
+            "name": "Orestes Yoga Pant",
+            "context": "Products / Inventory / Catalog / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6474,
+        "completion_tokens": 141
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1492', 'Aeno capri')",
+          1
+        ],
+        [
+          "click('1776')",
+          1
+        ],
+        [
+          "click('1662')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1492', 'Aeno capri')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=button": 1.0,
+            "name:default": 1.0,
+            "name:view": 1.0,
+            "typed_len": 0.05,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": " Default View",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5809,
+        "completion_tokens": 121
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1492')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1492')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:default": 1.0,
+            "name:view": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": " Default View",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5913,
+        "completion_tokens": 142
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 200)",
+          2
+        ],
+        [
+          "click('1492')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "scroll(0, 200)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6543,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1492')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1492')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:default": 1.0,
+            "name:view": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": " Default View",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5811,
+        "completion_tokens": 103
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1492')",
+          2
+        ],
+        [
+          "fill('1492', 'Aeno capri')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1492')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:default": 1.0,
+            "name:view": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": " Default View",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6545,
+        "completion_tokens": 197
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1492')",
+          2
+        ],
+        [
+          "noop(500)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1492')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:default": 1.0,
+            "name:view": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": " Default View",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6545,
+        "completion_tokens": 174
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1492', 'Aeno capri')",
+          2
+        ],
+        [
+          "noop(1000)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1492', 'Aeno capri')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=button": 1.0,
+            "name:default": 1.0,
+            "name:view": 1.0,
+            "typed_len": 0.05,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": " Default View",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6545,
+        "completion_tokens": 171
+      }
+    }
+  ],
+  "method": "sc_vote3",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 19:38:14"
+}

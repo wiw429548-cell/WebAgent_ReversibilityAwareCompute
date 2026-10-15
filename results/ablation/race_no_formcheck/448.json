@@ -1,0 +1,297 @@
+{
+  "task_id": 448,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "set the homepage URL on my GitLab profile to https://egg.tart.com",
+  "template": 331,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 4,
+  "n_env_actions": 4,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 5,
+  "prompt_tokens": 20407,
+  "completion_tokens": 515,
+  "llm_by_tag": {
+    "policy": [
+      4,
+      18201,
+      511
+    ],
+    "progress": [
+      1,
+      2206,
+      4
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 2,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 38.18749165534973,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('201')",
+          2
+        ],
+        [
+          "click('175')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.006441279764816845,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('201')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "Byte Blaze",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.006441279764816845,
+        0.008034101824031449
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7451,
+        "completion_tokens": 95
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('213')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.007236374037995453,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('213')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:edit": 1.0,
+            "name:profile": 1.0,
+            "kw:edit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "Edit profile",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 51,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5405,
+        "completion_tokens": 136
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('554', 'https://egg.tart.com')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.028609245865087837,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('554', 'https://egg.tart.com')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:website": 1.0,
+            "name:url": 1.0,
+            "typed_len": 0.1,
+            "path:profile": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/-/profile",
+          "element": {
+            "role": "textbox",
+            "name": "Website url",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3756,
+        "completion_tokens": 140
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('595')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"done\")",
+          1
+        ],
+        [
+          "send_msg_to_user(\"done\");",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.17389297195388545,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('595')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:update": 1.0,
+            "name:profile": 1.0,
+            "name:settings": 1.0,
+            "kw:update": 1.0,
+            "kw:set": 1.0,
+            "path:profile": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/-/profile",
+          "element": {
+            "role": "button",
+            "name": "Update profile settings",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 27,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.17389297195388545,
+        0.03176220409725453
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3795,
+        "completion_tokens": 144
+      }
+    }
+  ],
+  "method": "race_no_formcheck",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 03:28:53"
+}

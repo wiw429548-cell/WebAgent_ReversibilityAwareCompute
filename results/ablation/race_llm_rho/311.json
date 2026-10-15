@@ -1,0 +1,402 @@
+{
+  "task_id": 311,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Tell me who has made the most contributions, in terms of number of commits, to the Pytorch GAN project",
+  "template": 323,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 15,
+  "prompt_tokens": 33490,
+  "completion_tokens": 812,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      30223,
+      776
+    ],
+    "rho": [
+      8,
+      1125,
+      32
+    ],
+    "progress": [
+      1,
+      2142,
+      4
+    ]
+  },
+  "llm_cache_hits": 7,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 2,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "Erik Linder-Norén has made the most contributions with 85 commits.",
+    "scores": {
+      "StringEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 22.936315298080444,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('130', 'Pytorch GAN')",
+          1
+        ],
+        [
+          "fill('129', 'Pytorch GAN')",
+          1
+        ],
+        [
+          "click('307')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.1,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('130', 'Pytorch GAN')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:gitlab": 1.0,
+            "typed_len": 0.055,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "textbox",
+            "name": "Search GitLab",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1,
+        0.1
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 7644,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('911')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('911')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:pytorch": 1.0,
+            "name:gan": 1.0,
+            "name:all": 1.0,
+            "name:gitlab": 1.0,
+            "ctx:search": 0.5,
+            "ctx:gitlab": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "menuitem",
+            "name": " Pytorch GAN all GitLab ",
+            "context": "Search GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 22,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5567,
+        "completion_tokens": 113
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('318')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('318')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:erik": 1.0,
+            "name:linder": 1.0,
+            "name:nor": 1.0,
+            "name:n": 1.0,
+            "name:pytorch": 1.0,
+            "name:gan": 1.0,
+            "ctx:erik": 0.5,
+            "ctx:linder": 0.5,
+            "ctx:nor": 0.5,
+            "ctx:n": 0.5,
+            "ctx:pytorch": 0.5,
+            "ctx:gan": 0.5,
+            "path:search": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/search?search=Pytorch%20GAN&nav_source=navbar",
+          "element": {
+            "role": "link",
+            "name": "Erik Linder-Norén / PyTorch-GAN",
+            "context": "Erik Linder-Norén / PyTorch-GAN",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 42,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2251,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('594')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('594')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:commits": 1.0,
+            "path:eriklindernoren": 0.5,
+            "path:pytorch": 0.5,
+            "path:gan": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/eriklindernoren/PyTorch-GAN",
+          "element": {
+            "role": "link",
+            "name": "193 Commits",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 30,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5940,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('303')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('303')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:contributors": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "path:eriklindernoren": 0.5,
+            "path:pytorch": 0.5,
+            "path:gan": 0.5,
+            "path:commits": 0.5,
+            "path:master": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/eriklindernoren/PyTorch-GAN/-/commits/master",
+          "element": {
+            "role": "link",
+            "name": "Contributors",
+            "context": "Project navigation",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5972,
+        "completion_tokens": 109
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"Erik Linder-Norén has made the most contributions with 85 commits.\")",
+          2
+        ],
+        [
+          "send_msg_to_user(\"The person who has made the most contributions, in terms of number of commits, to the PyTorch GAN project is Erik Linder-Norén with 85 commits.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.1,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"Erik Linder-Norén has made the most contributions with 85 commits.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:eriklindernoren": 0.5,
+            "path:pytorch": 0.5,
+            "path:gan": 0.5,
+            "path:graphs": 0.5,
+            "path:master": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/eriklindernoren/PyTorch-GAN/-/graphs/master",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1,
+        0.1
+      ],
+      "llm": {
+        "calls": 3,
+        "prompt_tokens": 6116,
+        "completion_tokens": 197
+      }
+    }
+  ],
+  "method": "race_llm_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "llm"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 03:58:54"
+}

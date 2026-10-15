@@ -1,0 +1,465 @@
+{
+  "task_id": 45,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Check out the most recent open issues",
+  "template": 300,
+  "eval_types": [
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 8,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 7,
+  "prompt_tokens": 32056,
+  "completion_tokens": 902,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      29928,
+      898
+    ],
+    "progress": [
+      1,
+      2128,
+      4
+    ]
+  },
+  "llm_cache_hits": 7,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 2,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "URLEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 32.71931433677673,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('328')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('328')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:issues": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Issues",
+            "context": "Project navigation The A11Y Project / a11yproject.com · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5831,
+        "completion_tokens": 92
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('732')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('732')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:list": 1.0,
+            "name:of": 1.0,
+            "name:post": 1.0,
+            "name:ideas": 1.0,
+            "kw:post": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+          "element": {
+            "role": "link",
+            "name": "List of Post Ideas ",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 67,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5360,
+        "completion_tokens": 99
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('354')",
+          2
+        ],
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('354')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=list": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:post": 0.5,
+            "ctx:ideas": 0.5,
+            "ctx:issues": 0.5,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues/12",
+          "element": {
+            "role": "list",
+            "name": "",
+            "context": "Project navigation List of Post Ideas (#12) · Issues · The A11Y Project / a11yproject.com · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 33,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "path:service": 0.5,
+            "path:desk": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues/service_desk",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 68,
+          "server_error": false
+        },
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues/12",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7553,
+        "completion_tokens": 177
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('732')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('732')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:list": 1.0,
+            "name:of": 1.0,
+            "name:post": 1.0,
+            "name:ideas": 1.0,
+            "kw:post": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+          "element": {
+            "role": "link",
+            "name": "List of Post Ideas ",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 67,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5391,
+        "completion_tokens": 107
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('354')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('354')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=list": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:post": 0.5,
+            "ctx:ideas": 0.5,
+            "ctx:issues": 0.5,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues/12",
+          "element": {
+            "role": "list",
+            "name": "",
+            "context": "Project navigation List of Post Ideas (#12) · Issues · The A11Y Project / a11yproject.com · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 33,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5456,
+        "completion_tokens": 238
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The current page does not have any open issues as Service Desk is not supported.\")",
+          1
+        ],
+        [
+          "click('350')",
+          1
+        ],
+        [
+          "report_infeasible('The Service Desk is not supported on this instance, so there are no open issues to check out.')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The current page does not have any open issues as Service Desk is not supported.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:issues": 0.5,
+            "path:service": 0.5,
+            "path:desk": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues/service_desk",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2465,
+        "completion_tokens": 189
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "collect",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.612,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 14:42:16 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 14:43:56"
+}

@@ -1,0 +1,670 @@
+{
+  "task_id": 333,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "How much did I spend on shopping at One Stop Market on November 2022? They gave me a 20% discount on the total amount for orders exceeding $200 in cash",
+  "template": 147,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 16,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 5,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 11,
+  "prompt_tokens": 38834,
+  "completion_tokens": 806,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      29140,
+      786
+    ],
+    "progress": [
+      5,
+      9694,
+      20
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 5,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "The total amount spent on shopping before the discount was $298.65. After applying a 20% discount on the total amount for orders exceeding $200 in cash, the final amount would be $238.92.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 64.20688223838806,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227', 'left')",
+          2
+        ],
+        [
+          "click('227', button='left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.00778931282239435,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('227', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        },
+        {
+          "action": "click('227', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.00778931282239435,
+        0.00778931282239435
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7724,
+        "completion_tokens": 91
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1685')",
+          2
+        ],
+        [
+          "click('1769', 'left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.006770404244279714,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1685')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:all": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "View All",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        },
+        {
+          "action": "click('1769', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:orders": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "My Orders",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.006770404244279714,
+        0.007392945220335631
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6405,
+        "completion_tokens": 136
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1769', 'left')",
+          2
+        ],
+        [
+          "click('1769')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0077271139405912645,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1769', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:page": 1.0,
+            "ctx:page": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "link",
+            "name": "Page 4",
+            "context": "Page",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sales/order/history/?p=4",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        },
+        {
+          "action": "click('1769')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:page": 1.0,
+            "ctx:page": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "link",
+            "name": "Page 4",
+            "context": "Page",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0077271139405912645,
+        0.0077271139405912645
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6983,
+        "completion_tokens": 149
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1657')",
+          1
+        ],
+        [
+          "click('1652')",
+          1
+        ],
+        [
+          "click('1656')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.007080494975750173,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1657')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:order": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/?p=4",
+          "element": {
+            "role": "link",
+            "name": "View Order",
+            "context": "View OrderReorder Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sales/order/view/order_id/181/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        },
+        {
+          "action": "click('1652')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/?p=4",
+          "element": {
+            "role": "gridcell",
+            "name": "5/22/22",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007080494975750173,
+        0.05672850331721465
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6540,
+        "completion_tokens": 160
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1657')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.007080494975750173,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1657')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:order": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/?p=4",
+          "element": {
+            "role": "link",
+            "name": "View Order",
+            "context": "View OrderReorder Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4587,
+        "completion_tokens": 91
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1774')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"The total amount spent on shopping before the discount was $298.65. After applying a 20% discount on the total amount for orders exceeding $200 in cash, the final amount would be $238.92.\")",
+          1
+        ],
+        [
+          "click('1632')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.007213289492367987,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1774')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:orders": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/view/order_id/181/",
+          "element": {
+            "role": "link",
+            "name": "My Orders",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        },
+        {
+          "action": "send_msg_to_user(\"The total amount spent on shopping before the discount was $298.65. After applying a 20% discount on the total amount for orders exceeding $200 in cash, the final amount would be $238.92.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/view/order_id/181/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007213289492367987,
+        0.02934352102040623
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6595,
+        "completion_tokens": 179
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:45:27"
+}

@@ -1,0 +1,250 @@
+{
+  "task_id": 582,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Create a new forum named Cyberpunk, with a description of Welcome to the future, and include ['Games', 'Books', 'Movies', 'Future'] in the sidebar?",
+  "template": 7,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 3,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 6,
+  "prompt_tokens": 6069,
+  "completion_tokens": 450,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      4237,
+      310
+    ],
+    "arbiter": [
+      3,
+      1832,
+      140
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 3,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 3,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 44.6127290725708,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/submit')",
+          1
+        ],
+        [
+          "click('62')",
+          1
+        ],
+        [
+          "click('122')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/submit')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 26,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2262,
+        "completion_tokens": 136
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forums/new')",
+          2
+        ],
+        [
+          "fill('137', 'Cyberpunk')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forums/new')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 6,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2426,
+        "completion_tokens": 116
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forums/new')",
+          2
+        ],
+        [
+          "report_infeasible('The URL http://localhost:9999/forums/new leads to a 404 error page instead of the expected forum creation page.')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "report_infeasible('The URL http://localhost:9999/forums/new leads to a 404 error page instead of the expected forum creation page.')",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 1,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1381,
+        "completion_tokens": 198
+      }
+    }
+  ],
+  "method": "catts",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:02:00"
+}

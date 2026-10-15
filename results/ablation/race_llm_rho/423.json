@@ -1,0 +1,462 @@
+{
+  "task_id": 423,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Mark all Hollister shirts on sale",
+  "template": 237,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 7,
+  "n_env_actions": 7,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 23,
+  "prompt_tokens": 47641,
+  "completion_tokens": 1324,
+  "llm_by_tag": {
+    "policy": [
+      7,
+      37471,
+      1254
+    ],
+    "rho": [
+      12,
+      1547,
+      54
+    ],
+    "progress": [
+      4,
+      8623,
+      16
+    ]
+  },
+  "llm_cache_hits": 4,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 5,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 84.18081641197205,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('189')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.25,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('189')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:catalog": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CATALOG",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4384,
+        "completion_tokens": 108
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('201')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('201')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:products": 1.0,
+            "ctx:catalog": 0.5,
+            "ctx:products": 0.5,
+            "ctx:categories": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Products",
+            "context": " CATALOG Catalog  Products Categories",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 593,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4498,
+        "completion_tokens": 126
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1380', 'Hollister')",
+          2
+        ],
+        [
+          "fill('1380', 'Hollister shirt')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.1,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1380', 'Hollister')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:by": 1.0,
+            "name:keyword": 1.0,
+            "typed_len": 0.045,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "textbox",
+            "name": "Search by keyword",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1,
+        0.25
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 8274,
+        "completion_tokens": 203
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1381')",
+          2
+        ],
+        [
+          "click('890')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.25,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1381')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 387,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.25,
+        0.2
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 8259,
+        "completion_tokens": 175
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1769')",
+          2
+        ],
+        [
+          "report_infeasible(\"There is no direct information about which products are shirts or if they are on sale.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.25,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1769')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "checkbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.25,
+        0.1
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 8113,
+        "completion_tokens": 193
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1769')",
+          1
+        ],
+        [
+          "report_infeasible(\"There is no explicit indicator in the accessibility tree that shows which shirts are on sale.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"There is no indication of which items are on sale on the current page.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.25,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1769')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "checkbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.25,
+        0.1
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 8127,
+        "completion_tokens": 271
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"There is no explicit indicator in the current view to determine which shirts are on sale.\")",
+          1
+        ],
+        [
+          "click('1769')",
+          1
+        ],
+        [
+          "click('1769') # Clicking on the checkbox of the first item to see if it allows selecting items to mark as on sale.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.1,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"There is no explicit indicator in the current view to determine which shirts are on sale.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1,
+        0.25
+      ],
+      "llm": {
+        "calls": 3,
+        "prompt_tokens": 5986,
+        "completion_tokens": 248
+      }
+    }
+  ],
+  "method": "race_llm_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "llm"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 04:04:45"
+}

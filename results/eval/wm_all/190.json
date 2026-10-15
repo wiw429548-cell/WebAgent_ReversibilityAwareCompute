@@ -1,0 +1,350 @@
+{
+  "task_id": 190,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Tell me the total cost of my latest complete order?",
+  "template": 214,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 4,
+  "n_env_actions": 4,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 21,
+  "prompt_tokens": 46139,
+  "completion_tokens": 1702,
+  "llm_by_tag": {
+    "policy": [
+      4,
+      19032,
+      918
+    ],
+    "m2more": [
+      1,
+      5760,
+      105
+    ],
+    "wm": [
+      8,
+      19755,
+      615
+    ],
+    "value": [
+      8,
+      1592,
+      64
+    ]
+  },
+  "llm_cache_hits": 9,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 4
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "$65.32",
+    "scores": {
+      "StringEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 33.547837018966675,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.08
+      ],
+      "outcomes": [
+        "Upon clicking the 'My Account' link (ID 227), the user will be redirected to the account management page where they can view and manage their personal information, orders, and preferences. No data will be created, modified, or deleted as a result of this action alone; it primarily serves to navigate"
+      ],
+      "m2_cands": [
+        "click('227')"
+      ],
+      "m2_choice": "click('227')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 14142,
+        "completion_tokens": 360
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1599')",
+          2
+        ],
+        [
+          "send_msg_to_user(\"$65.32\")",
+          2
+        ],
+        [
+          "click('1601')",
+          1
+        ]
+      ],
+      "u": 0.6554587535412857,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1599')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:complete": 1.0,
+            "ctx:recent": 0.5,
+            "ctx:orders": 0.5,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "gridcell",
+            "name": "Complete",
+            "context": "Recent Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        8.02,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID `1599` will likely navigate to the details of the order with the status \"Complete\" (order number `000000180`). This action will take the user to a new page that displays detailed information about this specific order. No data will be created, modified, or deleted as a",
+        "The agent will inform the user about the order total amount of $65.32, likely referring to one of the recent orders listed on the \"My Account\" page. No page change will occur, and no data on the website will be created, modified, or deleted as a result of this action; it is purely informational.",
+        "Clicking on the element with the ID '1601' will likely navigate to the details of the order with the ID '000000180'. This action will display a new page showing the specific order details including items purchased, quantities, and possibly shipping information. No data will be created, modified, or "
+      ],
+      "m2_cands": [
+        "click('1599')",
+        "send_msg_to_user(\"$65.32\")",
+        "click('1601')"
+      ],
+      "m2_choice": "click('1599')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 12440,
+        "completion_tokens": 472
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1599')",
+          4
+        ],
+        [
+          "send_msg_to_user(\"$65.32\")",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1599')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:complete": 1.0,
+            "ctx:recent": 0.5,
+            "ctx:orders": 0.5,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "gridcell",
+            "name": "Complete",
+            "context": "Recent Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.04,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID `1599` will likely navigate to the details of the order with the status \"Complete\" (order number `000000180`). This action will take the user to a new page that displays detailed information about this specific order. No data will be created, modified, or deleted as a",
+        "The agent will inform the user about the order total amount of $65.32, likely referring to one of the recent orders listed on the \"My Account\" page. No page change will occur, and no data on the website will be created, modified, or deleted as a result of this action; it is purely informational."
+      ],
+      "m2_cands": [
+        "click('1599')",
+        "send_msg_to_user(\"$65.32\")"
+      ],
+      "m2_choice": "click('1599')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9774,
+        "completion_tokens": 414
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"$65.32\")",
+          4
+        ],
+        [
+          "click('1599')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"$65.32\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.04,
+        8.01
+      ],
+      "outcomes": [
+        "The agent will inform the user about the order total amount of $65.32, likely referring to one of the recent orders listed on the \"My Account\" page. No page change will occur, and no data on the website will be created, modified, or deleted as a result of this action; it is purely informational.",
+        "Clicking on the element with ID `1599` will likely navigate to the details of the order with the status \"Complete\" (order number `000000180`). This action will take the user to a new page that displays detailed information about this specific order. No data will be created, modified, or deleted as a"
+      ],
+      "m2_cands": [
+        "send_msg_to_user(\"$65.32\")",
+        "click('1599')"
+      ],
+      "m2_choice": "send_msg_to_user(\"$65.32\")",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9783,
+        "completion_tokens": 456
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:49:07"
+}

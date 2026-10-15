@@ -1,0 +1,468 @@
+{
+  "task_id": 202,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Get the date of the most recent canlled order",
+  "template": 366,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 20,
+  "prompt_tokens": 57299,
+  "completion_tokens": 1847,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      31452,
+      1073
+    ],
+    "wm": [
+      6,
+      15226,
+      457
+    ],
+    "value": [
+      6,
+      1253,
+      48
+    ],
+    "form": [
+      1,
+      3414,
+      80
+    ],
+    "m2more": [
+      1,
+      5954,
+      189
+    ]
+  },
+  "llm_cache_hits": 9,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 0,
+    "M2": 2
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "May 23, 2023 9:20:01 PM",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "may 23, 2023 9:20:01 pm",
+        "ref": "May 23 2023",
+        "question": "Get the date of the most recent canlled order",
+        "src": "string",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "**Judgement: Partially Correct**\n\nExplanation:\nThe student's answer includes the correct date (May 23, 2023), which matches the reference answer. However, the student also included the time (9:20:01 pm), which was not part of the reference answer and was not requested in the question. Since the core",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 38.5615496635437,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('156')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('156')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sales": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " SALES",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8693757169887597,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4258,
+        "completion_tokens": 102
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('168')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('168')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:orders": 1.0,
+            "ctx:sales": 0.5,
+            "ctx:orders": 0.5,
+            "ctx:invoices": 0.5,
+            "ctx:shipments": 0.5,
+            "ctx:credit": 0.5,
+            "ctx:memos": 0.5,
+            "ctx:billing": 0.5,
+            "ctx:agreements": 0.5,
+            "ctx:transactions": 0.5,
+            "ctx:braintree": 0.5,
+            "ctx:virtual": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Orders",
+            "context": " SALES Sales  Orders Invoices Shipments Credit Memos Billing Agreements Transactions Braintree Virtual Terminal",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 202,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6518650604210023,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4477,
+        "completion_tokens": 143
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1532')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1532')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:canceled": 1.0,
+            "kw:cancel": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "gridcell",
+            "name": "Canceled",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 213,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.10574715713368121,
+      "wm_scores": [
+        6.03,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "Clicking on the element with the ID '1532' will likely navigate to the details page of a specific order, based on the context provided. This action will not create, modify, or delete any data but will display more detailed information about the selected order.",
+        "Clicking on the element with the role description '1390' corresponds to interacting with the \"Status\" column header of the order table. This action typically triggers a sorting mechanism based on the order status. The page will refresh or update to show the orders sorted by their status, but no data",
+        "The agent will report that it cannot determine the date of the most recent canceled order due to insufficient information provided by the truncated table. No page change will occur, and no data on the website will be created, modified, or deleted as a result of this action. The current page displayi"
+      ],
+      "m2_cands": [
+        "click('1532')",
+        "click('1390')",
+        "report_infeasible(\"The table is truncated and does not provide enough information to determine the date of the most recent canceled order.\")"
+      ],
+      "m2_choice": "click('1532')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 9,
+        "prompt_tokens": 23522,
+        "completion_tokens": 638
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('194')",
+          1
+        ],
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "click('729')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('194')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sales": 1.0,
+            "ctx:orders": 0.5,
+            "ctx:operations": 0.5,
+            "ctx:sales": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/136/",
+          "element": {
+            "role": "link",
+            "name": " SALES",
+            "context": "#000000136 / Orders / Operations / Sales / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9093902730931767,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5357,
+        "completion_tokens": 176
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          2
+        ],
+        [
+          "click('753')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/136/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 202,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8523400560312098,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5430,
+        "completion_tokens": 190
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1126')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"May 23, 2023 9:20:01 PM\") # This date corresponds to the first \"Canceled\" order in the list.",
+          1
+        ],
+        [
+          "click('1423')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"May 23, 2023 9:20:01 PM\") # This date corresponds to the first \"Canceled\" order in the list.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.13895554122246168,
+      "wm_scores": [
+        2.01,
+        3.01,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the element with the identifier '1126' will navigate to the next page of the order list, as this element represents a button for pagination. The current page number will increment by one, showing orders 201-400 assuming each page displays 200 records. No data will be created, modified, o",
+        "Based on the provided accessibility tree and the instruction to send a message with the date \"May 23, 2023 9:20:01 PM\", it appears that no actual interaction with the page will occur; the action is simply to inform about a specific date related to a \"Canceled\" order. The current page displaying the ",
+        "Clicking on the \"View\" link for order ID 000000299 will navigate to a detailed view page for that specific order. This page will display comprehensive information about the order, including items purchased, customer details, and order status, without creating, modifying, or deleting any data directl"
+      ],
+      "m2_cands": [
+        "click('1126')",
+        "send_msg_to_user(\"May 23, 2023 9:20:01 PM\") # This date corresponds to the first \"Canceled\" order in the list.",
+        "click('1423')"
+      ],
+      "m2_choice": "send_msg_to_user(\"May 23, 2023 9:20:01 PM\") # This date corresponds to the first \"Canceled\" order in the list.",
+      "rho_choice": null,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 14255,
+        "completion_tokens": 598
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:17:22"
+}

@@ -1,0 +1,175 @@
+{
+  "task_id": 227,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "What is the price range for products from EYZUTAK?",
+  "template": 370,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 1,
+  "n_env_actions": 1,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 7,
+  "prompt_tokens": 13700,
+  "completion_tokens": 439,
+  "llm_by_tag": {
+    "policy": [
+      1,
+      5762,
+      203
+    ],
+    "wm": [
+      3,
+      7331,
+      212
+    ],
+    "value": [
+      3,
+      607,
+      24
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 10.95213794708252,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"There is no information about EYZUTAK on the current page.\")",
+          1
+        ],
+        [
+          "fill('386', 'EYZUTAK')",
+          1
+        ],
+        [
+          "report_infeasible(\"There is no information about any product from EYZUTAK on the current page.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02750748409404009,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "report_infeasible(\"There is no information about EYZUTAK on the current page.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.01,
+        5.01,
+        5.01
+      ],
+      "outcomes": [
+        "The agent will report that there is no information about \"EYZUTAK\" on the current page, indicating that the term or entity does not appear within the accessible content of the One Stop Market homepage. No page change will occur, and no data on the website will be created, modified, or deleted as a r",
+        "The agent will attempt to input the text \"EYZUTAK\" into the search combobox identified by the ID '386'. After filling the search term, since the 'Search' button is currently disabled, no immediate action will be taken, and the page will remain unchanged. No data will be created, modified, or deleted",
+        "The agent will report that there is no information about any product from EYZUTAK on the current page. No new pages will be shown as a result of this action. There will be no creation, modification, or deletion of data on the website since the action only involves reporting the absence of specific p"
+      ],
+      "m2_cands": [
+        "report_infeasible(\"There is no information about EYZUTAK on the current page.\")",
+        "fill('386', 'EYZUTAK')",
+        "report_infeasible(\"There is no information about any product from EYZUTAK on the current page.\")"
+      ],
+      "m2_choice": "report_infeasible(\"There is no information about EYZUTAK on the current page.\")",
+      "rho_choice": null,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13700,
+        "completion_tokens": 439
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:55:55"
+}

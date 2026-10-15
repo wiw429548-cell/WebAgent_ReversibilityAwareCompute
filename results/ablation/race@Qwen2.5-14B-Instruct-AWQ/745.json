@@ -1,0 +1,828 @@
+{
+  "task_id": 745,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Create a new public project \"awesome-llms\" and add primer, convexegg, abishek as members",
+  "template": 332,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 25,
+  "prompt_tokens": 50208,
+  "completion_tokens": 1587,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      34865,
+      1547
+    ],
+    "progress": [
+      10,
+      15343,
+      40
+    ]
+  },
+  "llm_cache_hits": 4,
+  "mode_counts": {
+    "M0": 5,
+    "M1": 10,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 183.64321327209473,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('141', 'left')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0741096775730741,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('141', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:create": 1.0,
+            "name:new": 1.0,
+            "kw:create": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "Create new...",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5252,
+        "completion_tokens": 84
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('147', 'left')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0018593260332687188,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('147', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:new": 1.0,
+            "name:project": 1.0,
+            "name:repository": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "New project/repository",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 26,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5368,
+        "completion_tokens": 90
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('264', 'awesome-llms')",
+          1
+        ],
+        [
+          "fill('271', 'awesome-llms')",
+          1
+        ],
+        [
+          "fill('364', 'awesome-llms')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.09809255448995943,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('264', 'awesome-llms')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.06,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.09809255448995943,
+        0.09809255448995943
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3233,
+        "completion_tokens": 89
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 200)",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.05319704018078658,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "scroll(0, 200)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1993,
+        "completion_tokens": 123
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('264', 'awesome-llms')",
+          2
+        ],
+        [
+          "fill('341', 'awesome-llms')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.09809255448995943,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('264', 'awesome-llms')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.06,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.09809255448995943,
+        0.09809255448995943
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3258,
+        "completion_tokens": 86
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 200)",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.05319704018078658,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "scroll(0, 200)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2018,
+        "completion_tokens": 119
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('264', 'awesome-llms')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.09809255448995943,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('264', 'awesome-llms')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.06,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1746,
+        "completion_tokens": 74
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 300)",
+          1
+        ],
+        [
+          "scroll(0, 400)",
+          1
+        ],
+        [
+          "scroll(0, 200)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.05319704018078658,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "scroll(0, 300)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05319704018078658,
+        0.05319704018078658
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3566,
+        "completion_tokens": 149
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('316')",
+          1
+        ],
+        [
+          "click('333')",
+          1
+        ],
+        [
+          "fill('264', 'awesome-llms')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.04231699720991523,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('316')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.04231699720991523,
+        0.04231699720991523
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3280,
+        "completion_tokens": 92
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 500)",
+          2
+        ],
+        [
+          "scroll(0, 400)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05319704018078658,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "scroll(0, 500)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05319704018078658,
+        0.05319704018078658
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3551,
+        "completion_tokens": 136
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('264', 'awesome-llms')",
+          2
+        ],
+        [
+          "click('237')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.09809255448995943,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('264', 'awesome-llms')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.06,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.09809255448995943,
+        0.11257139675277225
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3280,
+        "completion_tokens": 75
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 500)",
+          2
+        ],
+        [
+          "scroll(0, 800)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05319704018078658,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "scroll(0, 500)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05319704018078658,
+        0.05319704018078658
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3560,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('375', 'public')",
+          1
+        ],
+        [
+          "select_option('285', 'public')",
+          1
+        ],
+        [
+          "fill('264', 'awesome-llms')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.09789254449623373,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('375', 'public')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.03,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.09789254449623373,
+        0.030629255153998492
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3277,
+        "completion_tokens": 111
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 800)",
+          2
+        ],
+        [
+          "scroll(0, 1000)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05319704018078658,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "scroll(0, 800)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05319704018078658,
+        0.05319704018078658
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3555,
+        "completion_tokens": 146
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('316')",
+          1
+        ],
+        [
+          "fill('264', 'awesome-llms')",
+          1
+        ],
+        [
+          "click('261')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.04231699720991523,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('316')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.04231699720991523,
+        0.09809255448995943
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3271,
+        "completion_tokens": 79
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:59:04"
+}

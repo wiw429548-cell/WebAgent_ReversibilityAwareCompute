@@ -1,0 +1,428 @@
+{
+  "task_id": 645,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Post in books subreddit about what could machine learning help the correpong field.",
+  "template": 19,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 14,
+  "prompt_tokens": 30364,
+  "completion_tokens": 1312,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      16770,
+      884
+    ],
+    "m2more": [
+      1,
+      3961,
+      134
+    ],
+    "wm": [
+      3,
+      6252,
+      239
+    ],
+    "value": [
+      3,
+      632,
+      24
+    ],
+    "form": [
+      1,
+      2749,
+      31
+    ]
+  },
+  "llm_cache_hits": 6,
+  "mode_counts": {
+    "M0": 5,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "In the book industry, machine learning can help with inventory management, predicting best-selling genres, personalizing recommendations for readers, and automating customer service responses.",
+    "scores": {
+      "URLEvaluator": 0.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "",
+        "ref": "machine learning, help",
+        "question": "Post in books subreddit about what could machine learning help the correpong field.",
+        "src": "html",
+        "pending": false,
+        "score": 0.0
+      }
+    ],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 59.12079477310181,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('62')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.5629478487469619,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1513,
+        "completion_tokens": 96
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'books')",
+          2
+        ],
+        [
+          "click('121')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('378', 'books')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8674920149207992,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1591,
+        "completion_tokens": 120
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9153919394525474,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1689,
+        "completion_tokens": 156
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('137', 'How Machine Learning Can Help the Book Industry')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('137', 'How Machine Learning Can Help the Book Industry')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "name:is": 1.0,
+            "name:required": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "typed_len": 0.235,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Title This field is required.",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.05538763662593027,
+      "wm_scores": [
+        8.03,
+        8.01,
+        5.01
+      ],
+      "outcomes": [
+        "The agent will fill in the title field with the text \"How Machine Learning Can Help the Book Industry\". This action will update the form on the current page, specifically setting the value of the title input field. No data will be created, modified, or deleted on the website until the form is submit",
+        "The agent will fill in the title field with the text \"How Machine Learning Can Enhance the Book Industry\". This action will update the form on the current page, specifically setting the value of the title input field. No data will be created, modified, or deleted on the website until the form is sub",
+        "When the agent executes `focus('137')`, the input field labeled 'Title' will receive focus, allowing the user to directly input text into it. No page change will occur, and no data will be created, modified, or deleted on the website as a result of this action alone; it merely directs the user's inp"
+      ],
+      "m2_cands": [
+        "fill('137', 'How Machine Learning Can Help the Book Industry')",
+        "fill('137', 'How Machine Learning Can Enhance the Book Industry')",
+        "focus('137')"
+      ],
+      "m2_choice": "fill('137', 'How Machine Learning Can Help the Book Industry')",
+      "rho_choice": null,
+      "form_fix": "fill('137', 'How Machine Learning Can Help the Book Industry')",
+      "llm": {
+        "calls": 9,
+        "prompt_tokens": 17555,
+        "completion_tokens": 564
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('142')",
+          1
+        ],
+        [
+          "fill('142', 'Machine learning can assist the book industry in various ways such as personalized recommendations, automated content analysis, and optimizing inventory management.')",
+          1
+        ],
+        [
+          "fill('142', 'Machine learning can assist in various aspects of the book industry such as predicting best-sellers, personalizing recommendations for readers, automating the editing process, and even helping authors generate ideas or text.')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('142')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=textbox": 1.0,
+            "name:body": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Body",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6020124267672422,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4004,
+        "completion_tokens": 170
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"In the book industry, machine learning can help with inventory management, predicting best-selling genres, personalizing recommendations for readers, and automating customer service responses.\")",
+          1
+        ],
+        [
+          "fill('142', 'Machine learning can significantly impact the book industry by improving personalized recommendations, optimizing inventory management, enhancing customer service through chatbots, and automating parts of the publishing process such as editing and proofreading.')",
+          1
+        ],
+        [
+          "fill('142', 'Machine learning can assist the book industry in several ways. It can be used for personalized recommendations, improving customer satisfaction and sales. Additionally, it can optimize inventory management by predicting demand and reducing overstock or stockouts.')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"In the book industry, machine learning can help with inventory management, predicting best-selling genres, personalizing recommendations for readers, and automating customer service responses.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7524401438542583,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4012,
+        "completion_tokens": 206
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:30:32"
+}

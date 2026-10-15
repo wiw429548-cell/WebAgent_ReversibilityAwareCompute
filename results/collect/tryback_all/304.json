@@ -1,0 +1,586 @@
+{
+  "task_id": 304,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "How many commits did Eric make between Feb 2023 and May 2023?",
+  "template": 321,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 9,
+  "n_env_actions": 11,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 11,
+  "prompt_tokens": 40655,
+  "completion_tokens": 1264,
+  "llm_by_tag": {
+    "policy": [
+      9,
+      36350,
+      1256
+    ],
+    "progress": [
+      2,
+      4305,
+      8
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 6,
+    "M1": 3,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 95.16113924980164,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('687')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('687')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:commits": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "2,320 Commits",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5844,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('800')",
+          2
+        ],
+        [
+          "click('842')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('800')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:author": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:commits": 0.5,
+            "path:main": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/commits/main",
+          "element": {
+            "role": "button",
+            "name": "Author",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7813,
+        "completion_tokens": 185
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('822')",
+          2
+        ],
+        [
+          "click('800')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('822')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:avatar": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "name:byteblaze": 1.0,
+            "ctx:author": 0.5,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:commits": 0.5,
+            "path:main": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/commits/main",
+          "element": {
+            "role": "menuitem",
+            "name": "avatar Byte Blaze byteblaze",
+            "context": "Author",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 28,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:commits": 0.5,
+            "path:main": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/commits/main?author=Byte%20Blaze",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false
+        },
+        {
+          "action": "click('800')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:author": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:commits": 0.5,
+            "path:main": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/commits/main",
+          "element": {
+            "role": "button",
+            "name": "Author",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7796,
+        "completion_tokens": 165
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('822')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('822')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:avatar": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "name:byteblaze": 1.0,
+            "ctx:author": 0.5,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:commits": 0.5,
+            "path:main": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/commits/main",
+          "element": {
+            "role": "menuitem",
+            "name": "avatar Byte Blaze byteblaze",
+            "context": "Author",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 28,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5661,
+        "completion_tokens": 126
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('800')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('800')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:commits": 0.5,
+            "path:main": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/commits/main?author=Byte%20Blaze",
+          "element": {
+            "role": "button",
+            "name": "Byte Blaze",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2583,
+        "completion_tokens": 108
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('800')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('800')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:commits": 0.5,
+            "path:main": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/commits/main?author=Byte%20Blaze",
+          "element": {
+            "role": "button",
+            "name": "Byte Blaze",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2895,
+        "completion_tokens": 108
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('800')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('800')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:commits": 0.5,
+            "path:main": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/commits/main?author=Byte%20Blaze",
+          "element": {
+            "role": "button",
+            "name": "Byte Blaze",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2585,
+        "completion_tokens": 163
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('800')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('800')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:commits": 0.5,
+            "path:main": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/commits/main?author=Byte%20Blaze",
+          "element": {
+            "role": "button",
+            "name": "Byte Blaze",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2895,
+        "completion_tokens": 96
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"There are no commits from Eric between Feb 2023 and May 2023 on the current page.\")",
+          1
+        ],
+        [
+          "click('800')",
+          1
+        ],
+        [
+          "report_infeasible(\"The current page does not provide a way to filter commits by date or specific author other than Byte Blaze.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"There are no commits from Eric between Feb 2023 and May 2023 on the current page.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:commits": 0.5,
+            "path:main": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/commits/main?author=Byte%20Blaze",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2583,
+        "completion_tokens": 183
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "collect",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:45:24 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 16:50:34"
+}

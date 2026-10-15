@@ -1,0 +1,180 @@
+{
+  "task_id": 43,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "List the top 3 search terms in my store",
+  "template": 285,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 1,
+  "n_env_actions": 1,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 7,
+  "prompt_tokens": 11615,
+  "completion_tokens": 648,
+  "llm_by_tag": {
+    "policy": [
+      1,
+      4257,
+      374
+    ],
+    "wm": [
+      3,
+      6628,
+      252
+    ],
+    "value": [
+      3,
+      730,
+      22
+    ]
+  },
+  "llm_cache_hits": 1,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "The top 3 search terms in your store are: 1. hollister (19 uses), 2. Joust Bag (4 uses), 3. Antonia Racer Tank (2 uses).",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 16.57712721824646,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"The top 3 search terms are: 1. hollister, 2. Joust Bag, 3. Antonia Racer Tank.\")",
+          1
+        ],
+        [
+          "send_msg_to_user(\"The top 3 search terms are: 1. hollister (19 uses), 2. Joust Bag (4 uses), 3. Antonia Racer Tank (2 uses).\")",
+          1
+        ],
+        [
+          "send_msg_to_user(\"The top 3 search terms in your store are: 1. hollister (19 uses), 2. Joust Bag (4 uses), 3. Antonia Racer Tank (2 uses).\")",
+          1
+        ],
+        [
+          "send_msg_to_user(\"'hollister', 'Joust Bag', 'Antonia Racer Tank'\")",
+          1
+        ],
+        [
+          "send_msg_to_user(\"The top 3 search terms in your store are: 1. hollister, 2. Joust Bag, 3. Antonia Racer Tank.\")",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"The top 3 search terms in your store are: 1. hollister (19 uses), 2. Joust Bag (4 uses), 3. Antonia Racer Tank (2 uses).\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.01,
+        8.01,
+        10.01
+      ],
+      "outcomes": [
+        "The agent will send a message indicating the top 3 search terms without directly interacting with the current dashboard page or modifying its content. No data on the website will be created, modified, or deleted as a result of this action; the dashboard will remain unchanged with its current statist",
+        "Based on the provided accessibility tree and the action to be executed, no page change is indicated; the current dashboard page will remain visible. The action involves sending a message to the user with specific search term data (\"hollister\", \"Joust Bag\", \"Antonia Racer Tank\") and their usage count",
+        "The agent will send a message to the user with the top 3 search terms in their store: \"hollister\" (19 uses), \"Joust Bag\" (4 uses), and \"Antonia Racer Tank\" (2 uses). This action does not modify or delete any data on the website; it merely provides information based on existing search term data. No n"
+      ],
+      "m2_cands": [
+        "send_msg_to_user(\"The top 3 search terms are: 1. hollister, 2. Joust Bag, 3. Antonia Racer Tank.\")",
+        "send_msg_to_user(\"The top 3 search terms are: 1. hollister (19 uses), 2. Joust Bag (4 uses), 3. Antonia Racer Tank (2 uses).\")",
+        "send_msg_to_user(\"The top 3 search terms in your store are: 1. hollister (19 uses), 2. Joust Bag (4 uses), 3. Antonia Racer Tank (2 uses).\")"
+      ],
+      "m2_choice": "send_msg_to_user(\"The top 3 search terms in your store are: 1. hollister (19 uses), 2. Joust Bag (4 uses), 3. Antonia Racer Tank (2 uses).\")",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 11615,
+        "completion_tokens": 648
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:46:31"
+}

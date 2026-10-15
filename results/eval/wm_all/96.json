@@ -1,0 +1,307 @@
+{
+  "task_id": 96,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Tell me the status of my latest order and when will it arrive",
+  "template": 193,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 3,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 15,
+  "prompt_tokens": 37773,
+  "completion_tokens": 1361,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      14180,
+      742
+    ],
+    "m2more": [
+      2,
+      10181,
+      216
+    ],
+    "wm": [
+      5,
+      12354,
+      363
+    ],
+    "value": [
+      5,
+      1058,
+      40
+    ]
+  },
+  "llm_cache_hits": 6,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 3
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "Your latest order is currently pending. However, the specific arrival date is not provided on this page.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "your latest order is currently pending. however, the specific arrival date is not provided on this page.",
+        "ref": "The last order was canceled. It will never arrive.",
+        "question": "Tell me the status of my latest order and when will it arrive",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "The student's answer does not match the reference answer semantically. The reference answer clearly states that the order was canceled and will never arrive, while the student's answer indicates that the order is still pending and an arrival date is not available.\n\nJudgement: Incorrect",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 36.04836130142212,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.08
+      ],
+      "outcomes": [
+        "Upon clicking the 'My Account' link (ID 227), the user will be redirected to the account management page where they can view and manage their personal information, orders, and preferences. No data will be created, modified, or deleted as a result of this action alone; it primarily serves to navigate"
+      ],
+      "m2_cands": [
+        "click('227')"
+      ],
+      "m2_choice": "click('227')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 14151,
+        "completion_tokens": 340
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1565')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1565')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:order": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:recent": 0.5,
+            "ctx:orders": 0.5,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "View Order",
+            "context": "View OrderReorder Recent Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.08
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '1565' will navigate to the order details page for order number '000000189'. This action will not create, modify, or delete any data; it will simply display detailed information about the selected order."
+      ],
+      "m2_cands": [
+        "click('1565')"
+      ],
+      "m2_choice": "click('1565')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 11492,
+        "completion_tokens": 418
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user('Your latest order is currently pending. However, the specific arrival date is not provided on this page.')",
+          1
+        ],
+        [
+          "send_msg_to_user('Your latest order is currently pending. Unfortunately, there is no specific information provided on when it will arrive.')",
+          1
+        ],
+        [
+          "send_msg_to_user('Your latest order is currently pending, but there is no specific information on when it will arrive.')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"Your latest order is currently pending. Unfortunately, the expected arrival date is not specified on this page.\")",
+          1
+        ],
+        [
+          "send_msg_to_user('Your latest order is currently pending. There is no specific delivery date mentioned on this page.')",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "send_msg_to_user('Your latest order is currently pending. However, the specific arrival date is not provided on this page.')",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/view/order_id/189/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.01,
+        5.01,
+        5.01
+      ],
+      "outcomes": [
+        "The agent will inform the user that their latest order is currently pending but will not provide a specific arrival date from the information available on the current page. No page change will occur as a result of this interaction, and there will be no creation, modification, or deletion of data on ",
+        "The agent will send a message to the user indicating that their latest order is currently pending without providing an estimated arrival time. No page change will occur; the user will remain on the order view page for order ID 189. There will be no creation, modification, or deletion of data on the ",
+        "The agent will send a message to the user indicating that their latest order is currently pending without providing an estimated arrival time. No page change will occur; the user will remain on the order view page for order ID 189. There will be no creation, modification, or deletion of data on the "
+      ],
+      "m2_cands": [
+        "send_msg_to_user('Your latest order is currently pending. However, the specific arrival date is not provided on this page.')",
+        "send_msg_to_user('Your latest order is currently pending. Unfortunately, there is no specific information provided on when it will arrive.')",
+        "send_msg_to_user('Your latest order is currently pending, but there is no specific information on when it will arrive.')"
+      ],
+      "m2_choice": "send_msg_to_user('Your latest order is currently pending. However, the specific arrival date is not provided on this page.')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 12130,
+        "completion_tokens": 603
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:45:12"
+}

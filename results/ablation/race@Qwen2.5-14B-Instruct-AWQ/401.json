@@ -1,0 +1,1093 @@
+{
+  "task_id": 401,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Change my reddit bio to \"Seeking SDE positions\"",
+  "template": 6,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 25,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 5,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 25,
+  "prompt_tokens": 68759,
+  "completion_tokens": 1859,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      56979,
+      1819
+    ],
+    "progress": [
+      10,
+      11780,
+      40
+    ]
+  },
+  "llm_cache_hits": 6,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 11,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 233.54202365875244,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('68')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.18855816941178616,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('68')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:marvelsgrantman": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "button",
+            "name": "MarvelsGrantMan136",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1510,
+        "completion_tokens": 66
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('89')",
+          2
+        ],
+        [
+          "click('99')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.007033943101594867,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('89')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:user": 1.0,
+            "name:settings": 1.0,
+            "kw:set": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": " User settings",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 39,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007033943101594867,
+        0.8276099690000306
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1734,
+        "completion_tokens": 99
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          1
+        ],
+        [
+          "click('68')",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "path:preferences": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/preferences",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "path:settings": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/settings",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 39,
+          "server_error": false
+        },
+        {
+          "action": "click('68')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "path:preferences": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/preferences",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.03483436226134329
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5981,
+        "completion_tokens": 116
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('62')",
+          1
+        ],
+        [
+          "hover('62')",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136/preferences')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.19151634486270233,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:marvelsgrantman": 1.0,
+            "ctx:editing": 0.5,
+            "ctx:user": 0.5,
+            "ctx:settings": 0.5,
+            "ctx:for": 0.5,
+            "ctx:marvelsgrantman": 0.5,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "path:preferences": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/preferences",
+          "element": {
+            "role": "button",
+            "name": "MarvelsGrantMan136",
+            "context": "Editing user settings for MarvelsGrantMan136",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.19151634486270233,
+        0.24335547904994317
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7127,
+        "completion_tokens": 171
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('75')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.008034101824031449,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('75')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:profile": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "path:preferences": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/preferences",
+          "element": {
+            "role": "link",
+            "name": " Profile",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4951,
+        "completion_tokens": 73
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.040274651136156685,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5636,
+        "completion_tokens": 160
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          2
+        ],
+        [
+          "click('12')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "path:settings": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/settings",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.006155704580878549
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1413,
+        "completion_tokens": 143
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136')",
+          1
+        ],
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "path:settings": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/settings",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.040274651136156685
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1413,
+        "completion_tokens": 154
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          2
+        ],
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "path:settings": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/settings",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.01914946635900303
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1427,
+        "completion_tokens": 170
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.01914946635900303,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "path:settings": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/settings",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 42,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1157,
+        "completion_tokens": 106
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('63')",
+          1
+        ],
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.19398385857193653,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('63')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:marvelsgrantman": 1.0,
+            "ctx:marvelsgrantman": 0.5,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136",
+          "element": {
+            "role": "button",
+            "name": "MarvelsGrantMan136",
+            "context": "MarvelsGrantMan136",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.19398385857193653,
+        0.01914946635900303
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7801,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('136')",
+          1
+        ],
+        [
+          "click('67')",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.05974863604891016,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('136')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=strong": 1.0,
+            "ctx:no": 0.5,
+            "ctx:comments": 0.5,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": "No comments",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 39,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:machinelearning": 0.5,
+            "path:nvidia": 0.5,
+            "path:rtx": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/MachineLearning/1/nvidia-rtx-4090",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        },
+        {
+          "action": "click('67')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=strong": 1.0,
+            "ctx:marvelsgrantman": 0.5,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": "MarvelsGrantMan136 MarvelsGrantMan136",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05974863604891016,
+        0.05974863604891016
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7787,
+        "completion_tokens": 96
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          2
+        ],
+        [
+          "click('67')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "path:settings": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/settings",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        },
+        {
+          "action": "click('67')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=strong": 1.0,
+            "ctx:marvelsgrantman": 0.5,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": "MarvelsGrantMan136 MarvelsGrantMan136",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.05974863604891016
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6839,
+        "completion_tokens": 105
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          2
+        ],
+        [
+          "click('84')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "path:settings": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/settings",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        },
+        {
+          "action": "click('84')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.007033943101594867
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6844,
+        "completion_tokens": 106
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          2
+        ],
+        [
+          "hover('67')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/user/MarvelsGrantMan136/settings')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "path:settings": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/settings",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 42,
+          "server_error": false
+        },
+        {
+          "action": "hover('67')",
+          "rollback": false,
+          "feat": {
+            "act=hover": 1.0,
+            "role=strong": 1.0,
+            "ctx:marvelsgrantman": 0.5,
+            "path:user": 0.5,
+            "path:marvelsgrantman": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/user/MarvelsGrantMan136",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": "MarvelsGrantMan136 MarvelsGrantMan136",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.07942510328500135
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7139,
+        "completion_tokens": 180
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:37:06"
+}

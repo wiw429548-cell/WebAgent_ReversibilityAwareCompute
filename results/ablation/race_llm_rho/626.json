@@ -1,0 +1,894 @@
+{
+  "task_id": 626,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Create a discussion post about \"Iphone 14\" in a relevant subreddit and ask users for their opinions with the simple prompt, \"your opinion\"",
+  "template": 13,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 64,
+  "prompt_tokens": 60161,
+  "completion_tokens": 3588,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      35030,
+      2162
+    ],
+    "rho": [
+      22,
+      2744,
+      102
+    ],
+    "m2more": [
+      3,
+      4916,
+      391
+    ],
+    "wm": [
+      9,
+      6879,
+      746
+    ],
+    "value": [
+      9,
+      2025,
+      72
+    ],
+    "form": [
+      2,
+      1518,
+      99
+    ],
+    "progress": [
+      4,
+      7049,
+      16
+    ]
+  },
+  "llm_cache_hits": 26,
+  "mode_counts": {
+    "M0": 5,
+    "M1": 4,
+    "M2": 6
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 2,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 0.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 158.10235142707825,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('62')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.85,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.06
+      ],
+      "outcomes": [
+        "Upon clicking the \"Submit\" link, the user will be directed to a submission page where they can create new content such as posts or articles. No data will be created, modified, or deleted immediately upon navigating to this page; however, the user will have the opportunity to input and submit new inf"
+      ],
+      "m2_cands": [
+        "click('62')"
+      ],
+      "m2_choice": "click('62')",
+      "rho_choice": 0.85,
+      "form_fix": "click('62')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 4889,
+        "completion_tokens": 425
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('137', 'Iphone 14')",
+          2
+        ],
+        [
+          "select_option('378', 'Apple')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.85,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select_option('378', 'Apple')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.02,
+        7.01
+      ],
+      "outcomes": [
+        "The agent will fill in the textbox with the ID '137' with the text \"Iphone 14\", setting the title of the submission being created to \"Iphone 14\". No immediate page change or data creation/modification will occur until the \"Create submission\" button is pressed; currently, only the form data is being ",
+        "Selecting the option 'Apple' from the combobox with id '378' will update the forum selection for the submission form without navigating to a new page. No data will be created, modified, or deleted on the website at this point; the change only updates the form's state."
+      ],
+      "m2_cands": [
+        "fill('137', 'Iphone 14')",
+        "select_option('378', 'Apple')"
+      ],
+      "m2_choice": "select_option('378', 'Apple')",
+      "rho_choice": 0.25,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 3766,
+        "completion_tokens": 288
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.5,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1827,
+        "completion_tokens": 157
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'iphone')",
+          2
+        ],
+        [
+          "click('562')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.25,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('378', 'iphone')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.25,
+        0.3
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 6096,
+        "completion_tokens": 163
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          2
+        ],
+        [
+          "click('562')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.5,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.5,
+        0.3
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 5943,
+        "completion_tokens": 154
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('137', 'Iphone 14')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.85,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('137', 'Iphone 14 - Your Opinion')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "name:is": 1.0,
+            "name:required": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "typed_len": 0.12,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Title This field is required.",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.06
+      ],
+      "outcomes": [
+        "The agent will fill in the textbox with the ID '137' with the text \"Iphone 14\", setting the title of the submission being created to \"Iphone 14\". No immediate page change or data creation/modification will occur until the form is submitted; however, this action updates the form's state, preparing it"
+      ],
+      "m2_cands": [
+        "fill('137', 'Iphone 14')"
+      ],
+      "m2_choice": "fill('137', 'Iphone 14')",
+      "rho_choice": 0.85,
+      "form_fix": "fill('137', 'Iphone 14 - Your Opinion')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 5340,
+        "completion_tokens": 365
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('142', 'your opinion')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.3,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('142', 'your opinion')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:body": 1.0,
+            "typed_len": 0.06,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Body",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1816,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('395')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.85,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('395')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.06
+      ],
+      "outcomes": [
+        "Upon clicking the \"Create submission\" button, the form data including the title \"Iphone 14 - Your Opinion\", body text \"your opinion\", and selected forum will be submitted to the server. Assuming the submission is successful, the page will likely refresh or redirect to a confirmation page or the user"
+      ],
+      "m2_cands": [
+        "click('395')"
+      ],
+      "m2_choice": "click('395')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 4626,
+        "completion_tokens": 337
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('395')",
+          2
+        ],
+        [
+          "click('378')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.85,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('395')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        5.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Create submission\" button, the form data including the title \"Iphone 14 - Your Opinion\", body \"your opinion\", and selected forum will be submitted to the server. Assuming the submission is successful, the page will likely refresh or redirect to a confirmation page or the home page",
+        "When the agent clicks on the combobox with id '378', the dropdown menu for selecting a forum will expand, allowing the user to choose a specific forum from the list. No new page will be shown, and no data will be created, modified, or deleted until a forum is selected and the \"Create submission\" but"
+      ],
+      "m2_cands": [
+        "click('395')",
+        "click('378')"
+      ],
+      "m2_choice": "click('395')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 3895,
+        "completion_tokens": 330
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('395')",
+          2
+        ],
+        [
+          "select_option('378', 'iphone')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.85,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('395')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        7.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Create submission\" button, the form data including the title \"Iphone 14 - Your Opinion\", body \"your opinion\", and selected forum will be submitted to the server. Assuming the submission is successful, the page will likely refresh or redirect to a confirmation page or the home page",
+        "After executing the command `select_option('378', 'iphone')`, the dropdown menu with the identifier `378` will change its selected option to \"iphone\", assuming \"iphone\" is an available choice within the forum selection options. No new page will be shown as a result of this action alone; however, if "
+      ],
+      "m2_cands": [
+        "click('395')",
+        "select_option('378', 'iphone')"
+      ],
+      "m2_choice": "click('395')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 3947,
+        "completion_tokens": 411
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          2
+        ],
+        [
+          "select_option('378', 'technology')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.5,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.5,
+        0.25
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 3666,
+        "completion_tokens": 200
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'iphone')",
+          2
+        ],
+        [
+          "select_option('378', 'technology')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.25,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('378', 'iphone')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.25,
+        0.25
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 6245,
+        "completion_tokens": 177
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.5,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4327,
+        "completion_tokens": 176
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'iphone')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.25,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('378', 'iphone')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1846,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.5,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1932,
+        "completion_tokens": 147
+      }
+    }
+  ],
+  "method": "race_llm_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "llm"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 04:03:39"
+}

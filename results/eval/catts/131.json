@@ -1,0 +1,155 @@
+{
+  "task_id": 131,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "What's the total number of items sold in the most recent 7 orders?",
+  "template": 1002,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 1,
+  "n_env_actions": 1,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 2,
+  "prompt_tokens": 7753,
+  "completion_tokens": 232,
+  "llm_by_tag": {
+    "policy": [
+      1,
+      4262,
+      208
+    ],
+    "arbiter": [
+      1,
+      3491,
+      24
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 1,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "The most recent 7 orders have the following quantities: 5 + 4 + 3 + 4 + 2 = 18",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 13.68088960647583,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('156')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"The most recent 7 orders have the following quantities: 5 + 4 + 3 + 4 + 2 = 18\")",
+          1
+        ],
+        [
+          "send_msg_to_user(\"5 + 4 + 3 + 4 + 2\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"The most recent 7 orders have the following quantities: 5 + 4 + 3 + 4 + 2 = 18\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 1,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7753,
+        "completion_tokens": 232
+      }
+    }
+  ],
+  "method": "catts",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:04:04"
+}

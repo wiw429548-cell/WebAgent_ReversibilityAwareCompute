@@ -1,0 +1,329 @@
+{
+  "task_id": 324,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Show me the \"chairs\" listings by ascending price.",
+  "template": 208,
+  "eval_types": [
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 4,
+  "n_env_actions": 4,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 16,
+  "prompt_tokens": 41782,
+  "completion_tokens": 1208,
+  "llm_by_tag": {
+    "policy": [
+      4,
+      22366,
+      590
+    ],
+    "wm": [
+      5,
+      11978,
+      418
+    ],
+    "value": [
+      5,
+      1064,
+      40
+    ],
+    "form": [
+      2,
+      6374,
+      160
+    ]
+  },
+  "llm_cache_hits": 8,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 0,
+    "M2": 2
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 30.19510006904602,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('386', 'chairs', True)",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.6673317970746512,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('386', 'chairs', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.03,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5761,
+        "completion_tokens": 115
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"It seems the search results do not include any chairs. Could you please confirm if we should refine the search or check another page for chairs listings?\")",
+          1
+        ],
+        [
+          "click('1944')",
+          1
+        ],
+        [
+          "click('391')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03176220409725453,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('391')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.01,
+        2.01,
+        5.01
+      ],
+      "outcomes": [
+        "The current page will remain displayed with no immediate changes to the website's data. After sending the message to the user, if the user decides to refine the search or navigate to another page for chairs listings, the search query or page content might change accordingly, potentially updating the",
+        "Given the provided accessibility tree, clicking on element '1944' is not directly described within the given structure, suggesting it might be an element outside the current view or part of a dynamically loaded content. Assuming it's a valid clickable element, such as a product link or a navigation ",
+        "Upon executing the click action on element '391', which is the 'Search' button, the current page will likely refresh or navigate to a new page displaying search results for \"chairs\". No data will be created, modified, or deleted; however, the website will process the search query and update the cont"
+      ],
+      "m2_cands": [
+        "send_msg_to_user(\"It seems the search results do not include any chairs. Could you please confirm if we should refine the search or check another page for chairs listings?\")",
+        "click('1944')",
+        "click('391')"
+      ],
+      "m2_choice": "click('391')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 17074,
+        "completion_tokens": 566
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1500', ['Price'])",
+          2
+        ],
+        [
+          "click('1500')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.1189913527403678,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select_option('1500', ['Price'])",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.02,
+        3.01
+      ],
+      "outcomes": [
+        "Selecting the 'Price' option from the sort dropdown (ID 1500) will refresh the current page to display search results for 'chairs' sorted by price. No data will be created or deleted; only the existing product listings will be reordered based on their price, either ascending or descending depending ",
+        "Clicking on the combobox element with id '1500' will expand the dropdown menu allowing the user to select a different sorting option for the search results. This action itself does not create, modify, or delete any data on the website; it merely prepares the interface for a potential change in how t"
+      ],
+      "m2_cands": [
+        "select_option('1500', ['Price'])",
+        "click('1500')"
+      ],
+      "m2_choice": "select_option('1500', ['Price'])",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13495,
+        "completion_tokens": 386
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1504')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.005375209770072264,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1504')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:set": 1.0,
+            "name:ascending": 1.0,
+            "name:direction": 1.0,
+            "kw:set": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "path:index": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/index/?q=chairs&product_list_order=price",
+          "element": {
+            "role": "link",
+            "name": " Set Ascending Direction",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5452,
+        "completion_tokens": 141
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:57:33"
+}

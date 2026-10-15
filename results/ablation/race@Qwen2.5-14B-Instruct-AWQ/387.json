@@ -1,0 +1,297 @@
+{
+  "task_id": 387,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Who gave 4 or 5 stars for phone cases from EYZUTAK",
+  "template": 1356,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 2,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 2,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 4,
+  "prompt_tokens": 12693,
+  "completion_tokens": 352,
+  "llm_by_tag": {
+    "policy": [
+      2,
+      8881,
+      344
+    ],
+    "progress": [
+      2,
+      3812,
+      8
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 2,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 27.553089141845703,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('1293', 'left')",
+          2
+        ],
+        [
+          "goto('http://localhost:7770/cell-phones-accessories/')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.03941444060622814,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1293', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:cell": 1.0,
+            "name:phones": 1.0,
+            "name:accessories": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "menuitem",
+            "name": " Cell Phones & Accessories",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:7770/cell-phones-accessories/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 217,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03941444060622814,
+        0.040274651136156685
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7678,
+        "completion_tokens": 196
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          2
+        ],
+        [
+          "report_infeasible('The requested page does not exist.')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.01914946635900303,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        },
+        {
+          "action": "report_infeasible('The requested page does not exist.')",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.01914946635900303,
+        0.02750748409404009
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5015,
+        "completion_tokens": 156
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:46:43"
+}

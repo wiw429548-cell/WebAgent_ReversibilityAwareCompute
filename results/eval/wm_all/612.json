@@ -1,0 +1,1068 @@
+{
+  "task_id": 612,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Post a review of my recent reading \"big little lies\" in the r/books with my comment \"can't stop it\".",
+  "template": 9,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 89,
+  "prompt_tokens": 100571,
+  "completion_tokens": 6530,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      39582,
+      3157
+    ],
+    "wm": [
+      36,
+      49753,
+      2789
+    ],
+    "value": [
+      36,
+      7700,
+      288
+    ],
+    "m2more": [
+      2,
+      3536,
+      296
+    ]
+  },
+  "llm_cache_hits": 89,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 15
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 0.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 132.82021975517273,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('62')",
+          4
+        ],
+        [
+          "fill('54', 'r/books')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.04,
+        3.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Submit\" link, the user will be directed to a submission page where they can create new content such as posts or articles. No data will be created, modified, or deleted immediately upon navigating to this page; however, the user will have the opportunity to input and submit new inf",
+        "After executing the command to fill the search box with \"r/books\", the page will likely refresh or navigate to a results page displaying forums or submissions related to \"r/books\". No data on the website will be created, modified, or deleted; the action only triggers a search query."
+      ],
+      "m2_cands": [
+        "click('62')",
+        "fill('54', 'r/books')"
+      ],
+      "m2_choice": "click('62')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 3245,
+        "completion_tokens": 338
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('137', 'Big Little Lies')",
+          2
+        ],
+        [
+          "click('378')",
+          1
+        ],
+        [
+          "fill('137', 'big little lies')",
+          1
+        ],
+        [
+          "fill('137', 'Review of Big Little Lies')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('137', 'Big Little Lies')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "name:is": 1.0,
+            "name:required": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "typed_len": 0.075,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Title This field is required.",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        5.01,
+        6.01
+      ],
+      "outcomes": [
+        "The agent will fill in the textbox with the ID '137' with the text \"Big Little Lies\", which corresponds to the title field for creating a submission. No immediate page change will occur, but upon submitting the form, this title along with other filled fields will be used to create a new submission w",
+        "Clicking on the combobox element with ID '378' will expand its dropdown menu, allowing the user to select a forum from the available options. This action itself does not create, modify, or delete any data on the website; it merely prepares the form for submission by enabling the selection of a forum",
+        "The agent will fill in the textbox with the ID '137' with the text \"big little lies\", setting the title of the submission to this value. No new page will be shown as a result of this action alone; however, if the form is subsequently submitted, it will create a new submission titled \"big little lies"
+      ],
+      "m2_cands": [
+        "fill('137', 'Big Little Lies')",
+        "click('378')",
+        "fill('137', 'big little lies')"
+      ],
+      "m2_choice": "fill('137', 'Big Little Lies')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 4451,
+        "completion_tokens": 463
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          4
+        ],
+        [
+          "select_option('378', 'r/books')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select_option('378', 'r/books')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.04,
+        8.01
+      ],
+      "outcomes": [
+        "Upon clicking the combobox with ID '378', a dropdown menu will appear, allowing the user to select a forum from a list of available options. No data will be created, modified, or deleted at this stage; the action merely prepares the form for submission by enabling the selection of a forum category.",
+        "After the agent executes `select_option('378', 'r/books')`, the dropdown menu labeled \"Forum\" will change its selection to \"r/books\". No new page will be shown; instead, the form on the current page will update to reflect the selected forum for the submission. No data will be created, modified, or d"
+      ],
+      "m2_cands": [
+        "click('378')",
+        "select_option('378', 'r/books')"
+      ],
+      "m2_choice": "select_option('378', 'r/books')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 3554,
+        "completion_tokens": 406
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.08
+      ],
+      "outcomes": [
+        "Upon clicking the combobox with ID '378', a dropdown menu will appear, allowing the user to select a forum from a list of available options. No data will be created, modified, or deleted at this stage; the action merely prepares the form for submission by enabling the selection of a forum category."
+      ],
+      "m2_cands": [
+        "click('378')"
+      ],
+      "m2_choice": "click('378')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 4407,
+        "completion_tokens": 446
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('142')",
+          2
+        ],
+        [
+          "click('451')",
+          1
+        ],
+        [
+          "fill('142', \"can't stop it\")",
+          1
+        ],
+        [
+          "click('395')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "focus('142')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=textbox": 1.0,
+            "name:body": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Body",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.02,
+        2.01,
+        3.01
+      ],
+      "outcomes": [
+        "Focusing on the element with ID '142' will bring the 'Body' text box into focus, allowing the user to input or edit the body text of the submission directly. No page change will occur; the user remains on the 'Create submission' page. No data will be created, modified, or deleted until an explicit a",
+        "When the agent executes `click('451')`, it will select the \"boston\" option from the forum dropdown menu. This action will modify the form data on the current page, setting the forum field to \"boston\". No new page will be shown as a result of this action; the user remains on the submission creation p",
+        "The agent will fill the \"Body\" textbox with the text \"can't stop it\". No new page will be shown as a result of this action alone; the current page remains the same. No data will be created, modified, or deleted on the website until a form submission occurs, which is not part of the described action."
+      ],
+      "m2_cands": [
+        "focus('142')",
+        "click('451')",
+        "fill('142', \"can't stop it\")"
+      ],
+      "m2_choice": "focus('142')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 10847,
+        "completion_tokens": 419
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('142', 'can\\'t stop it')",
+          3
+        ],
+        [
+          "select_option('378', 'books')",
+          1
+        ],
+        [
+          "select_option('418', 'books')",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select_option('378', 'books')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.03,
+        8.01,
+        7.01
+      ],
+      "outcomes": [
+        "The agent will fill the \"Body\" textbox with the text \"can't stop it\". No immediate page change is expected; the user will remain on the submission creation page. The action itself does not create, modify, or delete any data on the website until the form is explicitly submitted.",
+        "When the agent executes `select_option('378', 'books')`, it will change the selected forum from \"Choose one…\" to \"books\" in the dropdown menu. No new page will be shown; instead, the current page will update to reflect the selection of the \"books\" forum for the submission. No data will be created, m",
+        "Upon executing the command `select_option('418', 'books')`, the option \"books\" will be selected from the dropdown menu labeled \"Forum\". This action will update the form on the current page without navigating to a new page. No data will be created, modified, or deleted on the website at this point; i"
+      ],
+      "m2_cands": [
+        "fill('142', 'can\\'t stop it')",
+        "select_option('378', 'books')",
+        "select_option('418', 'books')"
+      ],
+      "m2_choice": "select_option('378', 'books')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 10881,
+        "completion_tokens": 421
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('451')",
+          3
+        ],
+        [
+          "select_option('378', 'books')",
+          1
+        ],
+        [
+          "click('378')",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select_option('378', 'books')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        0.03,
+        8.01,
+        5.01
+      ],
+      "outcomes": [
+        "Clicking on the option 'boston' (ID: 451) within the forum selection dropdown will update the forum field with \"boston\" as the chosen forum for the submission. No new page will be shown; instead, the current page will remain active with the forum selection now reflecting \"boston\". No data will be cr",
+        "When the agent executes `select_option('378', 'books')`, it will change the selected forum from \"Choose one…\" to \"books\" in the dropdown menu. No new page will be shown; instead, the current page will update to reflect the selection of the \"books\" forum for the submission. No data will be created, m",
+        "Clicking on the 'Choose one…' combobox (ID 378) will expand the dropdown menu, allowing the user to select a forum from the list of options provided. No data will be created, modified, or deleted at this step; the action merely prepares for the selection of a forum category for the submission being "
+      ],
+      "m2_cands": [
+        "click('451')",
+        "select_option('378', 'books')",
+        "click('378')"
+      ],
+      "m2_choice": "select_option('378', 'books')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 10975,
+        "completion_tokens": 494
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          3
+        ],
+        [
+          "clear('378')",
+          1
+        ],
+        [
+          "select_option('378', 'books')",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select_option('378', 'books')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.03,
+        2.01,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Choose one…' combobox (ID 378) will expand the dropdown menu, allowing the user to select a forum from the list of options provided. No data will be created, modified, or deleted at this step; the action merely prepares for the selection of a forum category for the submission being ",
+        "Executing `clear('378')` will reset the forum selection dropdown to its initial state, effectively clearing any previously selected forum option. The current page will remain the same, with no data being created or permanently modified on the website; only the user's input in the forum selection fie",
+        "When the agent executes `select_option('378', 'books')`, it will change the selected forum from \"Choose one…\" to \"books\" in the dropdown menu. No new page will be shown; instead, the current page will update to reflect the selection of the \"books\" forum for the submission. No data will be created, m"
+      ],
+      "m2_cands": [
+        "click('378')",
+        "clear('378')",
+        "select_option('378', 'books')"
+      ],
+      "m2_choice": "select_option('378', 'books')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 10958,
+        "completion_tokens": 491
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'books')",
+          2
+        ],
+        [
+          "click('451')",
+          1
+        ],
+        [
+          "select_option('451', 'books')",
+          1
+        ],
+        [
+          "click('378')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select_option('378', 'books')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        0.01,
+        8.01
+      ],
+      "outcomes": [
+        "When the agent executes `select_option('378', 'books')`, it will change the selected forum from \"Choose one…\" to \"books\" in the dropdown menu. No new page will be shown; instead, the current page will update to reflect the selection of the \"books\" forum for the submission. No data will be created, m",
+        "Clicking on the option 'boston' (ID: 451) within the forum selection dropdown will update the forum field with \"boston\" as the chosen forum for the submission. No new page will be shown; instead, the current page will remain active with the forum selection now reflecting \"boston\". No data will be cr",
+        "Upon executing the command `select_option('451', 'books')`, the option \"books\" will be selected from the dropdown menu labeled \"Forum\". This action will update the form on the current page without navigating to a new page. No data will be created, modified, or deleted on the website at this point; i"
+      ],
+      "m2_cands": [
+        "select_option('378', 'books')",
+        "click('451')",
+        "select_option('451', 'books')"
+      ],
+      "m2_choice": "select_option('378', 'books')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 10996,
+        "completion_tokens": 479
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('451')",
+          3
+        ],
+        [
+          "click('378')",
+          2
+        ]
+      ],
+      "u": 0.4181656600790517,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        0.03,
+        5.02
+      ],
+      "outcomes": [
+        "Clicking on the option 'boston' (ID: 451) within the forum selection dropdown will update the forum field with \"boston\" as the chosen forum for the submission. No new page will be shown; instead, the current page will remain active with the forum selection now reflecting \"boston\". No data will be cr",
+        "Clicking on the 'Choose one…' combobox (ID 378) will expand the dropdown menu, allowing the user to select a forum from the list of options provided. No data will be created, modified, or deleted at this step; the action merely prepares for the selection of a forum category for the submission being "
+      ],
+      "m2_cands": [
+        "click('451')",
+        "click('378')"
+      ],
+      "m2_choice": "click('378')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 8679,
+        "completion_tokens": 412
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('142', \"can't stop it\")",
+          3
+        ],
+        [
+          "fill('142', 'can\\'t stop it')",
+          2
+        ]
+      ],
+      "u": 0.4181656600790517,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('142', \"can't stop it\")",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:body": 1.0,
+            "typed_len": 0.065,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Body",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.03,
+        3.02
+      ],
+      "outcomes": [
+        "The agent will fill the \"Body\" textbox with the text \"can't stop it\". No immediate page change is expected; the user remains on the submission creation page. The action itself does not create, modify, or delete any data on the website until the \"Create submission\" button is explicitly clicked, at wh",
+        "The agent will fill the \"Body\" textbox with the text \"can't stop it\". No immediate page change is expected; the user remains on the \"Create submission\" page. The action itself does not create, modify, or delete any data on the website until the \"Create submission\" button is pressed, at which point a"
+      ],
+      "m2_cands": [
+        "fill('142', \"can't stop it\")",
+        "fill('142', 'can\\'t stop it')"
+      ],
+      "m2_choice": "fill('142', \"can't stop it\")",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 3628,
+        "completion_tokens": 390
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('395')",
+          4
+        ],
+        [
+          "fill('137', 'Big Little Lies')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('395')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.04,
+        5.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Create submission\" button, the website will process the form data including the title \"Big Little Lies,\" body text \"can't stop it,\" and selected forum. If all fields are correctly filled and meet the requirements, a new submission will be created within the chosen forum, and the u",
+        "The action will update the value of the 'Title' textbox (element [137]) to 'Big Little Lies', which is already its current value, so there will be no visible change on the page. No data will be created, modified, or deleted on the website until the 'Create submission' button is clicked, at which poi"
+      ],
+      "m2_cands": [
+        "click('395')",
+        "fill('137', 'Big Little Lies')"
+      ],
+      "m2_choice": "click('395')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 3783,
+        "completion_tokens": 423
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('137', 'Big Little Lies')",
+          3
+        ],
+        [
+          "click('395')",
+          1
+        ],
+        [
+          "select_option('378', 'books')",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('395')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.03,
+        8.01,
+        8.01
+      ],
+      "outcomes": [
+        "The agent will fill the 'Title' textbox with the text 'Big Little Lies', which is already the current value, so there won't be any change in the input field. No new page will be shown as a result of this action alone, and no data will be created, modified, or deleted on the website until the 'Create",
+        "Upon clicking the \"Create submission\" button, the website will process the form data including the title \"Big Little Lies,\" body text \"can't stop it,\" and selected forum. If all fields are correctly filled and meet the requirements, a new submission will be created within the chosen forum, and the u",
+        "After the agent executes `select_option('378', 'books')`, the dropdown menu associated with the forum selection will change its value from \"Choose one…\" to \"books\". No new page will be shown; instead, the form on the current page will update to reflect the selected forum category. No data will be cr"
+      ],
+      "m2_cands": [
+        "fill('137', 'Big Little Lies')",
+        "click('395')",
+        "select_option('378', 'books')"
+      ],
+      "m2_choice": "click('395')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 4788,
+        "completion_tokens": 444
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'books')",
+          2
+        ],
+        [
+          "fill('137', 'Big Little Lies')",
+          1
+        ],
+        [
+          "clear('137')",
+          1
+        ],
+        [
+          "click('395')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select_option('378', 'books')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        5.01,
+        2.01
+      ],
+      "outcomes": [
+        "After the agent executes `select_option('378', 'books')`, the dropdown menu associated with the forum selection will change its value from \"Choose one…\" to \"books\". No new page will be shown; instead, the form on the current page will update to reflect the selected forum category. No data will be cr",
+        "The agent will fill the 'Title' textbox with the text 'Big Little Lies', which is already the current value, so there won't be any change in the input field. No new page will be shown as a result of this action alone, and no data will be created, modified, or deleted on the website until the 'Create",
+        "The agent will clear the text in the \"Title\" textbox, removing the current value \"Big Little Lies\". The page will remain the same, displaying the form for creating a submission. No data will be created, modified, or deleted on the website until the form is submitted."
+      ],
+      "m2_cands": [
+        "select_option('378', 'books')",
+        "fill('137', 'Big Little Lies')",
+        "clear('137')"
+      ],
+      "m2_choice": "select_option('378', 'books')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 4746,
+        "completion_tokens": 433
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.08
+      ],
+      "outcomes": [
+        "Upon clicking the combobox with ID '378', the dropdown menu for selecting a forum will expand, allowing the user to choose a specific forum from the available options. No immediate page change occurs; instead, the selection made will determine the forum to which the submission will be posted once th"
+      ],
+      "m2_cands": [
+        "click('378')"
+      ],
+      "m2_choice": "click('378')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 4633,
+        "completion_tokens": 471
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:58:58"
+}

@@ -1,0 +1,965 @@
+{
+  "task_id": 574,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "I recently moved, my address is 111 Magnolia Path, Atlanta, GA, 30303, update my information on OneStopShopping accordingly",
+  "template": 165,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 38,
+  "prompt_tokens": 114365,
+  "completion_tokens": 3360,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      78313,
+      2204
+    ],
+    "m2more": [
+      1,
+      5305,
+      200
+    ],
+    "wm": [
+      10,
+      22419,
+      742
+    ],
+    "value": [
+      10,
+      2291,
+      80
+    ],
+    "form": [
+      2,
+      6037,
+      134
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 11,
+    "M1": 0,
+    "M2": 4
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 2,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 215.91196537017822,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 668,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7648831846128594,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5791,
+        "completion_tokens": 108
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:manage": 1.0,
+            "name:addresses": 1.0,
+            "kw:add": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "Manage Addresses",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 669,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7690305735919978,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5025,
+        "completion_tokens": 102
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1503')",
+          2
+        ],
+        [
+          "click('1490')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1503')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:change": 1.0,
+            "name:shipping": 1.0,
+            "name:address": 1.0,
+            "kw:change": 1.0,
+            "kw:ship": 1.0,
+            "kw:add": 1.0,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/",
+          "element": {
+            "role": "link",
+            "name": "Change Shipping Address",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 671,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.04145112248593463,
+      "wm_scores": [
+        8.02,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the \"Change Shipping Address\" button (ID: 1503) will navigate to a new page where the user can modify the shipping address details. No immediate data modification occurs on this action; however, the subsequent changes made on the new page and submitted will update the default shipping ad",
+        "Clicking on the \"Change Shipping Address\" link (ID: 1490) will navigate to a new page where the user can modify the shipping address details. No immediate data modification occurs on the current page; however, the new page will allow the user to edit and save changes to their shipping address, which"
+      ],
+      "m2_cands": [
+        "click('1503')",
+        "click('1490')"
+      ],
+      "m2_choice": "click('1503')",
+      "rho_choice": null,
+      "form_fix": "click('1503')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 11864,
+        "completion_tokens": 314
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1516', '111 Magnolia Path')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1516', '111 Magnolia Path')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.085,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address* Street Address: Line 1",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9201493154456202,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5261,
+        "completion_tokens": 118
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1522', 'Atlanta')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1522', 'Atlanta')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.035,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.5384945516472222,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5274,
+        "completion_tokens": 84
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1522', 'GA')",
+          2
+        ],
+        [
+          "click('1527')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1522', 'GA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.01,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7074019253001786,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5281,
+        "completion_tokens": 90
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1522', 'Atlanta, GA')",
+          2
+        ],
+        [
+          "clear('1522')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1522', 'Atlanta, GA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.055,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.4048120533222104,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5295,
+        "completion_tokens": 163
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1522', '30303')",
+          1
+        ],
+        [
+          "fill('1522', 'Atlanta, GA 30303')",
+          1
+        ],
+        [
+          "clear('1522')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1522', '30303')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.025,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.660701796658703,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5298,
+        "completion_tokens": 218
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1522', 'GA')",
+          1
+        ],
+        [
+          "fill('1522', 'Atlanta, GA')",
+          1
+        ],
+        [
+          "clear('1522')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1522', 'Atlanta')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.035,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.14372515015258003,
+      "wm_scores": [
+        2.01,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will update the value of the \"Street Address: Line 2\" field to \"GA\". This action will modify the address information being edited on the current page without immediately saving the changes to the website's database. The page will remain as is, displaying the updated address information unt",
+        "The agent will update the value of the \"Street Address: Line 2\" field to \"Atlanta, GA\". This action will modify the address information being edited on the current page without immediately saving the changes to the server. The page will remain on the address editing interface, displaying the updated",
+        "The agent will clear the content of the \"Street Address: Line 2\" field (ID 1522), which is currently focused and contains the value '30303'. This action will remove the text '30303' from the input field without immediately modifying any data on the server; changes will only be applied if the user su"
+      ],
+      "m2_cands": [
+        "fill('1522', 'GA')",
+        "fill('1522', 'Atlanta, GA')",
+        "clear('1522')"
+      ],
+      "m2_choice": "fill('1522', 'GA')",
+      "rho_choice": null,
+      "form_fix": "fill('1522', 'Atlanta')",
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 15735,
+        "completion_tokens": 461
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1522', 'GA')",
+          1
+        ],
+        [
+          "fill('1522', 'Atlanta, GA')",
+          1
+        ],
+        [
+          "fill('1522', 'Atlanta, GA 30303')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1522', 'GA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.01,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.5554778739302719,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5309,
+        "completion_tokens": 190
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1522', 'Atlanta')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1522', 'Atlanta')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.035,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8254768760969675,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5306,
+        "completion_tokens": 147
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1522', 'Atlanta, GA')",
+          1
+        ],
+        [
+          "fill('1522', '111 Magnolia Path, Atlanta, GA, 30303')",
+          1
+        ],
+        [
+          "fill('1522', 'GA 30303')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1522', 'Atlanta, GA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.055,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.10297718970045366,
+      "wm_scores": [
+        2.01,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will update the \"Street Address: Line 2\" field with the value \"Atlanta, GA\". This action will modify the address information being edited on the current page without immediately saving the changes to the server. The page will remain on the address editing interface, showing the updated add",
+        "The agent will update the value of the \"Street Address: Line 2\" field from \"Atlanta\" to \"111 Magnolia Path, Atlanta, GA, 30303\". This action will modify the address information being edited on the current page without navigating to another page. Once the form is submitted, this updated address data ",
+        "The agent will update the \"Street Address: Line 2\" field with the value \"GA 30303\". This action will modify the address information for the user's record without immediately changing the displayed page. The changes will be applied upon form submission, which is not depicted in the current interactio"
+      ],
+      "m2_cands": [
+        "fill('1522', 'Atlanta, GA')",
+        "fill('1522', '111 Magnolia Path, Atlanta, GA, 30303')",
+        "fill('1522', 'GA 30303')"
+      ],
+      "m2_choice": "fill('1522', 'Atlanta, GA')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 12739,
+        "completion_tokens": 463
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1522', '30303')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1522', '30303')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.025,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.027963243420085604,
+      "wm_scores": [
+        2.05,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will update the value of the \"Street Address: Line 2\" field to \"30303\". This action will modify the address information being edited on the current page without immediately saving the changes. The page will remain on the address editing interface, displaying the updated partial address unt",
+        "The agent will update the \"Street Address: Line 2\" field with the value \"Atlanta, GA 30303\". This action will modify the address information being edited on the current page without navigating to another page. Once the form is submitted, the changes will be saved, updating the stored address details"
+      ],
+      "m2_cands": [
+        "fill('1522', '30303')",
+        "fill('1522', 'Atlanta, GA 30303')"
+      ],
+      "m2_choice": "fill('1522', '30303')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 15547,
+        "completion_tokens": 512
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1522', '111 Magnolia Path, Atlanta, GA, 30303')",
+          2
+        ],
+        [
+          "fill('1522', 'Atlanta, GA 30303')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1522', '111 Magnolia Path, Atlanta, GA, 30303')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.185,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.5229739851775363,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5315,
+        "completion_tokens": 205
+      }
+    },
+    {
+      "candidates": [
+        [
+          "clear('1522')",
+          2
+        ],
+        [
+          "fill('1522', 'Atlanta, GA, 30303')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "clear('1522')",
+          "rollback": false,
+          "feat": {
+            "act=clear": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.5943808847190155,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5325,
+        "completion_tokens": 185
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:43:53"
+}

@@ -1,0 +1,645 @@
+{
+  "task_id": 202,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Get the date of the most recent canlled order",
+  "template": 366,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 11,
+  "n_env_actions": 11,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 11,
+  "prompt_tokens": 61314,
+  "completion_tokens": 1901,
+  "llm_by_tag": {
+    "policy": [
+      11,
+      61314,
+      1901
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 11,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "The date of the most recent canceled order is Jun 13, 2022 11:06:22 PM.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "the date of the most recent canceled order is jun 13, 2022 11:06:22 pm.",
+        "ref": "May 23 2023",
+        "question": "Get the date of the most recent canlled order",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "**Judgement:** Incorrect\n\n**Reasoning:** The student's answer provides a specific date and time (June 13, 2022, 11:06:22 PM) which does not match the reference answer (May 23, 2023). Even though the student correctly identifies the task of finding the date of the most recent canceled order, the actu",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 95.04241704940796,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('156')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('156')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sales": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " SALES",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4258,
+        "completion_tokens": 102
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('168')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('168')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:orders": 1.0,
+            "ctx:sales": 0.5,
+            "ctx:orders": 0.5,
+            "ctx:invoices": 0.5,
+            "ctx:shipments": 0.5,
+            "ctx:credit": 0.5,
+            "ctx:memos": 0.5,
+            "ctx:billing": 0.5,
+            "ctx:agreements": 0.5,
+            "ctx:transactions": 0.5,
+            "ctx:braintree": 0.5,
+            "ctx:virtual": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Orders",
+            "context": " SALES Sales  Orders Invoices Shipments Credit Memos Billing Agreements Transactions Braintree Virtual Terminal",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 202,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4477,
+        "completion_tokens": 143
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1532')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1532')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:canceled": 1.0,
+            "kw:cancel": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "gridcell",
+            "name": "Canceled",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 213,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5954,
+        "completion_tokens": 142
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('194')",
+          1
+        ],
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "click('729')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('194')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sales": 1.0,
+            "ctx:orders": 0.5,
+            "ctx:operations": 0.5,
+            "ctx:sales": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/136/",
+          "element": {
+            "role": "link",
+            "name": " SALES",
+            "context": "#000000136 / Orders / Operations / Sales / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5357,
+        "completion_tokens": 176
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          2
+        ],
+        [
+          "click('753')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/136/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 202,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5430,
+        "completion_tokens": 190
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1126')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"May 23, 2023 9:20:01 PM\") # This date corresponds to the first \"Canceled\" order in the list.",
+          1
+        ],
+        [
+          "click('1423')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1126')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "button",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5976,
+        "completion_tokens": 320
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1380')",
+          2
+        ],
+        [
+          "click('1421')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1380')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=columnheader": 1.0,
+            "name:purchase": 1.0,
+            "name:date": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "columnheader",
+            "name": "↑ Purchase Date",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5974,
+        "completion_tokens": 123
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1380')",
+          2
+        ],
+        [
+          "click('1421')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1380')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=columnheader": 1.0,
+            "name:purchase": 1.0,
+            "name:date": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "columnheader",
+            "name": "↓ Purchase Date",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5967,
+        "completion_tokens": 156
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1380')",
+          2
+        ],
+        [
+          "send_msg_to_user(\"The date of the most recent canceled order is Jun 13, 2022 11:06:22 PM.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1380')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=columnheader": 1.0,
+            "name:purchase": 1.0,
+            "name:date": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "columnheader",
+            "name": "↑ Purchase Date",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5976,
+        "completion_tokens": 221
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1380')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1380')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=columnheader": 1.0,
+            "name:purchase": 1.0,
+            "name:date": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "columnheader",
+            "name": "↓ Purchase Date",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5968,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user('The date of the most recent canceled order is Jun 13, 2022 11:06:22 PM.')",
+          1
+        ],
+        [
+          "click('1421')",
+          1
+        ],
+        [
+          "click('1380')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user('The date of the most recent canceled order is Jun 13, 2022 11:06:22 PM.')",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5977,
+        "completion_tokens": 198
+      }
+    }
+  ],
+  "method": "sc_vote3",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 19:11:18"
+}

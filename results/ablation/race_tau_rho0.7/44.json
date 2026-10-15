@@ -1,0 +1,152 @@
+{
+  "task_id": 44,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Check out my todos",
+  "template": 303,
+  "eval_types": [
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 1,
+  "n_env_actions": 1,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 1,
+  "prompt_tokens": 1083,
+  "completion_tokens": 182,
+  "llm_by_tag": {
+    "policy": [
+      1,
+      1083,
+      182
+    ]
+  },
+  "llm_cache_hits": 1,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 1,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "URLEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 9.038798332214355,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The website is currently down with a 502 error, making it impossible to check todos.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"The website is currently down, showing a 502 error, and therefore I cannot check your todos.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"The website is currently not responding (502 error), so I cannot check your todos.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02750748409404009,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The website is currently down with a 502 error, making it impossible to check todos.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02750748409404009,
+        0.02750748409404009
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1083,
+        "completion_tokens": 182
+      }
+    }
+  ],
+  "method": "race_tau_rho0.7",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 06:20:09 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 06:58:51"
+}

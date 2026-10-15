@@ -1,0 +1,516 @@
+{
+  "task_id": 341,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "List all opened issues requesting new features",
+  "template": 299,
+  "eval_types": [
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 7,
+  "n_env_actions": 9,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 13,
+  "prompt_tokens": 50840,
+  "completion_tokens": 1329,
+  "llm_by_tag": {
+    "policy": [
+      7,
+      38058,
+      1305
+    ],
+    "progress": [
+      6,
+      12782,
+      24
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 6,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "- Dynamic loss scaler does not fully checkpoint state, causing path dependency wrt restarts\n- Remove eos padding when running generation workflow\n- Add GPU timers\n- Figure out potential duplication in ConfigStore\n- Unify model and task registries with... everything else.\n- Clean up utils.py\n- Defining arch from args/checkpoint/default?\n- Add tests for MultiplePadDataset class\n- Refactor prompt generation to not require loading a model\n- Validate args to prevent RuntimeError: attn_batches % batches_per_block == 0\n- Model_parallel=2 and 2 gpus on FAIR cluster: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:1!\n- Make eval_lm.py work with .jsonl formatted data\n- Inconsistency between valid ppl from TensorBoard and eval_lm.py\n- [eval] RuntimeError: attn_batches % batches_per_block when run with certain tasks",
+    "scores": {
+      "URLEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 106.80301189422607,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('322')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('322')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:issues": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:administrator": 0.5,
+            "ctx:metaseq": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:root": 0.5,
+            "path:metaseq": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/root/metaseq",
+          "element": {
+            "role": "link",
+            "name": "Issues",
+            "context": "Project navigation Administrator / metaseq · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 31,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5854,
+        "completion_tokens": 91
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('533')",
+          2
+        ],
+        [
+          "click('553')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('533')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:toggle": 1.0,
+            "name:history": 1.0,
+            "path:root": 0.5,
+            "path:metaseq": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/root/metaseq/-/issues",
+          "element": {
+            "role": "button",
+            "name": "Toggle history",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7464,
+        "completion_tokens": 161
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('533')",
+          1
+        ],
+        [
+          "fill('555', 'label:\"enhancement\"')",
+          1
+        ],
+        [
+          "fill('555', 'label:\"enhancement\"', True)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('533')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:toggle": 1.0,
+            "name:history": 1.0,
+            "path:root": 0.5,
+            "path:metaseq": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/root/metaseq/-/issues",
+          "element": {
+            "role": "button",
+            "name": "Toggle history",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7462,
+        "completion_tokens": 176
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('533')",
+          1
+        ],
+        [
+          "fill('551', 'label:\"enhancement\"')",
+          1
+        ],
+        [
+          "fill('551', 'label:\"enhancement\"', True)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('533')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:toggle": 1.0,
+            "name:history": 1.0,
+            "path:root": 0.5,
+            "path:metaseq": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/root/metaseq/-/issues",
+          "element": {
+            "role": "button",
+            "name": "Toggle history",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7478,
+        "completion_tokens": 173
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('555', 'label:\"enhancement\"')",
+          1
+        ],
+        [
+          "fill('555', 'enhancement')",
+          1
+        ],
+        [
+          "click('533')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('555', 'label:\"enhancement\"')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=group": 1.0,
+            "typed_len": 0.095,
+            "path:root": 0.5,
+            "path:metaseq": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/root/metaseq/-/issues",
+          "element": {
+            "role": "group",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7485,
+        "completion_tokens": 153
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('533')",
+          1
+        ],
+        [
+          "fill('557', 'label:\"enhancement\"')",
+          1
+        ],
+        [
+          "click('551')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('533')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:toggle": 1.0,
+            "name:history": 1.0,
+            "path:root": 0.5,
+            "path:metaseq": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/root/metaseq/-/issues",
+          "element": {
+            "role": "button",
+            "name": "Toggle history",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7611,
+        "completion_tokens": 199
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('621')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"- Dynamic loss scaler does not fully checkpoint state, causing path dependency wrt restarts\\n- Remove eos padding when running generation workflow\\n- Add GPU timers\\n- Figure out potential duplication in ConfigStore\\n- Unify model and task registries with... everything else.\\n- Clean up utils.py\\n- Defining arch from args/checkpoint/default?\\n- Add tests for MultiplePadDataset class\\n- Refactor prompt generation to not require loading a model\\n- Validate args to prevent RuntimeError: attn_batches % batches_per_block == 0\\n- Model_parallel=2 and 2 gpus on FAIR cluster: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:1!\\n- Make eval_lm.py work with .jsonl formatted data\\n- Inconsistency between valid ppl from TensorBoard and eval_lm.py\\n- [eval] RuntimeError: attn_batches % batches_per_block when run with certain tasks\")",
+          1
+        ],
+        [
+          "send_msg_to_user(\"[810] Add tests for MultiplePadDataset class\\n[881] Refactor prompt generation to not require loading a model\\n[964] Make eval_lm.py work with .jsonl formatted data\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('621')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:dynamic": 1.0,
+            "name:loss": 1.0,
+            "name:scaler": 1.0,
+            "name:does": 1.0,
+            "name:not": 1.0,
+            "name:fully": 1.0,
+            "name:checkpoint": 1.0,
+            "name:state": 1.0,
+            "name:causing": 1.0,
+            "name:path": 1.0,
+            "name:dependency": 1.0,
+            "name:wrt": 1.0,
+            "kw:star": 1.0,
+            "path:root": 0.5,
+            "path:metaseq": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/root/metaseq/-/issues",
+          "element": {
+            "role": "link",
+            "name": "Dynamic loss scaler does not fully checkpoint state, causing path dependency wrt restarts",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 55,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:root": 0.5,
+            "path:metaseq": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/root/metaseq/-/issues/3",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 33,
+          "server_error": false
+        },
+        {
+          "action": "send_msg_to_user(\"- Dynamic loss scaler does not fully checkpoint state, causing path dependency wrt restarts\\n- Remove eos padding when running generation workflow\\n- Add GPU timers\\n- Figure out potential duplication in ConfigStore\\n- Unify model and task registries with... everything else.\\n- Clean up utils.py\\n- Defining arch from args/checkpoint/default?\\n- Add tests for MultiplePadDataset class\\n- Refactor prompt generation to not require loading a model\\n- Validate args to prevent RuntimeError: attn_batches % batches_per_block == 0\\n- Model_parallel=2 and 2 gpus on FAIR cluster: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:1!\\n- Make eval_lm.py work with .jsonl formatted data\\n- Inconsistency between valid ppl from TensorBoard and eval_lm.py\\n- [eval] RuntimeError: attn_batches % batches_per_block when run with certain tasks\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:root": 0.5,
+            "path:metaseq": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/root/metaseq/-/issues",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7486,
+        "completion_tokens": 376
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "collect",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 17:02:30"
+}

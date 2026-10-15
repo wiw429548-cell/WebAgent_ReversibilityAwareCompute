@@ -1,0 +1,1184 @@
+{
+  "task_id": 318,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "List the last names of the top 3 contributors to 2019-nCov repo, ranked by the number of commits?",
+  "template": 324,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 21,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 3,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 28,
+  "prompt_tokens": 118362,
+  "completion_tokens": 3001,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      91454,
+      2949
+    ],
+    "progress": [
+      13,
+      26908,
+      52
+    ]
+  },
+  "llm_cache_hits": 12,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 13,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 93.75590777397156,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('306')",
+          2
+        ],
+        [
+          "click('314')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05653728697880515,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('306')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=listitem": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "listitem",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 17,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/dashboard/projects",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 17,
+          "server_error": false
+        },
+        {
+          "action": "click('314')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:a": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "A",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 42,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05653728697880515,
+        0.007602820234446907
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7482,
+        "completion_tokens": 85
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('273')",
+          1
+        ],
+        [
+          "report_infeasible(\"There is no direct link to the 2019-nCov repository from the current page.\")",
+          1
+        ],
+        [
+          "click('278')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.0094578861167994,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('273')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:a": 1.0,
+            "name:y": 1.0,
+            "name:syntax": 1.0,
+            "name:highlighting": 1.0,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "a11y-syntax-highlighting",
+            "context": "a11y-syntax-highlighting Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0094578861167994,
+        0.03595681281133039
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7888,
+        "completion_tokens": 191
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          2
+        ],
+        [
+          "click('273')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.008763269365449407,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "path:tree": 0.5,
+            "path:main": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting/-/tree/main",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        },
+        {
+          "action": "click('273')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:a": 1.0,
+            "name:y": 1.0,
+            "name:syntax": 1.0,
+            "name:highlighting": 1.0,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "a11y-syntax-highlighting",
+            "context": "a11y-syntax-highlighting Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008763269365449407,
+        0.0094578861167994
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7896,
+        "completion_tokens": 146
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          1
+        ],
+        [
+          "focus('146')",
+          1
+        ],
+        [
+          "fill('146', '2019-nCov')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.008763269365449407,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "path:tree": 0.5,
+            "path:main": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting/-/tree/main",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        },
+        {
+          "action": "focus('146')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:gitlab": 1.0,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "textbox",
+            "name": "Search GitLab",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008763269365449407,
+        0.029842866014191442
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8031,
+        "completion_tokens": 192
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          2
+        ],
+        [
+          "focus('1382')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.008763269365449407,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008763269365449407,
+        0.14017075714219013
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7689,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          2
+        ],
+        [
+          "report_infeasible(\"The 2019-nCov repository is not listed on the current page and cannot be navigated to from here.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.008763269365449407,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008763269365449407,
+        0.03595681281133039
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8354,
+        "completion_tokens": 272
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          2
+        ],
+        [
+          "goto('http://localhost:8023/byteblaze/2019-nCov')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.008763269365449407,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008763269365449407,
+        0.052434159877192216
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8342,
+        "completion_tokens": 232
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.008763269365449407,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6309,
+        "completion_tokens": 252
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          2
+        ],
+        [
+          "noop(500)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.008763269365449407,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008763269365449407,
+        0.25397502690305246
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8342,
+        "completion_tokens": 181
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          2
+        ],
+        [
+          "report_infeasible(\"The 2019-nCov repository is not listed in the current page.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.008763269365449407,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008763269365449407,
+        0.03595681281133039
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8340,
+        "completion_tokens": 219
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.008763269365449407,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6307,
+        "completion_tokens": 237
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          2
+        ],
+        [
+          "report_infeasible(\"Cannot find a direct link to the 2019-nCov repository on the current page.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.008763269365449407,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008763269365449407,
+        0.03595681281133039
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8340,
+        "completion_tokens": 242
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          2
+        ],
+        [
+          "report_infeasible(\"Cannot find the 2019-nCov repository on the current page or navigate to it directly.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.008763269365449407,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008763269365449407,
+        0.03595681281133039
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8340,
+        "completion_tokens": 216
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          2
+        ],
+        [
+          "report_infeasible('The current page does not contain information about the 2019-nCov repository.')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.008763269365449407,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008763269365449407,
+        0.03595681281133039
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8340,
+        "completion_tokens": 159
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1385', '2019-nCov')",
+          1
+        ],
+        [
+          "report_infeasible(\"The 2019-nCov repository is not available in the current context.\")",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/ByteBlaze/2019-nCov')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.14083294200873167,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1385', '2019-nCov')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:gitlab": 1.0,
+            "ctx:search": 0.5,
+            "ctx:gitlab": 0.5,
+            "typed_len": 0.045,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "searchbox",
+            "name": "Search GitLab",
+            "context": "Search GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.14083294200873167,
+        0.03595681281133039
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8362,
+        "completion_tokens": 247
+      }
+    }
+  ],
+  "method": "race_no_formcheck",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 03:23:59"
+}

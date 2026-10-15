@@ -1,0 +1,285 @@
+{
+  "task_id": 333,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "How much did I spend on shopping at One Stop Market on November 2022? They gave me a 20% discount on the total amount for orders exceeding $200 in cash",
+  "template": 147,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 3,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 14,
+  "prompt_tokens": 32335,
+  "completion_tokens": 1019,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      15231,
+      569
+    ],
+    "wm": [
+      5,
+      12714,
+      359
+    ],
+    "value": [
+      5,
+      1135,
+      40
+    ],
+    "form": [
+      1,
+      3255,
+      51
+    ]
+  },
+  "llm_cache_hits": 6,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 0,
+    "M2": 2
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 17.90947937965393,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.00778931282239435,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5791,
+        "completion_tokens": 142
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1530')",
+          2
+        ],
+        [
+          "click('1608')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.006770404244279714,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1530')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:all": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "View All",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        5.01
+      ],
+      "outcomes": [
+        "Clicking on the 'View All' link (element ID '1530') will navigate to a new page that displays a comprehensive list of all recent orders for the user Emma Lopez. This action does not create, modify, or delete any data; it merely changes the view to provide a more detailed order history.",
+        "Clicking on the element with the ID '1608' will likely navigate to the details of the order with the number '000000180'. This action will display a new page showing detailed information about this specific order, including items purchased, quantities, and status. No data will be created, modified, o"
+      ],
+      "m2_cands": [
+        "click('1530')",
+        "click('1608')"
+      ],
+      "m2_choice": "click('1530')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13101,
+        "completion_tokens": 348
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('380')",
+          1
+        ],
+        [
+          "click('1530')",
+          1
+        ],
+        [
+          "report_infeasible(\"There are no orders listed for November 2022.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.4409119973820693,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "report_infeasible(\"There are no orders listed for November 2022.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        4.01,
+        2.01,
+        5.01
+      ],
+      "outcomes": [
+        "Clicking on the combobox element with id '380' will likely open a dropdown or autocomplete list based on the user's input for searching. No data will be created, modified, or deleted on the website at this action; it merely prepares the interface for a search query to be entered and executed.",
+        "Clicking on the element with the ID '1530' will navigate to the details page of the order with the order date '3/10/23'. This action will not create, modify, or delete any data on the website; it will simply display more detailed information about that specific order.",
+        "The agent will report that there are no orders listed for November 2022, as the current page displays order history with dates ranging from February to May 2023, and no data on the website will be created, modified, or deleted as a result of this action. The user will remain on the same page showing"
+      ],
+      "m2_cands": [
+        "click('380')",
+        "click('1530')",
+        "report_infeasible(\"There are no orders listed for November 2022.\")"
+      ],
+      "m2_choice": "report_infeasible(\"There are no orders listed for November 2022.\")",
+      "rho_choice": null,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13443,
+        "completion_tokens": 529
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:57:51"
+}

@@ -1,0 +1,848 @@
+{
+  "task_id": 488,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Change the page title of \"Home Page\" page on my site to \"This is the home page!! Leave here!!\".",
+  "template": 275,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 12,
+  "n_env_actions": 16,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 2,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 22,
+  "prompt_tokens": 65940,
+  "completion_tokens": 1338,
+  "llm_by_tag": {
+    "policy": [
+      12,
+      48581,
+      1132
+    ],
+    "progress": [
+      6,
+      12744,
+      24
+    ],
+    "m2more": [
+      1,
+      2083,
+      83
+    ],
+    "wm": [
+      1,
+      1148,
+      50
+    ],
+    "value": [
+      1,
+      190,
+      8
+    ],
+    "form": [
+      1,
+      1194,
+      41
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 5,
+    "M1": 6,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 138.72599864006042,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('293')",
+          2
+        ],
+        [
+          "goto('http://localhost:7780/admin/cms/index/index/')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.002469878256159237,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('293')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:content": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CONTENT",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 295,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.002469878256159237,
+        0.01521602342874323
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6283,
+        "completion_tokens": 157
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('305')",
+          2
+        ],
+        [
+          "click('293')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.002947237008766365,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('305')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:pages": 1.0,
+            "ctx:content": 0.5,
+            "ctx:elements": 0.5,
+            "ctx:pages": 0.5,
+            "ctx:blocks": 0.5,
+            "ctx:widgets": 0.5,
+            "ctx:templates": 0.5,
+            "ctx:media": 0.5,
+            "ctx:gallery": 0.5,
+            "ctx:design": 0.5,
+            "ctx:configuration": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Pages",
+            "context": " CONTENT Content  Elements Pages Blocks Widgets Templates Media Media Gallery Design Configuration Themes Schedule",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 503,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        },
+        {
+          "action": "click('293')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:content": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CONTENT",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 295,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.002947237008766365,
+        0.002469878256159237
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6662,
+        "completion_tokens": 68
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('305')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.002947237008766365,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('305')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:pages": 1.0,
+            "ctx:content": 0.5,
+            "ctx:elements": 0.5,
+            "ctx:pages": 0.5,
+            "ctx:blocks": 0.5,
+            "ctx:widgets": 0.5,
+            "ctx:templates": 0.5,
+            "ctx:media": 0.5,
+            "ctx:gallery": 0.5,
+            "ctx:design": 0.5,
+            "ctx:configuration": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Pages",
+            "context": " CONTENT Content  Elements Pages Blocks Widgets Templates Media Media Gallery Design Configuration Themes Schedule",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 503,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4590,
+        "completion_tokens": 70
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1509')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.12398863792607778,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1509')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:select": 1.0,
+            "ctx:select": 0.5,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/",
+          "element": {
+            "role": "button",
+            "name": "Select",
+            "context": "Select",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 295,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4343,
+        "completion_tokens": 79
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1509')",
+          2
+        ],
+        [
+          "click('1512')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.12327187655650111,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1509')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:select": 1.0,
+            "ctx:select": 0.5,
+            "ctx:edit": 0.5,
+            "ctx:delete": 0.5,
+            "ctx:view": 0.5,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/",
+          "element": {
+            "role": "button",
+            "name": "Select",
+            "context": "Select Edit Delete View",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 295,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.12327187655650111,
+        0.004240400400823989
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6617,
+        "completion_tokens": 85
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1509')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.12398863792607778,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1509')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:select": 1.0,
+            "ctx:select": 0.5,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/",
+          "element": {
+            "role": "button",
+            "name": "Select",
+            "context": "Select",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 295,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4355,
+        "completion_tokens": 87
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1512')",
+          2
+        ],
+        [
+          "click('1510')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004240400400823989,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1512')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:edit": 1.0,
+            "ctx:select": 0.5,
+            "ctx:edit": 0.5,
+            "ctx:delete": 0.5,
+            "ctx:view": 0.5,
+            "kw:edit": 1.0,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/",
+          "element": {
+            "role": "link",
+            "name": "Edit",
+            "context": "Select Edit Delete View",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 590,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/edit/page_id/2/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 503,
+          "server_error": false
+        },
+        {
+          "action": "click('1510')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 295,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004240400400823989,
+        0.034448578901396874
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6588,
+        "completion_tokens": 87
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 200)",
+          2
+        ],
+        [
+          "scroll(0, 300)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.026279990365758264,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "scroll(0, 200)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 295,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.026279990365758264,
+        0.026279990365758264
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6816,
+        "completion_tokens": 167
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1509')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.12398863792607778,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1509')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:select": 1.0,
+            "ctx:select": 0.5,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/",
+          "element": {
+            "role": "button",
+            "name": "Select",
+            "context": "Select",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 295,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4365,
+        "completion_tokens": 85
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1512')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004240400400823989,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1512')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:edit": 1.0,
+            "ctx:select": 0.5,
+            "ctx:edit": 0.5,
+            "ctx:delete": 0.5,
+            "ctx:view": 0.5,
+            "kw:edit": 1.0,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/",
+          "element": {
+            "role": "link",
+            "name": "Edit",
+            "context": "Select Edit Delete View",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 590,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4449,
+        "completion_tokens": 77
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('851', 'This is the home page!! Leave here!!')",
+          2
+        ],
+        [
+          "focus('851')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.011452890688010033,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('851', 'This is the home page!! Leave here!!')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:page": 1.0,
+            "name:title": 1.0,
+            "typed_len": 0.18,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/edit/page_id/2/",
+          "element": {
+            "role": "textbox",
+            "name": "Page Title *",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 295,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.011452890688010033,
+        0.005130909518640614
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4174,
+        "completion_tokens": 100
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('806')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.6346324415135424,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('806')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:save": 1.0,
+            "ctx:save": 0.5,
+            "kw:save": 1.0,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/edit/page_id/2/",
+          "element": {
+            "role": "button",
+            "name": "Save",
+            "context": "Save",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 593,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.06
+      ],
+      "outcomes": [
+        "Clicking the \"Save\" button ('806') will finalize any changes made to the current page settings, such as the page title and enable status. No data will be deleted, but the modifications entered will be saved to the website."
+      ],
+      "m2_cands": [
+        "click('806')"
+      ],
+      "m2_choice": "click('806')",
+      "rho_choice": 0.6346324415135424,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 6698,
+        "completion_tokens": 276
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:51:10"
+}

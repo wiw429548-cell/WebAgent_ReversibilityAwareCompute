@@ -1,0 +1,1208 @@
+{
+  "task_id": 791,
+  "sites": [
+    "gitlab",
+    "reddit"
+  ],
+  "intent": "Make a folder named car on the gimmiethat.space repo and include a file called urls.txt that consists of the links to the 5 most recent posts from cars.",
+  "template": 84,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 27,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 1,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 6,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 24,
+  "prompt_tokens": 84176,
+  "completion_tokens": 2268,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      66298,
+      2232
+    ],
+    "progress": [
+      9,
+      17878,
+      36
+    ]
+  },
+  "llm_cache_hits": 4,
+  "mode_counts": {
+    "M0": 6,
+    "M1": 9,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 128.11876940727234,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('653')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('653')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "name:gimmiethat": 1.0,
+            "name:space": 1.0,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:gimmiethat": 0.5,
+            "ctx:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "Byte Blaze / gimmiethat.space",
+            "context": "Byte Blaze / gimmiethat.space",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5263,
+        "completion_tokens": 106
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('777')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('777')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:to": 1.0,
+            "name:tree": 1.0,
+            "ctx:files": 0.5,
+            "ctx:breadcrumb": 0.5,
+            "kw:add": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space",
+          "element": {
+            "role": "button",
+            "name": "Add to tree",
+            "context": "Files breadcrumb",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4259,
+        "completion_tokens": 156
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('787')",
+          2
+        ],
+        [
+          "click('781')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('787')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:new": 1.0,
+            "name:file": 1.0,
+            "ctx:new": 0.5,
+            "ctx:file": 0.5,
+            "ctx:add": 0.5,
+            "ctx:to": 0.5,
+            "ctx:tree": 0.5,
+            "ctx:files": 0.5,
+            "ctx:breadcrumb": 0.5,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space",
+          "element": {
+            "role": "menuitem",
+            "name": "New file",
+            "context": "New file Add to tree Files breadcrumb",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 27,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "path:new": 0.5,
+            "path:main": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space/-/new/main/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        },
+        {
+          "action": "click('781')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6616,
+        "completion_tokens": 116
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('777')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('777')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:to": 1.0,
+            "name:tree": 1.0,
+            "ctx:files": 0.5,
+            "ctx:breadcrumb": 0.5,
+            "kw:add": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space",
+          "element": {
+            "role": "button",
+            "name": "Add to tree",
+            "context": "Files breadcrumb",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4450,
+        "completion_tokens": 132
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('795')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('795')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:new": 1.0,
+            "name:directory": 1.0,
+            "ctx:new": 0.5,
+            "ctx:directory": 0.5,
+            "ctx:add": 0.5,
+            "ctx:to": 0.5,
+            "ctx:tree": 0.5,
+            "ctx:files": 0.5,
+            "ctx:breadcrumb": 0.5,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space",
+          "element": {
+            "role": "menuitem",
+            "name": "New directory",
+            "context": "New directory Add to tree Files breadcrumb",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4491,
+        "completion_tokens": 127
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1190', 'car')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1190', 'car')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "in_form": 1.0,
+            "ctx:create": 0.5,
+            "ctx:new": 0.5,
+            "ctx:directory": 0.5,
+            "typed_len": 0.015,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space#modal-create-new-dir",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "Create New Directory",
+            "in_form": true
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4561,
+        "completion_tokens": 118
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1207')",
+          2
+        ],
+        [
+          "fill('1194', 'Creating car directory')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1207')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "in_form": 1.0,
+            "name:create": 1.0,
+            "name:directory": 1.0,
+            "ctx:create": 0.5,
+            "ctx:new": 0.5,
+            "ctx:directory": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:gimmiethat": 0.5,
+            "ctx:space": 0.5,
+            "ctx:gitlab": 0.5,
+            "kw:create": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space#modal-create-new-dir",
+          "element": {
+            "role": "button",
+            "name": "Create directory",
+            "context": "Create New Directory Byte Blaze / gimmiethat.space · GitLab",
+            "in_form": true
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 36,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "path:tree": 0.5,
+            "path:main": 0.5,
+            "path:car": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space/-/tree/main/car",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false
+        },
+        {
+          "action": "fill('1194', 'Creating car directory')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.11,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space#modal-create-new-dir",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6731,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('921')",
+          2
+        ],
+        [
+          "goto('http://localhost:8023/postmill/cars')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('921')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:car": 1.0,
+            "ctx:car": 0.5,
+            "ctx:files": 0.5,
+            "ctx:directories": 0.5,
+            "ctx:and": 0.5,
+            "ctx:submodules": 0.5,
+            "ctx:in": 0.5,
+            "ctx:the": 0.5,
+            "ctx:path": 0.5,
+            "ctx:for": 0.5,
+            "ctx:commit": 0.5,
+            "ctx:reference": 0.5,
+            "ctx:main": 0.5,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space#modal-create-new-dir",
+          "element": {
+            "role": "link",
+            "name": "car",
+            "context": "car Files, directories, and submodules in the path / for commit reference main",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6485,
+        "completion_tokens": 200
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/cars')",
+          1
+        ],
+        [
+          "click('1169')",
+          1
+        ],
+        [
+          "click('1174')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/cars')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "path:tree": 0.5,
+            "path:main": 0.5,
+            "path:car": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space/-/tree/main/car",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:cars": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/cars",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 35,
+          "server_error": false
+        },
+        {
+          "action": "click('1169')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "path:tree": 0.5,
+            "path:main": 0.5,
+            "path:car": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space/-/tree/main/car",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4613,
+        "completion_tokens": 232
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/cars')",
+          1
+        ],
+        [
+          "click('603')",
+          1
+        ],
+        [
+          "click('789')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/cars')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "path:tree": 0.5,
+            "path:main": 0.5,
+            "path:car": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space/-/tree/main/car",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:cars": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/cars",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 35,
+          "server_error": false
+        },
+        {
+          "action": "click('603')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:add": 1.0,
+            "name:new": 1.0,
+            "name:directory": 1.0,
+            "kw:add": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "path:tree": 0.5,
+            "path:main": 0.5,
+            "path:car": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space/-/tree/main/car",
+          "element": {
+            "role": "link",
+            "name": "Add new directory",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4651,
+        "completion_tokens": 149
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('307')",
+          2
+        ],
+        [
+          "click('582')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('307')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:files": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "path:commit": 0.5,
+            "path:af": 0.5,
+            "path:e": 0.5,
+            "path:bd": 0.5,
+            "path:b": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space/-/commit/5af07e195bd37b888ce80d7d7119e9f28fb86100",
+          "element": {
+            "role": "link",
+            "name": "Files",
+            "context": "Project navigation",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "path:tree": 0.5,
+            "path:main": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space/-/tree/main",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        },
+        {
+          "action": "click('582')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:gimmiethat": 1.0,
+            "name:space": 1.0,
+            "ctx:breadcrumbs": 0.5,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "path:commit": 0.5,
+            "path:af": 0.5,
+            "path:e": 0.5,
+            "path:bd": 0.5,
+            "path:b": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space/-/commit/5af07e195bd37b888ce80d7d7119e9f28fb86100",
+          "element": {
+            "role": "link",
+            "name": "gimmiethat.space",
+            "context": "Breadcrumbs",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 36,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6088,
+        "completion_tokens": 176
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('783')",
+          1
+        ],
+        [
+          "report_infeasible(\"There is no direct link or obvious way to navigate to the 'cars' source to retrieve the URLs of the 5 most recent posts.\")",
+          1
+        ],
+        [
+          "click('728')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('783')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:to": 1.0,
+            "name:tree": 1.0,
+            "ctx:files": 0.5,
+            "ctx:breadcrumb": 0.5,
+            "kw:add": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space",
+          "element": {
+            "role": "button",
+            "name": "Add to tree",
+            "context": "Files breadcrumb",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6450,
+        "completion_tokens": 232
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('801')",
+          1
+        ],
+        [
+          "click('921')",
+          1
+        ],
+        [
+          "click('783')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('801')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:new": 1.0,
+            "name:directory": 1.0,
+            "ctx:new": 0.5,
+            "ctx:directory": 0.5,
+            "ctx:add": 0.5,
+            "ctx:to": 0.5,
+            "ctx:tree": 0.5,
+            "ctx:files": 0.5,
+            "ctx:breadcrumb": 0.5,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space",
+          "element": {
+            "role": "menuitem",
+            "name": "New directory",
+            "context": "New directory Add to tree Files breadcrumb",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space#modal-create-new-dir",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        },
+        {
+          "action": "click('921')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6755,
+        "completion_tokens": 155
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('783')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('783')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:to": 1.0,
+            "name:tree": 1.0,
+            "ctx:files": 0.5,
+            "ctx:breadcrumb": 0.5,
+            "kw:add": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space",
+          "element": {
+            "role": "button",
+            "name": "Add to tree",
+            "context": "Files breadcrumb",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4676,
+        "completion_tokens": 142
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('783')",
+          2
+        ],
+        [
+          "fill('1214', 'car')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('783')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:to": 1.0,
+            "name:tree": 1.0,
+            "ctx:files": 0.5,
+            "ctx:breadcrumb": 0.5,
+            "kw:add": 1.0,
+            "path:byteblaze": 0.5,
+            "path:gimmiethat": 0.5,
+            "path:space": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/gimmiethat.space",
+          "element": {
+            "role": "button",
+            "name": "Add to tree",
+            "context": "Files breadcrumb",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8087,
+        "completion_tokens": 113
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "multi",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14,
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 23:19:22"
+}

@@ -1,0 +1,529 @@
+{
+  "task_id": 714,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Thumbs down the top 1 post ever in gadgets.",
+  "template": 24,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 8,
+  "n_env_actions": 8,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 28,
+  "prompt_tokens": 30780,
+  "completion_tokens": 1807,
+  "llm_by_tag": {
+    "policy": [
+      8,
+      21795,
+      1129
+    ],
+    "wm": [
+      9,
+      5917,
+      583
+    ],
+    "value": [
+      9,
+      1691,
+      72
+    ],
+    "form": [
+      2,
+      1377,
+      23
+    ]
+  },
+  "llm_cache_hits": 8,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 0,
+    "M2": 4
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 87.47853779792786,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('117')",
+          2
+        ],
+        [
+          "fill('54', 'gadgets')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.007728815081755151,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('54', 'Thumbs down the top 1 post ever in gadgets')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "typed_len": 0.21,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        3.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Submissions\" link (element 117), the page will likely transition to display a list of user submissions across the platform or within a specific context, such as the subscribed forums. No data will be created, modified, or deleted with this action; it is purely navigational.",
+        "After executing the command to fill the search box with \"gadgets\", the page will likely refresh or update to display search results related to \"gadgets\". No data will be created, modified, or deleted on the website; only the displayed content will change based on the search query."
+      ],
+      "m2_cands": [
+        "click('117')",
+        "fill('54', 'gadgets')"
+      ],
+      "m2_choice": "fill('54', 'gadgets')",
+      "rho_choice": null,
+      "form_fix": "fill('54', 'Thumbs down the top 1 post ever in gadgets')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 3848,
+        "completion_tokens": 278
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('62')",
+          2
+        ],
+        [
+          "click('117') # Navigate to submissions to find the gadgets forum or a way to access it.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.005067546045833567,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('117') # Navigate to submissions to find the gadgets forum or a way to access it.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        0.02,
+        5.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Submit\" link, the user will likely be redirected to a submission form or page where they can create new content, such as posting a new discussion thread or submitting a piece of media. No data will be immediately created, modified, or deleted with just this action; the user will n",
+        "After clicking on the \"Submissions\" link (element 117), the page will likely reload or navigate to a new page displaying a list of recent or notable submissions across all forums, including the gadgets forum if it exists. No data will be created, modified, or deleted with this action; it is purely n"
+      ],
+      "m2_cands": [
+        "click('62')",
+        "click('117') # Navigate to submissions to find the gadgets forum or a way to access it."
+      ],
+      "m2_choice": "click('117') # Navigate to submissions to find the gadgets forum or a way to access it.",
+      "rho_choice": null,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 3318,
+        "completion_tokens": 316
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('117')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.007728815081755151,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('117')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submissions": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submissions",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1537,
+        "completion_tokens": 99
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('42')",
+          1
+        ],
+        [
+          "click('117') # Click on 'Submissions' to see if it leads to a list of forums including gadgets.",
+          1
+        ],
+        [
+          "click('117')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.007668884798031235,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('117') # Click on 'Submissions' to see if it leads to a list of forums including gadgets.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.01,
+        5.01,
+        2.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Forums\" link (node [42]), the page will navigate to the Forums section of Postmill, displaying a list of available forums for discussion. No data on the website will be created, modified, or deleted as a result of this action; it is purely navigational.",
+        "Upon clicking the 'Submissions' link, the page will likely refresh or navigate to a new section displaying a list of all submissions across different forums, including any related to gadgets if such categories exist. No data will be created, modified, or deleted as a result of this action; it is pur",
+        "Upon clicking the \"Submissions\" link (element 117), the page will likely transition to display a list of user submissions across the platform or within a specific context, such as the subscribed forums. No data will be created, modified, or deleted with this action; it is purely navigational."
+      ],
+      "m2_cands": [
+        "click('42')",
+        "click('117') # Click on 'Submissions' to see if it leads to a list of forums including gadgets.",
+        "click('117')"
+      ],
+      "m2_choice": "click('117') # Click on 'Submissions' to see if it leads to a list of forums including gadgets.",
+      "rho_choice": null,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 4067,
+        "completion_tokens": 440
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('42')",
+          2
+        ],
+        [
+          "click('117')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.007668884798031235,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('42')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        2.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Forums\" link (node [42]), the page will navigate to the Forums section of Postmill, displaying a list of available forums for discussion. No data on the website will be created, modified, or deleted as a result of this action; it is purely navigational.",
+        "Upon clicking the \"Submissions\" link (element 117), the page will likely transition to display a list of user submissions across the platform or within a specific context, such as the subscribed forums. No data will be created, modified, or deleted with this action; it is purely navigational."
+      ],
+      "m2_cands": [
+        "click('42')",
+        "click('117')"
+      ],
+      "m2_choice": "click('42')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 3912,
+        "completion_tokens": 302
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('117')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.007888513171907212,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('117')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:alphabetical": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Alphabetical",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4523,
+        "completion_tokens": 111
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('193')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.006585254543776556,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('193')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:gadgets": 1.0,
+            "path:forums": 0.5,
+            "path:all": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums/all",
+          "element": {
+            "role": "link",
+            "name": "gadgets",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4045,
+        "completion_tokens": 120
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('179')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.22334459067303097,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('179')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:downvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:downvote": 1.0,
+            "path:f": 0.5,
+            "path:gadgets": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/gadgets",
+          "element": {
+            "role": "button",
+            "name": "Downvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5530,
+        "completion_tokens": 141
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 02:06:25"
+}

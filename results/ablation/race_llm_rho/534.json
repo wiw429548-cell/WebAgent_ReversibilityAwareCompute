@@ -1,0 +1,915 @@
+{
+  "task_id": 534,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Follow ['Jakub Klinkovský', 'Koushik', 'Vinta Chen'] on Gitlab",
+  "template": 330,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 19,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 2,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 46,
+  "prompt_tokens": 74170,
+  "completion_tokens": 2687,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      56472,
+      2561
+    ],
+    "rho": [
+      23,
+      2955,
+      94
+    ],
+    "progress": [
+      8,
+      14743,
+      32
+    ]
+  },
+  "llm_cache_hits": 9,
+  "mode_counts": {
+    "M0": 7,
+    "M1": 8,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 163.94751977920532,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          2
+        ],
+        [
+          "goto('http://localhost:8023/users')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.1,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:u": 0.5,
+            "path:jakub": 0.5,
+            "path:klinkovsk": 0.5,
+            "path:c": 0.5,
+            "path:bd": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/u/Jakub%20Klinkovsk%C3%BD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:8023/users')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1,
+        0.1
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 6936,
+        "completion_tokens": 138
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/users')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/users')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:users": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/users",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1363,
+        "completion_tokens": 162
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('15', 'Jakub Klinkovský')",
+          2
+        ],
+        [
+          "goto('http://localhost:8023/users')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.1,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('15', 'Jakub Klinkovský')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:for": 1.0,
+            "name:projects": 1.0,
+            "name:issues": 1.0,
+            "name:etc": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "typed_len": 0.08,
+            "path:users": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/users",
+          "element": {
+            "role": "searchbox",
+            "name": "Search for projects, issues, etc.",
+            "context": "Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1,
+        0.1
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 2110,
+        "completion_tokens": 256
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('16')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.5,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('16')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "path:users": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/users",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 46,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1417,
+        "completion_tokens": 197
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('300')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('300')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:milestones": 1.0,
+            "path:search": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/search?search=Jakub+Klinkovsk%C3%BD",
+          "element": {
+            "role": "link",
+            "name": "Milestones 0",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2079,
+        "completion_tokens": 147
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('304')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('304')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:users": 1.0,
+            "path:search": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/search?scope=milestones&search=Jakub+Klinkovsk%C3%BD",
+          "element": {
+            "role": "link",
+            "name": "Users 1",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 46,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2072,
+        "completion_tokens": 177
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('316')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('316')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:jakub": 1.0,
+            "name:klinkovsk": 1.0,
+            "name:lahwaacz": 1.0,
+            "path:search": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/search?scope=users&search=Jakub+Klinkovsk%C3%BD",
+          "element": {
+            "role": "link",
+            "name": "Jakub Klinkovský @lahwaacz",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2129,
+        "completion_tokens": 98
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('237')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.3,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('237')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=Section": 1.0,
+            "path:lahwaacz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/lahwaacz",
+          "element": {
+            "role": "Section",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 47,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5321,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('112', 'Koushik')",
+          2
+        ],
+        [
+          "click('237')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.1,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('112', 'Koushik')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:gitlab": 1.0,
+            "typed_len": 0.035,
+            "path:lahwaacz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/lahwaacz",
+          "element": {
+            "role": "textbox",
+            "name": "Search GitLab",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 26,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1,
+        0.3
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 7600,
+        "completion_tokens": 188
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('636')",
+          2
+        ],
+        [
+          "fill('623', 'Koushik')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.25,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('636')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:koushik": 1.0,
+            "name:all": 1.0,
+            "name:gitlab": 1.0,
+            "ctx:search": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:lahwaacz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/lahwaacz",
+          "element": {
+            "role": "menuitem",
+            "name": " Koushik all GitLab ",
+            "context": "Search GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 46,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:search": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/search?search=Koushik&nav_source=navbar",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 46,
+          "server_error": false
+        },
+        {
+          "action": "fill('623', 'Koushik')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.035,
+            "path:lahwaacz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/lahwaacz",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.25,
+        0.1
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 7421,
+        "completion_tokens": 213
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('237')",
+          1
+        ],
+        [
+          "fill('112', 'Jakub Klinkovský')",
+          1
+        ],
+        [
+          "fill('112', 'Koushik')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.3,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('237')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=Section": 1.0,
+            "path:lahwaacz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/lahwaacz",
+          "element": {
+            "role": "Section",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 46,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.3,
+        0.1
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 7638,
+        "completion_tokens": 247
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('237')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.3,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('237')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=Section": 1.0,
+            "path:lahwaacz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/lahwaacz",
+          "element": {
+            "role": "Section",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 47,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5322,
+        "completion_tokens": 137
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('112', 'Koushik')",
+          2
+        ],
+        [
+          "fill('112', 'Jakub Klinkovský')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.1,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('112', 'Koushik')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:gitlab": 1.0,
+            "typed_len": 0.035,
+            "path:lahwaacz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/lahwaacz",
+          "element": {
+            "role": "textbox",
+            "name": "Search GitLab",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 26,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1,
+        0.1
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 7620,
+        "completion_tokens": 175
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('623', 'Koushik')",
+          1
+        ],
+        [
+          "click('237')",
+          1
+        ],
+        [
+          "fill('623', 'Jakub Klinkovský')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.1,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('623', 'Koushik')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:gitlab": 1.0,
+            "ctx:search": 0.5,
+            "ctx:gitlab": 0.5,
+            "typed_len": 0.035,
+            "path:lahwaacz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/lahwaacz",
+          "element": {
+            "role": "searchbox",
+            "name": "Search GitLab",
+            "context": "Search GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1,
+        0.3
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 7573,
+        "completion_tokens": 259
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('623', 'Jakub Klinkovský')",
+          1
+        ],
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "fill('623', 'Koushik')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.1,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('623', 'Jakub Klinkovský')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:gitlab": 1.0,
+            "ctx:search": 0.5,
+            "ctx:gitlab": 0.5,
+            "typed_len": 0.08,
+            "path:lahwaacz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/lahwaacz",
+          "element": {
+            "role": "searchbox",
+            "name": "Search GitLab",
+            "context": "Search GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 27,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1,
+        0.05
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 7569,
+        "completion_tokens": 159
+      }
+    }
+  ],
+  "method": "race_llm_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "llm"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 04:09:01"
+}

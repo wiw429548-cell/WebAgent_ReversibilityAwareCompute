@@ -1,0 +1,851 @@
+{
+  "task_id": 745,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Create a new public project \"awesome-llms\" and add primer, convexegg, abishek as members",
+  "template": 332,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 21,
+  "prompt_tokens": 68398,
+  "completion_tokens": 2296,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      50628,
+      2094
+    ],
+    "arbiter": [
+      6,
+      17770,
+      202
+    ]
+  },
+  "llm_cache_hits": 6,
+  "mode_counts": {
+    "M0": 15,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 6,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 202.61680030822754,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('248')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('248')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:new": 1.0,
+            "name:project": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "New project",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 26,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5478,
+        "completion_tokens": 90
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('237')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('237')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:create": 1.0,
+            "name:blank": 1.0,
+            "name:project": 1.0,
+            "name:a": 1.0,
+            "name:to": 1.0,
+            "name:store": 1.0,
+            "name:your": 1.0,
+            "name:files": 1.0,
+            "name:plan": 1.0,
+            "kw:create": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": "link",
+            "name": "Create blank project Create a blank project to store your files, plan your work, and collaborate on code, among other things.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1682,
+        "completion_tokens": 300
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('269', 'awesome-llms')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('269', 'awesome-llms')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:project": 1.0,
+            "name:name": 1.0,
+            "typed_len": 0.06,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "textbox",
+            "name": "Project name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2225,
+        "completion_tokens": 107
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('314')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('314')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=radio": 1.0,
+            "name:public": 1.0,
+            "name:the": 1.0,
+            "name:project": 1.0,
+            "name:can": 1.0,
+            "name:be": 1.0,
+            "name:accessed": 1.0,
+            "name:without": 1.0,
+            "name:any": 1.0,
+            "name:authentication": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "radio",
+            "name": " Public The project can be accessed without any authentication.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2258,
+        "completion_tokens": 99
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('314')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('314')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=radio": 1.0,
+            "name:public": 1.0,
+            "name:the": 1.0,
+            "name:project": 1.0,
+            "name:can": 1.0,
+            "name:be": 1.0,
+            "name:accessed": 1.0,
+            "name:without": 1.0,
+            "name:any": 1.0,
+            "name:authentication": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "radio",
+            "name": " Public The project can be accessed without any authentication.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2796,
+        "completion_tokens": 116
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('314')",
+          2
+        ],
+        [
+          "click('315')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('314')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=radio": 1.0,
+            "name:public": 1.0,
+            "name:the": 1.0,
+            "name:project": 1.0,
+            "name:can": 1.0,
+            "name:be": 1.0,
+            "name:accessed": 1.0,
+            "name:without": 1.0,
+            "name:any": 1.0,
+            "name:authentication": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "radio",
+            "name": " Public The project can be accessed without any authentication.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4250,
+        "completion_tokens": 166
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('331')",
+          1
+        ],
+        [
+          "click('336')",
+          1
+        ],
+        [
+          "click('315')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('336')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:project": 1.0,
+            "kw:create": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "button",
+            "name": "Create project",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 112,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 1,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4279,
+        "completion_tokens": 208
+      }
+    },
+    {
+      "candidates": [
+        [
+          "noop(500)",
+          1
+        ],
+        [
+          "click('631')",
+          1
+        ],
+        [
+          "click('160')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('160')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:create": 1.0,
+            "name:new": 1.0,
+            "kw:create": 1.0,
+            "path:byteblaze": 0.5,
+            "path:awesome": 0.5,
+            "path:llms": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/awesome-llms",
+          "element": {
+            "role": "link",
+            "name": "Create new...",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 72,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 2,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 9839,
+        "completion_tokens": 179
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('173')",
+          2
+        ],
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('173')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:invite": 1.0,
+            "name:members": 1.0,
+            "kw:invite": 1.0,
+            "path:byteblaze": 0.5,
+            "path:awesome": 0.5,
+            "path:llms": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/awesome-llms",
+          "element": {
+            "role": "link",
+            "name": "Invite members ",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 103,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 9833,
+        "completion_tokens": 149
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:awesome": 0.5,
+            "path:llms": 0.5,
+            "path:project": 0.5,
+            "path:members": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/awesome-llms/-/project_members",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 111,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3070,
+        "completion_tokens": 132
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('160')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('160')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:create": 1.0,
+            "name:new": 1.0,
+            "kw:create": 1.0,
+            "path:byteblaze": 0.5,
+            "path:awesome": 0.5,
+            "path:llms": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/awesome-llms",
+          "element": {
+            "role": "link",
+            "name": "Create new...",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 72,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5227,
+        "completion_tokens": 113
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('177')",
+          2
+        ],
+        [
+          "click('160')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('177')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:new": 1.0,
+            "name:project": 1.0,
+            "name:repository": 1.0,
+            "path:byteblaze": 0.5,
+            "path:awesome": 0.5,
+            "path:llms": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/awesome-llms",
+          "element": {
+            "role": "link",
+            "name": "New project/repository",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 94,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 9758,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('237')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('237')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:create": 1.0,
+            "name:blank": 1.0,
+            "name:project": 1.0,
+            "name:a": 1.0,
+            "name:to": 1.0,
+            "name:store": 1.0,
+            "name:your": 1.0,
+            "name:files": 1.0,
+            "name:plan": 1.0,
+            "kw:create": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": "link",
+            "name": "Create blank project Create a blank project to store your files, plan your work, and collaborate on code, among other things.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 72,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1719,
+        "completion_tokens": 237
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('269', 'awesome-llms')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('269', 'awesome-llms')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:project": 1.0,
+            "name:name": 1.0,
+            "typed_len": 0.06,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "textbox",
+            "name": "Project name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 72,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2254,
+        "completion_tokens": 127
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('336')",
+          2
+        ],
+        [
+          "click('314')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('336')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:project": 1.0,
+            "kw:create": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "button",
+            "name": "Create project",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 94,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3730,
+        "completion_tokens": 128
+      }
+    }
+  ],
+  "method": "catts",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:22:11"
+}

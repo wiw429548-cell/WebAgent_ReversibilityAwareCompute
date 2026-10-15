@@ -1,0 +1,290 @@
+{
+  "task_id": 48,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Today is 6/12/2023. Tell me how many fulfilled orders I have over the past three days, and the total amount of money I spent.",
+  "template": 197,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 3,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 7,
+  "prompt_tokens": 26980,
+  "completion_tokens": 716,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      15213,
+      463
+    ],
+    "m2more": [
+      1,
+      5785,
+      93
+    ],
+    "wm": [
+      1,
+      2432,
+      72
+    ],
+    "value": [
+      1,
+      215,
+      8
+    ],
+    "form": [
+      1,
+      3335,
+      80
+    ]
+  },
+  "llm_cache_hits": 4,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "n/a",
+        "ref": "0 order",
+        "question": "Today is 6/12/2023. Tell me how many fulfilled orders I have over the past three days, and the total amount of money I spent.",
+        "src": "string",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "**Judgement:** Incorrect\n\n**Explanation:** \nThe reference answer specifies \"0 order\" for the number of fulfilled orders and explains that \"N/A\" (not achievable) should be interpreted as a special sequence meaning the information cannot be provided. The student's answer simply states \"n/a,\" which doe",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      },
+      {
+        "kind": "fuzzy",
+        "pred": "n/a",
+        "ref": "$0 total spend",
+        "question": "Today is 6/12/2023. Tell me how many fulfilled orders I have over the past three days, and the total amount of money I spent.",
+        "src": "string",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "**Judgement:** Incorrect\n\n**Explanation:** \nThe reference answer provides specific details about the total spend ($0) and clarifies that \"N/A\" means \"not achievable.\" The student's answer only states \"n/a,\" which does not fully address the question regarding the number of fulfilled orders or the tot",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 20.29244041442871,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.0665648860293011,
+      "wm_scores": [
+        5.06
+      ],
+      "outcomes": [
+        "Upon clicking the 'My Account' link (ID 227), the user will be redirected to the account management page where they can view and manage their personal information, orders, and preferences. No data will be created, modified, or deleted as a result of this action alone; it primarily serves to navigate"
+      ],
+      "m2_cands": [
+        "click('227')"
+      ],
+      "m2_choice": "click('227')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 17552,
+        "completion_tokens": 337
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1614')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1614')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:orders": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "My Orders",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.39124791796570335,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4440,
+        "completion_tokens": 157
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"There are no orders in the last three days (June 2023) to calculate the number of fulfilled orders or the total amount spent.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"There are no fulfilled orders from the past three days.\")",
+          1
+        ],
+        [
+          "click('1491')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "report_infeasible(\"There are no orders in the last three days (June 2023) to calculate the number of fulfilled orders or the total amount spent.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.21052486655160862,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4988,
+        "completion_tokens": 222
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:08:42"
+}

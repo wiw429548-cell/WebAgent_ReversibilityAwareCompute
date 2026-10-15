@@ -1,0 +1,308 @@
+{
+  "task_id": 398,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Fork all source repos from Akilesh Kannan",
+  "template": 352,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 5,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 5,
+  "prompt_tokens": 20966,
+  "completion_tokens": 546,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      16703,
+      538
+    ],
+    "progress": [
+      2,
+      4263,
+      8
+    ]
+  },
+  "llm_cache_hits": 5,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 2,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 119.95847821235657,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('320')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "name:a": 1.0,
+            "name:y": 1.0,
+            "name:syntax": 1.0,
+            "name:highlighting": 1.0,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "Byte Blaze / a11y-syntax-highlighting",
+            "context": "Byte Blaze / a11y-syntax-highlighting",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 53,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5239,
+        "completion_tokens": 148
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('693')",
+          1
+        ],
+        [
+          "click('598')",
+          1
+        ],
+        [
+          "click('160')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('693')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=navigation": 1.0,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:syntax": 0.5,
+            "ctx:highlighting": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": "navigation",
+            "name": "",
+            "context": "Byte Blaze / a11y-syntax-highlighting · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 10,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7836,
+        "completion_tokens": 188
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "report_infeasible(\"There are no repositories by Akilesh Kannan visible on the current page to fork.\")",
+          1
+        ],
+        [
+          "fill('146', 'Akilesh Kannan')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 27,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 10,
+          "server_error": false
+        },
+        {
+          "action": "report_infeasible(\"There are no repositories by Akilesh Kannan visible on the current page to fork.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 10,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7891,
+        "completion_tokens": 210
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "collect",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 17:16:18"
+}

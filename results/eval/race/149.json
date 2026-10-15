@@ -1,0 +1,419 @@
+{
+  "task_id": 149,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "What is the color configuration of the artifical plants I bought Feb 2023",
+  "template": 155,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 5,
+  "n_env_actions": 7,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 7,
+  "prompt_tokens": 28447,
+  "completion_tokens": 779,
+  "llm_by_tag": {
+    "policy": [
+      5,
+      24596,
+      771
+    ],
+    "progress": [
+      2,
+      3851,
+      8
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 3,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "The color configuration of the artificial plants you bought in February 2023 is Green-vines.",
+    "scores": {
+      "StringEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 29.19590711593628,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.00778931282239435,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5769,
+        "completion_tokens": 118
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1530')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.006770404244279714,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1530')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:all": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "View All",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4424,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1557')",
+          2
+        ],
+        [
+          "click('1590')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.007080494975750173,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1557')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:order": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "link",
+            "name": "View Order",
+            "context": "View OrderReorder Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sales/order/view/order_id/161/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        },
+        {
+          "action": "click('1590')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:order": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "link",
+            "name": "View Order",
+            "context": "View OrderReorder Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007080494975750173,
+        0.007080494975750173
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6891,
+        "completion_tokens": 141
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1497')",
+          1
+        ],
+        [
+          "focus('1497')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"The color configuration of the artificial plants you bought in February 2023 is Green-vines.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.055121523639613305,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1497')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:artificial": 1.0,
+            "name:plants": 1.0,
+            "name:boston": 1.0,
+            "name:fern": 1.0,
+            "name:fake": 1.0,
+            "name:greenery": 1.0,
+            "name:hanging": 1.0,
+            "name:ivy": 1.0,
+            "name:decor": 1.0,
+            "name:plastic": 1.0,
+            "name:for": 1.0,
+            "ctx:items": 0.5,
+            "ctx:ordered": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/view/order_id/157/",
+          "element": {
+            "role": "gridcell",
+            "name": "Artificial Plants Boston Fern Fake Greenery Hanging Ivy Decor Plastic Greenery for Wall Indoor Outdoor Hanging Baskets Wedding Garland Decor (Pack of 2) Green-vines",
+            "context": "Items Ordered",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.055121523639613305,
+        0.06059289315032389
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6643,
+        "completion_tokens": 183
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"The color configuration of the artificial plants you bought in February 2023 is Green-vines.\")",
+          2
+        ],
+        [
+          "click('1497')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.02934352102040623,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"The color configuration of the artificial plants you bought in February 2023 is Green-vines.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/view/order_id/157/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02934352102040623,
+        0.055121523639613305
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4720,
+        "completion_tokens": 209
+      }
+    }
+  ],
+  "method": "race",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 00:12:11"
+}

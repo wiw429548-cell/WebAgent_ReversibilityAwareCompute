@@ -1,0 +1,910 @@
+{
+  "task_id": 440,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "I previously ordered some a make up removal kit during summer 2022 and later cancelled. Can you reorder it for me?",
+  "template": 156,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 3,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 55,
+  "prompt_tokens": 139024,
+  "completion_tokens": 4044,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      74787,
+      2098
+    ],
+    "wm": [
+      17,
+      40958,
+      1333
+    ],
+    "value": [
+      17,
+      3709,
+      133
+    ],
+    "form": [
+      6,
+      19570,
+      480
+    ]
+  },
+  "llm_cache_hits": 11,
+  "mode_counts": {
+    "M0": 7,
+    "M1": 0,
+    "M2": 8
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 176.2894287109375,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.00778931282239435,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5776,
+        "completion_tokens": 111
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1555')",
+          2
+        ],
+        [
+          "click('1530')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0075816472192016746,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1555')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reorder": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:recent": 0.5,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "Reorder",
+            "context": "View OrderReorder Recent Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 562,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '1555' will trigger the 'Reorder' action for order number '000000170'. This action will likely redirect to a new page where the items from this order can be reviewed and added back to the cart. No immediate data modification or deletion occurs on the current page; how",
+        "Clicking on the 'View All' link (element ID '1530') will navigate to a new page that displays a comprehensive list of all recent orders for the user Emma Lopez. This action does not create, modify, or delete any data; it merely changes the view to provide a more detailed order history."
+      ],
+      "m2_cands": [
+        "click('1555')",
+        "click('1530')"
+      ],
+      "m2_choice": "click('1555')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13062,
+        "completion_tokens": 419
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('227')",
+          2
+        ],
+        [
+          "goto('http://localhost:7770/catalogsearch/result/')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.03483436226134329,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "goto('http://localhost:7770/catalogsearch/result/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 459,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        0.02,
+        5.01
+      ],
+      "outcomes": [
+        "Clicking on element '227' does not correspond to any interactive elements listed in the provided accessibility tree. Therefore, no action will occur, and there will be no change in the displayed page or any data on the website. It's possible that the intended target was misidentified or the element ",
+        "Navigating to `http://localhost:7770/catalogsearch/result/` will display the search results page of the website. Initially, this page may show no results or a prompt to enter a search query since no specific search terms have been provided yet. No data will be created, modified, or deleted on the we"
+      ],
+      "m2_cands": [
+        "click('227')",
+        "goto('http://localhost:7770/catalogsearch/result/')"
+      ],
+      "m2_choice": "goto('http://localhost:7770/catalogsearch/result/')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9137,
+        "completion_tokens": 301
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.00778931282239435,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5807,
+        "completion_tokens": 132
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1530')",
+          2
+        ],
+        [
+          "click('1555')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.006770404244279714,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1530')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:all": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "View All",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 441,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the 'View All' link (ID: 1530) will navigate to a new page that displays a comprehensive list of all recent orders for the user Emma Lopez. This action does not create, modify, or delete any data; it merely changes the view to provide a more detailed order history.",
+        "Clicking on the element with ID '1555' will trigger the 'Reorder' action for order number '000000170'. This action will likely redirect to a new page where the items from this order can be reviewed and added back to the cart. No immediate data modification or deletion occurs on the current page; how"
+      ],
+      "m2_cands": [
+        "click('1530')",
+        "click('1555')"
+      ],
+      "m2_choice": "click('1530')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13095,
+        "completion_tokens": 403
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1570')",
+          2
+        ],
+        [
+          "report_infeasible(\"I cannot find any orders from summer 2022 in the order history provided.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.00747237620834376,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1570')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reorder": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "link",
+            "name": "Reorder",
+            "context": "View OrderReorder Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 563,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '1570' will trigger a reorder action for the order with the number '000000156'. This action will likely redirect to a new page where the items from this order can be reviewed and added to the cart again. No data will be immediately deleted or modified, but the reorder",
+        "The agent will report that it cannot find any orders from summer 2022 in the order history provided, indicating that the current page remains unchanged with no modifications, creations, or deletions to the website's data. The user will still see the same order history for more recent dates without a"
+      ],
+      "m2_cands": [
+        "click('1570')",
+        "report_infeasible(\"I cannot find any orders from summer 2022 in the order history provided.\")"
+      ],
+      "m2_choice": "click('1570')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 14124,
+        "completion_tokens": 486
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('519')",
+          2
+        ],
+        [
+          "focus('519')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.4495910926015506,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "focus('519')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        6.01
+      ],
+      "outcomes": [
+        "Clicking on the combobox element with ID '519' will likely open a dropdown or autocomplete suggestions based on the current input within the search field. No immediate data creation, modification, or deletion will occur on the website; however, this action prepares the user to select a suggestion or",
+        "Focusing on the element with ID `519`, which is a combobox labeled as \"Search\", will bring the search input field into focus, allowing the user to directly type in their search query without needing to click on it. No data on the website will be created, modified, or deleted by this action; it merel"
+      ],
+      "m2_cands": [
+        "click('519')",
+        "focus('519')"
+      ],
+      "m2_choice": "focus('519')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9787,
+        "completion_tokens": 283
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('519', 'make up removal kit', True)",
+          2
+        ],
+        [
+          "fill('519', 'makeup removal kit')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.6684193160672651,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('519', 'makeup removal kit')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.09,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.02,
+        8.01
+      ],
+      "outcomes": [
+        "The agent will input \"make up removal kit\" into the search combobox on the current page. This action will likely trigger a search query, resulting in a new page displaying search results for \"make up removal kit\". No data will be created, modified, or deleted on the website itself from this action; ",
+        "Upon executing the command to fill the search combobox with \"makeup removal kit\", the page will refresh or update to display search results related to \"makeup removal kit\". No data will be created, modified, or deleted on the website itself; however, the search query will be processed, and the curre"
+      ],
+      "m2_cands": [
+        "fill('519', 'make up removal kit', True)",
+        "fill('519', 'makeup removal kit')"
+      ],
+      "m2_choice": "fill('519', 'makeup removal kit')",
+      "rho_choice": null,
+      "form_fix": "fill('519', 'makeup removal kit')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 12690,
+        "completion_tokens": 398
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:7770/catalogsearch/result/')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.040274651136156685,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:7770/catalogsearch/result/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 459,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4951,
+        "completion_tokens": 115
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.00778931282239435,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5838,
+        "completion_tokens": 163
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1570')",
+          1
+        ],
+        [
+          "click('1593')",
+          1
+        ],
+        [
+          "click('1595')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.006770404244279714,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1570')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:all": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "View All",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 441,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.01,
+        4.01,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the 'View All' link (element ID: 1570) will navigate to a new page that displays a comprehensive list of all recent orders for the user Emma Lopez. This action does not create, modify, or delete any data; it merely changes the view to provide a more detailed order history.",
+        "Clicking on the 'View Order' link for order number 000000170 will navigate to the order details page for that specific order. This page will display detailed information about the order, including items purchased, quantities, prices, and status, without modifying or deleting any existing data on the",
+        "Clicking on the 'Reorder' link (element ID '1595') for order number '000000170' will initiate the reordering process for that specific order. The website will likely redirect to a cart or checkout page where the items from order '000000170' will be added. No data will be immediately modified or dele"
+      ],
+      "m2_cands": [
+        "click('1570')",
+        "click('1593')",
+        "click('1595')"
+      ],
+      "m2_choice": "click('1570')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 15808,
+        "completion_tokens": 502
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1658')",
+          2
+        ],
+        [
+          "click('1530')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.006132854041038122,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1530')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:view": 1.0,
+            "name:orderreorder": 1.0,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "View OrderReorder",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 563,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.02,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the element with the ID '1658' will likely navigate to the details page of a specific order, based on the pattern observed in the provided accessibility tree. This action will not create, modify, or delete any data but will display more detailed information about the selected order, such",
+        "Clicking on the element with the ID '1530' will navigate to the detailed view of the order with the number '000000170'. This action will not create, modify, or delete any data on the website; it will simply display more detailed information about the selected order."
+      ],
+      "m2_cands": [
+        "click('1658')",
+        "click('1530')"
+      ],
+      "m2_choice": "click('1530')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 14084,
+        "completion_tokens": 400
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('519')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.47455244243356975,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('519')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4949,
+        "completion_tokens": 89
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('519', 'makeup removal kit')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.6683357243599126,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('519', 'makeup removal kit')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.09,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4951,
+        "completion_tokens": 125
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:7770/catalogsearch/result/')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.040274651136156685,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:7770/catalogsearch/result/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 459,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4965,
+        "completion_tokens": 117
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 02:05:10"
+}

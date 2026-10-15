@@ -1,0 +1,362 @@
+{
+  "task_id": 488,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Change the page title of \"Home Page\" page on my site to \"This is the home page!! Leave here!!\".",
+  "template": 275,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 5,
+  "n_env_actions": 5,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 9,
+  "prompt_tokens": 33431,
+  "completion_tokens": 380,
+  "llm_by_tag": {
+    "policy": [
+      5,
+      22567,
+      199
+    ],
+    "m2more": [
+      1,
+      4729,
+      85
+    ],
+    "wm": [
+      1,
+      2489,
+      86
+    ],
+    "value": [
+      1,
+      222,
+      8
+    ],
+    "form": [
+      1,
+      3424,
+      2
+    ]
+  },
+  "llm_cache_hits": 1,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 51.32526969909668,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('293')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('293')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:content": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CONTENT",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 295,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4271,
+        "completion_tokens": 48
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('305')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('305')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:pages": 1.0,
+            "ctx:content": 0.5,
+            "ctx:elements": 0.5,
+            "ctx:pages": 0.5,
+            "ctx:blocks": 0.5,
+            "ctx:widgets": 0.5,
+            "ctx:templates": 0.5,
+            "ctx:media": 0.5,
+            "ctx:gallery": 0.5,
+            "ctx:design": 0.5,
+            "ctx:configuration": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Pages",
+            "context": " CONTENT Content  Elements Pages Blocks Widgets Templates Media Media Gallery Design Configuration Themes Schedule",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 503,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4564,
+        "completion_tokens": 34
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1493')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1493')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:home": 1.0,
+            "name:page": 1.0,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/",
+          "element": {
+            "role": "gridcell",
+            "name": "Home Page",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 299,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4317,
+        "completion_tokens": 40
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1992', 'This is the home page!! Leave here!!')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1992', 'This is the home page!! Leave here!!')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "ctx:home": 0.5,
+            "ctx:page": 0.5,
+            "typed_len": 0.18,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "Home Page",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 295,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4686,
+        "completion_tokens": 38
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2029')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.8,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('2029')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:save": 1.0,
+            "ctx:cancel": 0.5,
+            "ctx:save": 0.5,
+            "kw:save": 1.0,
+            "path:admin": 0.5,
+            "path:cms": 0.5,
+            "path:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/cms/page/",
+          "element": {
+            "role": "button",
+            "name": "Save",
+            "context": "Cancel Save",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 297,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.04
+      ],
+      "outcomes": [
+        "Clicking on the 'Save' button (element with id '2029') will submit the current form, updating the details of the selected CMS page. The specific changes include modifications to the title, URL key, layout, and status of the page with ID '2'. After submission, the page will likely refresh or redirect"
+      ],
+      "m2_cands": [
+        "click('2029')"
+      ],
+      "m2_choice": "click('2029')",
+      "rho_choice": 0.8,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 15593,
+        "completion_tokens": 220
+      }
+    }
+  ],
+  "method": "confirm_rule",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "heuristic"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 23:48:45"
+}

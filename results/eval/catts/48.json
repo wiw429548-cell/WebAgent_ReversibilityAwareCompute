@@ -1,0 +1,215 @@
+{
+  "task_id": 48,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Today is 6/12/2023. Tell me how many fulfilled orders I have over the past three days, and the total amount of money I spent.",
+  "template": 197,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 2,
+  "n_env_actions": 2,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 3,
+  "prompt_tokens": 13875,
+  "completion_tokens": 307,
+  "llm_by_tag": {
+    "policy": [
+      2,
+      10225,
+      273
+    ],
+    "arbiter": [
+      1,
+      3650,
+      34
+    ]
+  },
+  "llm_cache_hits": 2,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 1,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "n/a",
+        "ref": "0 order",
+        "question": "Today is 6/12/2023. Tell me how many fulfilled orders I have over the past three days, and the total amount of money I spent.",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "**Judgement:** Incorrect\n\n**Explanation:** \nThe reference answer specifies \"0 order\" for the number of fulfilled orders and explains that \"N/A\" (not achievable) should be interpreted as a special sequence meaning the information cannot be provided. The student's answer simply states \"n/a,\" which doe",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      },
+      {
+        "kind": "fuzzy",
+        "pred": "n/a",
+        "ref": "$0 total spend",
+        "question": "Today is 6/12/2023. Tell me how many fulfilled orders I have over the past three days, and the total amount of money I spent.",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "**Judgement:** Incorrect\n\n**Explanation:** \nThe reference answer provides specific details about the total spend ($0) and clarifies that \"N/A\" means \"not achievable.\" The student's answer only states \"n/a,\" which does not fully address the question regarding the number of fulfilled orders or the tot",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 14.556384325027466,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5785,
+        "completion_tokens": 84
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1614')",
+          2
+        ],
+        [
+          "report_infeasible('There are no orders in the Recent Orders section that fall within the last three days, so it is not possible to determine the number of fulfilled orders or the total amount spent.')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "report_infeasible('There are no orders in the Recent Orders section that fall within the last three days, so it is not possible to determine the number of fulfilled orders or the total amount spent.')",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 1,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8090,
+        "completion_tokens": 223
+      }
+    }
+  ],
+  "method": "catts",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 19:56:47"
+}

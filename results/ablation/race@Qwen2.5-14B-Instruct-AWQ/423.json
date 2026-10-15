@@ -1,0 +1,866 @@
+{
+  "task_id": 423,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Mark all Hollister shirts on sale",
+  "template": 237,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 25,
+  "prompt_tokens": 106184,
+  "completion_tokens": 1967,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      84826,
+      1927
+    ],
+    "progress": [
+      10,
+      21358,
+      40
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 5,
+    "M1": 10,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 193.3637125492096,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('189')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0023083566572779206,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('189')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:catalog": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CATALOG",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4254,
+        "completion_tokens": 102
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('201')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.002789273636068043,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('201')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:products": 1.0,
+            "ctx:catalog": 0.5,
+            "ctx:products": 0.5,
+            "ctx:categories": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Products",
+            "context": " CATALOG Catalog  Products Categories",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 593,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4363,
+        "completion_tokens": 90
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('890')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.062052975840531745,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('890')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:filters": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": "Filters",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 385,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5850,
+        "completion_tokens": 107
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1375')",
+          1
+        ],
+        [
+          "fill('1380', 'Hollister')",
+          1
+        ],
+        [
+          "click('962')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.062052975840531745,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1375')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:apply": 1.0,
+            "name:filters": 1.0,
+            "kw:apply": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": "Apply Filters",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.062052975840531745,
+        0.01747767988817809
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7836,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('890')",
+          2
+        ],
+        [
+          "click('1386')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.062052975840531745,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('890')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:filters": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": "Filters",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.062052975840531745,
+        0.06421834584409107
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8015,
+        "completion_tokens": 157
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('890')",
+          2
+        ],
+        [
+          "goto('http://localhost:7780/admin/catalog/product/edit')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.062052975840531745,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('890')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:filters": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": "Filters",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.062052975840531745,
+        0.011824469096098165
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7851,
+        "completion_tokens": 143
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1380')",
+          2
+        ],
+        [
+          "click('890')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.007183247116805412,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1380')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:by": 1.0,
+            "name:keyword": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "textbox",
+            "name": "Search by keyword",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007183247116805412,
+        0.062052975840531745
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8052,
+        "completion_tokens": 108
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1380', 'Hollister', True)",
+          2
+        ],
+        [
+          "click('890')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.01747767988817809,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1380', 'Hollister', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:by": 1.0,
+            "name:keyword": 1.0,
+            "typed_len": 0.045,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "textbox",
+            "name": "Search by keyword",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.01747767988817809,
+        0.062052975840531745
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8058,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1381')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.16340959650777043,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1381')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 387,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5880,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1386')",
+          1
+        ],
+        [
+          "click('1829')",
+          1
+        ],
+        [
+          "click('118')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.06421834584409107,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1386')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:actions": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": "Actions",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.06421834584409107,
+        0.014192522119406163
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7854,
+        "completion_tokens": 175
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1399')",
+          2
+        ],
+        [
+          "click('1751')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.016800210901696387,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1399')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=listitem": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "listitem",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.016800210901696387,
+        0.017990343384961253
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7808,
+        "completion_tokens": 146
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1399')",
+          2
+        ],
+        [
+          "click('1768')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.016800210901696387,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1399')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=listitem": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "listitem",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.016800210901696387,
+        0.013761038103427995
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7818,
+        "completion_tokens": 174
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('9514')",
+          2
+        ],
+        [
+          "click('1768')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.01613210899995845,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('9514')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=dialog": 1.0,
+            "name:attention": 1.0,
+            "ctx:products": 0.5,
+            "ctx:inventory": 0.5,
+            "ctx:catalog": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "dialog",
+            "name": "Attention",
+            "context": "Products / Inventory / Catalog / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.01613210899995845,
+        0.013761038103427995
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8369,
+        "completion_tokens": 142
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1800')",
+          1
+        ],
+        [
+          "click('1768')",
+          1
+        ],
+        [
+          "click('122')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.016157717904645975,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1800')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:edit": 1.0,
+            "name:hollister": 1.0,
+            "name:backyard": 1.0,
+            "name:sweatshirt": 1.0,
+            "kw:edit": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "gridcell",
+            "name": "Edit Hollister Backyard Sweatshirt",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.016157717904645975,
+        0.013761038103427995
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7829,
+        "completion_tokens": 140
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('9514')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.01613210899995845,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('9514')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=dialog": 1.0,
+            "name:attention": 1.0,
+            "ctx:products": 0.5,
+            "ctx:inventory": 0.5,
+            "ctx:catalog": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "dialog",
+            "name": "Attention",
+            "context": "Products / Inventory / Catalog / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6347,
+        "completion_tokens": 121
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:46:12"
+}

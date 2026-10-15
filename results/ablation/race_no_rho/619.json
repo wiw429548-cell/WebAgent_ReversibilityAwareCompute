@@ -1,0 +1,306 @@
+{
+  "task_id": 619,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Re-post the image of costume contest in this page to funny subreddit and note \"from /f/pics\"",
+  "template": 11,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 3,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 15,
+  "prompt_tokens": 12358,
+  "completion_tokens": 896,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      8307,
+      474
+    ],
+    "wm": [
+      6,
+      2690,
+      374
+    ],
+    "value": [
+      6,
+      1361,
+      48
+    ]
+  },
+  "llm_cache_hits": 6,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 0,
+    "M2": 2
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "URLEvaluator": 0.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 48.336774826049805,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('228')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.006981759687886865,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('228')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:we": 1.0,
+            "name:won": 1.0,
+            "name:first": 1.0,
+            "name:place": 1.0,
+            "name:in": 1.0,
+            "name:the": 1.0,
+            "name:costume": 1.0,
+            "name:contest": 1.0,
+            "ctx:we": 0.5,
+            "ctx:won": 0.5,
+            "ctx:first": 0.5,
+            "ctx:place": 0.5,
+            "ctx:in": 0.5,
+            "ctx:the": 0.5,
+            "ctx:costume": 0.5,
+            "ctx:contest": 0.5,
+            "path:f": 0.5,
+            "path:pics": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/pics",
+          "element": {
+            "role": "link",
+            "name": "We won first place in the costume contest!",
+            "context": "We won first place in the costume contest!",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 3,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5621,
+        "completion_tokens": 111
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/')",
+          1
+        ],
+        [
+          "new_tab()",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.022922710070659647,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:submission": 0.5,
+            "path:images": 0.5,
+            "path:bd": 0.5,
+            "path:bc": 0.5,
+            "path:f": 0.5,
+            "path:c": 0.5,
+            "path:aac": 0.5,
+            "path:df": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submission_images/bd8bc5f4c846aac4df08626faa3a34a7d47c8f3bdd92bf615a54afd939f063a7.jpg",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 56,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        0.01,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "Executing `go_back()` will navigate the browser to the previous page in the history, meaning the current image page will no longer be displayed. No data on the website will be created, modified, or deleted as this action only affects the browser's navigation history.",
+        "Navigating to `http://localhost:9999/` will load the homepage of the local web server. No data on the website will be created, modified, or deleted as a result of this navigation action; it simply changes the displayed content to whatever is defined as the homepage at that URL.",
+        "The current tab displaying the image at the specified URL will remain unchanged, but a new tab will open, typically showing the default homepage or a blank page, depending on the browser settings. No data on the website will be created, modified, or deleted as a result of opening a new tab."
+      ],
+      "m2_cands": [
+        "go_back()",
+        "goto('http://localhost:9999/')",
+        "new_tab()"
+      ],
+      "m2_choice": "goto('http://localhost:9999/')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 2613,
+        "completion_tokens": 359
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The current page does not contain an image of a costume contest to repost.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"There is no image of a costume contest on this page to repost.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"Cannot find the image of costume contest in the current page.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02750748409404009,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The current page does not contain an image of a costume contest to repost.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.01,
+        7.01,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will report that the current page does not contain an image of a costume contest to repost, indicating that no action regarding a costume contest image is feasible with the current page content. No new pages will be shown, and no data on the website will be created, modified, or deleted as",
+        "The agent will report that there is no image of a costume contest on the current page to repost, indicating that no action can be taken regarding a costume contest image. No new pages will be shown, and no data on the website will be created, modified, or deleted as a result of this report.",
+        "The agent's attempt to find an image related to a costume contest on the current page will not yield any results since the described accessibility tree does not contain such an element. No page change or data modification will occur as a result of this action; the website will remain in its current "
+      ],
+      "m2_cands": [
+        "report_infeasible(\"The current page does not contain an image of a costume contest to repost.\")",
+        "report_infeasible(\"There is no image of a costume contest on this page to repost.\")",
+        "report_infeasible(\"Cannot find the image of costume contest in the current page.\")"
+      ],
+      "m2_choice": "report_infeasible(\"The current page does not contain an image of a costume contest to repost.\")",
+      "rho_choice": null,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 4124,
+        "completion_tokens": 426
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 02:00:30"
+}

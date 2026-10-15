@@ -1,0 +1,601 @@
+{
+  "task_id": 440,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "I previously ordered some a make up removal kit during summer 2022 and later cancelled. Can you reorder it for me?",
+  "template": 156,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 7,
+  "n_env_actions": 13,
+  "n_state_changes": 2,
+  "n_state_changes_in_rollbacks": 1,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 3,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 11,
+  "prompt_tokens": 43168,
+  "completion_tokens": 1135,
+  "llm_by_tag": {
+    "policy": [
+      7,
+      35517,
+      1119
+    ],
+    "progress": [
+      4,
+      7651,
+      16
+    ]
+  },
+  "llm_cache_hits": 1,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 5,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 109.21304130554199,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.00778931282239435,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5776,
+        "completion_tokens": 111
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1530')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.006770404244279714,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1530')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:all": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "View All",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 441,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4431,
+        "completion_tokens": 124
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1567')",
+          2
+        ],
+        [
+          "click('1573')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05501566186840518,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1567')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:view": 1.0,
+            "name:orderreorder": 1.0,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "View OrderReorder",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 563,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 441,
+          "server_error": false
+        },
+        {
+          "action": "click('1573')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:complete": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "Complete",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05501566186840518,
+        0.05672850331721465
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6892,
+        "completion_tokens": 147
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1658')",
+          2
+        ],
+        [
+          "click('1610')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.006132854041038122,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1658')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:page": 1.0,
+            "name:next": 1.0,
+            "ctx:page": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "link",
+            "name": " Page Next",
+            "context": "Page",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 441,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sales/order/history/?p=2",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 441,
+          "server_error": false
+        },
+        {
+          "action": "click('1610')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reorder": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "link",
+            "name": "Reorder",
+            "context": "View OrderReorder Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 563,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.006132854041038122,
+        0.00747237620834376
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6923,
+        "completion_tokens": 183
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1567')",
+          2
+        ],
+        [
+          "click('534')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.03483436226134329,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1567')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03483436226134329,
+        0.03941444060622814
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6838,
+        "completion_tokens": 162
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          2
+        ],
+        [
+          "click('1610')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.00778931282239435,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 560,
+          "server_error": false
+        },
+        {
+          "action": "click('1610')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.00778931282239435,
+        0.03483436226134329
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7111,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"There is no information about a previously canceled makeup removal kit in the current shopping cart or elsewhere on the page.\")",
+          1
+        ],
+        [
+          "click('320')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"It seems the shopping cart does not contain the make-up removal kit. Could you provide more details about the product or how to access your order history?\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02750748409404009,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"There is no information about a previously canceled makeup removal kit in the current shopping cart or elsewhere on the page.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02750748409404009,
+        0.00778931282239435
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5197,
+        "completion_tokens": 274
+      }
+    }
+  ],
+  "method": "race_no_formcheck",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 03:33:08"
+}

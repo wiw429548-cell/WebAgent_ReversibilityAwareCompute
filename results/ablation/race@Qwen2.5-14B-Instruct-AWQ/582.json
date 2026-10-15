@@ -1,0 +1,941 @@
+{
+  "task_id": 582,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Create a new forum named Cyberpunk, with a description of Welcome to the future, and include ['Games', 'Books', 'Movies', 'Future'] in the sidebar?",
+  "template": 7,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 17,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 36,
+  "prompt_tokens": 74467,
+  "completion_tokens": 2471,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      42693,
+      1645
+    ],
+    "progress": [
+      4,
+      6031,
+      16
+    ],
+    "m2more": [
+      1,
+      4081,
+      75
+    ],
+    "wm": [
+      7,
+      14561,
+      519
+    ],
+    "value": [
+      7,
+      1559,
+      56
+    ],
+    "form": [
+      2,
+      5542,
+      160
+    ]
+  },
+  "llm_cache_hits": 5,
+  "mode_counts": {
+    "M0": 5,
+    "M1": 7,
+    "M2": 3
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 2,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 231.56440687179565,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/submit')",
+          1
+        ],
+        [
+          "click('62')",
+          1
+        ],
+        [
+          "click('122')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/submit')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 26,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 22,
+          "server_error": false
+        },
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 26,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.005067546045833567
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2849,
+        "completion_tokens": 74
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('137', 'Cyberpunk')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.019598511046818465,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('137', 'Cyberpunk')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "name:is": 1.0,
+            "name:required": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "typed_len": 0.045,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Title This field is required.",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 5,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1636,
+        "completion_tokens": 90
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('142', 'Welcome to the future')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.025520529269409627,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('142', 'Welcome to the future')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:body": 1.0,
+            "typed_len": 0.105,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Body",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 5,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1666,
+        "completion_tokens": 81
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'Create submission')",
+          1
+        ],
+        [
+          "click('395')",
+          1
+        ],
+        [
+          "select_option('378', 'Choose one…')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.05115532088842839,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('378', 'Create submission')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05115532088842839,
+        0.9825400828844786
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1727,
+        "completion_tokens": 87
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.07010907429540121,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1826,
+        "completion_tokens": 119
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('395')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.9825400828844786,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select('378', 'Futurology')",
+          "rollback": false,
+          "feat": {
+            "act=select": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.04,
+        2.02
+      ],
+      "outcomes": [
+        "Clicking the element associated with '395' will likely submit the form for creating a new submission, based on the current context provided. This action will result in the creation of a new submission with the title \"Cyberpunk\" and body \"Welcome to the future\", assuming all required fields are corre",
+        "When the agent executes `select_option('378', 'Create submission')`, it will attempt to select the \"Create submission\" option from the dropdown menu identified by the ID '378'. However, since \"Create submission\" does not appear to be a valid option in the list (valid options include forum names like"
+      ],
+      "m2_cands": [
+        "click('395')",
+        "select_option('378', 'Create submission')"
+      ],
+      "m2_choice": "click('395')",
+      "rho_choice": 0.9825400828844786,
+      "form_fix": "select('378', 'Futurology')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 15549,
+        "completion_tokens": 428
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'Futurology')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.05115532088842839,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('378', 'Futurology')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4098,
+        "completion_tokens": 161
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          1
+        ],
+        [
+          "click('529')",
+          1
+        ],
+        [
+          "click('525')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.07010907429540121,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.07010907429540121,
+        0.039634510662497714
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5864,
+        "completion_tokens": 141
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'Futurology')",
+          2
+        ],
+        [
+          "click('378')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05115532088842839,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('378', 'Futurology')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05115532088842839,
+        0.07010907429540121
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3255,
+        "completion_tokens": 108
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.07010907429540121,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1827,
+        "completion_tokens": 121
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('137', 'Cyberpunk')",
+          2
+        ],
+        [
+          "click('395')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.019598511046818465,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('137', 'Cyberpunk')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "name:is": 1.0,
+            "name:required": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "typed_len": 0.045,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Title This field is required.",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.019598511046818465,
+        0.9825400828844786
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4131,
+        "completion_tokens": 110
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'Futurology')",
+          2
+        ],
+        [
+          "click('395')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05115532088842839,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('378', 'Futurology')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05115532088842839,
+        0.9825400828844786
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4136,
+        "completion_tokens": 103
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('395')",
+          1
+        ],
+        [
+          "select_option('378', 'Futurology')",
+          1
+        ],
+        [
+          "select_option('378', ['Games', 'Books', 'Movies', 'Future'])",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.9825400828844786,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select('378', 'Futurology')",
+          "rollback": false,
+          "feat": {
+            "act=select": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.01,
+        0.01,
+        5.01
+      ],
+      "outcomes": [
+        "Clicking '395' will likely submit the current form, creating a new submission with the title \"Cyberpunk\" and body \"Welcome to the future\". The exact forum chosen will determine where this submission appears, based on the selection in the dropdown menu.",
+        "When the agent executes `select_option('378', 'Futurology')`, it will change the selected forum from the dropdown menu to \"Futurology\". No data will be created, modified, or deleted as a result of this action; the page will remain unchanged except for the selection in the forum dropdown.",
+        "When the agent executes `select_option('378', ['Games', 'Books', 'Movies', 'Future'])`, it will select multiple options from the forum dropdown menu labeled \"Choose one…\" (ID: 378). The current page will remain unchanged, but the selected forums ('Games', 'Books', 'Movies', 'Future') will be associa"
+      ],
+      "m2_cands": [
+        "click('395')",
+        "select_option('378', 'Futurology')",
+        "select_option('378', ['Games', 'Books', 'Movies', 'Future'])"
+      ],
+      "m2_choice": "click('395')",
+      "rho_choice": 0.9825400828844786,
+      "form_fix": "select('378', 'Futurology')",
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 13923,
+        "completion_tokens": 481
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('395')",
+          2
+        ],
+        [
+          "select_option('378', 'Futurology')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.9825400828844786,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('395')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        0.01
+      ],
+      "outcomes": [
+        "Clicking '395' will likely submit the current form, creating a new submission with the title \"Cyberpunk\" and body \"Welcome to the future\". The exact forum chosen will determine where this submission appears, based on the selection in the dropdown menu.",
+        "When the agent executes `select_option('378', 'Futurology')`, it will change the selected forum from the dropdown menu to \"Futurology\". No data will be created, modified, or deleted as a result of this action; the page will remain unchanged except for the selection in the forum dropdown."
+      ],
+      "m2_cands": [
+        "click('395')",
+        "select_option('378', 'Futurology')"
+      ],
+      "m2_choice": "click('395')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 8724,
+        "completion_tokens": 255
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('142', 'Welcome to the future')",
+          2
+        ],
+        [
+          "select_option('378', ['Games', 'Books', 'Movies', 'Future'])",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.025520529269409627,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('142', 'Welcome to the future')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:body": 1.0,
+            "typed_len": 0.105,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Body",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.025520529269409627,
+        0.05115532088842839
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3256,
+        "completion_tokens": 112
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:40:58"
+}

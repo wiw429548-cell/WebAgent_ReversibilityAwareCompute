@@ -1,0 +1,887 @@
+{
+  "task_id": 733,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Edit my post on Star Trek Starfleet Academy series by adding a line to the body that says \"Every watch makes me feel like a kid again\"",
+  "template": 27,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 26,
+  "prompt_tokens": 48635,
+  "completion_tokens": 3825,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      39195,
+      3385
+    ],
+    "wm": [
+      5,
+      5246,
+      320
+    ],
+    "value": [
+      5,
+      1123,
+      40
+    ],
+    "form": [
+      1,
+      3071,
+      80
+    ]
+  },
+  "llm_cache_hits": 16,
+  "mode_counts": {
+    "M0": 13,
+    "M1": 0,
+    "M2": 2
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 125.49229407310486,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('42')",
+          1
+        ],
+        [
+          "click('26')",
+          1
+        ],
+        [
+          "click('117')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('42')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7709933650828091,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1528,
+        "completion_tokens": 90
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          1
+        ],
+        [
+          "report_infeasible(\"I cannot find the specific forum related to the Star Trek Starfleet Academy series from the current page.\")",
+          1
+        ],
+        [
+          "fill('50', 'Star Trek Starfleet Academy')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9136000869718934,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4461,
+        "completion_tokens": 212
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          2
+        ],
+        [
+          "click('113') # This will click on the 'Forums' link to navigate to the forums page. However, since the bid '113' is already clicked previously, we should look for another way to navigate to the specific forum. The accessibility tree does not provide a direct link to the Star Trek Starfleet Academy series forum, so we might need to search or navigate through the forums page.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.1264013266922177,
+      "wm_scores": [
+        2.02,
+        2.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Forums' link at position [113] will likely refresh or reaffirm the current view of the forums list page since the user is already on the forums page. No data will be created, modified, or deleted as a result of this action; it simply navigates to the same section of the site.",
+        "Clicking on the 'Forums' link again will likely refresh or reaffirm the current view of the forums page without changing the URL or displayed content. Since there's no direct link to the Star Trek Starfleet Academy series forum provided in the current accessibility tree, no data on the website will "
+      ],
+      "m2_cands": [
+        "click('113')",
+        "click('113') # This will click on the 'Forums' link to navigate to the forums page. However, since the bid '113' is already clicked previously, we should look for another way to navigate to the specific forum. The accessibility tree does not provide a direct link to the Star Trek Starfleet Academy series forum, so we might need to search or navigate through the forums page."
+      ],
+      "m2_choice": "click('113')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 12737,
+        "completion_tokens": 754
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          1
+        ],
+        [
+          "click('113') # This will click on 'Forums' to get into the forums section, assuming the specific forum is listed there. However, the specific forum ID is not provided in the given accessibility tree.",
+          1
+        ],
+        [
+          "fill('50', 'Star Trek Starfleet Academy')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6715912229054268,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4477,
+        "completion_tokens": 171
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('113')",
+          2
+        ],
+        [
+          "click('223')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('113')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9642545743612665,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4485,
+        "completion_tokens": 155
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forums/star-trek-starfleet-academy-series')",
+          1
+        ],
+        [
+          "click('113') # This will refresh the forums list if necessary, but we don't have a direct link to the Star Trek Starfleet Academy series forum in the given accessibility tree. We need more information or steps to locate the specific forum.",
+          1
+        ],
+        [
+          "report_infeasible(\"The current page does not contain a direct link to the Star Trek Starfleet Academy series forum.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forums/star-trek-starfleet-academy-series')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.568456725028387,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4493,
+        "completion_tokens": 298
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('12')",
+          2
+        ],
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('12')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:go": 1.0,
+            "name:to": 1.0,
+            "name:home": 1.0,
+            "name:page": 1.0,
+            "ctx:not": 0.5,
+            "ctx:found": 0.5,
+            "path:forums": 0.5,
+            "path:star": 0.5,
+            "path:trek": 0.5,
+            "path:starfleet": 0.5,
+            "path:academy": 0.5,
+            "path:series": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums/star-trek-starfleet-academy-series",
+          "element": {
+            "role": "link",
+            "name": "Go to home page",
+            "context": "404 Not Found",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.4951330262878493,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1128,
+        "completion_tokens": 241
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('12')",
+          1
+        ],
+        [
+          "click('113')",
+          1
+        ],
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('12')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.2614172621752253,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1588,
+        "completion_tokens": 230
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forums/star-trek-starfleet-academy-series')",
+          1
+        ],
+        [
+          "click('117')",
+          1
+        ],
+        [
+          "scroll(0, 200)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forums/star-trek-starfleet-academy-series')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6651484870522282,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1853,
+        "completion_tokens": 238
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          2
+        ],
+        [
+          "click('12')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "path:star": 0.5,
+            "path:trek": 0.5,
+            "path:starfleet": 0.5,
+            "path:academy": 0.5,
+            "path:series": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums/star-trek-starfleet-academy-series",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9562867382097657,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1143,
+        "completion_tokens": 188
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          2
+        ],
+        [
+          "click('26')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.15321692299517764,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1600,
+        "completion_tokens": 208
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forums/star-trek-starfleet-academy-series')",
+          2
+        ],
+        [
+          "report_infeasible(\"Cannot find the post to edit due to a 404 error.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forums/star-trek-starfleet-academy-series')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "path:star": 0.5,
+            "path:trek": 0.5,
+            "path:starfleet": 0.5,
+            "path:academy": 0.5,
+            "path:series": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums/star-trek-starfleet-academy-series",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7395788566127344,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1137,
+        "completion_tokens": 265
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forums')",
+          1
+        ],
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "click('12')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forums')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "path:star": 0.5,
+            "path:trek": 0.5,
+            "path:starfleet": 0.5,
+            "path:academy": 0.5,
+            "path:series": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums/star-trek-starfleet-academy-series",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.1138078943489802,
+      "wm_scores": [
+        2.01,
+        0.01,
+        0.01
+      ],
+      "outcomes": [
+        "The agent will navigate to the forums homepage at `http://localhost:9999/forums`. This action will not create, modify, or delete any data on the website; it will simply display the list of available forums or categories without altering the existing content.",
+        "When the agent executes `go_back()`, the previous page in the browsing history will be displayed. No data on the website will be created, modified, or deleted as this action only navigates back through the browser's history.",
+        "Upon clicking the link to go to the home page, the website will redirect to the homepage at `http://localhost:9999/`. No data on the website will be created, modified, or deleted as this action only involves navigation between pages."
+      ],
+      "m2_cands": [
+        "goto('http://localhost:9999/forums')",
+        "go_back()",
+        "click('12')"
+      ],
+      "m2_choice": "goto('http://localhost:9999/forums')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 2309,
+        "completion_tokens": 409
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forums/star-trek-starfleet-academy-series')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forums/star-trek-starfleet-academy-series')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.22853121188117598,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4534,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          2
+        ],
+        [
+          "goto('http://localhost:9999/forums')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "path:star": 0.5,
+            "path:trek": 0.5,
+            "path:starfleet": 0.5,
+            "path:academy": 0.5,
+            "path:series": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums/star-trek-starfleet-academy-series",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6286402429709383,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1162,
+        "completion_tokens": 221
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:37:40"
+}

@@ -1,0 +1,353 @@
+{
+  "task_id": 448,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "set the homepage URL on my GitLab profile to https://egg.tart.com",
+  "template": 331,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 4,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 6,
+  "prompt_tokens": 25354,
+  "completion_tokens": 596,
+  "llm_by_tag": {
+    "policy": [
+      4,
+      21089,
+      588
+    ],
+    "progress": [
+      2,
+      4265,
+      8
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 3,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 59.89554476737976,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('201')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.006441279764816845,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('201')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:byte": 1.0,
+            "name:blaze": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "Byte Blaze",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5245,
+        "completion_tokens": 96
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('218')",
+          2
+        ],
+        [
+          "click('216')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.008034101824031449,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('218')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:preferences": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "Preferences",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 69,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008034101824031449,
+        0.007236374037995453
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7571,
+        "completion_tokens": 102
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('241')",
+          2
+        ],
+        [
+          "click('331')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.006892197339821106,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('241')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:profile": 1.0,
+            "ctx:user": 0.5,
+            "ctx:settings": 0.5,
+            "ctx:preferences": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:profile": 0.5,
+            "path:preferences": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/-/profile/preferences",
+          "element": {
+            "role": "link",
+            "name": "Profile",
+            "context": "User settings Preferences · User Settings · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 51,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:profile": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/-/profile",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 69,
+          "server_error": false
+        },
+        {
+          "action": "click('331')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:preferences": 1.0,
+            "ctx:user": 0.5,
+            "ctx:settings": 0.5,
+            "ctx:preferences": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:profile": 0.5,
+            "path:preferences": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/-/profile/preferences",
+          "element": {
+            "role": "link",
+            "name": "Preferences",
+            "context": "User settings Preferences · User Settings · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 69,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.006892197339821106,
+        0.006892197339821106
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7316,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"There is no option to set the homepage URL on this page.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"There is no input field for setting a homepage URL on this preferences page.\")",
+          1
+        ],
+        [
+          "click('331')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02750748409404009,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"There is no option to set the homepage URL on this page.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:profile": 0.5,
+            "path:preferences": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/-/profile/preferences",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02750748409404009,
+        0.02750748409404009
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5222,
+        "completion_tokens": 270
+      }
+    }
+  ],
+  "method": "race_tau_rho0.7",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 06:20:09 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 07:06:01"
+}

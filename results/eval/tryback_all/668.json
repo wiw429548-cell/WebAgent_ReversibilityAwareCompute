@@ -1,0 +1,855 @@
+{
+  "task_id": 668,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Submit a merge request for a11yproject.com/redesign branch to be merged into master branch, assign Roshan Jossy as the reviewer",
+  "template": 335,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 20,
+  "prompt_tokens": 69655,
+  "completion_tokens": 1970,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      58663,
+      1950
+    ],
+    "progress": [
+      5,
+      10992,
+      20
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 10,
+    "M1": 5,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 1.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 70.18476104736328,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('323')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('323')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:the": 1.0,
+            "name:a": 1.0,
+            "name:y": 1.0,
+            "name:project": 1.0,
+            "name:yproject": 1.0,
+            "name:com": 1.0,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:project": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "The A11Y Project / a11yproject.com",
+            "context": "The A11Y Project / a11yproject.com",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 43,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5490,
+        "completion_tokens": 168
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('355')",
+          2
+        ],
+        [
+          "click('187')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('355')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "ctx:gitlab": 0.5,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "Project navigation The A11Y Project / a11yproject.com · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8102,
+        "completion_tokens": 90
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('622')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('622')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:new": 1.0,
+            "name:merge": 1.0,
+            "name:request": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": "link",
+            "name": "New merge request",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 43,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5972,
+        "completion_tokens": 93
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('631')",
+          2
+        ],
+        [
+          "click('613')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('631')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:select": 1.0,
+            "name:source": 1.0,
+            "name:branch": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests/new",
+          "element": {
+            "role": "button",
+            "name": "Select source branch",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4863,
+        "completion_tokens": 183
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('837')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('837')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:redesign": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests/new",
+          "element": {
+            "role": "link",
+            "name": "redesign",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 3,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3223,
+        "completion_tokens": 90
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('631')",
+          2
+        ],
+        [
+          "click('677')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('631')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:redesign": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests/new#",
+          "element": {
+            "role": "button",
+            "name": "redesign",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5027,
+        "completion_tokens": 99
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('720')",
+          2
+        ],
+        [
+          "click('677')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('720')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:compare": 1.0,
+            "name:branches": 1.0,
+            "name:and": 1.0,
+            "name:continue": 1.0,
+            "ctx:new": 0.5,
+            "ctx:merge": 0.5,
+            "ctx:request": 0.5,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:project": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests/new#",
+          "element": {
+            "role": "button",
+            "name": "Compare branches and continue",
+            "context": "New merge request · The A11Y Project / a11yproject.com · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5605,
+        "completion_tokens": 140
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('750')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('750')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:unassigned": 1.0,
+            "kw:assign": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests/new?merge_request%5Bsource_project_id%5D=174&merge_request%5Bsource_branch%5D=redesign&merge_request%5Btarget_project_id%5D=174&merge_request%5Btarget_branch%5D=main",
+          "element": {
+            "role": "button",
+            "name": "Unassigned",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 5,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3470,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('750')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('750')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:unassigned": 1.0,
+            "kw:assign": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests/new?merge_request%5Bsource_project_id%5D=174&merge_request%5Bsource_branch%5D=redesign&merge_request%5Btarget_project_id%5D=174&merge_request%5Btarget_branch%5D=main",
+          "element": {
+            "role": "button",
+            "name": "Unassigned",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3789,
+        "completion_tokens": 124
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('750')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('750')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:unassigned": 1.0,
+            "kw:assign": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests/new?merge_request%5Bsource_project_id%5D=174&merge_request%5Bsource_branch%5D=redesign&merge_request%5Btarget_project_id%5D=174&merge_request%5Btarget_branch%5D=main",
+          "element": {
+            "role": "button",
+            "name": "Unassigned",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 3,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3473,
+        "completion_tokens": 146
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('750')",
+          1
+        ],
+        [
+          "click('759')",
+          1
+        ],
+        [
+          "fill('759', 'Roshan Jossy')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('750')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:unassigned": 1.0,
+            "kw:assign": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests/new?merge_request%5Bsource_project_id%5D=174&merge_request%5Bsource_branch%5D=redesign&merge_request%5Btarget_project_id%5D=174&merge_request%5Btarget_branch%5D=main",
+          "element": {
+            "role": "button",
+            "name": "Unassigned",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6083,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('750')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('750')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:unassigned": 1.0,
+            "kw:assign": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests/new?merge_request%5Bsource_project_id%5D=174&merge_request%5Bsource_branch%5D=redesign&merge_request%5Btarget_project_id%5D=174&merge_request%5Btarget_branch%5D=main",
+          "element": {
+            "role": "button",
+            "name": "Unassigned",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 3,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3473,
+        "completion_tokens": 148
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('750')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('750')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:unassigned": 1.0,
+            "kw:assign": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests/new?merge_request%5Bsource_project_id%5D=174&merge_request%5Bsource_branch%5D=redesign&merge_request%5Btarget_project_id%5D=174&merge_request%5Btarget_branch%5D=main",
+          "element": {
+            "role": "button",
+            "name": "Unassigned",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3806,
+        "completion_tokens": 121
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('750')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('750')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:unassigned": 1.0,
+            "kw:assign": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests/new?merge_request%5Bsource_project_id%5D=174&merge_request%5Bsource_branch%5D=redesign&merge_request%5Btarget_project_id%5D=174&merge_request%5Btarget_branch%5D=main",
+          "element": {
+            "role": "button",
+            "name": "Unassigned",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 3,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3473,
+        "completion_tokens": 140
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('750')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('750')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:unassigned": 1.0,
+            "kw:assign": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests/new?merge_request%5Bsource_project_id%5D=174&merge_request%5Bsource_branch%5D=redesign&merge_request%5Btarget_project_id%5D=174&merge_request%5Btarget_branch%5D=main",
+          "element": {
+            "role": "button",
+            "name": "Unassigned",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3806,
+        "completion_tokens": 130
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 22:55:27"
+}

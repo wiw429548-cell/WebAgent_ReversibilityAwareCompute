@@ -1,0 +1,343 @@
+{
+  "task_id": 227,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "What is the price range for products from EYZUTAK?",
+  "template": 370,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 5,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 10,
+  "prompt_tokens": 29760,
+  "completion_tokens": 646,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      17334,
+      367
+    ],
+    "progress": [
+      2,
+      3811,
+      8
+    ],
+    "wm": [
+      2,
+      4873,
+      175
+    ],
+    "value": [
+      2,
+      424,
+      16
+    ],
+    "form": [
+      1,
+      3318,
+      80
+    ]
+  },
+  "llm_cache_hits": 2,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 2,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "The price range for products from EYZUTAK is $8.49 to $411.76.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 26.155154943466187,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "search('EYZUTAK')",
+          1
+        ],
+        [
+          "goto('http://localhost:7770/')",
+          1
+        ],
+        [
+          "goto('http://localhost:7770/catalogsearch/result/?q=EYZUTAK')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03884998856843444,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "search('EYZUTAK')",
+          "rollback": false,
+          "feat": {
+            "act=search": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03884998856843444,
+        0.040274651136156685
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7651,
+        "completion_tokens": 129
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('386', 'EYZUTAK')",
+          2
+        ],
+        [
+          "click('386', 'left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.6674155158949274,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('386', 'EYZUTAK')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.035,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.02,
+        2.01
+      ],
+      "outcomes": [
+        "When the agent executes `fill('386', 'EYZUTAK')`, it will input the text \"EYZUTAK\" into the autocomplete field identified by the ID \"386\". This action will likely trigger an update to the search suggestions displayed below the search box, showing items or products that match the search term \"EYZUTAK",
+        "When the agent clicks on the element with ID '386', which is the autocomplete search box, it will likely expand to show a dropdown list of suggested search terms or previously searched items. No data will be created, modified, or deleted as a result of this action; the interaction is primarily for u"
+      ],
+      "m2_cands": [
+        "fill('386', 'EYZUTAK')",
+        "click('386', 'left')"
+      ],
+      "m2_choice": "fill('386', 'EYZUTAK')",
+      "rho_choice": 0.6674155158949274,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 14396,
+        "completion_tokens": 386
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1496', 'left')",
+          1
+        ],
+        [
+          "send_msg_to_user('The price range for products from EYZUTAK is $8.49 to $411.76.')",
+          1
+        ],
+        [
+          "click('391', 'left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.007338135898519072,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1496', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:pre": 1.0,
+            "name:baked": 1.0,
+            "name:gingerbread": 1.0,
+            "name:house": 1.0,
+            "name:kit": 1.0,
+            "name:value": 1.0,
+            "name:pack": 1.0,
+            "name:oz": 1.0,
+            "name:of": 1.0,
+            "name:total": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 260,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:pre": 0.5,
+            "path:baked": 0.5,
+            "path:gingerbread": 0.5,
+            "path:house": 0.5,
+            "path:kit": 0.5,
+            "path:value": 0.5,
+            "path:pack": 0.5,
+            "path:oz": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        },
+        {
+          "action": "send_msg_to_user('The price range for products from EYZUTAK is $8.49 to $411.76.')",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007338135898519072,
+        0.03176220409725453
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7713,
+        "completion_tokens": 131
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:38:57"
+}

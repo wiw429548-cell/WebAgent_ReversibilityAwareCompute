@@ -1,0 +1,1012 @@
+{
+  "task_id": 109,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Presents the monthly count of successful orders from Jan to December 2022 in MM:COUNT format",
+  "template": 270,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 81,
+  "prompt_tokens": 180633,
+  "completion_tokens": 6867,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      70252,
+      3425
+    ],
+    "wm": [
+      28,
+      59583,
+      1899
+    ],
+    "value": [
+      28,
+      5617,
+      224
+    ],
+    "m2more": [
+      10,
+      45181,
+      1319
+    ]
+  },
+  "llm_cache_hits": 31,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 15
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 108.16866111755371,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('339')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('156')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sales": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " SALES",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.06,
+        2.01,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the 'MARKETING' link will navigate to the marketing section of the Magento Admin panel. This action will not create, modify, or delete any data directly; it will simply load a new page that likely displays tools and metrics related to marketing activities within the store.",
+        "Clicking on the 'STORES' link (ID 464) will navigate to the Stores management section of the Magento Admin Panel. This page will likely display options for managing store configurations, such as store views, websites, and store groups, without immediately creating, modifying, or deleting any data un",
+        "Clicking on the 'SALES' link will navigate to the sales dashboard or overview page within the Magento Admin Panel. This action will not create, modify, or delete any data; it will simply display sales-related metrics, orders, and possibly other sales data for the administrator to review."
+      ],
+      "m2_cands": [
+        "click('339')",
+        "click('464')",
+        "click('156')"
+      ],
+      "m2_choice": "click('156')",
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 15632,
+        "completion_tokens": 544
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          3
+        ],
+        [
+          "click('168')",
+          1
+        ],
+        [
+          "click('156')",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('339')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.03,
+        3.01,
+        6.01
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link (ID 339) will navigate to the Reports section of the Magento Admin dashboard. This action will not create, modify, or delete any data; it will simply display a new page with various reporting tools and data visualizations related to sales, customers, and other business",
+        "Clicking on the 'Orders' link will navigate to the Orders management page where you can view, modify, or delete existing orders. No data will be immediately created, modified, or deleted upon navigating to this page; however, the page will provide tools to perform these actions on specific orders.",
+        "Clicking on the 'SALES' link (element [156]) will navigate to the sales overview page within the Magento Admin panel. This action will not create, modify, or delete any data; it will simply display a new page with sales-related information such as orders, invoices, and shipments."
+      ],
+      "m2_cands": [
+        "click('339')",
+        "click('168')",
+        "click('156')"
+      ],
+      "m2_choice": "click('339')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 11464,
+        "completion_tokens": 437
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          4
+        ],
+        [
+          "click('381')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('339')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.04,
+        5.01
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link (element 339) will navigate to the Reports section of the Magento Admin dashboard. This action will not create, modify, or delete any data; it will simply display a new page with various reporting options categorized under Marketing, Reviews, Sales, Customers, Products",
+        "Upon clicking the 'Sales' menu item (ID 381), a dropdown menu will expand, revealing various sales-related report options such as Orders, Tax, Invoiced, Shipping, Refunds, Coupons, PayPal Settlement, and Braintree Settlement. No data will be created, modified, or deleted by this action; it merely na"
+      ],
+      "m2_cands": [
+        "click('339')",
+        "click('381')"
+      ],
+      "m2_choice": "click('339')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9739,
+        "completion_tokens": 429
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('339')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.08
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link will navigate to the Reports section of the Magento Admin panel. No data will be created, modified, or deleted as a result of this action; it will simply load a new page displaying various reporting options and data summaries relevant to sales, customers, and other bus"
+      ],
+      "m2_cands": [
+        "click('339')"
+      ],
+      "m2_choice": "click('339')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 10949,
+        "completion_tokens": 379
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('381')",
+          2
+        ],
+        [
+          "click('156')",
+          2
+        ],
+        [
+          "click('339')",
+          1
+        ]
+      ],
+      "u": 0.6554587535412857,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('156')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sales": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " SALES",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.02,
+        7.02,
+        6.01
+      ],
+      "outcomes": [
+        "Upon clicking the 'Sales' menu item (ID 381), a dropdown menu will expand, revealing various sales-related report options such as Orders, Tax, Invoiced, Shipping, Refunds, Coupons, PayPal Settlement, and Braintree Settlement. No data will be created, modified, or deleted by this action; it merely na",
+        "Clicking on the 'SALES' link (element [156]) will navigate to the sales dashboard or overview page within the Magento Admin interface. This action will not create, modify, or delete any data; it will simply change the displayed content to provide an overview of sales-related metrics and activities.",
+        "Clicking on the 'REPORTS' link (element 339) will navigate to the Reports section of the Magento Admin dashboard. This action will not create, modify, or delete any data; it will simply display a new page with various reporting options categorized under Marketing, Reviews, Sales, Customers, Products"
+      ],
+      "m2_cands": [
+        "click('381')",
+        "click('156')",
+        "click('339')"
+      ],
+      "m2_choice": "click('156')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 12048,
+        "completion_tokens": 461
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('339')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.08
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link (ID 339) will navigate to the Reports section of the Magento Admin dashboard. This action will not create, modify, or delete any data; it will simply display a new page with various reporting tools and data visualizations related to sales, customers, and other business"
+      ],
+      "m2_cands": [
+        "click('339')"
+      ],
+      "m2_choice": "click('339')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 11368,
+        "completion_tokens": 406
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          3
+        ],
+        [
+          "click('339') # Click on 'REPORTS' to access the reports section.",
+          1
+        ],
+        [
+          "click('723')",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('339')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.03,
+        6.01,
+        5.01
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link (element 339) will navigate to the Reports section of the Magento Admin dashboard. This action will not create, modify, or delete any data; it will simply display a new page with various reporting options categorized under Marketing, Reviews, Sales, Customers, Products",
+        "Clicking on 'REPORTS' will navigate to the reports section within the Magento Admin Panel, displaying various categories of reports such as Sales, Customers, and Marketing. No data will be created, modified, or deleted by this action; it will merely change the view to show different reporting option",
+        "Clicking on the element with ID '723' will navigate to the 'Advanced Reporting' section within the Magento Admin interface. No data will be created, modified, or deleted as a result of this action; it will simply display a new page or section that likely contains detailed reporting tools for analyzi"
+      ],
+      "m2_cands": [
+        "click('339')",
+        "click('339') # Click on 'REPORTS' to access the reports section.",
+        "click('723')"
+      ],
+      "m2_choice": "click('339')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 12071,
+        "completion_tokens": 499
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('156')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sales": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " SALES",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.07,
+        7.01
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link will navigate to the Reports section of the Magento Admin panel. No data will be created, modified, or deleted as a result of this action; it will simply load a new page displaying various reporting options and data summaries relevant to sales, customers, and other bus",
+        "Clicking on the 'SALES' link will navigate to the sales dashboard or overview page within the Magento Admin interface. No data will be created, modified, or deleted as a result of this action; it will simply change the displayed content to focus on sales-related metrics and reports."
+      ],
+      "m2_cands": [
+        "click('339')",
+        "click('156')"
+      ],
+      "m2_choice": "click('156')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13358,
+        "completion_tokens": 456
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('339')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.08
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link (ID 339) will navigate to the Reports section of the Magento Admin dashboard. This action will not create, modify, or delete any data; it will simply display a new page with various reporting tools and data visualizations related to sales, customers, and other business"
+      ],
+      "m2_cands": [
+        "click('339')"
+      ],
+      "m2_choice": "click('339')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 11384,
+        "completion_tokens": 403
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          3
+        ],
+        [
+          "click('381')",
+          1
+        ],
+        [
+          "click('339') # Navigate to 'REPORTS' section",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('339')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.03,
+        5.01,
+        6.01
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link (element 339) will navigate to the Reports section of the Magento Admin dashboard. This action will not create, modify, or delete any data; it will simply display a new page with various reporting options categorized under Marketing, Reviews, Sales, Customers, Products",
+        "Upon clicking the 'Sales' menu item (ID 381), a dropdown menu will expand, revealing various sales-related report options such as Orders, Tax, Invoiced, Shipping, Refunds, Coupons, PayPal Settlement, and Braintree Settlement. No data will be created, modified, or deleted by this action; it merely na",
+        "Clicking on the 'REPORTS' section will navigate to a sub-page within the dashboard that focuses on various reporting categories such as marketing, sales, customers, and products. No data will be created, modified, or deleted by this action; it will merely display existing reports and analytics based"
+      ],
+      "m2_cands": [
+        "click('339')",
+        "click('381')",
+        "click('339') # Navigate to 'REPORTS' section"
+      ],
+      "m2_choice": "click('339')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 12085,
+        "completion_tokens": 535
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('339')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.08
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link will navigate to the Reports section of the Magento Admin panel. No data will be created, modified, or deleted as a result of this action; it will simply load a new page displaying various reporting options and data summaries relevant to sales, customers, and other bus"
+      ],
+      "m2_cands": [
+        "click('339')"
+      ],
+      "m2_choice": "click('339')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 10997,
+        "completion_tokens": 406
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('339')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.05,
+        5.03
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link (element 339) will navigate to the Reports section of the Magento Admin dashboard. This action will not create, modify, or delete any data; it will simply display a new page with various reporting options categorized under Marketing, Reviews, Sales, Customers, Products",
+        "Upon clicking the 'Sales' menu item (ID 381), a dropdown menu will expand, revealing various sales-related report options such as Orders, Tax, Invoiced, Shipping, Refunds, Coupons, PayPal Settlement, and Braintree Settlement. No data will be created, modified, or deleted by this action; it merely na"
+      ],
+      "m2_cands": [
+        "click('339')",
+        "click('381')"
+      ],
+      "m2_choice": "click('339')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 14929,
+        "completion_tokens": 658
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('339')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.08
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link will navigate to the Reports section of the Magento Admin panel. No data will be created, modified, or deleted as a result of this action; it will simply load a new page displaying various reporting options and data summaries relevant to sales, customers, and other bus"
+      ],
+      "m2_cands": [
+        "click('339')"
+      ],
+      "m2_choice": "click('339')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 10997,
+        "completion_tokens": 372
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('339')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.08
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link (element 339) will navigate to the Reports section of the Magento Admin dashboard. This action will not create, modify, or delete any data; it will simply display a new page with various reporting options categorized under Marketing, Reviews, Sales, Customers, Products"
+      ],
+      "m2_cands": [
+        "click('339')"
+      ],
+      "m2_choice": "click('339')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 12615,
+        "completion_tokens": 483
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('339')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('339')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.08
+      ],
+      "outcomes": [
+        "Clicking on the 'REPORTS' link will navigate to the Reports section of the Magento Admin panel. No data will be created, modified, or deleted as a result of this action; it will simply load a new page displaying various reporting options and data summaries relevant to sales, customers, and other bus"
+      ],
+      "m2_cands": [
+        "click('339')"
+      ],
+      "m2_choice": "click('339')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 10997,
+        "completion_tokens": 399
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:52:38"
+}

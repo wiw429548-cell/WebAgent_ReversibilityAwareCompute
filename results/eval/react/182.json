@@ -1,0 +1,729 @@
+{
+  "task_id": 182,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Open my latest created issue that has homepage content in its title to check if it is closed",
+  "template": 500,
+  "eval_types": [
+    "string_match",
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 15,
+  "prompt_tokens": 85912,
+  "completion_tokens": 657,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      85912,
+      657
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 15,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0,
+      "URLEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 127.89436292648315,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('153')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('153')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:issues": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "Issues",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 33,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5246,
+        "completion_tokens": 36
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('286')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('286')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:recent": 1.0,
+            "name:searches": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "button",
+            "name": "Recent searches",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5381,
+        "completion_tokens": 40
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('123')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('123')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:gitlab": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "textbox",
+            "name": "Search GitLab",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5497,
+        "completion_tokens": 41
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1005')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1005')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:issues": 1.0,
+            "name:i": 1.0,
+            "name:ve": 1.0,
+            "name:created": 1.0,
+            "ctx:search": 0.5,
+            "ctx:gitlab": 0.5,
+            "kw:create": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": "menuitem",
+            "name": "Issues I've created",
+            "context": "Search GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 35,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5719,
+        "completion_tokens": 73
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('123')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('123')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=image": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues/?author_username=byteblaze",
+          "element": {
+            "role": "image",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5804,
+        "completion_tokens": 40
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('123') # Focus the search box to start searching for the specific issue.",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('123') # Focus the search box to start searching for the specific issue.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/dashboard/issues/?author_username=byteblaze",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5812,
+        "completion_tokens": 53
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('574')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('574')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=listitem": 1.0,
+            "ctx:issues": 0.5,
+            "ctx:dashboard": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues/?author_username=byteblaze",
+          "element": {
+            "role": "listitem",
+            "name": "",
+            "context": "Issues · Dashboard · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5833,
+        "completion_tokens": 39
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('123')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('123')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=image": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/dashboard/issues/?author_username=byteblaze",
+          "element": {
+            "role": "image",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5833,
+        "completion_tokens": 43
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('123')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('123')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=image": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/dashboard/issues/?author_username=byteblaze",
+          "element": {
+            "role": "image",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5833,
+        "completion_tokens": 43
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('123')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('123')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=image": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/dashboard/issues/?author_username=byteblaze",
+          "element": {
+            "role": "image",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5833,
+        "completion_tokens": 43
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('123')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('123')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=image": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/dashboard/issues/?author_username=byteblaze",
+          "element": {
+            "role": "image",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5832,
+        "completion_tokens": 43
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('123')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('123')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=image": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/dashboard/issues/?author_username=byteblaze",
+          "element": {
+            "role": "image",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5832,
+        "completion_tokens": 43
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('123')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('123')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=image": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/dashboard/issues/?author_username=byteblaze",
+          "element": {
+            "role": "image",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5819,
+        "completion_tokens": 40
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('123')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('123')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=image": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues/?author_username=byteblaze",
+          "element": {
+            "role": "image",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5819,
+        "completion_tokens": 40
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('124')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('124')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:gitlab": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/issues/?author_username=byteblaze",
+          "element": {
+            "role": "textbox",
+            "name": "Search GitLab",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5819,
+        "completion_tokens": 40
+      }
+    }
+  ],
+  "method": "react",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 18:10:27"
+}

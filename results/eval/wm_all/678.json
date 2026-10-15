@@ -1,0 +1,408 @@
+{
+  "task_id": 678,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Lookup orders that are canceled",
+  "template": 253,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 5,
+  "n_env_actions": 5,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 22,
+  "prompt_tokens": 44864,
+  "completion_tokens": 1763,
+  "llm_by_tag": {
+    "policy": [
+      5,
+      18110,
+      897
+    ],
+    "m2more": [
+      3,
+      10236,
+      332
+    ],
+    "wm": [
+      7,
+      15219,
+      478
+    ],
+    "value": [
+      7,
+      1299,
+      56
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 5
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 1.0,
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 30.80827569961548,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('156')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('156')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sales": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " SALES",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.08
+      ],
+      "outcomes": [
+        "Clicking on the 'SALES' link will navigate to the sales dashboard or overview page within the Magento Admin Panel. This action will not create, modify, or delete any data; it will simply display sales-related metrics, orders, and possibly other sales data for the administrator to review."
+      ],
+      "m2_cands": [
+        "click('156')"
+      ],
+      "m2_choice": "click('156')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 10850,
+        "completion_tokens": 364
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('168')",
+          4
+        ],
+        [
+          "click('156')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('168')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:orders": 1.0,
+            "ctx:sales": 0.5,
+            "ctx:orders": 0.5,
+            "ctx:invoices": 0.5,
+            "ctx:shipments": 0.5,
+            "ctx:credit": 0.5,
+            "ctx:memos": 0.5,
+            "ctx:billing": 0.5,
+            "ctx:agreements": 0.5,
+            "ctx:transactions": 0.5,
+            "ctx:braintree": 0.5,
+            "ctx:virtual": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Orders",
+            "context": " SALES Sales  Orders Invoices Shipments Credit Memos Billing Agreements Transactions Braintree Virtual Terminal",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 197,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.04,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Orders' link will navigate to the Orders management page where you can view, modify, or delete existing orders. No data will be immediately created, modified, or deleted upon navigating to this page; however, the page will provide tools to perform these actions on specific orders.",
+        "Clicking on the 'SALES' link (element [156]) will navigate to the sales overview page within the Magento Admin panel. This action will not create, modify, or delete any data; it will simply display a new page with sales-related information such as orders, invoices, and shipments."
+      ],
+      "m2_cands": [
+        "click('168')",
+        "click('156')"
+      ],
+      "m2_choice": "click('168')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9086,
+        "completion_tokens": 317
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('845')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('845')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:filters": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "button",
+            "name": "Filters",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.08
+      ],
+      "outcomes": [
+        "Clicking on the 'Filters' button (element 845) will likely expand or display a panel containing various filter options to refine the search results for orders. No data will be created, modified, or deleted; this action is purely for filtering the existing dataset displayed on the page."
+      ],
+      "m2_cands": [
+        "click('845')"
+      ],
+      "m2_choice": "click('845')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 7011,
+        "completion_tokens": 363
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('972')",
+          4
+        ],
+        [
+          "select_option('972', 'Canceled')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select_option('972', 'Canceled')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:notice": 1.0,
+            "name:gcbayte": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "combobox",
+            "name": "notice-GCBAYTE",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.04,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '972' will open a dropdown menu for the order status filter, allowing the user to select a specific status to filter the orders by. No data will be created, modified, or deleted; this action only affects the filtering criteria applied to the displayed list of orders. ",
+        "After executing the command `select_option('972', 'Canceled')`, the filter for order status will be set to \"Canceled\". This action will update the displayed table to show only orders that have been canceled, without creating or deleting any data on the website. The page will remain at the current UR"
+      ],
+      "m2_cands": [
+        "click('972')",
+        "select_option('972', 'Canceled')"
+      ],
+      "m2_choice": "select_option('972', 'Canceled')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 8530,
+        "completion_tokens": 343
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1065')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1065')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:apply": 1.0,
+            "name:filters": 1.0,
+            "kw:apply": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/",
+          "element": {
+            "role": "button",
+            "name": "Apply Filters",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.08
+      ],
+      "outcomes": [
+        "Clicking on the 'Apply Filters' button (element ID '1065') will apply the current filter settings to the order list, potentially modifying the displayed data to show only orders that match the specified criteria such as status, purchase date, and grand total. The page will refresh or update to refle"
+      ],
+      "m2_cands": [
+        "click('1065')"
+      ],
+      "m2_choice": "click('1065')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 9387,
+        "completion_tokens": 376
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 22:10:18"
+}

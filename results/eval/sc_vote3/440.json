@@ -1,0 +1,672 @@
+{
+  "task_id": 440,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "I previously ordered some a make up removal kit during summer 2022 and later cancelled. Can you reorder it for me?",
+  "template": 156,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 12,
+  "n_env_actions": 12,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 12,
+  "prompt_tokens": 61410,
+  "completion_tokens": 1893,
+  "llm_by_tag": {
+    "policy": [
+      12,
+      61410,
+      1893
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 12,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 125.11952066421509,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 440,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5777,
+        "completion_tokens": 100
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1611')",
+          2
+        ],
+        [
+          "click('1636')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1611')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:all": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "View All",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 441,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4432,
+        "completion_tokens": 168
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1574')",
+          1
+        ],
+        [
+          "click('1572')",
+          1
+        ],
+        [
+          "click('1689')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1574')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reorder": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "link",
+            "name": "Reorder",
+            "context": "View OrderReorder Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 565,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4980,
+        "completion_tokens": 168
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('560')",
+          1
+        ],
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "click('575')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('560')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5214,
+        "completion_tokens": 152
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('560', 'make up removal kit')",
+          2
+        ],
+        [
+          "focus('560')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('560', 'make up removal kit')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.095,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5090,
+        "completion_tokens": 119
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('560', 'make up removal kit')",
+          2
+        ],
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('560', 'make up removal kit')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.095,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5108,
+        "completion_tokens": 165
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('560', 'make up removal kit')",
+          2
+        ],
+        [
+          "clear('560')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('560', 'make up removal kit')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.095,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5122,
+        "completion_tokens": 149
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('560', 'make up removal kit')",
+          2
+        ],
+        [
+          "goto('http://localhost:7770/catalogsearch/result/?q=make+up+removal+kit')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('560', 'make up removal kit')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.095,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5128,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('560', 'make up removal kit')",
+          2
+        ],
+        [
+          "click('565')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('560', 'make up removal kit')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.095,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5133,
+        "completion_tokens": 129
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('560', 'make up removal kit')",
+          1
+        ],
+        [
+          "click('320')",
+          1
+        ],
+        [
+          "fill('560', 'make up removal kit', True)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('560', 'make up removal kit')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.095,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5138,
+        "completion_tokens": 169
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('560', 'make up removal kit')",
+          2
+        ],
+        [
+          "report_infeasible(\"Cannot find the 'make up removal kit' in the cart or search results. There doesn't seem to be an option to view previous orders or order history directly from this page.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('560', 'make up removal kit')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.095,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5144,
+        "completion_tokens": 218
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The make up removal kit is not found in the cart or search results, hence it cannot be reordered based on the current information.\")",
+          1
+        ],
+        [
+          "fill('560', 'make up removal kit')",
+          1
+        ],
+        [
+          "fill('560', 'make up removal kit', True)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The make up removal kit is not found in the cart or search results, hence it cannot be reordered based on the current information.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 221,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5144,
+        "completion_tokens": 222
+      }
+    }
+  ],
+  "method": "sc_vote3",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 19:29:28"
+}

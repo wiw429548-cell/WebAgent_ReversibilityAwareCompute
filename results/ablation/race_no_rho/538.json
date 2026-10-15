@@ -1,0 +1,810 @@
+{
+  "task_id": 538,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Modify the address of order #299 to 456 Oak Avenue, New York, NY, 10001",
+  "template": 240,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 12,
+  "n_env_actions": 12,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [
+    "shopping_admin:failed",
+    "shopping_admin:failed"
+  ],
+  "llm_calls": 44,
+  "prompt_tokens": 105908,
+  "completion_tokens": 3188,
+  "llm_by_tag": {
+    "policy": [
+      12,
+      62014,
+      1762
+    ],
+    "wm": [
+      15,
+      34249,
+      1196
+    ],
+    "value": [
+      15,
+      3489,
+      120
+    ],
+    "form": [
+      2,
+      6156,
+      110
+    ]
+  },
+  "llm_cache_hits": 28,
+  "mode_counts": {
+    "M0": 5,
+    "M1": 0,
+    "M2": 7
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 2,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 131.95257925987244,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('850')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.020104559265465886,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 428,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4275,
+        "completion_tokens": 109
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('818')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.003934877765034894,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('818')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:edit": 1.0,
+            "ctx:information": 0.5,
+            "kw:edit": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "link",
+            "name": "Edit",
+            "context": "Information",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 365,
+          "server_error": false,
+          "relogin": "shopping_admin:failed"
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5524,
+        "completion_tokens": 96
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('748', '456 Oak Avenue')",
+          2
+        ],
+        [
+          "clear('748')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.01650619305299436,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('748', '456 Oak Avenue')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.07,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:address": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/address/address_id/597/",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.02,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will change the value of the street address field to \"456 Oak Avenue\". This action will modify the address information for the order associated with address ID 597, but it will not save the changes until the \"Save Order Address\" button is clicked. The page will remain the same, displaying ",
+        "Executing `clear('748')` will clear the value of the street address field (with the ID 748), setting it to an empty string. This action will remove \"321 Maple Avenue\" from the street address input box on the current page without immediately saving or deleting any data on the website. The changes wil"
+      ],
+      "m2_cands": [
+        "fill('748', '456 Oak Avenue')",
+        "clear('748')"
+      ],
+      "m2_choice": "fill('748', '456 Oak Avenue')",
+      "rho_choice": null,
+      "form_fix": "fill('748', '456 Oak Avenue')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13272,
+        "completion_tokens": 385
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.020104559265465886,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 428,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4341,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('818')",
+          2
+        ],
+        [
+          "tab_focus(0)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.003934877765034894,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('321 Maple Avenue', '456 Oak Avenue, New York, NY, 10001')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.175,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.02,
+        1.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Edit' link associated with the shipping address (element ID '818') will likely bring up an editable form for the shipping address details of the customer's order. This action will not immediately modify any data but will prepare the interface for potential changes to the shipping ad",
+        "Executing `tab_focus(0)` will bring focus to the first tabbable element on the page, which is the \"Magento Admin Panel\" link at the top. This action does not modify or delete any data on the website; it merely changes the focus for accessibility purposes, potentially allowing keyboard navigation to "
+      ],
+      "m2_cands": [
+        "click('818')",
+        "tab_focus(0)"
+      ],
+      "m2_choice": "click('818')",
+      "rho_choice": null,
+      "form_fix": "fill('321 Maple Avenue', '456 Oak Avenue, New York, NY, 10001')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13816,
+        "completion_tokens": 337
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('818')",
+          2
+        ],
+        [
+          "tab_focus(0)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.003934877765034894,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('818')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:edit": 1.0,
+            "ctx:information": 0.5,
+            "kw:edit": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "link",
+            "name": "Edit",
+            "context": "Information",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 365,
+          "server_error": false,
+          "relogin": "shopping_admin:failed"
+        }
+      ],
+      "wm_scores": [
+        7.02,
+        1.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Edit' link associated with the shipping address (element ID '818') will likely bring up an editable form for the shipping address details of the customer's order. This action will not immediately modify any data but will prepare the interface for potential changes to the shipping ad",
+        "Executing `tab_focus(0)` will bring focus to the first tabbable element on the page, which is the \"Magento Admin Panel\" link at the top. This action does not modify or delete any data on the website; it merely changes the focus for accessibility purposes, potentially allowing keyboard navigation to "
+      ],
+      "m2_cands": [
+        "click('818')",
+        "tab_focus(0)"
+      ],
+      "m2_choice": "click('818')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10765,
+        "completion_tokens": 314
+      }
+    },
+    {
+      "candidates": [
+        [
+          "clear('748')",
+          2
+        ],
+        [
+          "fill('748', '456 Oak Avenue')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.006824978170682045,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('748', '456 Oak Avenue')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.07,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:address": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/address/address_id/597/",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        5.01
+      ],
+      "outcomes": [
+        "Executing `clear('748')` will clear the value of the street address field (with the ID 748), setting it to an empty string. This action will remove \"321 Maple Avenue\" from the street address input box on the current page without immediately saving or deleting any data on the website. The changes wil",
+        "The agent will change the value of the street address field to \"456 Oak Avenue\". This action will modify the address information for the order associated with address ID 597, but it will not save the changes until the \"Save Order Address\" button is clicked. The page will remain the same, displaying "
+      ],
+      "m2_cands": [
+        "clear('748')",
+        "fill('748', '456 Oak Avenue')"
+      ],
+      "m2_choice": "fill('748', '456 Oak Avenue')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10333,
+        "completion_tokens": 307
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          2
+        ],
+        [
+          "goto('http://localhost:7780/admin/sales/order/address/address_id/597/')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.020104559265465886,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 428,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the element with the ID '850' will navigate to the order details page for the specific order associated with Sarah Miller. The new page will display detailed information about this particular order, including items purchased and total cost. No data will be created, modified, or deleted a",
+        "Navigating to `http://localhost:7780/admin/sales/order/address/address_id/597/` will display the address details associated with the specific order identified by address ID 597. No data will be created, modified, or deleted during this action; the page will simply present the existing address inform"
+      ],
+      "m2_cands": [
+        "click('850')",
+        "goto('http://localhost:7780/admin/sales/order/address/address_id/597/')"
+      ],
+      "m2_choice": "click('850')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9211,
+        "completion_tokens": 332
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('818')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.003934877765034894,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('818')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:edit": 1.0,
+            "ctx:information": 0.5,
+            "kw:edit": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "link",
+            "name": "Edit",
+            "context": "Information",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 365,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5641,
+        "completion_tokens": 193
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('748', '456 Oak Avenue')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.01650619305299436,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('748', '456 Oak Avenue')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.07,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:address": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/address/address_id/597/",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5336,
+        "completion_tokens": 171
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('755')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"The current view does not contain fields for updating the city, state, or zip code. Please provide further instructions or confirm if these details can be added or modified directly.\")",
+          1
+        ],
+        [
+          "fill('748', '456 Oak Avenue, New York, NY, 10001')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.13649795030354203,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('748', '456 Oak Avenue, New York, NY, 10001')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.175,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:address": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/address/address_id/597/",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.01,
+        3.01,
+        7.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Country *' dropdown menu (element 755) will expand the list of available countries for selection. No data will be immediately created, modified, or deleted; however, selecting a different country from the dropdown will modify the 'Country' field's value, which could affect how addre",
+        "The agent will inform the user that the current view does not include fields to update the city, state, or zip code. No immediate changes to the website's data will occur as a result of this interaction. The page displayed remains the same, with the focus still on modifying an order address, specifi",
+        "The agent will update the street address field (identified by '748') to \"456 Oak Avenue, New York, NY, 10001\". This action will modify the address information for the order associated with address ID 597 without immediately saving the changes. The same page will remain visible, showing the updated a"
+      ],
+      "m2_cands": [
+        "click('755')",
+        "send_msg_to_user(\"The current view does not contain fields for updating the city, state, or zip code. Please provide further instructions or confirm if these details can be added or modified directly.\")",
+        "fill('748', '456 Oak Avenue, New York, NY, 10001')"
+      ],
+      "m2_choice": "fill('748', '456 Oak Avenue, New York, NY, 10001')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 12979,
+        "completion_tokens": 496
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('695')",
+          2
+        ],
+        [
+          "fill('748', '456 Oak Avenue, New York, NY, 10001')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.5576073646440347,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('695')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:save": 1.0,
+            "name:order": 1.0,
+            "name:address": 1.0,
+            "kw:save": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:address": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/address/address_id/597/",
+          "element": {
+            "role": "button",
+            "name": "Save Order Address",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 429,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        7.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Save Order Address\" button (ID 695), the form data for the order address, including the name and address details provided, will be submitted. The page will likely refresh or redirect to confirm the changes, and the order address information associated with address ID 597 will be u",
+        "The action will update the street address field for the order address with ID 597 to \"456 Oak Avenue, New York, NY, 10001\". This change will be reflected on the current page without navigating to another page. No new data will be created, but the existing address information associated with this ord"
+      ],
+      "m2_cands": [
+        "click('695')",
+        "fill('748', '456 Oak Avenue, New York, NY, 10001')"
+      ],
+      "m2_choice": "click('695')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10415,
+        "completion_tokens": 320
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 02:11:43"
+}

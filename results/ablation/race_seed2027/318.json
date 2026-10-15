@@ -1,0 +1,564 @@
+{
+  "task_id": 318,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "List the last names of the top 3 contributors to 2019-nCov repo, ranked by the number of commits?",
+  "template": 324,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 5,
+  "n_env_actions": 11,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 3,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 10,
+  "prompt_tokens": 39939,
+  "completion_tokens": 842,
+  "llm_by_tag": {
+    "policy": [
+      5,
+      29152,
+      822
+    ],
+    "progress": [
+      5,
+      10787,
+      20
+    ]
+  },
+  "llm_cache_hits": 1,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 5,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 59.078757524490356,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('314')",
+          2
+        ],
+        [
+          "click('394')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.007602820234446907,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('314')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:a": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "A",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 42,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:a": 0.5,
+            "path:y": 0.5,
+            "path:syntax": 0.5,
+            "path:highlighting": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/a11y-syntax-highlighting",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 17,
+          "server_error": false
+        },
+        {
+          "action": "click('394')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:the": 1.0,
+            "name:a": 1.0,
+            "name:y": 1.0,
+            "name:project": 1.0,
+            "name:yproject": 1.0,
+            "name:com": 1.0,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:project": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "The A11Y Project / a11yproject.com",
+            "context": "The A11Y Project / a11yproject.com",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 42,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007602820234446907,
+        0.004611099891338835
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7431,
+        "completion_tokens": 121
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('687')",
+          1
+        ],
+        [
+          "click('273')",
+          1
+        ],
+        [
+          "report_infeasible(\"The current page does not contain information about the 2019-nCov repo. Further steps are needed to navigate to the correct repository.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.0046380240949398565,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('687')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:commits": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "2,320 Commits",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:commits": 0.5,
+            "path:main": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/commits/main",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 42,
+          "server_error": false
+        },
+        {
+          "action": "click('273')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:a": 1.0,
+            "name:yproject": 1.0,
+            "name:com": 1.0,
+            "ctx:a": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:the": 0.5,
+            "ctx:y": 0.5,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "a11yproject.com",
+            "context": "a11yproject.com Project navigation The A11Y Project / a11yproject.com · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0046380240949398565,
+        0.00488111118927432
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8109,
+        "completion_tokens": 204
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('273')",
+          2
+        ],
+        [
+          "click('687')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.00488111118927432,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('273')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:a": 1.0,
+            "name:yproject": 1.0,
+            "name:com": 1.0,
+            "ctx:a": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:the": 0.5,
+            "ctx:y": 0.5,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "a11yproject.com",
+            "context": "a11yproject.com Project navigation The A11Y Project / a11yproject.com · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.00488111118927432,
+        0.0046380240949398565
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8134,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('273')",
+          2
+        ],
+        [
+          "click('687')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.00488111118927432,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('273')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:a": 1.0,
+            "name:yproject": 1.0,
+            "name:com": 1.0,
+            "ctx:a": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:the": 0.5,
+            "ctx:y": 0.5,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "a11yproject.com",
+            "context": "a11yproject.com Project navigation The A11Y Project / a11yproject.com · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.00488111118927432,
+        0.0046380240949398565
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8134,
+        "completion_tokens": 132
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('297')",
+          1
+        ],
+        [
+          "report_infeasible(\"The current page does not contain a direct link to the 2019-nCov repository.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"The current page does not contain information about the 2019-nCov repository, and there is no direct link to access it.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.00439351272816724,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('297')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:repository": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Repository",
+            "context": "Project navigation The A11Y Project / a11yproject.com · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:tree": 0.5,
+            "path:main": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/tree/main",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        },
+        {
+          "action": "report_infeasible(\"The current page does not contain a direct link to the 2019-nCov repository.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.00439351272816724,
+        0.016492953609466315
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8131,
+        "completion_tokens": 255
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": 2027,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 06:20:09 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 07:42:59"
+}

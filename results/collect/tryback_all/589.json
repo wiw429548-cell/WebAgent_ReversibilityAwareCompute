@@ -1,0 +1,286 @@
+{
+  "task_id": 589,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Rate my recent purchase of Mini Wireless Bluetooth Speaker with 2 stars, using my nickname SimpleEmma?",
+  "template": 194,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 4,
+  "n_env_actions": 4,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 4,
+  "prompt_tokens": 20638,
+  "completion_tokens": 723,
+  "llm_by_tag": {
+    "policy": [
+      4,
+      20638,
+      723
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 3,
+    "M1": 1,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 43.750110149383545,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('413', 'Mini Wireless Bluetooth Speaker')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('413', 'Mini Wireless Bluetooth Speaker')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.155,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5769,
+        "completion_tokens": 147
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('418')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('418')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5776,
+        "completion_tokens": 203
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1545')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1545')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:wangliwer": 1.0,
+            "name:mini": 1.0,
+            "name:wireless": 1.0,
+            "name:bluetooth": 1.0,
+            "name:speaker": 1.0,
+            "name:with": 1.0,
+            "name:mic": 1.0,
+            "name:tf": 1.0,
+            "name:card": 1.0,
+            "name:metal": 1.0,
+            "name:portable": 1.0,
+            "name:subwoof": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Mini+Wireless+Bluetooth+Speaker",
+          "element": {
+            "role": "link",
+            "name": "wangliwer Mini Wireless Bluetooth Speaker with Mic TF Card Metal Portable Subwoof Sound FM Radio AUX MP3 Music Plays Loudspeaker Portable Speaker (Color : Pink)",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 261,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5336,
+        "completion_tokens": 132
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"There are no elements on the page that allow submitting a product rating.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"There are no visible fields or options to leave a rating or review on this product page.\")",
+          1
+        ],
+        [
+          "click('1708')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"There are no elements on the page that allow submitting a product rating.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:wangliwer": 0.5,
+            "path:mini": 0.5,
+            "path:wireless": 0.5,
+            "path:bluetooth": 0.5,
+            "path:speaker": 0.5,
+            "path:with": 0.5,
+            "path:mic": 0.5,
+            "path:tf": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/wangliwer-mini-wireless-bluetooth-speaker-with-mic-tf-card-metal-portable-subwoof-sound-fm-radio-aux-mp3-music-plays-loudspeaker-portable-speaker-color-pink.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3757,
+        "completion_tokens": 241
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "collect",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 17:12:51"
+}

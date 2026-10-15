@@ -1,0 +1,852 @@
+{
+  "task_id": 798,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Change the delivery address for my most recent order to 77 Massachusetts Ave, Cambridge, MA.",
+  "template": 191,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 15,
+  "prompt_tokens": 76019,
+  "completion_tokens": 2218,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      76019,
+      2218
+    ]
+  },
+  "llm_cache_hits": 13,
+  "mode_counts": {
+    "M0": 15,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 47.30055546760559,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.4658379090532243,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5769,
+        "completion_tokens": 104
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1553')",
+          2
+        ],
+        [
+          "click('1498')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1553')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:order": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:recent": 0.5,
+            "ctx:orders": 0.5,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "View Order",
+            "context": "View OrderReorder Recent Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7372812744211075,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4424,
+        "completion_tokens": 118
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1628')",
+          2
+        ],
+        [
+          "report_infeasible(\"There are no editable fields or options to change the delivery address on the current page.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1628')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:address": 1.0,
+            "name:book": 1.0,
+            "kw:add": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/view/order_id/170/",
+          "element": {
+            "role": "link",
+            "name": "Address Book",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6569229181933736,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4579,
+        "completion_tokens": 169
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1501')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1501')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:change": 1.0,
+            "name:shipping": 1.0,
+            "name:address": 1.0,
+            "kw:change": 1.0,
+            "kw:ship": 1.0,
+            "kw:add": 1.0,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/",
+          "element": {
+            "role": "link",
+            "name": "Change Shipping Address",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.749927223053124,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3319,
+        "completion_tokens": 131
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1514', '77 Massachusetts Ave')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1514', '77 Massachusetts Ave')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.1,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address* Street Address: Line 1",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.4066614154570978,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5252,
+        "completion_tokens": 138
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1520', 'Cambridge')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1520', 'Cambridge')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.045,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.33326466137658883,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5251,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1520', 'Cambridge, MA')",
+          2
+        ],
+        [
+          "fill('1523', 'MA')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1520', 'Cambridge, MA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.065,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6442652601544943,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5262,
+        "completion_tokens": 154
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1525')",
+          1
+        ],
+        [
+          "click('1694')",
+          1
+        ],
+        [
+          "fill('1520', 'Cambridge')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1525')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:country": 1.0,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "combobox",
+            "name": "Country *",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.5553264798986994,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5272,
+        "completion_tokens": 232
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1525')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1525')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:country": 1.0,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "combobox",
+            "name": "Country *",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8089354347822031,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5273,
+        "completion_tokens": 99
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1525')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1525')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:country": 1.0,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "combobox",
+            "name": "Country *",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8290060214425274,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5272,
+        "completion_tokens": 133
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1525')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1525')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:country": 1.0,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "combobox",
+            "name": "Country *",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.4144000660017966,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5273,
+        "completion_tokens": 92
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1520', 'Cambridge, MA')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1520', 'Cambridge, MA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.065,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.30441890951646755,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5266,
+        "completion_tokens": 180
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1520', 'Cambridge, MA')",
+          1
+        ],
+        [
+          "fill('1514', '77 Massachusetts Ave')",
+          1
+        ],
+        [
+          "fill('1520', '77 Massachusetts Ave, Cambridge, MA')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1520', 'Cambridge, MA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.065,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7222116967995404,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5268,
+        "completion_tokens": 214
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1520', '77 Massachusetts Ave, Cambridge, MA')",
+          2
+        ],
+        [
+          "send_msg_to_user(\"done\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1520', '77 Massachusetts Ave, Cambridge, MA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.175,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.3087012137102576,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5268,
+        "completion_tokens": 186
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1525')",
+          1
+        ],
+        [
+          "fill('1514', '77 Massachusetts Ave, Cambridge, MA')",
+          1
+        ],
+        [
+          "fill('1520', 'Cambridge, MA')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1525')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:country": 1.0,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "combobox",
+            "name": "Country *",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.5943292519338996,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5271,
+        "completion_tokens": 140
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:26:16"
+}

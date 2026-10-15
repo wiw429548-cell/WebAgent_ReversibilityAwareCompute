@@ -1,0 +1,897 @@
+{
+  "task_id": 392,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Post \"Good idea\" for the merge request related to color ulitity in a11yproject.com project",
+  "template": 348,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 17,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 21,
+  "prompt_tokens": 101417,
+  "completion_tokens": 1266,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      88628,
+      1242
+    ],
+    "progress": [
+      6,
+      12789,
+      24
+    ]
+  },
+  "llm_cache_hits": 5,
+  "mode_counts": {
+    "M0": 9,
+    "M1": 6,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 71.64993643760681,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('394')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004611099891338835,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('394')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:the": 1.0,
+            "name:a": 1.0,
+            "name:y": 1.0,
+            "name:project": 1.0,
+            "name:yproject": 1.0,
+            "name:com": 1.0,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:project": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "The A11Y Project / a11yproject.com",
+            "context": "The A11Y Project / a11yproject.com",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 42,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5252,
+        "completion_tokens": 65
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004393319299001493,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5933,
+        "completion_tokens": 68
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('352')",
+          2
+        ],
+        [
+          "click('187')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004087192818008768,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('352')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "ctx:gitlab": 0.5,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "Project navigation The A11Y Project / a11yproject.com · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 42,
+          "server_error": false
+        },
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004087192818008768,
+        0.004393319299001493
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8047,
+        "completion_tokens": 76
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          2
+        ],
+        [
+          "click('352')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004393319299001493,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004393319299001493,
+        0.004087192818008768
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8064,
+        "completion_tokens": 77
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004393319299001493,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5968,
+        "completion_tokens": 74
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004393319299001493,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5959,
+        "completion_tokens": 75
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004393319299001493,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5968,
+        "completion_tokens": 57
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004393319299001493,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5959,
+        "completion_tokens": 82
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004393319299001493,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5966,
+        "completion_tokens": 78
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          2
+        ],
+        [
+          "click('352')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004393319299001493,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004393319299001493,
+        0.004087192818008768
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8090,
+        "completion_tokens": 81
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004393319299001493,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5966,
+        "completion_tokens": 70
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          2
+        ],
+        [
+          "click('192')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004393319299001493,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004393319299001493,
+        0.03494050173514766
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8090,
+        "completion_tokens": 152
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          2
+        ],
+        [
+          "goto('http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004393319299001493,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004393319299001493,
+        0.024275511265177123
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8099,
+        "completion_tokens": 141
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          2
+        ],
+        [
+          "click('352')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004393319299001493,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004393319299001493,
+        0.004087192818008768
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8090,
+        "completion_tokens": 97
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004393319299001493,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5966,
+        "completion_tokens": 73
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:40:58"
+}

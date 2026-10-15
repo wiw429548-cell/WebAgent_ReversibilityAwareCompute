@@ -1,0 +1,175 @@
+{
+  "task_id": 516,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Add this product to my wishlist",
+  "template": 196,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 1,
+  "n_env_actions": 1,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 4,
+  "prompt_tokens": 9944,
+  "completion_tokens": 387,
+  "llm_by_tag": {
+    "policy": [
+      1,
+      3653,
+      172
+    ],
+    "m2more": [
+      1,
+      3653,
+      104
+    ],
+    "wm": [
+      1,
+      2389,
+      105
+    ],
+    "value": [
+      1,
+      249,
+      6
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 19.324169874191284,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('1606')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1606')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:add": 1.0,
+            "name:to": 1.0,
+            "name:wish": 1.0,
+            "name:list": 1.0,
+            "kw:add to wish": 1.0,
+            "kw:add": 1.0,
+            "path:elmwood": 0.5,
+            "path:inn": 0.5,
+            "path:fine": 0.5,
+            "path:teas": 0.5,
+            "path:orange": 0.5,
+            "path:vanilla": 0.5,
+            "path:caffeine": 0.5,
+            "path:free": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/elmwood-inn-fine-teas-orange-vanilla-caffeine-free-fruit-infusion-16-ounce-pouch.html",
+          "element": {
+            "role": "link",
+            "name": "Add to Wish List",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 456,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        10.08
+      ],
+      "outcomes": [
+        "Clicking on the 'Add to Wish List' button (element ID '1606') will add the current product, Elmwood Inn Fine Teas, Orange Vanilla Caffeine-free Fruit Infusion, 16-Ounce Pouch, to the user's wish list. The page will likely refresh or update to reflect this change, showing an indication that the produ"
+      ],
+      "m2_cands": [
+        "click('1606')"
+      ],
+      "m2_choice": "click('1606')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 9944,
+        "completion_tokens": 387
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 21:49:59"
+}

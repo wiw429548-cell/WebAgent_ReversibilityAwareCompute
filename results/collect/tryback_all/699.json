@@ -1,0 +1,849 @@
+{
+  "task_id": 699,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Draft a new marketing price rule for spring sale that offers a 20 percent discount site-wide for all customers",
+  "template": 258,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 25,
+  "prompt_tokens": 64988,
+  "completion_tokens": 1817,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      44600,
+      1777
+    ],
+    "progress": [
+      10,
+      20388,
+      40
+    ]
+  },
+  "llm_cache_hits": 1,
+  "mode_counts": {
+    "M0": 5,
+    "M1": 10,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 0.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 134.2694652080536,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('226')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('226')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:marketing": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " MARKETING",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4269,
+        "completion_tokens": 95
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('240')",
+          2
+        ],
+        [
+          "click('226')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('240')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:catalog": 1.0,
+            "name:price": 1.0,
+            "name:rule": 1.0,
+            "ctx:marketing": 0.5,
+            "ctx:promotions": 0.5,
+            "ctx:catalog": 0.5,
+            "ctx:price": 0.5,
+            "ctx:rule": 0.5,
+            "ctx:cart": 0.5,
+            "ctx:rules": 0.5,
+            "ctx:communications": 0.5,
+            "ctx:email": 0.5,
+            "ctx:templates": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Catalog Price Rule",
+            "context": " MARKETING Marketing  Promotions Catalog Price Rule Cart Price Rules Communications Email Templates Newsletter Templates Newsletter Queue Newsletter Subscribers SEO & Search URL Rewrites Search Term",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 146,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6717,
+        "completion_tokens": 121
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('686')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('686')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:new": 1.0,
+            "name:rule": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/",
+          "element": {
+            "role": "button",
+            "name": "Add New Rule",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 182,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2800,
+        "completion_tokens": 98
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('770', 'Spring Sale 20% Off')",
+          2
+        ],
+        [
+          "fill('770', 'Spring Sale 2023')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('770', 'Spring Sale 20% Off')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:rule": 1.0,
+            "name:name": 1.0,
+            "typed_len": 0.095,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/new/",
+          "element": {
+            "role": "textbox",
+            "name": "Rule Name *",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4433,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('783')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('783')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:active": 1.0,
+            "name:no": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/new/",
+          "element": {
+            "role": "checkbox",
+            "name": "Active * No",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2406,
+        "completion_tokens": 71
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('783')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('783')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:active": 1.0,
+            "name:no": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/new/",
+          "element": {
+            "role": "checkbox",
+            "name": "Active * No",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3105,
+        "completion_tokens": 120
+      }
+    },
+    {
+      "candidates": [
+        [
+          "hover('784')",
+          1
+        ],
+        [
+          "focus('783')",
+          1
+        ],
+        [
+          "click('783')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "hover('784')",
+          "rollback": false,
+          "feat": {
+            "act=hover": 1.0,
+            "role=LabelText": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/new/",
+          "element": {
+            "role": "LabelText",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5170,
+        "completion_tokens": 125
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('783')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('783')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:active": 1.0,
+            "name:no": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/new/",
+          "element": {
+            "role": "checkbox",
+            "name": "Active * No",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2422,
+        "completion_tokens": 82
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('784')",
+          2
+        ],
+        [
+          "hover('783')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('784')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=LabelText": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/new/",
+          "element": {
+            "role": "LabelText",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5168,
+        "completion_tokens": 132
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('831')",
+          2
+        ],
+        [
+          "click('791')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('831')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=strong": 1.0,
+            "ctx:conditions": 0.5,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/new/",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": " Conditions",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4500,
+        "completion_tokens": 157
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('770', 'Spring Sale 20% Off')",
+          2
+        ],
+        [
+          "noop()",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('770', 'Spring Sale 20% Off')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:rule": 1.0,
+            "name:name": 1.0,
+            "typed_len": 0.095,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/new/",
+          "element": {
+            "role": "textbox",
+            "name": "Rule Name *",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4681,
+        "completion_tokens": 155
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('791')",
+          1
+        ],
+        [
+          "click('802')",
+          1
+        ],
+        [
+          "click('783')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('791')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=listbox": 1.0,
+            "name:websites": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/new/",
+          "element": {
+            "role": "listbox",
+            "name": "Websites *",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4659,
+        "completion_tokens": 105
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('791')",
+          2
+        ],
+        [
+          "click('783')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('791')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=listbox": 1.0,
+            "name:websites": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/new/",
+          "element": {
+            "role": "listbox",
+            "name": "Websites *",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4659,
+        "completion_tokens": 113
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('783')",
+          1
+        ],
+        [
+          "click('791')",
+          1
+        ],
+        [
+          "fill('828', '1')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('783')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:active": 1.0,
+            "name:yes": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/new/",
+          "element": {
+            "role": "checkbox",
+            "name": "Active * Yes",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4659,
+        "completion_tokens": 122
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('783')",
+          2
+        ],
+        [
+          "click('791')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('783')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:active": 1.0,
+            "name:yes": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:rule": 0.5,
+            "path:promo": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog_rule/promo_catalog/new/",
+          "element": {
+            "role": "checkbox",
+            "name": "Active * Yes",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5340,
+        "completion_tokens": 176
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "collect",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 17:10:00"
+}

@@ -1,0 +1,1128 @@
+{
+  "task_id": 506,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Buy the highest rated product from the meat substitute category within a budget between 100 and 200.",
+  "template": 172,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 103,
+  "prompt_tokens": 201984,
+  "completion_tokens": 8065,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      86455,
+      4121
+    ],
+    "wm": [
+      44,
+      105658,
+      3601
+    ],
+    "value": [
+      44,
+      9871,
+      343
+    ]
+  },
+  "llm_cache_hits": 26,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 15
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 200.37474656105042,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('427', 'meat substitute')",
+          4
+        ],
+        [
+          "click('427')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('427', 'meat substitute')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.075,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.04,
+        6.01
+      ],
+      "outcomes": [
+        "Upon executing the command `fill('427', 'meat substitute')`, the agent will input \"meat substitute\" into the search field with the ID `427`. This action will likely trigger a search query on the current page, resulting in a new page or section displaying products related to \"meat substitute\". No dat",
+        "Clicking on the element with ID '427' (the combobox for search) will likely bring up an input field or expand the search functionality, allowing the user to enter a search query directly. No data will be created, modified, or deleted at this stage; the action primarily serves to prepare the interfac"
+      ],
+      "m2_cands": [
+        "fill('427', 'meat substitute')",
+        "click('427')"
+      ],
+      "m2_choice": "fill('427', 'meat substitute')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 11091,
+        "completion_tokens": 493
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1986')",
+          2
+        ],
+        [
+          "click('1721') # Clicking on the 'Add to Cart' button for the product 'So Delicious Dairy Free CocoWhip Light, Vegan, Non-GMO Project Verified, 9 oz. Tub'",
+          1
+        ],
+        [
+          "click('1989')",
+          1
+        ],
+        [
+          "fill('427', 'veggie meat')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1986')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:page": 1.0,
+            "ctx:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "Page 2",
+            "context": "Page",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 459,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        2.01,
+        3.01
+      ],
+      "outcomes": [
+        "Given the provided accessibility tree, clicking on element '1986' does not directly correspond to any visible elements listed. Assuming '1986' is an ID for a product or a link within the truncated list items, clicking it would likely navigate to a detailed product page for that specific item. No dat",
+        "When the 'Add to Cart' button for the product 'So Delicious Dairy Free CocoWhip Light, Vegan, Non-GMO Project Verified, 9 oz. Tub' is clicked, the product will be added to the user's shopping cart. The current page will likely refresh or update to reflect this change, showing an incremented number n",
+        "Given the provided accessibility tree, clicking on element '1989' does not directly correspond to any visible elements listed. Assuming it's an interactive element not fully represented in the given tree, such as a product link or button, the action would likely navigate to a new page with detailed "
+      ],
+      "m2_cands": [
+        "click('1986')",
+        "click('1721') # Clicking on the 'Add to Cart' button for the product 'So Delicious Dairy Free CocoWhip Light, Vegan, Non-GMO Project Verified, 9 oz. Tub'",
+        "click('1989')"
+      ],
+      "m2_choice": "click('1986')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13866,
+        "completion_tokens": 807
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1986')",
+          2
+        ],
+        [
+          "fill('427', 'meat substitute')",
+          2
+        ],
+        [
+          "click('432')",
+          1
+        ]
+      ],
+      "u": 0.6554587535412857,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('427', 'meat substitute')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.075,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        0.02,
+        8.02,
+        0.01
+      ],
+      "outcomes": [
+        "Given the provided accessibility tree, there is no element with the identifier '1986'. Therefore, attempting to execute `click('1986')` would not result in any action being performed on the current page. No new page will be shown, and no data on the website will be created, modified, or deleted as a",
+        "Upon executing the command `fill('427', 'meat substitute')`, the user will input \"meat substitute\" into the search field labeled as 'Search'. The page will then likely refresh or update to display search results related to \"meat substitute\", without creating, modifying, or deleting any specific data",
+        "Clicking on the disabled 'Search' button with id '432' will not result in any action or page change since the button is currently disabled. No data on the website will be created, modified, or deleted as a result of this interaction."
+      ],
+      "m2_cands": [
+        "click('1986')",
+        "fill('427', 'meat substitute')",
+        "click('432')"
+      ],
+      "m2_choice": "fill('427', 'meat substitute')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13652,
+        "completion_tokens": 460
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('427')",
+          2
+        ],
+        [
+          "fill('427', 'meat substitute', True)",
+          2
+        ],
+        [
+          "fill('427', 'meat substitute')",
+          1
+        ]
+      ],
+      "u": 0.6554587535412857,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('427')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        8.02,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID `427` (the combobox with the value 'meat substitute') will likely trigger a search action based on the input value 'meat substitute'. The page will then reload or transition to a new page displaying search results related to 'meat substitute'. No data will be created,",
+        "The agent will fill the search box with the term \"meat substitute\" and trigger an autocomplete dropdown, likely displaying product suggestions related to \"meat substitute\". No data will be created, modified, or deleted on the website until an explicit action such as a search submission or selection ",
+        "Filling the combobox with the value 'meat substitute' will likely trigger a search action on the current page, filtering the product showcases to display items related to 'meat substitute'. No data will be created, modified, or deleted on the website itself; however, the displayed content will be up"
+      ],
+      "m2_cands": [
+        "click('427')",
+        "fill('427', 'meat substitute', True)",
+        "fill('427', 'meat substitute')"
+      ],
+      "m2_choice": "click('427')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13561,
+        "completion_tokens": 483
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('427', 'meat substitute')",
+          2
+        ],
+        [
+          "report_infeasible(\"There are no products in the meat substitute category that fall within the specified budget range of 100-200.\")",
+          1
+        ],
+        [
+          "click('432')",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute', True)",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('427', 'meat substitute')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.075,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        5.01,
+        8.01
+      ],
+      "outcomes": [
+        "Filling the combobox with the value 'meat substitute' will likely trigger a search action on the current page, filtering the product showcases to display items related to 'meat substitute'. No data will be created, modified, or deleted on the website itself; however, the displayed content will be up",
+        "The current page will remain displayed, showing the product showcases and search bar with the term \"meat substitute\" still focused and populated in the search field. No data on the website will be created, modified, or deleted as the action is simply reporting an infeasibility message indicating tha",
+        "Upon clicking the 'Search' button with the search term 'meat substitute' already entered, the current page will refresh or transition to a new page displaying search results related to 'meat substitute'. No data will be created, modified, or deleted; however, the website will query its database to r"
+      ],
+      "m2_cands": [
+        "fill('427', 'meat substitute')",
+        "report_infeasible(\"There are no products in the meat substitute category that fall within the specified budget range of 100-200.\")",
+        "click('432')"
+      ],
+      "m2_choice": "fill('427', 'meat substitute')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13607,
+        "completion_tokens": 519
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('427')",
+          1
+        ],
+        [
+          "click('1971')",
+          1
+        ],
+        [
+          "click('1986')",
+          1
+        ],
+        [
+          "click('1538')",
+          1
+        ],
+        [
+          "click('430')",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('427')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.01,
+        8.01,
+        0.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID `427` (the combobox with the value 'meat substitute') will likely trigger a search action based on the input value 'meat substitute'. The page will then reload or transition to a new page displaying search results related to 'meat substitute'. No data will be created,",
+        "Clicking on the element with the ID '1971' will likely navigate to the product details page for the item associated with that ID. No data will be created, modified, or deleted on the website itself; however, the URL and the content displayed on the page will change to show detailed information about",
+        "Given the provided accessibility tree, there is no element with the identifier '1986'. Therefore, attempting to execute `click('1986')` would not result in any action being performed on the current page. No data on the website will be created, modified, or deleted as a result of this non-existent cl"
+      ],
+      "m2_cands": [
+        "click('427')",
+        "click('1971')",
+        "click('1986')"
+      ],
+      "m2_choice": "click('427')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13586,
+        "completion_tokens": 551
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('427')",
+          2
+        ],
+        [
+          "click('430')",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute')",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute', True)",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('427')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        8.01,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID `427` (the combobox with the value 'meat substitute') will likely trigger a search action based on the input value 'meat substitute'. The page will then reload or transition to a new page displaying search results related to 'meat substitute'. No data will be created,",
+        "Clicking on the 'Advanced Search' link (ID 430) will navigate to the advanced search page of the One Stop Market website. This action will not create, modify, or delete any data on the website but will allow the user to refine their search criteria further.",
+        "Filling the combobox with the value 'meat substitute' will likely trigger a search action on the current page, filtering the product showcases to display items related to 'meat substitute'. No data will be created, modified, or deleted on the website itself; however, the displayed content will be up"
+      ],
+      "m2_cands": [
+        "click('427')",
+        "click('430')",
+        "fill('427', 'meat substitute')"
+      ],
+      "m2_choice": "click('427')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13570,
+        "completion_tokens": 503
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('427', 'meat substitute category')",
+          2
+        ],
+        [
+          "noop(500) # To give time to think about the next steps without missing any dynamic content updates.",
+          1
+        ],
+        [
+          "click('427')",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('427', 'meat substitute category')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.12,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        3.01,
+        8.01
+      ],
+      "outcomes": [
+        "After executing the command `fill('427', 'meat substitute category')`, the search query on the current page will be updated to \"meat substitute category\". Upon submitting the search, the page will reload or transition to a new page displaying products that fall under the \"meat substitute category\". ",
+        "The current page will remain displayed with no changes to its content or structure during the 500 milliseconds, ensuring that any potential dynamic updates are captured without user interaction. No data on the website will be created, modified, or deleted as a result of this action.",
+        "Clicking on the element with ID `427` (the combobox with the value 'meat substitute') will likely trigger a search action based on the input value 'meat substitute'. The page will then reload or transition to a new page displaying search results related to 'meat substitute'. No data will be created,"
+      ],
+      "m2_cands": [
+        "fill('427', 'meat substitute category')",
+        "noop(500) # To give time to think about the next steps without missing any dynamic content updates.",
+        "click('427')"
+      ],
+      "m2_choice": "fill('427', 'meat substitute category')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13613,
+        "completion_tokens": 487
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('427', 'meat substitute grocery')",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute category')",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute', True)",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute')",
+          1
+        ],
+        [
+          "clear('427')",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('427', 'meat substitute category')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.12,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.01,
+        8.01,
+        8.01
+      ],
+      "outcomes": [
+        "After executing the command `fill('427', 'meat substitute grocery')`, the search query in the combobox will be updated to \"meat substitute grocery\". The page will likely refresh or update to display products related to \"meat substitute grocery\", showing relevant product listings under the \"Product S",
+        "Filling the combobox with the value 'meat substitute category' will likely filter the product showcases to only display items related to meat substitutes. No data will be created or deleted; however, the displayed content will be modified to match the search criteria, showing products that fall unde",
+        "After executing the command `fill('427', 'meat substitute', True)`, the search field will be populated with the term \"meat substitute\" and the search will be triggered. The page will likely refresh or navigate to a new page displaying products related to \"meat substitute\", without creating, modifyin"
+      ],
+      "m2_cands": [
+        "fill('427', 'meat substitute grocery')",
+        "fill('427', 'meat substitute category')",
+        "fill('427', 'meat substitute', True)"
+      ],
+      "m2_choice": "fill('427', 'meat substitute category')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13619,
+        "completion_tokens": 532
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('427', 'meat substitute')",
+          3
+        ],
+        [
+          "fill('427', 'meat substitute', True)",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute', False)",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('427', 'meat substitute')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.075,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.03,
+        8.01,
+        8.01
+      ],
+      "outcomes": [
+        "After executing the command `fill('427', 'meat substitute')`, the search query in the combobox will be updated to \"meat substitute\". Upon submitting the search, the page will reload or transition to a new page displaying products related to \"meat substitute\", without creating, modifying, or deleting",
+        "After executing the command `fill('427', 'meat substitute', True)`, the search field will be populated with the term \"meat substitute\" and the search will be triggered. The page will likely refresh or navigate to a new page displaying products related to \"meat substitute\", without creating, modifyin",
+        "After executing the command `fill('427', 'meat substitute', False)`, the search query in the combobox with ID 427 will be updated to \"meat substitute\". The page will likely refresh or update dynamically to show search results related to \"meat substitute\" products without navigating to a new page. No"
+      ],
+      "m2_cands": [
+        "fill('427', 'meat substitute')",
+        "fill('427', 'meat substitute', True)",
+        "fill('427', 'meat substitute', False)"
+      ],
+      "m2_choice": "fill('427', 'meat substitute')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13640,
+        "completion_tokens": 513
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('427', 'meat substitute category')",
+          2
+        ],
+        [
+          "fill('427', 'meat substitute product')",
+          1
+        ],
+        [
+          "click('427')",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute grocery')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('427', 'meat substitute category')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.12,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        6.01,
+        8.01
+      ],
+      "outcomes": [
+        "After executing the command `fill('427', 'meat substitute category')`, the search query on the current page will be updated to \"meat substitute category\". Upon submitting the search, the page will reload or transition to a new page displaying products that fall under the \"meat substitute category\". ",
+        "After executing the command `fill('427', 'meat substitute product')`, the search query on the current page will be updated to \"meat substitute product\". Upon submitting the search, the page will reload or transition to a new results page displaying products related to \"meat substitute product\". No d",
+        "Clicking on the element with ID `427` (the combobox with the value 'meat substitute') will likely trigger a search action based on the input value 'meat substitute'. The page will then reload or transition to a new page displaying search results related to 'meat substitute'. No data will be created,"
+      ],
+      "m2_cands": [
+        "fill('427', 'meat substitute category')",
+        "fill('427', 'meat substitute product')",
+        "click('427')"
+      ],
+      "m2_choice": "fill('427', 'meat substitute category')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13639,
+        "completion_tokens": 544
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('427', 'meat substitute')",
+          2
+        ],
+        [
+          "fill('427', 'meat substitutes')",
+          1
+        ],
+        [
+          "click('427')",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute', True)",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('427', 'meat substitute')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.075,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        8.01,
+        5.01
+      ],
+      "outcomes": [
+        "After executing the command `fill('427', 'meat substitute')`, the search query in the combobox will be updated to \"meat substitute\". Upon submitting the search, the page will reload or transition to a new page displaying products related to \"meat substitute\", without creating, modifying, or deleting",
+        "After executing the command `fill('427', 'meat substitutes')`, the search field will be populated with the term \"meat substitutes\". Upon submitting the search, the page will refresh or navigate to a new page displaying products related to \"meat substitutes\". No data will be created, modified, or del",
+        "Clicking on the combobox element with ID '427' will likely trigger an action that either submits the current search query ('meat substitute category') or opens a dropdown menu with more options related to the search. If it submits the search, the page will refresh or navigate to a new page displayin"
+      ],
+      "m2_cands": [
+        "fill('427', 'meat substitute')",
+        "fill('427', 'meat substitutes')",
+        "click('427')"
+      ],
+      "m2_choice": "fill('427', 'meat substitute')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13628,
+        "completion_tokens": 541
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('427', 'meat substitute', True)",
+          1
+        ],
+        [
+          "click('432')",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute product')",
+          1
+        ],
+        [
+          "report_infeasible(\"There are no products in the meat substitute category within the specified price range.\")",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute category')",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('427', 'meat substitute', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.075,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 224,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.01,
+        8.01,
+        6.01
+      ],
+      "outcomes": [
+        "The agent will fill the search box with the term \"meat substitute\" and trigger an autocomplete dropdown, likely displaying product suggestions related to \"meat substitute\". No data will be created, modified, or deleted on the website until an explicit action such as a search submission or selection ",
+        "Upon clicking the 'Search' button with the search term 'meat substitute' already entered, the current page will refresh or transition to a new page displaying search results related to 'meat substitute'. No data will be created, modified, or deleted; however, the website will query its database to r",
+        "After executing the command `fill('427', 'meat substitute product')`, the search query on the current page will be updated to \"meat substitute product\". Upon submitting the search, the page will reload or transition to a new results page displaying products related to \"meat substitute product\". No d"
+      ],
+      "m2_cands": [
+        "fill('427', 'meat substitute', True)",
+        "click('432')",
+        "fill('427', 'meat substitute product')"
+      ],
+      "m2_choice": "fill('427', 'meat substitute', True)",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13609,
+        "completion_tokens": 493
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('427', 'meat substitutes')",
+          2
+        ],
+        [
+          "report_infeasible(\"None of the products listed appear to be in the meat substitute category.\")",
+          1
+        ],
+        [
+          "click('432')",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute category')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('427', 'meat substitutes')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.08,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        5.01,
+        8.01
+      ],
+      "outcomes": [
+        "After executing the command `fill('427', 'meat substitutes')`, the search query in the combobox will be updated to \"meat substitutes\". The page will likely refresh or update dynamically to show search results related to \"meat substitutes\", without necessarily navigating to a new URL. No data will be",
+        "The current page will remain displayed with no changes to its content or structure. The agent's action of reporting that none of the products listed appear to be in the meat substitute category will not modify, create, or delete any data on the website. This report is purely informational and does n",
+        "Upon clicking the 'Search' button with the search term 'meat substitute' already entered, the current page will refresh or transition to a new page displaying search results related to 'meat substitute'. No data will be created, modified, or deleted; however, the website will query its database to r"
+      ],
+      "m2_cands": [
+        "fill('427', 'meat substitutes')",
+        "report_infeasible(\"None of the products listed appear to be in the meat substitute category.\")",
+        "click('432')"
+      ],
+      "m2_choice": "fill('427', 'meat substitutes')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13624,
+        "completion_tokens": 530
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('427', 'meat substitute', True)",
+          2
+        ],
+        [
+          "fill('427', 'meat substitute')",
+          1
+        ],
+        [
+          "fill('427', 'meat substitute category')",
+          1
+        ],
+        [
+          "click('432')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('427', 'meat substitute', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.075,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 224,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        8.01,
+        8.01
+      ],
+      "outcomes": [
+        "After executing the command `fill('427', 'meat substitute', True)`, the search query in the combobox with ID 427 will be updated to \"meat substitute\". The page will likely refresh or update dynamically to show search results related to \"meat substitute\", without necessarily navigating to a new URL. ",
+        "After executing the command `fill('427', 'meat substitute')`, the search query in the combobox with the ID `427` will be updated to \"meat substitute\". The page will likely refresh or update dynamically to show search results related to \"meat substitute\", without necessarily navigating to a new URL. ",
+        "After executing the command `fill('427', 'meat substitute category')`, the search field will be populated with the term \"meat substitute category\". Upon submitting the search, the page will refresh to display products related to \"meat substitute category\", potentially creating or modifying the produ"
+      ],
+      "m2_cands": [
+        "fill('427', 'meat substitute', True)",
+        "fill('427', 'meat substitute')",
+        "fill('427', 'meat substitute category')"
+      ],
+      "m2_choice": "fill('427', 'meat substitute', True)",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13679,
+        "completion_tokens": 609
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 21:45:36"
+}

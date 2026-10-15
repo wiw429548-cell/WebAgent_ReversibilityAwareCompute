@@ -1,0 +1,258 @@
+{
+  "task_id": 514,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Add a white desk to my wish list.",
+  "template": 189,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 3,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 7,
+  "prompt_tokens": 27946,
+  "completion_tokens": 382,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      16934,
+      116
+    ],
+    "m2more": [
+      1,
+      5391,
+      146
+    ],
+    "wm": [
+      1,
+      2324,
+      110
+    ],
+    "value": [
+      1,
+      236,
+      8
+    ],
+    "form": [
+      1,
+      3061,
+      2
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 35.631325006484985,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('427', 'white desk')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('427', 'white desk')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.05,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 224,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5766,
+        "completion_tokens": 42
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('432')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('432')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 462,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5777,
+        "completion_tokens": 33
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1590')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.8,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1590')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:to": 1.0,
+            "name:wish": 1.0,
+            "name:list": 1.0,
+            "kw:add to wish": 1.0,
+            "kw:add": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=white+desk",
+          "element": {
+            "role": "button",
+            "name": "Add to Wish List",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 452,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.04
+      ],
+      "outcomes": [
+        "Clicking on the element with ID `1590` will add the product \"VIVO Electric Motor Height Adjustable Corner 3 Leg Standing Desk Frame, Frame Only, Sit Stand Ergonomic L Frame, White, DESK-V130EW\" to the user's wish list. No new page will be shown; instead, there may be an update or confirmation messag"
+      ],
+      "m2_cands": [
+        "click('1590')"
+      ],
+      "m2_choice": "click('1590')",
+      "rho_choice": 0.8,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 16403,
+        "completion_tokens": 307
+      }
+    }
+  ],
+  "method": "confirm_rule",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "heuristic"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 23:50:17"
+}

@@ -1,0 +1,256 @@
+{
+  "task_id": 419,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Set my gitlab status as Enjoying life.",
+  "template": 361,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 3,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 5,
+  "prompt_tokens": 20298,
+  "completion_tokens": 476,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      15949,
+      468
+    ],
+    "progress": [
+      2,
+      4349,
+      8
+    ]
+  },
+  "llm_cache_hits": 1,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 3,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 31.965914011001587,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('59')",
+          1
+        ],
+        [
+          "click('201')",
+          1
+        ],
+        [
+          "click('64')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.05168858753978281,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('59')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=image": 1.0,
+            "ctx:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "image",
+            "name": "",
+            "context": "Dashboard",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05168858753978281,
+        0.006441279764816845
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7445,
+        "completion_tokens": 102
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('64')",
+          2
+        ],
+        [
+          "click('59')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.19398385857193653,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('64')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "button",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.19398385857193653,
+        0.05168858753978281
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7386,
+        "completion_tokens": 161
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"There is no direct way to navigate to the profile settings or change status on the current page.\")",
+          1
+        ],
+        [
+          "click('79')",
+          1
+        ],
+        [
+          "click('64')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02750748409404009,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"There is no direct way to navigate to the profile settings or change status on the current page.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02750748409404009,
+        0.19398385857193653
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5467,
+        "completion_tokens": 213
+      }
+    }
+  ],
+  "method": "race",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 00:23:25"
+}

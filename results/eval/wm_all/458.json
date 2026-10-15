@@ -1,0 +1,1072 @@
+{
+  "task_id": 458,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Reduce the price of this product by $5",
+  "template": 247,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 79,
+  "prompt_tokens": 188537,
+  "completion_tokens": 7723,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      81443,
+      4081
+    ],
+    "m2more": [
+      6,
+      32547,
+      932
+    ],
+    "wm": [
+      29,
+      68213,
+      2485
+    ],
+    "value": [
+      29,
+      6334,
+      225
+    ]
+  },
+  "llm_cache_hits": 18,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 15
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 184.51407170295715,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('985')",
+          4
+        ],
+        [
+          "focus('985')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('985')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.04,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '985', which is the price input field for the product, will allow the user to modify the price of the product \"Minerva LumaTech™ V-Tee-S-Blue\". No new page will be shown; the user can directly edit the price within the current product editing interface. Once the user ",
+        "Focusing on element '985' will bring the global price input field for the product \"Minerva LumaTech™ V-Tee-S-Blue\" into focus. No data will be created, modified, or deleted on the website with this action alone; it merely highlights the price field, allowing for potential future modifications to the"
+      ],
+      "m2_cands": [
+        "click('985')",
+        "focus('985')"
+      ],
+      "m2_choice": "click('985')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10490,
+        "completion_tokens": 354
+      }
+    },
+    {
+      "candidates": [
+        [
+          "clear('985')",
+          3
+        ],
+        [
+          "fill('985', '27.00')",
+          2
+        ]
+      ],
+      "u": 0.4181656600790517,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '27.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.025,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.03,
+        10.02
+      ],
+      "outcomes": [
+        "Executing `clear('985')` will clear the content of the price field for the product being edited, setting its value to an empty string. This action modifies the price data for the product with ID 1481 but does not save the change immediately; it remains on the same product editing page within the Mag",
+        "The agent will modify the value of the 'Price' field for the product with ID 1481 from '32.00' to '27.00'. This action will update the price displayed on the current page and, upon saving, will modify the product's price in the backend database without changing the current page's URL or structure. N"
+      ],
+      "m2_cands": [
+        "clear('985')",
+        "fill('985', '27.00')"
+      ],
+      "m2_choice": "fill('985', '27.00')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10516,
+        "completion_tokens": 453
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '22.00')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '22.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.025,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.08
+      ],
+      "outcomes": [
+        "The agent will modify the value of the 'Price' field for the product being edited to '22.00'. This action will update the price displayed on the current page under the 'Price' section without immediately saving the changes to the database. The page will remain on the product editing interface at the"
+      ],
+      "m2_cands": [
+        "fill('985', '22.00')"
+      ],
+      "m2_choice": "fill('985', '22.00')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 13367,
+        "completion_tokens": 509
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '17.00')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '17.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.025,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.08
+      ],
+      "outcomes": [
+        "The agent will modify the value of the 'Price' field for the product being edited to '17.00'. This action will update the price displayed on the current page without immediately saving the changes to the database. The page will remain on the product editing interface under the URL `http://localhost:"
+      ],
+      "m2_cands": [
+        "fill('985', '17.00')"
+      ],
+      "m2_choice": "fill('985', '17.00')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 13390,
+        "completion_tokens": 565
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '12.00')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '12.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.025,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.08
+      ],
+      "outcomes": [
+        "The agent will modify the value of the 'Price' field for the product to '12.00'. This action will update the price displayed on the current page without immediately saving the changes to the database. The page will remain on the product editing interface under the URL `http://localhost:7780/admin/ca"
+      ],
+      "m2_cands": [
+        "fill('985', '12.00')"
+      ],
+      "m2_choice": "fill('985', '12.00')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 13421,
+        "completion_tokens": 548
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '7.00')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '7.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        10.08
+      ],
+      "outcomes": [
+        "The agent will modify the value of the 'Price' field for the product 'Minerva LumaTech™ V-Tee-S-Blue' from '12.00' to '7.00'. This change will occur on the same page, which is used for editing product details within the Magento Admin panel. No new pages will be shown, and no data will be created or "
+      ],
+      "m2_cands": [
+        "fill('985', '7.00')"
+      ],
+      "m2_choice": "fill('985', '7.00')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 13452,
+        "completion_tokens": 547
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '2.00')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '2.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.08
+      ],
+      "outcomes": [
+        "The agent will modify the value of the price field for the product \"Minerva LumaTech™ V-Tee-S-Blue\" from '7.00' to '2.00'. This action will update the price data for the specified product within the administrative interface of the Magento platform, but the page itself will remain the same, displayin"
+      ],
+      "m2_cands": [
+        "fill('985', '2.00')"
+      ],
+      "m2_choice": "fill('985', '2.00')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 13486,
+        "completion_tokens": 545
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '0.00')",
+          1
+        ],
+        [
+          "fill('985', '7.00')",
+          1
+        ],
+        [
+          "fill('985', '-3.00')",
+          1
+        ],
+        [
+          "report_infeasible(\"The current price is $2.00, reducing it by $5 would result in a negative price, which is not feasible.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"The current price is already lower than $5, so it cannot be reduced by $5.\")",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '0.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.01,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will change the value of the 'Price' field to '0.00'. This action will modify the price data for the product \"Minerva LumaTech™ V-Tee-S-Blue\" with SKU 'WS08-S-Blue' on the current page without immediately saving the changes. The page will remain the same, displaying the product's details u",
+        "The agent will modify the value of the 'Price' field for the product with ID 1481 from '2.00' to '7.00'. This action will take place on the same page, which is the product editing interface within the Magento Admin panel. No new pages will be shown, and no data other than the price of this specific ",
+        "The agent will change the value of the 'Price' field to '-3.00'. This action will modify the price data for the product 'Minerva LumaTech™ V-Tee-S-Blue' within the administrative interface of the website. No new pages will be shown as a result of this action, and no data will be deleted; only the sp"
+      ],
+      "m2_cands": [
+        "fill('985', '0.00')",
+        "fill('985', '7.00')",
+        "fill('985', '-3.00')"
+      ],
+      "m2_choice": "fill('985', '0.00')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13164,
+        "completion_tokens": 631
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '5.00')",
+          2
+        ],
+        [
+          "fill('985', '0.00')",
+          1
+        ],
+        [
+          "fill('985', '-5.00')",
+          1
+        ],
+        [
+          "focus('985')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '5.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will modify the value of the 'Price' field for the product with ID 1481 to '5.00'. This action will update the price displayed and stored in the backend database for the specific product variant within the Magento Admin panel, without changing the current page or deleting any data. The cha",
+        "The agent will modify the value of the \"Price\" field for the product with ID 1481 to '0.00'. This action will update the price data for the product within the administrative interface of the Magento platform, but it will not immediately save the changes to the database until explicitly saved by the ",
+        "The agent will modify the value of the 'Price' field, changing it from '0.00' to '-5.00'. This action will take place on the same product editing page for \"Minerva LumaTech™ V-Tee-S-Blue\" within the Magento Admin panel, without navigating to another page. No new data will be created or deleted; only"
+      ],
+      "m2_cands": [
+        "fill('985', '5.00')",
+        "fill('985', '0.00')",
+        "fill('985', '-5.00')"
+      ],
+      "m2_choice": "fill('985', '5.00')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13154,
+        "completion_tokens": 552
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '0.00')",
+          3
+        ],
+        [
+          "clear('985')",
+          1
+        ],
+        [
+          "fill('985', '0.00') # Assuming the current price is $5.00, reducing by $5 makes it $0.00. This action will set the new price.",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '0.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.03,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will change the value of the \"Price\" field to '0.00'. This action modifies the price data for the product \"Minerva LumaTech™ V-Tee-S-Blue\" with SKU 'WS08-S-Blue' on the current page without immediately saving the changes. The page remains the same, displaying the product's details under th",
+        "Executing `clear('985')` will clear the value of the price field for the product being edited, setting it to an empty state. This action modifies the current product's price data on the page but does not save the change to the database until explicitly saved by the user. The same product editing pag",
+        "The agent will change the value of the 'Price' field from '5.00' to '0.00'. No page navigation will occur; the user will remain on the product editing page for \"Minerva LumaTech™ V-Tee-S-Blue\". This action modifies the product's pricing data within the database, setting its price to $0.00 without de"
+      ],
+      "m2_cands": [
+        "fill('985', '0.00')",
+        "clear('985')",
+        "fill('985', '0.00') # Assuming the current price is $5.00, reducing by $5 makes it $0.00. This action will set the new price."
+      ],
+      "m2_choice": "fill('985', '0.00')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13207,
+        "completion_tokens": 548
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '5.00')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '5.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.07,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will modify the value of the 'Price' field for the product with ID 1481 to '5.00'. This action will update the price displayed and stored in the backend database for the specific product variant within the Magento Admin panel, without changing the current page or deleting any data. The cha",
+        "The agent will clear the value in the \"Price\" field for the product being edited, setting it to an empty input. This action modifies the current product data by removing the previously set price, but these changes will only be saved if the \"Save\" button is subsequently clicked. No other data on the "
+      ],
+      "m2_cands": [
+        "fill('985', '5.00')",
+        "clear('985')"
+      ],
+      "m2_choice": "fill('985', '5.00')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 16012,
+        "completion_tokens": 602
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '0.00')",
+          4
+        ],
+        [
+          "clear('985')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '0.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.04,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will change the value of the \"Price\" field to '0.00'. This action modifies the price data for the product \"Minerva LumaTech™ V-Tee-S-Blue\" with SKU 'WS08-S-Blue' on the current page without immediately saving the changes. The page remains the same, displaying the product's details under th",
+        "Executing `clear('985')` will clear the value of the price field for the product being edited, setting it to an empty state. This action modifies the current product's price data on the page but does not save the change to the database until explicitly saved by the user. The same product editing pag"
+      ],
+      "m2_cands": [
+        "fill('985', '0.00')",
+        "clear('985')"
+      ],
+      "m2_choice": "fill('985', '0.00')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10570,
+        "completion_tokens": 430
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '5.00')",
+          4
+        ],
+        [
+          "fill('985', '-5.00')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '5.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.04,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will modify the value of the 'Price' field for the product with ID 1481 to '5.00'. This action will update the price displayed and stored in the backend database for the specific product variant within the Magento Admin panel, without changing the current page or deleting any data. The cha",
+        "The agent will modify the value of the 'Price' field, changing it from '0.00' to '-5.00'. This action will take place on the same product editing page for \"Minerva LumaTech™ V-Tee-S-Blue\" within the Magento Admin panel, without navigating to another page. No new data will be created or deleted; only"
+      ],
+      "m2_cands": [
+        "fill('985', '5.00')",
+        "fill('985', '-5.00')"
+      ],
+      "m2_choice": "fill('985', '5.00')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10583,
+        "completion_tokens": 483
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '0.00')",
+          4
+        ],
+        [
+          "send_msg_to_user(\"done\")",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '0.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.04,
+        0.01
+      ],
+      "outcomes": [
+        "The agent will change the value of the \"Price\" field to '0.00'. This action modifies the price data for the product \"Minerva LumaTech™ V-Tee-S-Blue\" with SKU 'WS08-S-Blue' on the current page without immediately saving the changes. The page remains the same, displaying the product's details under th",
+        "The agent's action `send_msg_to_user(\"done\")` does not interact with the webpage or its data directly; it merely sends a message back to the user indicating that an action is complete. No page change, creation, modification, or deletion of data on the website will occur as a result of this action al"
+      ],
+      "m2_cands": [
+        "fill('985', '0.00')",
+        "send_msg_to_user(\"done\")"
+      ],
+      "m2_choice": "fill('985', '0.00')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10590,
+        "completion_tokens": 457
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '5.00')",
+          3
+        ],
+        [
+          "fill('985', '-5.00')",
+          1
+        ],
+        [
+          "clear('985')",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '5.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.03,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will modify the value of the 'Price' field for the product with ID 1481 to '5.00'. This action will update the price displayed and stored in the backend database for the specific product variant within the Magento Admin panel, without changing the current page or deleting any data. The cha",
+        "The agent will modify the value of the 'Price' field, changing it from '0.00' to '-5.00'. This action will take place on the same product editing page for \"Minerva LumaTech™ V-Tee-S-Blue\" within the Magento Admin panel, without navigating to another page. No new data will be created or deleted; only",
+        "The agent will clear the value in the \"Price\" field for the product being edited, setting it to an empty input. This action modifies the current product data by removing the previously set price, but these changes will only be saved if the \"Save\" button is subsequently clicked. No other data on the "
+      ],
+      "m2_cands": [
+        "fill('985', '5.00')",
+        "fill('985', '-5.00')",
+        "clear('985')"
+      ],
+      "m2_choice": "fill('985', '5.00')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13135,
+        "completion_tokens": 499
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 21:56:51"
+}

@@ -1,0 +1,979 @@
+{
+  "task_id": 593,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Create a milestone for the upcoming task of merging all branches to main starting on March 15, 2044 and ending on March 30, 2044",
+  "template": 339,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 21,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 3,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 28,
+  "prompt_tokens": 73845,
+  "completion_tokens": 2917,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      56006,
+      2865
+    ],
+    "progress": [
+      13,
+      17839,
+      52
+    ]
+  },
+  "llm_cache_hits": 16,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 13,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 0.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 91.02724361419678,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('187')",
+          2
+        ],
+        [
+          "click('452')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7943,
+        "completion_tokens": 106
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('511')",
+          2
+        ],
+        [
+          "click('352')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('511')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:settings": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:dotfiles": 0.5,
+            "ctx:gitlab": 0.5,
+            "kw:set": 1.0,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles",
+          "element": {
+            "role": "link",
+            "name": "Settings",
+            "context": "Project navigation Byte Blaze / dotfiles · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 32,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "path:edit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles/edit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        },
+        {
+          "action": "click('352')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:dotfiles": 0.5,
+            "ctx:gitlab": 0.5,
+            "kw:merge": 1.0,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "Project navigation Byte Blaze / dotfiles · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 32,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7944,
+        "completion_tokens": 109
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('510')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('510')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:settings": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:merge": 0.5,
+            "ctx:requests": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:dotfiles": 0.5,
+            "ctx:gitlab": 0.5,
+            "kw:set": 1.0,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles/-/merge_requests",
+          "element": {
+            "role": "link",
+            "name": "Settings",
+            "context": "Project navigation Merge requests · Byte Blaze / dotfiles · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 32,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2271,
+        "completion_tokens": 123
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('187')",
+          2
+        ],
+        [
+          "click('184')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('187')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=image": 1.0,
+            "ctx:merge": 0.5,
+            "ctx:requests": 0.5,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "path:edit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles/edit",
+          "element": {
+            "role": "image",
+            "name": "",
+            "context": "Merge requests",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7044,
+        "completion_tokens": 190
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('184')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('184')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "kw:merge": 1.0,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "path:edit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles/edit",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4947,
+        "completion_tokens": 148
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('184') # Navigate to Merge Requests to find a path to Milestones.",
+          1
+        ],
+        [
+          "click('184')",
+          1
+        ],
+        [
+          "click('360')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('184') # Navigate to Merge Requests to find a path to Milestones.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "path:edit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles/edit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7062,
+        "completion_tokens": 183
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('184') # Click on Merge requests to navigate back to the project's main page where I can find the link to milestones.",
+          1
+        ],
+        [
+          "click('184')",
+          1
+        ],
+        [
+          "click('184') # Click on 'Merge requests' to find a path to 'Milestones'. However, based on the structure provided, it seems like I might need to look elsewhere, but I'll try this first as it was previously clicked.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('184') # Click on Merge requests to navigate back to the project's main page where I can find the link to milestones.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "path:edit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles/edit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7100,
+        "completion_tokens": 254
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          2
+        ],
+        [
+          "click('184') # Click on Merge requests to navigate back to the project's main page where I can find the link to milestones.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "path:edit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles/edit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 32,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles/-/merge_requests",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        },
+        {
+          "action": "click('184') # Click on Merge requests to navigate back to the project's main page where I can find the link to milestones.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 33,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7097,
+        "completion_tokens": 161
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('150') # Click on 'Merge requests' to attempt to navigate towards the project's main page where I might find a link to milestones.",
+          1
+        ],
+        [
+          "click('150') # Click on Merge requests to navigate back to the project's main page where I can find the link to milestones.",
+          1
+        ],
+        [
+          "click('150') # Click on 'Merge requests' to navigate back to the project's main page where I can find the link to milestones.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('150') # Click on 'Merge requests' to attempt to navigate towards the project's main page where I might find a link to milestones.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7988,
+        "completion_tokens": 238
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "click('150') # Click on 'Merge requests' again to attempt to navigate towards the project's main page where I might find a link to milestones.",
+          1
+        ],
+        [
+          "click('194') # Click on 'Byte Blaze' to attempt to navigate to the project's main page where I can find the link to milestones.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:dashboard": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/dashboard/issues?assignee_username=byteblaze",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:dotfiles": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/byteblaze/dotfiles",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        },
+        {
+          "action": "click('150') # Click on 'Merge requests' again to attempt to navigate towards the project's main page where I might find a link to milestones.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8049,
+        "completion_tokens": 224
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost/gitlab/')",
+          1
+        ],
+        [
+          "goto('http://localhost/gitlab')",
+          1
+        ],
+        [
+          "goto('http://localhost/gitlab/namespace/project/milestones')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost/gitlab/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1252,
+        "completion_tokens": 202
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('184') # Assuming '184' is a bid for a link or menu item that leads to the project's main page or milestones section. If it does not exist, further exploration of the accessibility tree would be required.",
+          1
+        ],
+        [
+          "click('150') # Attempt to click on 'Merge requests' again to see if it leads to a page with more navigation options.",
+          1
+        ],
+        [
+          "report_infeasible(\"There are no elements or links available on the current page to navigate to the GitLab interface or create a milestone.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('184') # Assuming '184' is a bid for a link or menu item that leads to the project's main page or milestones section. If it does not exist, further exploration of the accessibility tree would be required.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1317,
+        "completion_tokens": 329
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost/gitlab/explore')",
+          1
+        ],
+        [
+          "goto('http://localhost/gitlab/explore/projects')",
+          1
+        ],
+        [
+          "click('150') # Attempting to click on 'Merge requests' again to see if it leads to a page where I can access milestones.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost/gitlab/explore')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1274,
+        "completion_tokens": 252
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost/gitlab/')",
+          2
+        ],
+        [
+          "goto('http://localhost/')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost/gitlab/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1277,
+        "completion_tokens": 146
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost/gitlab/')",
+          2
+        ],
+        [
+          "click('184') # Attempt to navigate using internal links to reach the GitLab instance's milestones section.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost/gitlab/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1280,
+        "completion_tokens": 252
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "collect",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 17:37:44"
+}

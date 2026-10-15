@@ -1,0 +1,826 @@
+{
+  "task_id": 225,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "What do customers say about brush from sephora",
+  "template": 135,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 10,
+  "n_env_actions": 16,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 3,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 26,
+  "prompt_tokens": 80930,
+  "completion_tokens": 2243,
+  "llm_by_tag": {
+    "policy": [
+      10,
+      49322,
+      1611
+    ],
+    "m2more": [
+      1,
+      5760,
+      129
+    ],
+    "wm": [
+      4,
+      9648,
+      374
+    ],
+    "value": [
+      4,
+      926,
+      32
+    ],
+    "form": [
+      2,
+      5786,
+      77
+    ],
+    "progress": [
+      5,
+      9488,
+      20
+    ]
+  },
+  "llm_cache_hits": 6,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 7,
+    "M2": 2
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 1.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "n/a",
+        "ref": "No reviews available for the sephora brushes.",
+        "question": "What do customers say about brush from sephora",
+        "src": "string",
+        "pending": false,
+        "score": 1.0,
+        "parsable": true,
+        "response": "Judgement: Correct\n\nExplanation: The student's answer \"n/a\" is semantically equivalent to the reference answer \"No reviews available for the sephora brushes.\" Both convey the same meaning, which is that there are no reviews to refer to regarding the Sephora brushes. The notation \"n/a\" is commonly us",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 76.40987539291382,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('386', 'Sephora brush', True)",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.6679176066860486,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('386', 'Sephora brush')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.065,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.05,
+        8.01
+      ],
+      "outcomes": [
+        "After executing the command `fill('386', 'Sephora brush', True)`, the search field on the current page will be filled with \"Sephora brush\". Since the \"Search\" button is currently disabled, the page will not automatically navigate to a new search result page; however, if the user manually triggers th",
+        "After executing the command to fill the search field with \"Sephora brush\", the page will reload or update to display search results related to \"Sephora brush\". No data will be created, modified, or deleted on the website itself; however, the search query will be processed, and the results will be fe"
+      ],
+      "m2_cands": [
+        "fill('386', 'Sephora brush', True)",
+        "fill('386', 'Sephora brush')"
+      ],
+      "m2_choice": "fill('386', 'Sephora brush')",
+      "rho_choice": 0.6679176066860486,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 20155,
+        "completion_tokens": 472
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('391')",
+          2
+        ],
+        [
+          "click('1496')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.40653450861884005,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('391')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        },
+        {
+          "action": "click('1496')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:pre": 1.0,
+            "name:baked": 1.0,
+            "name:gingerbread": 1.0,
+            "name:house": 1.0,
+            "name:kit": 1.0,
+            "name:value": 1.0,
+            "name:pack": 1.0,
+            "name:oz": 1.0,
+            "name:of": 1.0,
+            "name:total": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 260,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.40653450861884005,
+        0.007338135898519072
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7664,
+        "completion_tokens": 148
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('419', 'Sephora brush', True)",
+          2
+        ],
+        [
+          "fill('419', 'Sephora brush')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.6635882549567282,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('419', 'Sephora brush reviews', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.105,
+            "path:pre": 0.5,
+            "path:baked": 0.5,
+            "path:gingerbread": 0.5,
+            "path:house": 0.5,
+            "path:kit": 0.5,
+            "path:value": 0.5,
+            "path:pack": 0.5,
+            "path:oz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        5.01
+      ],
+      "outcomes": [
+        "The action `fill('419', 'Sephora brush', True)` suggests an attempt to interact with element ID `419`, which is a combobox used for searching on the current page. After executing this command, the search query \"Sephora brush\" will be entered into the search field. The page will then likely refresh o",
+        "Filling the combobox with the value 'Sephora brush' will trigger a search action on the current page, filtering the results to display items related to 'Sephora brush'. No data will be created, modified, or deleted; the page will update to show search results relevant to the query 'Sephora brush'."
+      ],
+      "m2_cands": [
+        "fill('419', 'Sephora brush', True)",
+        "fill('419', 'Sephora brush')"
+      ],
+      "m2_choice": "fill('419', 'Sephora brush', True)",
+      "rho_choice": 0.6635882549567282,
+      "form_fix": "fill('419', 'Sephora brush reviews', True)",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 11086,
+        "completion_tokens": 416
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('424')",
+          2
+        ],
+        [
+          "fill('419', 'Sephora brush reviews')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.4018492138040727,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('424')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:pre": 0.5,
+            "path:baked": 0.5,
+            "path:gingerbread": 0.5,
+            "path:house": 0.5,
+            "path:kit": 0.5,
+            "path:value": 0.5,
+            "path:pack": 0.5,
+            "path:oz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.4018492138040727,
+        0.6642614526221189
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3396,
+        "completion_tokens": 121
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1590')",
+          2
+        ],
+        [
+          "click('1522')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.006921584842672792,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1590')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reviews": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush+reviews",
+          "element": {
+            "role": "link",
+            "name": "12  Reviews",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 262,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sephora": 0.5,
+            "path:collection": 0.5,
+            "path:waterproof": 0.5,
+            "path:eye": 0.5,
+            "path:makeup": 0.5,
+            "path:remover": 0.5,
+            "path:oz": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sephora-collection-waterproof-eye-makeup-remover-4-2-oz.html#reviews",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 240,
+          "server_error": false
+        },
+        {
+          "action": "click('1522')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=strong": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush+reviews",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.006921584842672792,
+        0.006638937601706469
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7521,
+        "completion_tokens": 162
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1522')",
+          2
+        ],
+        [
+          "click('1591')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.053174540850572424,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1522')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=strong": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush+reviews",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.053174540850572424,
+        0.006921584842672792
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7503,
+        "completion_tokens": 141
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1522')",
+          2
+        ],
+        [
+          "click('1591')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.053174540850572424,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1522')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=strong": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush+reviews",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.053174540850572424,
+        0.006921584842672792
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7503,
+        "completion_tokens": 147
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1591')",
+          2
+        ],
+        [
+          "click('1522')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.006921584842672792,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1591')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reviews": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush+reviews",
+          "element": {
+            "role": "link",
+            "name": "12  Reviews",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 262,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sephora": 0.5,
+            "path:collection": 0.5,
+            "path:waterproof": 0.5,
+            "path:eye": 0.5,
+            "path:makeup": 0.5,
+            "path:remover": 0.5,
+            "path:oz": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sephora-collection-waterproof-eye-makeup-remover-4-2-oz.html#reviews",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 240,
+          "server_error": false
+        },
+        {
+          "action": "click('1522')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=strong": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush+reviews",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.006921584842672792,
+        0.053174540850572424
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7509,
+        "completion_tokens": 193
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1591')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.006921584842672792,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1591')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reviews": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush+reviews",
+          "element": {
+            "role": "link",
+            "name": "12  Reviews",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 262,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5603,
+        "completion_tokens": 208
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The current product page is about a waterproof eye makeup remover, not a brush. There are no reviews about brushes on this page.\")",
+          1
+        ],
+        [
+          "click('1657')",
+          1
+        ],
+        [
+          "fill('420', 'Sephora brush reviews')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.021051295369817934,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The current product page is about a waterproof eye makeup remover, not a brush. There are no reviews about brushes on this page.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:sephora": 0.5,
+            "path:collection": 0.5,
+            "path:waterproof": 0.5,
+            "path:eye": 0.5,
+            "path:makeup": 0.5,
+            "path:remover": 0.5,
+            "path:oz": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sephora-collection-waterproof-eye-makeup-remover-4-2-oz.html#reviews",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.021051295369817934,
+        0.005698491182725904
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2990,
+        "completion_tokens": 235
+      }
+    }
+  ],
+  "method": "race",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 00:15:36"
+}

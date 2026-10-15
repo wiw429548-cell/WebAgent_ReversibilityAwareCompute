@@ -1,0 +1,967 @@
+{
+  "task_id": 509,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Buy the best rating product from \"Men's shoe\" category with at least 5 reviews and the product is least expensive",
+  "template": 216,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 58,
+  "prompt_tokens": 144481,
+  "completion_tokens": 4627,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      78402,
+      2583
+    ],
+    "wm": [
+      19,
+      45649,
+      1543
+    ],
+    "value": [
+      19,
+      4454,
+      152
+    ],
+    "form": [
+      5,
+      15976,
+      349
+    ]
+  },
+  "llm_cache_hits": 12,
+  "mode_counts": {
+    "M0": 8,
+    "M1": 0,
+    "M2": 7
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 2,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 176.27481174468994,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('697')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0278373648040842,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('697')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:clothing": 1.0,
+            "name:shoes": 1.0,
+            "name:jewelry": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "menuitem",
+            "name": " Clothing, Shoes & Jewelry",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 462,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5782,
+        "completion_tokens": 141
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1957')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004522726742000476,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1957')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:men": 1.0,
+            "name:item": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": "link",
+            "name": "Men( 7648 item )",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 462,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5571,
+        "completion_tokens": 132
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1972')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004027768555993073,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1972')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:shoes": 1.0,
+            "name:item": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26",
+          "element": {
+            "role": "link",
+            "name": "Shoes( 2523 item )",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 462,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5627,
+        "completion_tokens": 153
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1542')",
+          1
+        ],
+        [
+          "click('1560')",
+          1
+        ],
+        [
+          "select_option('1542', ['Price'])",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.11381262163157993,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1560')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reef": 1.0,
+            "name:men": 1.0,
+            "name:s": 1.0,
+            "name:twinpin": 1.0,
+            "name:prints": 1.0,
+            "name:sandals": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=145",
+          "element": {
+            "role": "link",
+            "name": "Reef Men's Twinpin Prints Sandals",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 492,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.01,
+        7.01,
+        7.01
+      ],
+      "outcomes": [
+        "Clicking on the combobox element with id '1542' will open a dropdown menu allowing the user to select a sorting method for the items listed under 'Clothing, Shoes & Jewelry'. The current page will remain displayed, but the items will be reordered based on the selected sort option, such as product na",
+        "Clicking on the link \"Reef Men's Twinpin Prints Sandals\" (ID: 1560) will navigate to the product detail page for this specific item. No data will be created, modified, or deleted on the website as a result of this action; it will simply display more detailed information about the selected product.",
+        "Selecting the 'Price' option from the dropdown menu with id '1542' will sort the items listed under 'Clothing, Shoes & Jewelry' by price. The current page will refresh or update to display the items sorted in ascending order by default. No data will be created, modified, or deleted; only the display"
+      ],
+      "m2_cands": [
+        "click('1542')",
+        "click('1560')",
+        "select_option('1542', ['Price'])"
+      ],
+      "m2_choice": "click('1560')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 16878,
+        "completion_tokens": 516
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.01466054748521665,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:reef": 0.5,
+            "path:men": 0.5,
+            "path:s": 0.5,
+            "path:twinpin": 0.5,
+            "path:prints": 0.5,
+            "path:sandals": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/reef-men-s-twinpin-prints-sandals.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 462,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4720,
+        "completion_tokens": 184
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1979')",
+          1
+        ],
+        [
+          "click('1872')",
+          1
+        ],
+        [
+          "click('1542')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.003370549116453308,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1872')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:cole": 1.0,
+            "name:haan": 1.0,
+            "name:men": 1.0,
+            "name:s": 1.0,
+            "name:lionel": 1.0,
+            "name:dress": 1.0,
+            "name:chukka": 1.0,
+            "name:boot": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=145",
+          "element": {
+            "role": "link",
+            "name": "Cole Haan Men's Lionel Dress Chukka Boot",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 483,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.01,
+        6.01,
+        6.01
+      ],
+      "outcomes": [
+        "Clicking on the element with the ID '1979' would likely navigate to the product details page for the specific item linked from that element. No data on the website will be created, modified, or deleted; this action is purely navigational, leading to more detailed information about the selected produ",
+        "Clicking on the element with the ID '1872' will likely navigate to the product details page for the specific item linked from that element, based on the structure provided. No data will be created, modified, or deleted on the website itself; however, the URL and displayed content will change to refl",
+        "Clicking on the combobox element with id '1542' will open a dropdown menu allowing the user to select a sorting method for the items listed under 'Clothing, Shoes & Jewelry'. The current page will remain displayed, but the items will be reordered based on the selected sort option, such as product na"
+      ],
+      "m2_cands": [
+        "click('1979')",
+        "click('1872')",
+        "click('1542')"
+      ],
+      "m2_choice": "click('1872')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 16872,
+        "completion_tokens": 481
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The current product's price cannot be determined from the given accessibility tree to confirm if it is the least expensive.\")",
+          1
+        ],
+        [
+          "click('1635')",
+          1
+        ],
+        [
+          "click('732')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02750748409404009,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('732')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:clothing": 1.0,
+            "name:shoes": 1.0,
+            "name:jewelry": 1.0,
+            "path:cole": 0.5,
+            "path:haan": 0.5,
+            "path:men": 0.5,
+            "path:s": 0.5,
+            "path:lionel": 0.5,
+            "path:dress": 0.5,
+            "path:chukka": 0.5,
+            "path:boot": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/cole-haan-men-s-lionel-dress-chukka-boot.html",
+          "element": {
+            "role": "menuitem",
+            "name": " Clothing, Shoes & Jewelry",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 462,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.01,
+        2.01,
+        6.01
+      ],
+      "outcomes": [
+        "The agent will report that it is unable to determine the current product's price from the provided accessibility tree, specifically noting that it cannot confirm if the price is the least expensive among comparable items. No page change will occur, and no data on the website will be created, modifie",
+        "Clicking on the element with ID `1635` (the \"Add to Cart\" button) will add the selected shoe to the user's shopping cart. The current page will likely refresh or update to reflect the change, showing an updated cart count or a confirmation message. No new pages will be shown, but data related to the",
+        "Clicking on the menu item '732' (which corresponds to 'Clothing, Shoes & Jewelry') will navigate to a new page displaying categories and items within the 'Clothing, Shoes & Jewelry' department. No data on the website will be created, modified, or deleted as a result of this action; it will simply ch"
+      ],
+      "m2_cands": [
+        "report_infeasible(\"The current product's price cannot be determined from the given accessibility tree to confirm if it is the least expensive.\")",
+        "click('1635')",
+        "click('732')"
+      ],
+      "m2_choice": "click('732')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 14763,
+        "completion_tokens": 539
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1957')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004522726742000476,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1957')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:men": 1.0,
+            "name:item": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": "link",
+            "name": "Men( 7648 item )",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 462,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5612,
+        "completion_tokens": 153
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1972')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004027768555993073,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1972')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:shoes": 1.0,
+            "name:item": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=26",
+          "element": {
+            "role": "link",
+            "name": "Shoes( 2523 item )",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 462,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5659,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1560') # Click on the first product to check its details.",
+          1
+        ],
+        [
+          "select_option('1542', 'Price')",
+          1
+        ],
+        [
+          "click('1647') # Click on the first product to check its details.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.13431120538026617,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1647') # Click on the first product to check its details.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=145",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 482,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.01,
+        7.01,
+        8.01
+      ],
+      "outcomes": [
+        "When the agent clicks on the first product, \"Reef Men's Twinpin Prints Sandals,\" a new page dedicated to this product will be displayed. This page will contain detailed information about the product, including images, description, price, and reviews. No data will be created, modified, or deleted on ",
+        "Selecting the 'Price' option from the dropdown menu with id '1542' will sort the items listed under 'Clothing, Shoes & Jewelry' by price. The current page will refresh or update to display the items sorted in ascending order by default. No data will be created, modified, or deleted; only the display",
+        "When the agent clicks on the first product, \"HAFLINGER Men's Wool Felt Open Back Slippers, Beige 550 Peat, US:7\", a new page dedicated to this product will be displayed. This page will contain detailed information about the product, including images, description, reviews, and purchasing options. No "
+      ],
+      "m2_cands": [
+        "click('1560') # Click on the first product to check its details.",
+        "select_option('1542', 'Price')",
+        "click('1647') # Click on the first product to check its details."
+      ],
+      "m2_choice": "click('1647') # Click on the first product to check its details.",
+      "rho_choice": null,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13750,
+        "completion_tokens": 498
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.01914946635900303,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:haflinger": 0.5,
+            "path:men": 0.5,
+            "path:s": 0.5,
+            "path:wool": 0.5,
+            "path:felt": 0.5,
+            "path:open": 0.5,
+            "path:back": 0.5,
+            "path:slippers": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/haflinger-men-s-wool-felt-open-back-slippers-beige-550-peat-us-7.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 462,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3994,
+        "completion_tokens": 113
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1677') # Click on the next product to check its details.",
+          1
+        ],
+        [
+          "select_option('1542', 'Product Name')",
+          1
+        ],
+        [
+          "select_option('1542', 'Price')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.13431120538026617,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1677') # Click on the next product to check its details.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=145",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 479,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.01,
+        2.01,
+        7.01
+      ],
+      "outcomes": [
+        "When the agent executes `click('1677')`, it will navigate to the detailed page of the product listed under the fifth list item, which is the \"Klogs Footwear Hadley Black/White 9.5 M (C)\". This detailed page will display comprehensive information about the product, including images, description, revi",
+        "Selecting the 'Product Name' option from the sort dropdown menu will refresh the current page, displaying the items under the 'Clothing, Shoes & Jewelry' category sorted alphabetically by product name. No data will be created, modified, or deleted; only the sorting order of the displayed products wi",
+        "Selecting the 'Price' option from the dropdown menu with id '1542' will sort the items listed under 'Clothing, Shoes & Jewelry' by price. The current page will refresh or update to display the items sorted in ascending order by default. No data will be created, modified, or deleted; only the display"
+      ],
+      "m2_cands": [
+        "click('1677') # Click on the next product to check its details.",
+        "select_option('1542', 'Product Name')",
+        "select_option('1542', 'Price')"
+      ],
+      "m2_choice": "click('1677') # Click on the next product to check its details.",
+      "rho_choice": null,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13727,
+        "completion_tokens": 488
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.014635470153969375,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:klogs": 0.5,
+            "path:footwear": 0.5,
+            "path:hadley": 0.5,
+            "path:black": 0.5,
+            "path:white": 0.5,
+            "path:m": 0.5,
+            "path:c": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/klogs-footwear-hadley-black-white-9-5-m-c.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 462,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3115,
+        "completion_tokens": 169
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1647')",
+          2
+        ],
+        [
+          "select_option('1542', ['Price'])",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004657270539651136,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select_option('1542', ['Price'])",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=145",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 462,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.02,
+        7.01
+      ],
+      "outcomes": [
+        "Clicking on the link with the ID '1647' will navigate to the product details page for the \"HAFLINGER Men's Wool Felt Open Back Slippers, Beige 550 Peat, US:7\". This new page will provide detailed information about the product, including images, descriptions, reviews, and purchasing options. No data ",
+        "Selecting the 'Price' option from the dropdown menu with id '1542' will sort the items listed under 'Clothing, Shoes & Jewelry' by price. The current page will refresh or update to display the items sorted in ascending order by default. No data will be created, modified, or deleted; only the display"
+      ],
+      "m2_cands": [
+        "click('1647')",
+        "select_option('1542', ['Price'])"
+      ],
+      "m2_choice": "select_option('1542', ['Price'])",
+      "rho_choice": null,
+      "form_fix": "select_option('1542', ['Price'])",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 14305,
+        "completion_tokens": 510
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1560')",
+          2
+        ],
+        [
+          "click('1581') # Click on the second product to check its details.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004218894687804688,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "select('1542', 'Rating')",
+          "rollback": false,
+          "feat": {
+            "act=select": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=145&product_list_order=price",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        6.01
+      ],
+      "outcomes": [
+        "Clicking on the product link with the ID '1560' will navigate to the detailed page of the \"MAPOLO Blue Sharks Pattern Men's Boys Casual Walking Shoes Sneaker\". No data will be created, modified, or deleted on the website from this action; it will simply load a new page with more information about th",
+        "Clicking on the second product, identified by the element with id '1581', will navigate to the detailed page of the \"PUMA Men's King FG Soccer Cleat\". This new page will display comprehensive information about the product, including images, descriptions, reviews, and purchasing options. No data will"
+      ],
+      "m2_cands": [
+        "click('1560')",
+        "click('1581') # Click on the second product to check its details."
+      ],
+      "m2_choice": "click('1560')",
+      "rho_choice": null,
+      "form_fix": "select('1542', 'Rating')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 14106,
+        "completion_tokens": 422
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 02:08:46"
+}

@@ -1,0 +1,842 @@
+{
+  "task_id": 521,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Subscribe to the newsletter of OneStopMarket",
+  "template": 199,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 24,
+  "prompt_tokens": 104191,
+  "completion_tokens": 1571,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      87129,
+      1535
+    ],
+    "progress": [
+      9,
+      17062,
+      36
+    ]
+  },
+  "llm_cache_hits": 5,
+  "mode_counts": {
+    "M0": 6,
+    "M1": 9,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 136.1503427028656,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "focus('2117')",
+          1
+        ],
+        [
+          "fill('2117', 'example@example.com')",
+          1
+        ],
+        [
+          "fill('2117', 'test@example.com')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.013347892107494647,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "focus('2117')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=textbox": 1.0,
+            "name:sign": 1.0,
+            "name:up": 1.0,
+            "name:for": 1.0,
+            "name:our": 1.0,
+            "name:newsletter": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "textbox",
+            "name": "Sign Up for Our Newsletter:",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.013347892107494647,
+        0.02931119952379553
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7655,
+        "completion_tokens": 89
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('2117', 'user@example.com')",
+          2
+        ],
+        [
+          "fill('2117', 'example@example.com')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0292790258242707,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('2117', 'user@example.com')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:sign": 1.0,
+            "name:up": 1.0,
+            "name:for": 1.0,
+            "name:our": 1.0,
+            "name:newsletter": 1.0,
+            "typed_len": 0.08,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "textbox",
+            "name": "Sign Up for Our Newsletter:",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0292790258242707,
+        0.02931119952379553
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7664,
+        "completion_tokens": 92
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2119')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.19398385857193653,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('2119')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:subscribe": 1.0,
+            "kw:subscribe": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Subscribe",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 458,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5783,
+        "completion_tokens": 77
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2122')",
+          2
+        ],
+        [
+          "click('2122', timeout=10000)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.19398385857193653,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('2122')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:subscribe": 1.0,
+            "kw:subscribe": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Subscribe",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.19398385857193653,
+        0.19398385857193653
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7823,
+        "completion_tokens": 115
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2122')",
+          1
+        ],
+        [
+          "fill('2118', 'user@example.com')",
+          1
+        ],
+        [
+          "fill('2120', 'user@example.com')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.19398385857193653,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('2122')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:subscribe": 1.0,
+            "kw:subscribe": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Subscribe",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.19398385857193653,
+        0.10764196279711756
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7674,
+        "completion_tokens": 96
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('2120', 'user@example.com')",
+          2
+        ],
+        [
+          "focus('2120')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.014103271542681022,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('2120', 'user@example.com')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:sign": 1.0,
+            "name:up": 1.0,
+            "name:for": 1.0,
+            "name:our": 1.0,
+            "name:newsletter": 1.0,
+            "name:this": 1.0,
+            "name:is": 1.0,
+            "name:a": 1.0,
+            "name:required": 1.0,
+            "name:field": 1.0,
+            "typed_len": 0.08,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "textbox",
+            "name": "Sign Up for Our Newsletter: This is a required field.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.014103271542681022,
+        0.006375250778417438
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7688,
+        "completion_tokens": 124
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2122')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.19398385857193653,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('2122')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:subscribe": 1.0,
+            "kw:subscribe": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Subscribe",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 458,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5795,
+        "completion_tokens": 100
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2122')",
+          2
+        ],
+        [
+          "fill('2120', 'user@example.com')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.19398385857193653,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('2122')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:subscribe": 1.0,
+            "kw:subscribe": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Subscribe",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.19398385857193653,
+        0.0292790258242707
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7717,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('2120', 'user@example.com')",
+          1
+        ],
+        [
+          "click('2122')",
+          1
+        ],
+        [
+          "fill('2120', 'test.email@example.com')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.014103271542681022,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('2120', 'user@example.com')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:sign": 1.0,
+            "name:up": 1.0,
+            "name:for": 1.0,
+            "name:our": 1.0,
+            "name:newsletter": 1.0,
+            "name:this": 1.0,
+            "name:is": 1.0,
+            "name:a": 1.0,
+            "name:required": 1.0,
+            "name:field": 1.0,
+            "typed_len": 0.08,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "textbox",
+            "name": "Sign Up for Our Newsletter: This is a required field.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.014103271542681022,
+        0.19398385857193653
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7693,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2122')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.19398385857193653,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('2122')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:subscribe": 1.0,
+            "kw:subscribe": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Subscribe",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 458,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5794,
+        "completion_tokens": 107
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('2120', 'user@example.com')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0292790258242707,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('2120', 'user@example.com')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:sign": 1.0,
+            "name:up": 1.0,
+            "name:for": 1.0,
+            "name:our": 1.0,
+            "name:newsletter": 1.0,
+            "typed_len": 0.08,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "textbox",
+            "name": "Sign Up for Our Newsletter:",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5824,
+        "completion_tokens": 95
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2122')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.19398385857193653,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('2122')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:subscribe": 1.0,
+            "kw:subscribe": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Subscribe",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 458,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5816,
+        "completion_tokens": 86
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('2120', 'user@example.com')",
+          2
+        ],
+        [
+          "click('2122')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0292790258242707,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('2120', 'user@example.com')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:sign": 1.0,
+            "name:up": 1.0,
+            "name:for": 1.0,
+            "name:our": 1.0,
+            "name:newsletter": 1.0,
+            "typed_len": 0.08,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "textbox",
+            "name": "Sign Up for Our Newsletter:",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0292790258242707,
+        0.19398385857193653
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7722,
+        "completion_tokens": 104
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2122')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.19398385857193653,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('2122')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:subscribe": 1.0,
+            "kw:subscribe": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Subscribe",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 458,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5816,
+        "completion_tokens": 111
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('2120', 'user@example.com')",
+          2
+        ],
+        [
+          "click('2122')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0292790258242707,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('2120', 'user@example.com')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:sign": 1.0,
+            "name:up": 1.0,
+            "name:for": 1.0,
+            "name:our": 1.0,
+            "name:newsletter": 1.0,
+            "typed_len": 0.08,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "textbox",
+            "name": "Sign Up for Our Newsletter:",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0292790258242707,
+        0.19398385857193653
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7727,
+        "completion_tokens": 131
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:57:50"
+}

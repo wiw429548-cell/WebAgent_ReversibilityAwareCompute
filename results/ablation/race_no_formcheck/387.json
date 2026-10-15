@@ -1,0 +1,1231 @@
+{
+  "task_id": 387,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Who gave 4 or 5 stars for phone cases from EYZUTAK",
+  "template": 1356,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 25,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 5,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 57,
+  "prompt_tokens": 142909,
+  "completion_tokens": 4590,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      75834,
+      2650
+    ],
+    "m2more": [
+      2,
+      11098,
+      349
+    ],
+    "wm": [
+      17,
+      40596,
+      1431
+    ],
+    "value": [
+      17,
+      3887,
+      136
+    ],
+    "progress": [
+      6,
+      11494,
+      24
+    ]
+  },
+  "llm_cache_hits": 10,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 7,
+    "M2": 7
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 134.55490922927856,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('386', 'phone cases EYZUTAK')",
+          1
+        ],
+        [
+          "fill('386', 'EYZUTAK phone case reviews', True)",
+          1
+        ],
+        [
+          "fill('386', 'EYZUTAK phone case', False)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.6684193160672651,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('386', 'EYZUTAK phone case reviews', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.13,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.01,
+        8.01,
+        7.01
+      ],
+      "outcomes": [
+        "The agent will input \"phone cases EYZUTAK\" into the search field identified by ID '386'. Upon submission, the page will likely refresh or navigate to a new search results page displaying products that match the query \"phone cases EYZUTAK\". No data will be created, modified, or deleted on the website",
+        "The agent will fill the search box with the query \"EYZUTAK phone case reviews\" and trigger a search. This action will likely result in a new page being displayed that shows search results for the specified query. No data on the website will be created, modified, or deleted; only the content displaye",
+        "The agent will input \"EYZUTAK phone case\" into the search field labeled as 'Search'. After executing this action, the page will likely refresh or navigate to a new page displaying search results for \"EYZUTAK phone case\". No data will be created, modified, or deleted on the website itself; only the q"
+      ],
+      "m2_cands": [
+        "fill('386', 'phone cases EYZUTAK')",
+        "fill('386', 'EYZUTAK phone case reviews', True)",
+        "fill('386', 'EYZUTAK phone case', False)"
+      ],
+      "m2_choice": "fill('386', 'EYZUTAK phone case reviews', True)",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13721,
+        "completion_tokens": 465
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('391')",
+          2
+        ],
+        [
+          "press('386', 'Enter')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.40653450861884005,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('391')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=EYZUTAK+phone+case+reviews",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        },
+        {
+          "action": "press('386', 'Enter')",
+          "rollback": false,
+          "feat": {
+            "act=press": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "press_enter": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.40653450861884005,
+        0.4777521286231504
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7682,
+        "completion_tokens": 152
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('389')",
+          1
+        ],
+        [
+          "click('1948')",
+          1
+        ],
+        [
+          "click('391')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02229977777947516,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('389')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:advanced": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "Advanced Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 216,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        },
+        {
+          "action": "click('1948')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:page": 1.0,
+            "name:next": 1.0,
+            "ctx:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": " Page Next",
+            "context": "Page",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02229977777947516,
+        0.006350791961583788
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7708,
+        "completion_tokens": 171
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('386', 'phone cases EYZUTAK')",
+          1
+        ],
+        [
+          "fill('386', 'phone case EYZUTAK')",
+          1
+        ],
+        [
+          "focus('386')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.6684193160672651,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('386', 'phone cases EYZUTAK')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.095,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.01,
+        7.01,
+        5.01
+      ],
+      "outcomes": [
+        "The agent will input \"phone cases EYZUTAK\" into the search field identified by the ID '386'. Upon submission, the page will likely refresh or navigate to a new search results page displaying products that match the query \"phone cases EYZUTAK\". No data will be created, modified, or deleted on the web",
+        "The agent will input \"phone case EYZUTAK\" into the search field identified by the ID '386'. Upon submission, the page will likely refresh or navigate to a new search results page displaying products related to \"phone case EYZUTAK\". No data will be created, modified, or deleted on the website itself;",
+        "Focusing on element '386' will bring the search combobox into focus, allowing the user to input search terms directly. No data on the website will be created, modified, or deleted as a result of this action; it merely shifts the keyboard focus to the search field, preparing it for user input."
+      ],
+      "m2_cands": [
+        "fill('386', 'phone cases EYZUTAK')",
+        "fill('386', 'phone case EYZUTAK')",
+        "focus('386')"
+      ],
+      "m2_choice": "fill('386', 'phone cases EYZUTAK')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13562,
+        "completion_tokens": 437
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('391')",
+          2
+        ],
+        [
+          "click('389')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.40653450861884005,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('391')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=phone+cases+EYZUTAK",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        },
+        {
+          "action": "click('389')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:advanced": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "link",
+            "name": "Advanced Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 216,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.40653450861884005,
+        0.02229977777947516
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7643,
+        "completion_tokens": 148
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1486', 'phone cases EYZUTAK')",
+          1
+        ],
+        [
+          "report_infeasible(\"The current page does not provide the necessary fields to filter by rating or seller name.\")",
+          1
+        ],
+        [
+          "fill('1509', '4')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.016116223435545224,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1486', 'phone cases EYZUTAK')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:product": 1.0,
+            "name:name": 1.0,
+            "ctx:search": 0.5,
+            "ctx:settings": 0.5,
+            "typed_len": 0.095,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/",
+          "element": {
+            "role": "textbox",
+            "name": "Product Name",
+            "context": "Search Settings",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.016116223435545224,
+        0.023951983343233323
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 4449,
+        "completion_tokens": 209
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1518')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.37276650550653195,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1518')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 217,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2572,
+        "completion_tokens": 131
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1481')",
+          1
+        ],
+        [
+          "goto('http://localhost:7770/catalog/category/view/s/cases/id/123')",
+          1
+        ],
+        [
+          "report_infeasible(\"There are no items matching the search criteria for phone cases from EYZUTAK, hence it's impossible to find who gave 4 or 5 stars.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.018916531538964863,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1481')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:modify": 1.0,
+            "name:your": 1.0,
+            "name:search": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/result/?name=phone+cases+EYZUTAK&sku=&description=&short_description=&price%5Bfrom%5D=&price%5Bto%5D=&price%5Bcurrency%5D=USD",
+          "element": {
+            "role": "link",
+            "name": "Modify your search.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 216,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/?description=&name=phone+cases+EYZUTAK&price%5Bfrom%5D=&price%5Bto%5D=&price%5Bcurrency%5D=USD&short_description=&sku=",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 217,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:7770/catalog/category/view/s/cases/id/123')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "path:result": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/result/?name=phone+cases+EYZUTAK&sku=&description=&short_description=&price%5Bfrom%5D=&price%5Bto%5D=&price%5Bcurrency%5D=USD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.018916531538964863,
+        0.033926106485988955
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5049,
+        "completion_tokens": 216
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('388', 'phone cases EYZUTAK', True)",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.5637042126990558,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('388', 'phone cases EYZUTAK', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.095,
+            "path:catalog": 0.5,
+            "path:category": 0.5,
+            "path:view": 0.5,
+            "path:s": 0.5,
+            "path:cases": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalog/category/view/s/cases/id/123",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.04,
+        3.01,
+        6.01
+      ],
+      "outcomes": [
+        "The agent will input the search query \"phone cases EYZUTAK\" into the search combobox identified by the ID '388'. Upon submission, the page will likely refresh or navigate to a new search results page displaying products that match the query \"phone cases EYZUTAK\". No data will be created, modified, o",
+        "The agent will interact with the search combobox on the current page, filling it with the query \"phone cases EYZUTAK\". This action will likely trigger a search within the \"Styling Tools & Appliances\" category, but since the query is specific to phone cases, it may not return relevant results within ",
+        "The agent will interact with the search combobox on the current page, filling it with the term \"EYZUTAK phone cases\". Upon submission, the page will likely refresh or navigate to a new search results page displaying products that match the query \"EYZUTAK phone cases\". No data on the website will be "
+      ],
+      "m2_cands": [
+        "fill('388', 'phone cases EYZUTAK', True)",
+        "fill('1486', 'phone cases EYZUTAK', False)",
+        "fill('388', 'EYZUTAK phone cases')"
+      ],
+      "m2_choice": "fill('388', 'phone cases EYZUTAK', True)",
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 18868,
+        "completion_tokens": 626
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('393')",
+          1
+        ],
+        [
+          "click('2074')",
+          1
+        ],
+        [
+          "click('1907')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.30509635907715527,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('393')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:catalog": 0.5,
+            "path:category": 0.5,
+            "path:view": 0.5,
+            "path:s": 0.5,
+            "path:cases": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalog/category/view/s/cases/id/123",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 240,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=phone+cases+EYZUTAK",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        },
+        {
+          "action": "click('2074')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:catalog": 0.5,
+            "path:category": 0.5,
+            "path:view": 0.5,
+            "path:s": 0.5,
+            "path:cases": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalog/category/view/s/cases/id/123",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.30509635907715527,
+        0.03322229760499197
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7439,
+        "completion_tokens": 173
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('388', 'phone cases EYZUTAK', True)",
+          2
+        ],
+        [
+          "fill('388', 'phone cases EYZUTAK reviews 4 stars', True)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.5637042126990558,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('388', 'phone cases EYZUTAK reviews 4 stars', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.175,
+            "path:catalog": 0.5,
+            "path:category": 0.5,
+            "path:view": 0.5,
+            "path:s": 0.5,
+            "path:cases": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalog/category/view/s/cases/id/123",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.02,
+        8.01
+      ],
+      "outcomes": [
+        "The agent will input the search query \"phone cases EYZUTAK\" into the search combobox identified by the ID '388'. Upon submission, the page will likely refresh or navigate to a new search results page displaying products that match the query \"phone cases EYZUTAK\". No data will be created, modified, o",
+        "The agent will interact with the search combobox on the current page, filling it with the query \"phone cases EYZUTAK reviews 4 stars\". After submitting this query, the page will likely refresh or navigate to a new search results page displaying products that match the criteria, specifically phone ca"
+      ],
+      "m2_cands": [
+        "fill('388', 'phone cases EYZUTAK', True)",
+        "fill('388', 'phone cases EYZUTAK reviews 4 stars', True)"
+      ],
+      "m2_choice": "fill('388', 'phone cases EYZUTAK reviews 4 stars', True)",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10766,
+        "completion_tokens": 398
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1907')",
+          1
+        ],
+        [
+          "fill('388', 'phone cases EYZUTAK 4 or 5 stars reviews', True)",
+          1
+        ],
+        [
+          "fill('388', 'EYZUTAK phone cases reviews 4 stars', True)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.004079715380784503,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1907')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:page": 1.0,
+            "name:next": 1.0,
+            "ctx:page": 0.5,
+            "path:catalog": 0.5,
+            "path:category": 0.5,
+            "path:view": 0.5,
+            "path:s": 0.5,
+            "path:cases": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalog/category/view/s/cases/id/123",
+          "element": {
+            "role": "link",
+            "name": " Page Next",
+            "context": "Page",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004079715380784503,
+        0.5656510410760425
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5546,
+        "completion_tokens": 182
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('388', 'phone cases EYZUTAK reviews 4 stars', True)",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.5651876918743278,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('388', 'phone cases EYZUTAK reviews', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.135,
+            "path:catalog": 0.5,
+            "path:category": 0.5,
+            "path:view": 0.5,
+            "path:s": 0.5,
+            "path:cases": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalog/category/view/s/cases/id/123/?p=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.05,
+        8.01
+      ],
+      "outcomes": [
+        "The agent will interact with the search combobox on the current page, filling it with the query \"phone cases EYZUTAK reviews 4 stars\". After executing this action, the page will likely refresh or update to display search results related to the query. No data will be created, modified, or deleted on ",
+        "The agent will fill the search combobox with the query \"phone cases EYZUTAK reviews\" and trigger a search. This action will likely result in a new page being displayed that shows search results related to \"phone cases EYZUTAK reviews\". No data on the website will be created, modified, or deleted; on"
+      ],
+      "m2_cands": [
+        "fill('388', 'phone cases EYZUTAK reviews 4 stars', True)",
+        "fill('388', 'phone cases EYZUTAK reviews', True)"
+      ],
+      "m2_choice": "fill('388', 'phone cases EYZUTAK reviews', True)",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 16326,
+        "completion_tokens": 522
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('388', 'EYZUTAK phone cases reviews 4 stars', True)",
+          2
+        ],
+        [
+          "fill('388', 'phone cases EYZUTAK 4 stars reviews', True)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.5651876918743278,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('388', 'EYZUTAK phone cases reviews 4 stars', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.175,
+            "path:catalog": 0.5,
+            "path:category": 0.5,
+            "path:view": 0.5,
+            "path:s": 0.5,
+            "path:cases": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalog/category/view/s/cases/id/123/?p=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        8.01
+      ],
+      "outcomes": [
+        "The agent will modify the search query in the combobox element identified by '388' to \"EYZUTAK phone cases reviews 4 stars\" and trigger a search. This action will likely result in the display of a new page showing search results that match the updated query criteria, specifically focusing on phone c",
+        "After executing the command, the search query in the combobox will be updated to \"phone cases EYZUTAK 4 stars reviews\". The page will refresh or update to display search results relevant to this new query, showing products that match \"phone cases EYZUTAK\" with at least 4-star reviews. No data will b"
+      ],
+      "m2_cands": [
+        "fill('388', 'EYZUTAK phone cases reviews 4 stars', True)",
+        "fill('388', 'phone cases EYZUTAK 4 stars reviews', True)"
+      ],
+      "m2_choice": "fill('388', 'EYZUTAK phone cases reviews 4 stars', True)",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10793,
+        "completion_tokens": 406
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('388', 'EYZUTAK phone cases reviews 4 stars', True)",
+          2
+        ],
+        [
+          "fill('388', 'EYZUTAK phone cases 4 or 5 stars reviews', True)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.5651876918743278,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('388', 'EYZUTAK phone cases 4 or 5 stars reviews', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.2,
+            "path:catalog": 0.5,
+            "path:category": 0.5,
+            "path:view": 0.5,
+            "path:s": 0.5,
+            "path:cases": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalog/category/view/s/cases/id/123/?p=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.02,
+        9.01
+      ],
+      "outcomes": [
+        "The agent will modify the search query within the search combobox to \"EYZUTAK phone cases reviews 4 stars\" and trigger a search action. This will likely result in the page reloading or navigating to a new search results page that displays products matching the specified query, without creating, modi",
+        "The agent will modify the search query within the search combobox to \"EYZUTAK phone cases 4 or 5 stars reviews\" and trigger a search. This action will likely result in the display of a new page showing search results that match the updated query, specifically reviews for EYZUTAK phone cases with rat"
+      ],
+      "m2_cands": [
+        "fill('388', 'EYZUTAK phone cases reviews 4 stars', True)",
+        "fill('388', 'EYZUTAK phone cases 4 or 5 stars reviews', True)"
+      ],
+      "m2_choice": "fill('388', 'EYZUTAK phone cases 4 or 5 stars reviews', True)",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10785,
+        "completion_tokens": 354
+      }
+    }
+  ],
+  "method": "race_no_formcheck",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 03:28:21"
+}

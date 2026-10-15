@@ -1,0 +1,461 @@
+{
+  "task_id": 125,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "What is the price range of teeth grinding mouth guard in the One Stop Market?",
+  "template": 159,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 29,
+  "prompt_tokens": 49627,
+  "completion_tokens": 1795,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      22858,
+      791
+    ],
+    "wm": [
+      10,
+      18019,
+      775
+    ],
+    "value": [
+      10,
+      2080,
+      80
+    ],
+    "form": [
+      3,
+      6670,
+      149
+    ]
+  },
+  "llm_cache_hits": 21,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 0,
+    "M2": 4
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 2,
+  "eval": {
+    "answer": "$14.99",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 28.111337900161743,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('386', 'teeth grinding mouth guard')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.6690041604870651,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('386', 'teeth grinding mouth guard')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.13,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5765,
+        "completion_tokens": 136
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('389')",
+          2
+        ],
+        [
+          "report_infeasible(\"There are no products related to teeth grinding mouth guards in the search results.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.02229977777947516,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('389')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:advanced": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "Advanced Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 216,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.02,
+        5.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Advanced Search' link (ID 389) will navigate to the advanced search page of the One Stop Market website. This action will not create, modify, or delete any data on the website; it will simply display additional search options for the user to refine their query further.",
+        "The current page will remain displayed with no changes to the existing data on the website. The search results for \"teeth grinding mouth guard\" do not contain any relevant products, leading to the execution of the `report_infeasible` function, which indicates that there are no matching products avai"
+      ],
+      "m2_cands": [
+        "click('389')",
+        "report_infeasible(\"There are no products related to teeth grinding mouth guards in the search results.\")"
+      ],
+      "m2_choice": "click('389')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 14350,
+        "completion_tokens": 346
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1486', 'teeth grinding mouth guard')",
+          2
+        ],
+        [
+          "scroll(0, 200)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.01615813727076708,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1486', 'teeth grinding mouth guard')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:product": 1.0,
+            "name:name": 1.0,
+            "ctx:search": 0.5,
+            "ctx:settings": 0.5,
+            "typed_len": 0.13,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/",
+          "element": {
+            "role": "textbox",
+            "name": "Product Name",
+            "context": "Search Settings",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        3.01
+      ],
+      "outcomes": [
+        "After filling in \"teeth grinding mouth guard\" into the \"Product Name\" field (element 1486), no immediate page change will occur. However, if the user proceeds to click the \"Search\" button, the website will likely display search results related to \"teeth grinding mouth guard,\" without creating, modif",
+        "After executing the scroll command, the page will shift downwards by 200 pixels, bringing more content into view below the current viewport. This action does not create, modify, or delete any data on the website; it merely changes the visible portion of the page."
+      ],
+      "m2_cands": [
+        "fill('1486', 'teeth grinding mouth guard')",
+        "scroll(0, 200)"
+      ],
+      "m2_choice": "fill('1486', 'teeth grinding mouth guard')",
+      "rho_choice": null,
+      "form_fix": "fill('1486', 'teeth grinding mouth guard')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 7846,
+        "completion_tokens": 314
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1518')",
+          1
+        ],
+        [
+          "fill('1509', '0')",
+          1
+        ],
+        [
+          "fill('1509', '10')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.37276650550653195,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1486', 'teeth grinding mouth guard')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:product": 1.0,
+            "name:name": 1.0,
+            "ctx:search": 0.5,
+            "ctx:settings": 0.5,
+            "typed_len": 0.13,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/",
+          "element": {
+            "role": "textbox",
+            "name": "Product Name",
+            "context": "Search Settings",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.01,
+        2.01,
+        6.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Search\" button with ID '1518', the website will process the advanced search query using the provided criteria, specifically the product name \"teeth grinding mouth guard\". The next page displayed will likely be a results page showing products that match the search criteria. No data",
+        "The agent will fill in the \"Price\" textbox with the value '0'. This action alone will not change any data on the website; it merely updates the form input on the current page, preparing for a potential search query. No data is created, modified, or deleted until the 'Search' button is clicked, which",
+        "The agent will input the value '10' into the 'Price' textbox with the ID '1509'. This action will set the minimum price filter for the advanced search to $10, but it will not immediately modify or delete any data on the website. The page will remain the same, displaying the advanced search form with"
+      ],
+      "m2_cands": [
+        "click('1518')",
+        "fill('1509', '0')",
+        "fill('1509', '10')"
+      ],
+      "m2_choice": "click('1518')",
+      "rho_choice": null,
+      "form_fix": "fill('1486', 'teeth grinding mouth guard')",
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 9822,
+        "completion_tokens": 475
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1509', '')",
+          1
+        ],
+        [
+          "fill('1509', '10')",
+          1
+        ],
+        [
+          "click('1518')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02280538093754942,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1518')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 226,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.01,
+        6.01,
+        7.01
+      ],
+      "outcomes": [
+        "The agent will input text into the \"Price\" textbox identified by the ID `1509`. This action alone will not change any data on the website; it merely updates the form field with the provided input. No page reload or navigation will occur as a result of this single action.",
+        "The agent will input the value '10' into the 'Price' textbox with the ID '1509'. This action will set the minimum price filter for the advanced search to $10, but it will not immediately modify or delete any data on the website. The page will remain the same, displaying the advanced search form with",
+        "Upon clicking the \"Search\" button with ID '1518', the website will process the advanced search query using the provided criteria, specifically the product name \"teeth grinding mouth guard\". The next page displayed will likely be a results page showing products that match the search criteria. No data"
+      ],
+      "m2_cands": [
+        "fill('1509', '')",
+        "fill('1509', '10')",
+        "click('1518')"
+      ],
+      "m2_choice": "click('1518')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 8128,
+        "completion_tokens": 398
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"$14.99\")",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.026718131717157066,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"$14.99\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/result/?name=teeth+grinding+mouth+guard&sku=&description=&short_description=&price%5Bfrom%5D=&price%5Bto%5D=&price%5Bcurrency%5D=USD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3716,
+        "completion_tokens": 126
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:54:45"
+}

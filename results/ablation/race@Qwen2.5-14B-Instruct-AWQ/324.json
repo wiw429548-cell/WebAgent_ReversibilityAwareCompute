@@ -1,0 +1,641 @@
+{
+  "task_id": 324,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Show me the \"chairs\" listings by ascending price.",
+  "template": 208,
+  "eval_types": [
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 7,
+  "n_env_actions": 13,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 3,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 13,
+  "prompt_tokens": 48836,
+  "completion_tokens": 742,
+  "llm_by_tag": {
+    "policy": [
+      7,
+      37342,
+      718
+    ],
+    "progress": [
+      6,
+      11494,
+      24
+    ]
+  },
+  "llm_cache_hits": 1,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 7,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "URLEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 58.002941608428955,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('863', button='left')",
+          1
+        ],
+        [
+          "click('811', button='left')",
+          1
+        ],
+        [
+          "click('863', 'left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03693515723427114,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('863', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:home": 1.0,
+            "name:kitchen": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "menuitem",
+            "name": " Home & Kitchen",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:home": 0.5,
+            "path:kitchen": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/home-kitchen.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        },
+        {
+          "action": "click('811', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:clothing": 1.0,
+            "name:shoes": 1.0,
+            "name:jewelry": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "menuitem",
+            "name": " Clothing, Shoes & Jewelry",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03693515723427114,
+        0.0278373648040842
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7666,
+        "completion_tokens": 96
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1655', 'Price')",
+          2
+        ],
+        [
+          "click('1655', button='left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.08411248601260712,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('1655', 'Price')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?product_list_order=price",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        },
+        {
+          "action": "click('1655', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.08411248601260712,
+        0.11381262163157993
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7518,
+        "completion_tokens": 89
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1655', button='left')",
+          1
+        ],
+        [
+          "select_option('1655', 'Price: Low to High')",
+          1
+        ],
+        [
+          "click('1649', button='left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.11381262163157993,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1655', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.11381262163157993,
+        0.08411248601260712
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7548,
+        "completion_tokens": 101
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1655', button='left')",
+          1
+        ],
+        [
+          "select_option('1655', 'Price: Low to High')",
+          1
+        ],
+        [
+          "click('2089', button='left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.11381262163157993,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1655', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.11381262163157993,
+        0.08411248601260712
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7550,
+        "completion_tokens": 108
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1655', 'Price Ascending')",
+          1
+        ],
+        [
+          "click('2082', button='left')",
+          1
+        ],
+        [
+          "click('1655', button='left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.08411248601260712,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('1655', 'Price Ascending')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.08411248601260712,
+        0.004036091485036488
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7554,
+        "completion_tokens": 103
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('2074', button='left')",
+          2
+        ],
+        [
+          "goto('http://localhost:7770/search?search=chairs&sort=price_asc')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004522726742000476,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('2074', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:women": 1.0,
+            "name:item": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": "link",
+            "name": "Women( 9769 item )",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html?cat=27",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:7770/search?search=chairs&sort=price_asc')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:clothing": 0.5,
+            "path:shoes": 0.5,
+            "path:jewelry": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/clothing-shoes-jewelry.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 217,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004522726742000476,
+        0.024598086396192414
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7838,
+        "completion_tokens": 102
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible('The URL leads to a \"404 Not Found\" error page instead of the expected search results.')",
+          1
+        ],
+        [
+          "report_infeasible('The requested page does not exist or an error occurred.')",
+          1
+        ],
+        [
+          "report_infeasible('The page returned a \"404 Not Found\" error, meaning the requested resource does not exist.')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.027210845655702226,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible('The URL leads to a \"404 Not Found\" error page instead of the expected search results.')",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:search": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/search?search=chairs&sort=price_asc",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.027210845655702226,
+        0.027210845655702226
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3162,
+        "completion_tokens": 143
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:44:23"
+}

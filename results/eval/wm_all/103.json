@@ -1,0 +1,790 @@
+{
+  "task_id": 103,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Display the list of issues in the kkroening/ffmpeg-python repository that have labels related to questions",
+  "template": 349,
+  "eval_types": [
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 10,
+  "n_env_actions": 10,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 63,
+  "prompt_tokens": 140522,
+  "completion_tokens": 5085,
+  "llm_by_tag": {
+    "policy": [
+      10,
+      55144,
+      2659
+    ],
+    "wm": [
+      25,
+      60955,
+      1728
+    ],
+    "value": [
+      25,
+      7673,
+      273
+    ],
+    "m2more": [
+      3,
+      16750,
+      425
+    ]
+  },
+  "llm_cache_hits": 6,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 10
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "There are no issues with labels related to questions currently displayed.",
+    "scores": {
+      "URLEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 107.00048875808716,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "focus('129')",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/kkroening/ffmpeg-python')",
+          1
+        ],
+        [
+          "report_infeasible(\"The kkroening/ffmpeg-python repository is not found on the current page.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"The kkroening/ffmpeg-python repository is not found in the current list of repositories.\")",
+          1
+        ],
+        [
+          "fill('129', 'kkroening/ffmpeg-python')",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/kkroening/ffmpeg-python')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 43,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        0.01,
+        7.01,
+        2.01
+      ],
+      "outcomes": [
+        "Focusing on element '129', which is an image, will bring it into focus within the accessibility tree but will not change the displayed page or modify any data on the website. No data will be created, modified, or deleted as a result of this action.",
+        "Navigating to `http://localhost:8023/kkroening/ffmpeg-python` will likely display a page dedicated to the `ffmpeg-python` project by user `kkroening`. This action will not create, modify, or delete any data on the website; it will simply load and show the details of the specified project.",
+        "The agent will report that the kkroening/ffmpeg-python repository is not found on the current page, indicating an unsuccessful search or navigation attempt. No data on the website will be created, modified, or deleted; the page will remain unchanged, showing the list of projects and repositories as "
+      ],
+      "m2_cands": [
+        "focus('129')",
+        "goto('http://localhost:8023/kkroening/ffmpeg-python')",
+        "report_infeasible(\"The kkroening/ffmpeg-python repository is not found on the current page.\")"
+      ],
+      "m2_choice": "goto('http://localhost:8023/kkroening/ffmpeg-python')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13646,
+        "completion_tokens": 553
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('322')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('322')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:issues": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:karl": 0.5,
+            "ctx:kroening": 0.5,
+            "ctx:ffmpeg": 0.5,
+            "ctx:python": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:kkroening": 0.5,
+            "path:ffmpeg": 0.5,
+            "path:python": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/kkroening/ffmpeg-python",
+          "element": {
+            "role": "link",
+            "name": "Issues",
+            "context": "Project navigation Karl Kroening / ffmpeg-python · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 31,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.08
+      ],
+      "outcomes": [
+        "After clicking on the \"Issues\" link (ID 322), the page will navigate to the Issues section of the `ffmpeg-python` project. This action will not create, modify, or delete any data; it will simply display a list of existing issues related to the project."
+      ],
+      "m2_cands": [
+        "click('322')"
+      ],
+      "m2_choice": "click('322')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 14189,
+        "completion_tokens": 343
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('553', 'question')",
+          1
+        ],
+        [
+          "focus('530')",
+          1
+        ],
+        [
+          "focus('553')",
+          1
+        ],
+        [
+          "fill('551', 'label:\"question\"', True)",
+          1
+        ],
+        [
+          "click('1013')",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('553', 'question')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.04,
+            "path:kkroening": 0.5,
+            "path:ffmpeg": 0.5,
+            "path:python": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/kkroening/ffmpeg-python/-/issues",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.01,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will click the \"Search\" button after filling in the search box with the word \"question\". This action will likely trigger a search query on the current page, filtering the list of issues to those that contain the term \"question\". No data will be created, modified, or deleted; the page will ",
+        "Focusing on element '530' will bring into prominence the \"Toggle history\" button and its adjacent search functionalities. No data on the website will be created, modified, or deleted; this action merely shifts the user interface focus to allow potential interaction with the history toggle and search",
+        "Focusing on the element with ID `553` will trigger a search action on the current page, likely filtering or sorting the list of issues based on the criteria inputted in the adjacent search textbox. No data will be created, modified, or deleted; the action will only affect the display of existing iss"
+      ],
+      "m2_cands": [
+        "fill('553', 'question')",
+        "focus('530')",
+        "focus('553')"
+      ],
+      "m2_choice": "fill('553', 'question')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13220,
+        "completion_tokens": 573
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('551', 'question')",
+          4
+        ],
+        [
+          "fill('551', 'label:\"question\"')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('551', 'question')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:or": 1.0,
+            "name:filter": 1.0,
+            "name:results": 1.0,
+            "typed_len": 0.04,
+            "path:kkroening": 0.5,
+            "path:ffmpeg": 0.5,
+            "path:python": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/kkroening/ffmpeg-python/-/issues",
+          "element": {
+            "role": "textbox",
+            "name": "Search or filter results...",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.04,
+        8.01
+      ],
+      "outcomes": [
+        "After executing `fill('551', 'question')`, the agent will input the word \"question\" into the search or filter textbox on the current page. This action will likely trigger a search or filter operation, updating the displayed list of issues to show only those that match the keyword \"question\". No data",
+        "After executing the command `fill('551', 'label:\"question\"')`, the search or filter textbox on the current page will be populated with the query `label:\"question\"`. This action will likely trigger a filter update on the issues list, showing only those issues that have the \"question\" label associated"
+      ],
+      "m2_cands": [
+        "fill('551', 'question')",
+        "fill('551', 'label:\"question\"')"
+      ],
+      "m2_choice": "fill('551', 'question')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10793,
+        "completion_tokens": 447
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('553')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('553')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:kkroening": 0.5,
+            "path:ffmpeg": 0.5,
+            "path:python": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/kkroening/ffmpeg-python/-/issues",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.07,
+        2.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Search' button (element ID 553) will likely trigger a search based on the current query in the search box, which is currently set to \"question\". The page will refresh or update to display search results that match this query from the issues listed in the repository. No data will be ",
+        "Executing `clear('551')` will clear the current value of the textbox with ID `551`, which is currently focused and contains the value 'question'. This action will remove the search term from the textbox but will not submit the form or modify any data on the website; the page will remain the same, di"
+      ],
+      "m2_cands": [
+        "click('553')",
+        "clear('551')"
+      ],
+      "m2_choice": "click('553')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 16085,
+        "completion_tokens": 533
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('553', 'question')",
+          2
+        ],
+        [
+          "click('553')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"done\")",
+          1
+        ],
+        [
+          "fill('1262', 'label:\"question\"', True)",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('553')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:kkroening": 0.5,
+            "path:ffmpeg": 0.5,
+            "path:python": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/kkroening/ffmpeg-python/-/issues/?sort=created_asc&state=opened&first_page_size=20",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.02,
+        553.01,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will trigger a search action by filling in the search button identified by '553' with the keyword 'question'. This will likely result in the current page being updated to show a filtered list of issues that contain the word \"question\" in their titles or descriptions. No data will be create",
+        "Clicking the \"Search\" button (element ID '553') will trigger a search based on any query or filters that have been input into the search box. The current page will refresh or update to display the search results, showing issues that match the specified criteria without creating, modifying, or deleti",
+        "The agent will confirm the current page display by sending a \"done\" message to the user, indicating that the user is viewing the open issues for the `ffmpeg-python` project on GitLab, sorted by creation date in ascending order. No data on the website will be created, modified, or deleted as a result"
+      ],
+      "m2_cands": [
+        "fill('553', 'question')",
+        "click('553')",
+        "send_msg_to_user(\"done\")"
+      ],
+      "m2_choice": "click('553')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 15585,
+        "completion_tokens": 542
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1262', 'label:\"question\"')",
+          1
+        ],
+        [
+          "fill('1262', '~\"label:question\"', True)",
+          1
+        ],
+        [
+          "fill('553', 'question')",
+          1
+        ],
+        [
+          "fill('1262', 'label:\"question\"', True)",
+          1
+        ],
+        [
+          "click('553')",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1262', 'label:\"question\"')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:or": 1.0,
+            "name:filter": 1.0,
+            "name:results": 1.0,
+            "typed_len": 0.08,
+            "path:kkroening": 0.5,
+            "path:ffmpeg": 0.5,
+            "path:python": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/kkroening/ffmpeg-python/-/issues/?sort=created_asc&state=opened&first_page_size=20",
+          "element": {
+            "role": "textbox",
+            "name": "Search or filter results...",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        9.01,
+        8.01,
+        7.01
+      ],
+      "outcomes": [
+        "The agent will fill the search textbox with the query `label:\"question\"` and trigger a search. This action will filter the current list of issues to only show those labeled as \"question\". No data on the website will be created, modified, or deleted; the change is purely in the display of existing da",
+        "The agent will fill the search textbox with the query `~\"label:question\"`, filtering the issues list to show only those labeled as \"question\". This action will update the displayed page to reflect the filtered results without creating, modifying, or deleting any data on the website itself; it merely",
+        "Executing `fill('553', 'question')` will simulate clicking the \"Search\" button with \"question\" as the search term. This action will likely refresh the current page, displaying a filtered list of issues that match the search term \"question\". No data will be created, modified, or deleted; only the dis"
+      ],
+      "m2_cands": [
+        "fill('1262', 'label:\"question\"')",
+        "fill('1262', '~\"label:question\"', True)",
+        "fill('553', 'question')"
+      ],
+      "m2_choice": "fill('1262', 'label:\"question\"')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13571,
+        "completion_tokens": 525
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('553')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('553')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:kkroening": 0.5,
+            "path:ffmpeg": 0.5,
+            "path:python": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/kkroening/ffmpeg-python/-/issues/?sort=created_asc&state=opened&first_page_size=20",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.07,
+        7.01
+      ],
+      "outcomes": [
+        "Clicking on the button identified by '553' labeled 'Search' will likely trigger a search operation based on the current filter criteria displayed in the textbox with the value 'label:\"question\"'. The page will refresh or update to show a filtered list of issues that match this label criterion, witho",
+        "After executing the command, the page will refresh or update to display a filtered list of issues that have labels related to questions. No data will be created or deleted; however, the current view will be modified to reflect this specific filtering criteria, showing only the relevant issues based "
+      ],
+      "m2_cands": [
+        "click('553')",
+        "send_msg_to_user(\"The list of issues is now filtered to show only those with labels related to questions.\")"
+      ],
+      "m2_choice": "click('553')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 16430,
+        "completion_tokens": 522
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('553')",
+          3
+        ],
+        [
+          "report_infeasible(\"There are no issues with labels related to questions in the current list.\")",
+          1
+        ],
+        [
+          "send_msg_to_user(\"There are no issues with labels related to questions.\")",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('553')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:kkroening": 0.5,
+            "path:ffmpeg": 0.5,
+            "path:python": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/kkroening/ffmpeg-python/-/issues/?sort=created_asc&state=opened&first_page_size=20",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.03,
+        7.01,
+        7.01
+      ],
+      "outcomes": [
+        "Clicking the button with ID '553' labeled 'Search' will execute the current search query on the page, which is filtered by the label \"question\". The page will refresh or update to display issues that match this criterion, showing any issues tagged with the \"question\" label. No data will be created, ",
+        "The agent will report that there are no issues with labels related to questions in the current list, indicating that the search or filter applied did not return any matching results. No page change will occur, and no data on the website will be created, modified, or deleted; the report is purely inf",
+        "The agent will inform the user that there are no issues with labels related to questions. The current page displaying the list of open issues will remain unchanged, and no data on the website will be created, modified, or deleted as a result of this interaction."
+      ],
+      "m2_cands": [
+        "click('553')",
+        "report_infeasible(\"There are no issues with labels related to questions in the current list.\")",
+        "send_msg_to_user(\"There are no issues with labels related to questions.\")"
+      ],
+      "m2_choice": "click('553')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13522,
+        "completion_tokens": 486
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 200)",
+          2
+        ],
+        [
+          "send_msg_to_user(\"done\");",
+          1
+        ],
+        [
+          "send_msg_to_user(\"There are no issues with labels related to questions currently displayed.\")",
+          1
+        ],
+        [
+          "click('553')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"There are no issues with labels related to questions currently displayed.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:kkroening": 0.5,
+            "path:ffmpeg": 0.5,
+            "path:python": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/kkroening/ffmpeg-python/-/issues/?sort=created_asc&state=opened&first_page_size=20",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        2.01,
+        7.01
+      ],
+      "outcomes": [
+        "The agent will scroll down the current page by 200 pixels, revealing more issues listed under the \"Open\" tab. No data on the website will be created, modified, or deleted; the action only affects the visible portion of the page.",
+        "The agent will confirm the current page display by sending a \"done\" message to the user, indicating that the user is viewing the open issues for the `ffmpeg-python` project on GitLab. No data on the website will be created, modified, or deleted as a result of this action; the page remains unchanged.",
+        "The agent will inform the user that there are no issues with labels related to questions currently displayed on the page. No changes will be made to the website's data; the current page displaying open issues will remain unchanged, and no data will be created, modified, or deleted."
+      ],
+      "m2_cands": [
+        "scroll(0, 200)",
+        "send_msg_to_user(\"done\");",
+        "send_msg_to_user(\"There are no issues with labels related to questions currently displayed.\")"
+      ],
+      "m2_choice": "send_msg_to_user(\"There are no issues with labels related to questions currently displayed.\")",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13481,
+        "completion_tokens": 561
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:45:45"
+}

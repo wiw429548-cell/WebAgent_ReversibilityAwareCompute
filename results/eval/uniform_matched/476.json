@@ -1,0 +1,628 @@
+{
+  "task_id": 476,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Set up a new, empty repository with the name awesome_llm_reading?",
+  "template": 292,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 10,
+  "n_env_actions": 10,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 18,
+  "prompt_tokens": 36613,
+  "completion_tokens": 1732,
+  "llm_by_tag": {
+    "policy": [
+      10,
+      26165,
+      1314
+    ],
+    "wm": [
+      2,
+      2721,
+      164
+    ],
+    "value": [
+      2,
+      430,
+      16
+    ],
+    "form": [
+      2,
+      2799,
+      17
+    ],
+    "m2more": [
+      2,
+      4498,
+      221
+    ]
+  },
+  "llm_cache_hits": 12,
+  "mode_counts": {
+    "M0": 8,
+    "M1": 0,
+    "M2": 2
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 77.22321486473083,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('248')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('248')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:new": 1.0,
+            "name:project": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "New project",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.29886361054389,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5243,
+        "completion_tokens": 92
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('237')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('237')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:create": 1.0,
+            "name:blank": 1.0,
+            "name:project": 1.0,
+            "name:a": 1.0,
+            "name:to": 1.0,
+            "name:store": 1.0,
+            "name:your": 1.0,
+            "name:files": 1.0,
+            "name:plan": 1.0,
+            "kw:create": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": "link",
+            "name": "Create blank project Create a blank project to store your files, plan your work, and collaborate on code, among other things.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9015955110668123,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1673,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('269', 'awesome_llm_reading')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('269', 'awesome_llm_reading')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:project": 1.0,
+            "name:name": 1.0,
+            "typed_len": 0.095,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "textbox",
+            "name": "Project name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.02181401753462353,
+      "wm_scores": [
+        7.06
+      ],
+      "outcomes": [
+        "After the agent fills in the 'awesome_llm_reading' value into the 'Project name' field, no immediate page change will occur. However, upon submitting the form by clicking the 'Create project' button, the website will create a new project named 'awesome_llm_reading' with the specified configurations,"
+      ],
+      "m2_cands": [
+        "fill('269', 'awesome_llm_reading')"
+      ],
+      "m2_choice": "fill('269', 'awesome_llm_reading')",
+      "rho_choice": null,
+      "form_fix": "fill('269', 'awesome_llm_reading')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 7386,
+        "completion_tokens": 341
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('325')",
+          2
+        ],
+        [
+          "clear('282')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('325')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:initialize": 1.0,
+            "name:repository": 1.0,
+            "name:with": 1.0,
+            "name:a": 1.0,
+            "name:readme": 1.0,
+            "name:allows": 1.0,
+            "name:you": 1.0,
+            "name:to": 1.0,
+            "name:immediately": 1.0,
+            "name:clone": 1.0,
+            "name:this": 1.0,
+            "name:project": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "checkbox",
+            "name": "Initialize repository with a README Allows you to immediately clone this project’s repository. Skip this if you plan to push up an existing repository.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8010407886786908,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2249,
+        "completion_tokens": 124
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 200)",
+          1
+        ],
+        [
+          "click('325')",
+          1
+        ],
+        [
+          "click('326')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "scroll(0, 200)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.1617337005182904,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2790,
+        "completion_tokens": 135
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('282', 'awesome_llm_reading')",
+          2
+        ],
+        [
+          "click('325')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('282', 'awesome_llm_reading')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:project": 1.0,
+            "name:slug": 1.0,
+            "typed_len": 0.095,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "textbox",
+            "name": "Project slug",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.37180782720375305,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2268,
+        "completion_tokens": 177
+      }
+    },
+    {
+      "candidates": [
+        [
+          "clear('282')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "clear('282')",
+          "rollback": false,
+          "feat": {
+            "act=clear": 1.0,
+            "role=textbox": 1.0,
+            "name:project": 1.0,
+            "name:slug": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "textbox",
+            "name": "Project slug",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8709036934049124,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2307,
+        "completion_tokens": 109
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('282', 'awesome_llm_reading')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('282', 'awesome_llm_reading')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:project": 1.0,
+            "name:slug": 1.0,
+            "typed_len": 0.095,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "textbox",
+            "name": "Project slug",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.10905790000682813,
+      "wm_scores": [
+        7.06
+      ],
+      "outcomes": [
+        "After the agent fills in the \"Project slug\" field with \"awesome_llm_reading\", the page will remain the same, displaying the form for creating a new project. No data will be created, modified, or deleted on the website until the \"Create project\" button is clicked, at which point a new project named \""
+      ],
+      "m2_cands": [
+        "fill('282', 'awesome_llm_reading')"
+      ],
+      "m2_choice": "fill('282', 'awesome_llm_reading')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 7560,
+        "completion_tokens": 315
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('325')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('325')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:initialize": 1.0,
+            "name:repository": 1.0,
+            "name:with": 1.0,
+            "name:a": 1.0,
+            "name:readme": 1.0,
+            "name:allows": 1.0,
+            "name:you": 1.0,
+            "name:to": 1.0,
+            "name:immediately": 1.0,
+            "name:clone": 1.0,
+            "name:this": 1.0,
+            "name:project": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "checkbox",
+            "name": "Initialize repository with a README Allows you to immediately clone this project’s repository. Skip this if you plan to push up an existing repository.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6618217155374353,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2305,
+        "completion_tokens": 137
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('336')",
+          2
+        ],
+        [
+          "hover('325')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('336')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:project": 1.0,
+            "kw:create": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "button",
+            "name": "Create project",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 80,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.23939112120929096,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2832,
+        "completion_tokens": 157
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:28:55"
+}

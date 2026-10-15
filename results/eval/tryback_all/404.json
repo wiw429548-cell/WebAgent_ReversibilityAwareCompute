@@ -1,0 +1,894 @@
+{
+  "task_id": 404,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Upvote the newest post in books subreddit",
+  "template": 22,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 17,
+  "n_state_changes": 13,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 30,
+  "prompt_tokens": 107107,
+  "completion_tokens": 2798,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      77432,
+      2738
+    ],
+    "progress": [
+      15,
+      29675,
+      60
+    ]
+  },
+  "llm_cache_hits": 7,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 15,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 187.02348494529724,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/r/books')",
+          1
+        ],
+        [
+          "click('42')",
+          1
+        ],
+        [
+          "fill('54', 'books')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/r/books')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 21,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:r": 0.5,
+            "path:books": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/r/books",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        },
+        {
+          "action": "click('42')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2245,
+        "completion_tokens": 232
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('544')",
+          2
+        ],
+        [
+          "goto('http://localhost:9999/r/books')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('544')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:books": 1.0,
+            "ctx:books": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "books — books",
+            "context": "books — books",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6499,
+        "completion_tokens": 103
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          2
+        ],
+        [
+          "click('169')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7560,
+        "completion_tokens": 191
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('282')",
+          1
+        ],
+        [
+          "click('320')",
+          1
+        ],
+        [
+          "click('619')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('282')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7568,
+        "completion_tokens": 211
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          2
+        ],
+        [
+          "click('169')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:retract": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Retract upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7577,
+        "completion_tokens": 258
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('619')",
+          1
+        ],
+        [
+          "click('320')",
+          1
+        ],
+        [
+          "hover('310')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('619')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7569,
+        "completion_tokens": 106
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          2
+        ],
+        [
+          "click('619')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7568,
+        "completion_tokens": 158
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          2
+        ],
+        [
+          "click('169')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:retract": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Retract upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7569,
+        "completion_tokens": 165
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          2
+        ],
+        [
+          "click('310') # Clicking on the time of the newest post to ensure we are focusing on the correct post.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7569,
+        "completion_tokens": 222
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('169')",
+          1
+        ],
+        [
+          "click('320')",
+          1
+        ],
+        [
+          "click('619')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('169')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7566,
+        "completion_tokens": 194
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          1
+        ],
+        [
+          "click('206')",
+          1
+        ],
+        [
+          "click('469')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:retract": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Retract upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7564,
+        "completion_tokens": 243
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('619')",
+          1
+        ],
+        [
+          "click('320') # Clicking the upvote button for the newest post.",
+          1
+        ],
+        [
+          "click('310')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('619')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:retract": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Retract upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7563,
+        "completion_tokens": 245
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('320')",
+          2
+        ],
+        [
+          "click('619')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('320')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7563,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('206')",
+          1
+        ],
+        [
+          "click('469')",
+          1
+        ],
+        [
+          "click('619')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('206')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7563,
+        "completion_tokens": 155
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('619')",
+          2
+        ],
+        [
+          "click('469')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('619')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:upvote": 1.0,
+            "kw:vote": 1.0,
+            "kw:upvote": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "button",
+            "name": "Upvote",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7564,
+        "completion_tokens": 185
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 22:34:57"
+}

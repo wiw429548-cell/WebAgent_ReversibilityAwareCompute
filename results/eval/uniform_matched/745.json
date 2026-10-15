@@ -1,0 +1,667 @@
+{
+  "task_id": 745,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Create a new public project \"awesome-llms\" and add primer, convexegg, abishek as members",
+  "template": 332,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 10,
+  "n_env_actions": 10,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 24,
+  "prompt_tokens": 47443,
+  "completion_tokens": 2278,
+  "llm_by_tag": {
+    "policy": [
+      10,
+      33063,
+      1663
+    ],
+    "wm": [
+      5,
+      6807,
+      439
+    ],
+    "value": [
+      5,
+      1125,
+      40
+    ],
+    "form": [
+      3,
+      4223,
+      6
+    ],
+    "m2more": [
+      1,
+      2225,
+      130
+    ]
+  },
+  "llm_cache_hits": 16,
+  "mode_counts": {
+    "M0": 7,
+    "M1": 0,
+    "M2": 3
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 123.34945487976074,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('248')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('248')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:new": 1.0,
+            "name:project": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "New project",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 26,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6883773768976411,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5478,
+        "completion_tokens": 89
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('237')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('237')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:create": 1.0,
+            "name:blank": 1.0,
+            "name:project": 1.0,
+            "name:a": 1.0,
+            "name:to": 1.0,
+            "name:store": 1.0,
+            "name:your": 1.0,
+            "name:files": 1.0,
+            "name:plan": 1.0,
+            "kw:create": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new",
+          "element": {
+            "role": "link",
+            "name": "Create blank project Create a blank project to store your files, plan your work, and collaborate on code, among other things.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.5689084040102763,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1682,
+        "completion_tokens": 300
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('269', 'awesome-llms')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('269', 'awesome-llms')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:project": 1.0,
+            "name:name": 1.0,
+            "typed_len": 0.06,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "textbox",
+            "name": "Project name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.011213442441768251,
+      "wm_scores": [
+        7.06
+      ],
+      "outcomes": [
+        "After the agent fills in the 'awesome-llms' value into the 'Project name' field, no immediate page change will occur. However, upon submitting the form by clicking the 'Create project' button, the website will create a new project named 'awesome-llms' under the specified visibility level and configu"
+      ],
+      "m2_cands": [
+        "fill('269', 'awesome-llms')"
+      ],
+      "m2_choice": "fill('269', 'awesome-llms')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 7424,
+        "completion_tokens": 329
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('314')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('314')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=radio": 1.0,
+            "name:public": 1.0,
+            "name:the": 1.0,
+            "name:project": 1.0,
+            "name:can": 1.0,
+            "name:be": 1.0,
+            "name:accessed": 1.0,
+            "name:without": 1.0,
+            "name:any": 1.0,
+            "name:authentication": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "radio",
+            "name": " Public The project can be accessed without any authentication.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6459937838261105,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2258,
+        "completion_tokens": 99
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('314')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('314')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=radio": 1.0,
+            "name:public": 1.0,
+            "name:the": 1.0,
+            "name:project": 1.0,
+            "name:can": 1.0,
+            "name:be": 1.0,
+            "name:accessed": 1.0,
+            "name:without": 1.0,
+            "name:any": 1.0,
+            "name:authentication": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "radio",
+            "name": " Public The project can be accessed without any authentication.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.67031535095931,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2796,
+        "completion_tokens": 116
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('314')",
+          2
+        ],
+        [
+          "click('315')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('314')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=radio": 1.0,
+            "name:public": 1.0,
+            "name:the": 1.0,
+            "name:project": 1.0,
+            "name:can": 1.0,
+            "name:be": 1.0,
+            "name:accessed": 1.0,
+            "name:without": 1.0,
+            "name:any": 1.0,
+            "name:authentication": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "radio",
+            "name": " Public The project can be accessed without any authentication.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.12758032527494123,
+      "wm_scores": [
+        7.02,
+        7.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Public' radio button (ID 314) will update the visibility level of the project being created to \"Public,\" meaning the project can be accessed without any authentication. No new page will be shown as a result of this action; the user remains on the same form. This interaction modifies",
+        "Clicking on the '315' element, which corresponds to the \"Public\" radio button for the visibility level, will update the visibility setting of the project being created to public. This action does not immediately create or delete any data; it merely modifies the configuration settings for the project"
+      ],
+      "m2_cands": [
+        "click('314')",
+        "click('315')"
+      ],
+      "m2_choice": "click('314')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 7401,
+        "completion_tokens": 335
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('331')",
+          1
+        ],
+        [
+          "click('336')",
+          1
+        ],
+        [
+          "click('315')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('331')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:enable": 1.0,
+            "name:static": 1.0,
+            "name:application": 1.0,
+            "name:security": 1.0,
+            "name:testing": 1.0,
+            "name:sast": 1.0,
+            "name:analyze": 1.0,
+            "name:your": 1.0,
+            "name:source": 1.0,
+            "name:code": 1.0,
+            "name:for": 1.0,
+            "name:known": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "checkbox",
+            "name": "Enable Static Application Security Testing (SAST) Analyze your source code for known security vulnerabilities. Learn more.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.2999625252585183,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2812,
+        "completion_tokens": 161
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('336')",
+          2
+        ],
+        [
+          "click('331')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('336')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:project": 1.0,
+            "kw:create": 1.0,
+            "path:projects": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/projects/new#blank_project",
+          "element": {
+            "role": "button",
+            "name": "Create project",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 112,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.05613002202672135,
+      "wm_scores": [
+        7.02,
+        2.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Create project\" button, the website will process the creation of a new project named \"awesome-llms\" with a public visibility level and an initialized repository containing a README file. After successful creation, the page will likely redirect to the newly created project's main p",
+        "When the agent clicks on the checkbox labeled 'Enable Static Application Security Testing (SAST)', it toggles the selection state of this option. This action does not immediately change the displayed page or create any data on the website; it merely updates the form's state to include SAST if the \"C"
+      ],
+      "m2_cands": [
+        "click('336')",
+        "click('331')"
+      ],
+      "m2_choice": "click('336')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 7401,
+        "completion_tokens": 356
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('511')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('511')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:settings": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:byte": 0.5,
+            "ctx:blaze": 0.5,
+            "ctx:awesome": 0.5,
+            "ctx:llms": 0.5,
+            "ctx:gitlab": 0.5,
+            "kw:set": 1.0,
+            "path:byteblaze": 0.5,
+            "path:awesome": 0.5,
+            "path:llms": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/awesome-llms",
+          "element": {
+            "role": "link",
+            "name": "Settings",
+            "context": "Project navigation Byte Blaze / awesome-llms · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 104,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6336523461627444,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5263,
+        "completion_tokens": 140
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"Cannot proceed with creating a new project as we are currently on the settings page of an existing project.\")",
+          1
+        ],
+        [
+          "click('656')",
+          1
+        ],
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "report_infeasible(\"Cannot proceed with creating a new project as we are currently on the settings page of an existing project.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:byteblaze": 0.5,
+            "path:awesome": 0.5,
+            "path:llms": 0.5,
+            "path:edit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/byteblaze/awesome-llms/edit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 72,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7874737563778957,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4928,
+        "completion_tokens": 353
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:40:37"
+}

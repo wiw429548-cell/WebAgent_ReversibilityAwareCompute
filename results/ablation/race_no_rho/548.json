@@ -1,0 +1,926 @@
+{
+  "task_id": 548,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Add a new color blue to size S and M of Frankie Sweatshirt",
+  "template": 252,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 40,
+  "prompt_tokens": 107744,
+  "completion_tokens": 3254,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      76056,
+      2092
+    ],
+    "wm": [
+      11,
+      22776,
+      837
+    ],
+    "value": [
+      11,
+      2338,
+      85
+    ],
+    "form": [
+      3,
+      6574,
+      240
+    ]
+  },
+  "llm_cache_hits": 7,
+  "mode_counts": {
+    "M0": 10,
+    "M1": 0,
+    "M2": 5
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 2,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 156.5558660030365,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('189')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0023083566572779206,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('189')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:catalog": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CATALOG",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4261,
+        "completion_tokens": 78
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('189')",
+          2
+        ],
+        [
+          "click('201')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0023083566572779206,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('201')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:products": 1.0,
+            "ctx:catalog": 0.5,
+            "ctx:products": 0.5,
+            "ctx:categories": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Products",
+            "context": " CATALOG Catalog  Products Categories",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 586,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        5.01
+      ],
+      "outcomes": [
+        "Clicking on the 'CATALOG' link (ID 189) will navigate to the catalog management section of the Magento Admin Panel. This page will display options for managing products and categories, but no data will be created, modified, or deleted simply by navigating to this section; actions will require furthe",
+        "Clicking on the 'Products' link (ID 201) will navigate to the product management page within the Catalog section of the Magento Admin Panel. This action will not create, modify, or delete any data directly; it will simply display the current list of products available for management, allowing the us"
+      ],
+      "m2_cands": [
+        "click('189')",
+        "click('201')"
+      ],
+      "m2_choice": "click('201')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 12113,
+        "completion_tokens": 341
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1385', 'Frankie Sweatshirt')",
+          2
+        ],
+        [
+          "clear('1385')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.017536061699190343,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1385', 'Frankie Sweatshirt')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:by": 1.0,
+            "name:keyword": 1.0,
+            "typed_len": 0.09,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "textbox",
+            "name": "Search by keyword",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        2.01
+      ],
+      "outcomes": [
+        "After executing the command to fill the textbox with ID '1385' with the value 'Frankie Sweatshirt', the search query on the product catalog page will be updated to look for 'Frankie Sweatshirt'. The page will refresh or update to display any products that match this new search term. No data will be ",
+        "Executing `clear('1385')` will clear the text in the search box with the ID '1385', which currently contains the search term 'Hollister shirt'. This action will remove the search term but will not modify or delete any data on the website; it will simply reset the search criteria to an empty state, p"
+      ],
+      "m2_cands": [
+        "fill('1385', 'Frankie Sweatshirt')",
+        "clear('1385')"
+      ],
+      "m2_choice": "fill('1385', 'Frankie Sweatshirt')",
+      "rho_choice": null,
+      "form_fix": "fill('1385', 'Frankie Sweatshirt')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 8240,
+        "completion_tokens": 385
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('718')",
+          2
+        ],
+        [
+          "click('1777')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0341834982843651,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1385', 'Frankie Sweatshirt')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:by": 1.0,
+            "name:keyword": 1.0,
+            "typed_len": 0.09,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "textbox",
+            "name": "Search by keyword",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        0.01
+      ],
+      "outcomes": [
+        "Clicking on the \"Add Product\" button (element ID 718) will navigate to the product creation form where you can input details for a new product. No data will be created, modified, or deleted until the form is filled out and explicitly saved or submitted by the user.",
+        "Clicking on the element with ID `1777` will likely not result in navigating to a new page since it is a message indicating that no records were found. No data on the website will be created, modified, or deleted as a result of this action. The current page displaying the product catalog will remain "
+      ],
+      "m2_cands": [
+        "click('718')",
+        "click('1777')"
+      ],
+      "m2_choice": "click('718')",
+      "rho_choice": null,
+      "form_fix": "fill('1385', 'Frankie Sweatshirt')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 8213,
+        "completion_tokens": 433
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('718')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0341834982843651,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('718')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:product": 1.0,
+            "ctx:add": 0.5,
+            "ctx:product": 0.5,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": "Add Product",
+            "context": "Add Product",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 731,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2623,
+        "completion_tokens": 133
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('854')",
+          1
+        ],
+        [
+          "click('854') # Clicking 'Add Attribute' to start adding the required attributes (color and size).",
+          1
+        ],
+        [
+          "report_infeasible(\"There is no option to add attributes such as colors and sizes directly on this page. The task requires navigating to a different section or changing the product type, which is not possible with the current options.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03977732464493044,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('854') # Clicking 'Add Attribute' to start adding the required attributes (color and size).",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:new": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 416,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.01,
+        8.01,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the \"Add Attribute\" button (ID 854) will likely open a modal or navigate to a new page where attributes for the product can be added. This action itself does not create, modify, or delete any product data directly; it prepares the interface for adding new attributes that can later be ass",
+        "Upon clicking the 'Add Attribute' button, a new section or modal will likely appear, allowing the user to select or define new product attributes such as color and size. No data will be immediately created, modified, or deleted at this step; however, the action sets up the interface for the subseque",
+        "The agent will report that it's infeasible to add attributes such as colors and sizes directly on the current page. No new page will be shown as a result of this action, and no data on the website will be created, modified, or deleted. The report will indicate the need for navigating to a different "
+      ],
+      "m2_cands": [
+        "click('854')",
+        "click('854') # Clicking 'Add Attribute' to start adding the required attributes (color and size).",
+        "report_infeasible(\"There is no option to add attributes such as colors and sizes directly on this page. The task requires navigating to a different section or changing the product type, which is not possible with the current options.\")"
+      ],
+      "m2_choice": "click('854') # Clicking 'Add Attribute' to start adding the required attributes (color and size).",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 12996,
+        "completion_tokens": 588
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('854') # Click 'Add Attribute' to add the 'Color' attribute.",
+          2
+        ],
+        [
+          "click('854') # Click 'Add Attribute' to add the 'Color' attribute first.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0814923350079249,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('854') # Click 'Add Attribute' to add the 'Color' attribute.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:new": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.02,
+        7.01
+      ],
+      "outcomes": [
+        "Upon clicking the 'Add Attribute' button, a modal or new section will likely appear on the current page, allowing the user to select or define the 'Color' attribute for the product being created. No data will be immediately created, modified, or deleted; however, this action sets up the configuratio",
+        "Upon clicking the 'Add Attribute' button, a modal or new section will likely appear on the current page, allowing the user to select or define the 'Color' attribute for the product being created. No data will be immediately created, modified, or deleted; however, this action sets up the configuratio"
+      ],
+      "m2_cands": [
+        "click('854') # Click 'Add Attribute' to add the 'Color' attribute.",
+        "click('854') # Click 'Add Attribute' to add the 'Color' attribute first."
+      ],
+      "m2_choice": "click('854') # Click 'Add Attribute' to add the 'Color' attribute.",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10479,
+        "completion_tokens": 297
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('854')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03977732464493044,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('854')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:new": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6110,
+        "completion_tokens": 110
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('854')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03977732464493044,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('854')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:new": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6124,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('854')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03977732464493044,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('854')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:new": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6117,
+        "completion_tokens": 104
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('854')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03977732464493044,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('854')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:new": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6110,
+        "completion_tokens": 117
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('854')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03977732464493044,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('854')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:new": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6110,
+        "completion_tokens": 153
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('854')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03977732464493044,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('854')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:new": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6092,
+        "completion_tokens": 102
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('854')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03977732464493044,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('854')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:new": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6078,
+        "completion_tokens": 175
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('854')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03977732464493044,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('854')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:new": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/new/set/4/type/simple/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6078,
+        "completion_tokens": 124
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 02:14:19"
+}

@@ -1,0 +1,968 @@
+{
+  "task_id": 135,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "How many commits did Eric and Kilian make to a11yproject on 1/3/2023?",
+  "template": 322,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 17,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 26,
+  "prompt_tokens": 113038,
+  "completion_tokens": 1803,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      90027,
+      1759
+    ],
+    "progress": [
+      11,
+      23011,
+      44
+    ]
+  },
+  "llm_cache_hits": 4,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 11,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 71.7778308391571,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('394', 'left')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004611099891338835,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('394', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:the": 1.0,
+            "name:a": 1.0,
+            "name:y": 1.0,
+            "name:project": 1.0,
+            "name:yproject": 1.0,
+            "name:com": 1.0,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:project": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "The A11Y Project / a11yproject.com",
+            "context": "The A11Y Project / a11yproject.com",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 43,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5254,
+        "completion_tokens": 123
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 200); click('394', 'left')",
+          1
+        ],
+        [
+          "click('363', 'left')",
+          1
+        ],
+        [
+          "click('21')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02648736539840791,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "scroll(0, 200); click('394', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02648736539840791,
+        0.004445909852231504
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8218,
+        "completion_tokens": 150
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('352', 'left')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004087192818008768,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('352', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:merge": 1.0,
+            "name:requests": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:the": 0.5,
+            "ctx:a": 0.5,
+            "ctx:y": 0.5,
+            "ctx:yproject": 0.5,
+            "ctx:com": 0.5,
+            "ctx:gitlab": 0.5,
+            "kw:merge": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "element": {
+            "role": "link",
+            "name": "Merge requests",
+            "context": "Project navigation The A11Y Project / a11yproject.com · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5975,
+        "completion_tokens": 102
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('871', 'left')",
+          2
+        ],
+        [
+          "fill('649', 'Kil员')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.3441000328872878,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('871', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:created": 1.0,
+            "name:date": 1.0,
+            "kw:create": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": "button",
+            "name": "Created date",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.3441000328872878,
+        0.08062577241132458
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8151,
+        "completion_tokens": 142
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('871', 'left')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.3441000328872878,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('871', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:created": 1.0,
+            "name:date": 1.0,
+            "kw:create": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": "button",
+            "name": "Created date",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5899,
+        "completion_tokens": 72
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('871', 'left')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.3441000328872878,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('871', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:created": 1.0,
+            "name:date": 1.0,
+            "kw:create": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": "button",
+            "name": "Created date",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6011,
+        "completion_tokens": 124
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('882', 'Created date')",
+          1
+        ],
+        [
+          "click('1044', 'left')",
+          1
+        ],
+        [
+          "click('871', 'left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.07712810829084134,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('882', 'Created date')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=option": 1.0,
+            "name:created": 1.0,
+            "name:date": 1.0,
+            "ctx:created": 0.5,
+            "ctx:date": 0.5,
+            "kw:create": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": "option",
+            "name": "Created date",
+            "context": "Created date",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.07712810829084134,
+        0.004463121618965257
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8083,
+        "completion_tokens": 110
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/a11yproject/a11yproject.com/-/commits/master')",
+          1
+        ],
+        [
+          "select_option('882', ['Created date'])",
+          1
+        ],
+        [
+          "click('871', 'left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.023968498280922356,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/a11yproject/a11yproject.com/-/commits/master')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:commits": 0.5,
+            "path:master": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/commits/master",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false
+        },
+        {
+          "action": "select_option('882', ['Created date'])",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.023968498280922356,
+        0.07712810829084134
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7407,
+        "completion_tokens": 131
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('882', 'Created date')",
+          2
+        ],
+        [
+          "scroll(0, 200)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.014877902401002155,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('882', 'Created date')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.014877902401002155,
+        0.026153128833713134
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8469,
+        "completion_tokens": 138
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 200)",
+          2
+        ],
+        [
+          "select_option('871', 'Created date')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.026153128833713134,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "scroll(0, 200)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.026153128833713134,
+        0.27280460117047367
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8469,
+        "completion_tokens": 136
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('871', 'Created date')",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/a11yproject/a11yproject.com/-/commits/master')",
+          1
+        ],
+        [
+          "select_option('882', 'Created date')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.27280460117047367,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('871', 'Created date')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=button": 1.0,
+            "name:created": 1.0,
+            "name:date": 1.0,
+            "kw:create": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": "button",
+            "name": "Created date",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.27280460117047367,
+        0.023968498280922356
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8200,
+        "completion_tokens": 123
+      }
+    },
+    {
+      "candidates": [
+        [
+          "noop(500)",
+          1
+        ],
+        [
+          "fill('651', '1/3/2023')",
+          1
+        ],
+        [
+          "click('871', button='left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.13125137225355626,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "noop(500)",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.13125137225355626,
+        0.045584120132645345
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8278,
+        "completion_tokens": 115
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('871', 'Created date')",
+          2
+        ],
+        [
+          "select_option('871', '1/3/2023')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.27280460117047367,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('871', 'Created date')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=button": 1.0,
+            "name:created": 1.0,
+            "name:date": 1.0,
+            "kw:create": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": "button",
+            "name": "Created date",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.27280460117047367,
+        0.27280460117047367
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8179,
+        "completion_tokens": 103
+      }
+    },
+    {
+      "candidates": [
+        [
+          "noop(1000)",
+          1
+        ],
+        [
+          "select_option('871', 'Author')",
+          1
+        ],
+        [
+          "select_option('871', 'Created date')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.13125137225355626,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "noop(1000)",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.13125137225355626,
+        0.27280460117047367
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8261,
+        "completion_tokens": 125
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('871', '1/3/2023')",
+          2
+        ],
+        [
+          "select_option('871', 'Created date')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.27280460117047367,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('871', '1/3/2023')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=button": 1.0,
+            "name:created": 1.0,
+            "name:date": 1.0,
+            "kw:create": 1.0,
+            "path:a": 0.5,
+            "path:yproject": 0.5,
+            "path:com": 0.5,
+            "path:merge": 0.5,
+            "path:requests": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "element": {
+            "role": "button",
+            "name": "Created date",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.27280460117047367,
+        0.27280460117047367
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8184,
+        "completion_tokens": 109
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:35:32"
+}

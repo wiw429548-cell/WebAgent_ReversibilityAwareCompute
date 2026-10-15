@@ -1,0 +1,484 @@
+{
+  "task_id": 729,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "DisLike all submissions created by AdamCannon in subreddit UpliftingNews",
+  "template": 1510,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 37,
+  "prompt_tokens": 23900,
+  "completion_tokens": 2957,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      9281,
+      1567
+    ],
+    "wm": [
+      15,
+      10142,
+      1018
+    ],
+    "value": [
+      15,
+      2934,
+      120
+    ],
+    "m2more": [
+      1,
+      1543,
+      252
+    ]
+  },
+  "llm_cache_hits": 37,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 6
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 60.17962336540222,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('54', 'UpliftingNews')",
+          3
+        ],
+        [
+          "click('117')",
+          1
+        ],
+        [
+          "click('54') # Clicking on the search box to search for the subreddit UpliftingNews.",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('54', 'UpliftingNews')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "typed_len": 0.065,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.03,
+        3.01,
+        3.01
+      ],
+      "outcomes": [
+        "After filling the search box with \"UpliftingNews\" and presumably submitting the search, the page will likely refresh or navigate to a results page displaying forums or posts related to \"UpliftingNews\". No data on the website will be created, modified, or deleted; the action will only query existing ",
+        "After clicking on the \"Submissions\" link (ID 117), the page will likely transition to a submissions overview or listing page where users can view their submitted posts or content. No data will be created, modified, or deleted with this action; it is purely navigational.",
+        "Upon clicking the search box with ID '54', the focus will shift to the search input field, allowing the user to type their query, such as \"UpliftingNews\". No immediate page change occurs; instead, the current page remains active with the search bar now ready to accept input. Once a search term is en"
+      ],
+      "m2_cands": [
+        "fill('54', 'UpliftingNews')",
+        "click('117')",
+        "click('54') # Clicking on the search box to search for the subreddit UpliftingNews."
+      ],
+      "m2_choice": "fill('54', 'UpliftingNews')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 4145,
+        "completion_tokens": 499
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('54')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('54')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.05,
+        3.03
+      ],
+      "outcomes": [
+        "Clicking on the searchbox with the ID '54' will likely trigger a search for \"UpliftingNews\". The page will refresh or update to show results related to \"UpliftingNews\", but no data will be created, modified, or deleted; only the displayed content will change based on the search query.",
+        "Upon pressing 'Enter' while focusing on the search box with the query 'UpliftingNews', the website will likely navigate to a results page displaying posts or forums related to 'UpliftingNews'. No data will be created, modified, or deleted; the action will only trigger a search query based on the inp"
+      ],
+      "m2_cands": [
+        "click('54')",
+        "press('54', 'Enter')"
+      ],
+      "m2_choice": "click('54')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 4826,
+        "completion_tokens": 530
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('54')",
+          4
+        ],
+        [
+          "send_msg_to_user(\"It seems we are not on the UpliftingNews subreddit page. Please confirm the URL or try searching again.\")",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('54')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.04,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the searchbox with the ID '54' will likely trigger a search for \"UpliftingNews\". The page will refresh or update to show results related to \"UpliftingNews\", but no data will be created, modified, or deleted; only the displayed content will change based on the search query.",
+        "The current interaction will not change or delete any data on the website. The user will receive a message indicating that they might not be on the intended UpliftingNews subreddit page and will be prompted to confirm the URL or retry their search. No new data will be created as a result of this int"
+      ],
+      "m2_cands": [
+        "click('54')",
+        "send_msg_to_user(\"It seems we are not on the UpliftingNews subreddit page. Please confirm the URL or try searching again.\")"
+      ],
+      "m2_choice": "click('54')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 3325,
+        "completion_tokens": 438
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('54')",
+          4
+        ],
+        [
+          "click('117')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('54')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.04,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the searchbox with the ID '54' will likely trigger a search for \"UpliftingNews\". The page will refresh or update to show results related to \"UpliftingNews\", but no data will be created, modified, or deleted; only the displayed content will change based on the search query.",
+        "After clicking on the \"Submissions\" link (ID 117), the page will likely transition to a new view that displays all user submissions across the forums. No data will be created, modified, or deleted with this action; it is purely navigational, intended to show existing content organized under the subm"
+      ],
+      "m2_cands": [
+        "click('54')",
+        "click('117')"
+      ],
+      "m2_choice": "click('54')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 3292,
+        "completion_tokens": 507
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('117')",
+          2
+        ],
+        [
+          "noop(1000)",
+          1
+        ],
+        [
+          "click('135')",
+          1
+        ],
+        [
+          "click('54')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('117')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submissions": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submissions",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        0.01,
+        2.01
+      ],
+      "outcomes": [
+        "After clicking on the \"Submissions\" link (ID 117), the page will likely transition to a new view that displays all user submissions across the forums. No data will be created, modified, or deleted with this action; it is purely navigational, intended to show existing content organized under the subm",
+        "The current page will remain unchanged, displaying the main content area with a message indicating that there are no featured forums to show and no subscriptions. No data on the website will be created, modified, or deleted as the action specified is a `noop`, meaning no operation will be performed.",
+        "Clicking on the \"Sort by: Hot\" button (element 135) will likely expand a menu allowing the user to choose different sorting options for the displayed content. No data will be created, modified, or deleted; the action will only affect the sorting order of the current content displayed on the page."
+      ],
+      "m2_cands": [
+        "click('117')",
+        "noop(1000)",
+        "click('135')"
+      ],
+      "m2_choice": "click('117')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 4161,
+        "completion_tokens": 530
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('54')",
+          2
+        ],
+        [
+          "click('117')",
+          2
+        ],
+        [
+          "report_infeasible(\"The current page does not contain any submissions by AdamCannon to dislike. The search for 'UpliftingNews' did not yield expected results.\")",
+          1
+        ]
+      ],
+      "u": 0.6554587535412857,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The current page does not contain any submissions by AdamCannon to dislike. The search for 'UpliftingNews' did not yield expected results.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        3.02,
+        7.01
+      ],
+      "outcomes": [
+        "Clicking on the searchbox with the label 'Search query' will bring up the search interface, likely allowing the user to input a search term. No data will be created, modified, or deleted until an actual search is executed; the current action simply prepares the interface for user input.",
+        "After clicking on the \"Submissions\" link (ID 117), the page will likely transition to a submissions overview or listing page where users can view their submitted posts or content. No data will be created, modified, or deleted with this action; it is purely navigational.",
+        "Given the instruction, no page change will occur, and there will be no creation, modification, or deletion of data on the website. The agent will report that it is unable to find any submissions by AdamCannon to dislike and that the search for 'UpliftingNews' did not return expected results, indicat"
+      ],
+      "m2_cands": [
+        "click('54')",
+        "click('117')",
+        "report_infeasible(\"The current page does not contain any submissions by AdamCannon to dislike. The search for 'UpliftingNews' did not yield expected results.\")"
+      ],
+      "m2_choice": "report_infeasible(\"The current page does not contain any submissions by AdamCannon to dislike. The search for 'UpliftingNews' did not yield expected results.\")",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 4151,
+        "completion_tokens": 453
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 21:11:53"
+}

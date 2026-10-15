@@ -1,0 +1,36 @@
+# NOTE: do NOT `pip install -r requirements.txt` on the server: together with the pre-installed vLLM this fails with
+# `resolution-too-deep`. run_all.py installs only the missing packages, in stages, without ever re-resolving vLLM
+# (race/infra.py: install_packages). This file documents the stack for a fresh environment.
+#
+# --- pre-installed on the server, not installed by run_all.py
+# vllm            # OpenAI-compatible server for the backbone LLMs (tested: 0.31)
+# torch
+# --- installed if missing (normal resolution, constrained to the already-installed versions)
+pyyaml
+numpy
+scikit-learn
+scipy
+matplotlib
+openai>=1.0
+requests
+tqdm
+pillow
+gymnasium>=0.27
+beautifulsoup4>=4.12
+lxml>=4.9,<6
+pyparsing>=3
+nltk
+tiktoken
+aiolimiter
+aiohttp>=3.8,<4
+pydantic>2,<3
+beartype>=0.18
+greenlet>=3.0.3
+pyee==11.1.0
+transformers
+# --- installed with --no-deps (exact versions verified together); then `python -m playwright install chromium`
+playwright==1.44.0
+browsergym-core==0.14.3
+browsergym-webarena==0.14.3
+libwebarena==0.0.4
+text-generation==0.7.0

@@ -1,0 +1,234 @@
+{
+  "task_id": 720,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Like all submissions created by CameronKelsey in subreddit earthporn",
+  "template": 25,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 2,
+  "n_env_actions": 2,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 12,
+  "prompt_tokens": 5526,
+  "completion_tokens": 849,
+  "llm_by_tag": {
+    "policy": [
+      2,
+      2548,
+      432
+    ],
+    "wm": [
+      5,
+      1913,
+      377
+    ],
+    "value": [
+      5,
+      1065,
+      40
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 2
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 49.458118200302124,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/r/earthporn')",
+          2
+        ],
+        [
+          "fill('54', 'earthporn')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040274651136156685,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/r/earthporn')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 66,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.02,
+        3.01
+      ],
+      "outcomes": [
+        "Navigating to `http://localhost:9999/r/earthporn` will load the EarthPorn subreddit-like page within the Postmill site, displaying posts related to EarthPorn such as nature and landscape images. No data will be created, modified, or deleted with this navigation action; it simply changes the displaye",
+        "After executing the command to fill the search box with \"earthporn\", the page will likely refresh or navigate to a results page displaying posts or submissions related to the keyword \"earthporn\". No data will be created, modified, or deleted; the action only triggers a search query based on the inpu"
+      ],
+      "m2_cands": [
+        "goto('http://localhost:9999/r/earthporn')",
+        "fill('54', 'earthporn')"
+      ],
+      "m2_choice": "goto('http://localhost:9999/r/earthporn')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 3189,
+        "completion_tokens": 329
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The subreddit page did not load correctly, resulting in a 404 error.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"The subreddit page 'earthporn' is not available on this local instance as it results in a 404 Not Found error.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"The subreddit earthporn could not be found, as the current page is a 404 error page.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02750748409404009,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The subreddit page did not load correctly, resulting in a 404 error.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:r": 0.5,
+            "path:earthporn": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/r/earthporn",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 64,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.01,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will report that the subreddit page did not load correctly, leading to a 404 error page being displayed. This action will not create, modify, or delete any data on the website; it will simply highlight the issue with loading the specific page. The user or developer might then take steps to",
+        "The agent will report that the requested subreddit page 'earthporn' is unavailable due to a 404 Not Found error, indicating that the page cannot be accessed on the current local instance. No data on the website will be created, modified, or deleted as a result of this action; the error page will rem",
+        "The agent will report that the requested subreddit \"earthporn\" could not be found due to encountering a 404 error page. No new pages will be shown as a result of this action, and no data on the website will be created, modified, or deleted. The report simply indicates the failure to access the desir"
+      ],
+      "m2_cands": [
+        "report_infeasible(\"The subreddit page did not load correctly, resulting in a 404 error.\")",
+        "report_infeasible(\"The subreddit page 'earthporn' is not available on this local instance as it results in a 404 Not Found error.\")",
+        "report_infeasible(\"The subreddit earthporn could not be found, as the current page is a 404 error page.\")"
+      ],
+      "m2_choice": "report_infeasible(\"The subreddit page did not load correctly, resulting in a 404 error.\")",
+      "rho_choice": null,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 2337,
+        "completion_tokens": 520
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 02:07:14"
+}

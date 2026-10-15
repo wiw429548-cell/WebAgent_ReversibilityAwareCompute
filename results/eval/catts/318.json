@@ -1,0 +1,493 @@
+{
+  "task_id": 318,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "List the last names of the top 3 contributors to 2019-nCov repo, ranked by the number of commits?",
+  "template": 324,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 8,
+  "n_env_actions": 8,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 13,
+  "prompt_tokens": 57553,
+  "completion_tokens": 1174,
+  "llm_by_tag": {
+    "policy": [
+      8,
+      38771,
+      990
+    ],
+    "arbiter": [
+      5,
+      18782,
+      184
+    ]
+  },
+  "llm_cache_hits": 2,
+  "mode_counts": {
+    "M0": 8,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 5,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 49.603392601013184,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('306')",
+          2
+        ],
+        [
+          "click('314')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('306')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=listitem": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "listitem",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 17,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 9689,
+        "completion_tokens": 112
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('306')",
+          1
+        ],
+        [
+          "click('268')",
+          1
+        ],
+        [
+          "focus('269')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('269')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/dashboard/projects",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 2,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 9718,
+        "completion_tokens": 136
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('269', '2019-nCov')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('269', '2019-nCov')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "typed_len": 0.045,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5275,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('307')",
+          2
+        ],
+        [
+          "click('269')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('307')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:all": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "link",
+            "name": "All",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 17,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2631,
+        "completion_tokens": 206
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          2
+        ],
+        [
+          "fill('269', '2019-nCov')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 9780,
+        "completion_tokens": 156
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5308,
+        "completion_tokens": 132
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5316,
+        "completion_tokens": 96
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('314')",
+          1
+        ],
+        [
+          "report_infeasible('There is no project named 2019-nCov in the list.')",
+          1
+        ],
+        [
+          "click('307')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "report_infeasible('There is no project named 2019-nCov in the list.')",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 1,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 9836,
+        "completion_tokens": 208
+      }
+    }
+  ],
+  "method": "catts",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:03:41"
+}

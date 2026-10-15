@@ -1,0 +1,380 @@
+{
+  "task_id": 225,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "What do customers say about brush from sephora",
+  "template": 135,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 6,
+  "prompt_tokens": 27465,
+  "completion_tokens": 271,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      27465,
+      271
+    ]
+  },
+  "llm_cache_hits": 6,
+  "mode_counts": {
+    "M0": 6,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "There are no customer reviews available for the Sephora brush set.",
+    "scores": {
+      "StringEvaluator": 1.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "there are no customer reviews available for the sephora brush set.",
+        "ref": "No reviews available for the sephora brushes.",
+        "question": "What do customers say about brush from sephora",
+        "src": "string",
+        "pending": false,
+        "score": 1.0,
+        "parsable": true,
+        "response": "The student's answer conveys the same meaning as the reference answer, just with slightly different wording. Both indicate that there are no available customer reviews for the Sephora brushes.\n\nJudgement: Correct",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 22.65442728996277,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('386', 'Sephora brush reviews', True)",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('386', 'Sephora brush reviews', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.105,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5760,
+        "completion_tokens": 49
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('391')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('391')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5776,
+        "completion_tokens": 32
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1518')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1518')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sephora": 1.0,
+            "name:collection": 1.0,
+            "name:skin": 1.0,
+            "name:perfecting": 1.0,
+            "name:brush": 1.0,
+            "name:set": 1.0,
+            "kw:set": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=Sephora+brush+reviews",
+          "element": {
+            "role": "link",
+            "name": "Sephora Collection Skin Perfecting Brush Set",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 257,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5570,
+        "completion_tokens": 62
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1629')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1629')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=tab": 1.0,
+            "name:reviews": 1.0,
+            "path:sephora": 0.5,
+            "path:collection": 0.5,
+            "path:skin": 0.5,
+            "path:perfecting": 0.5,
+            "path:brush": 0.5,
+            "path:set": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sephora-collection-skin-perfecting-brush-set.html",
+          "element": {
+            "role": "tab",
+            "name": "Reviews",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3059,
+        "completion_tokens": 52
+      }
+    },
+    {
+      "candidates": [
+        [
+          "noop()",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "noop()",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:sephora": 0.5,
+            "path:collection": 0.5,
+            "path:skin": 0.5,
+            "path:perfecting": 0.5,
+            "path:brush": 0.5,
+            "path:set": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sephora-collection-skin-perfecting-brush-set.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3648,
+        "completion_tokens": 26
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"There are no customer reviews available for the Sephora brush set.\")",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"There are no customer reviews available for the Sephora brush set.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:sephora": 0.5,
+            "path:collection": 0.5,
+            "path:skin": 0.5,
+            "path:perfecting": 0.5,
+            "path:brush": 0.5,
+            "path:set": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sephora-collection-skin-perfecting-brush-set.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3652,
+        "completion_tokens": 50
+      }
+    }
+  ],
+  "method": "confirm_rule",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "heuristic"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 23:30:25"
+}

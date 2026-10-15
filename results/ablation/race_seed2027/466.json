@@ -1,0 +1,787 @@
+{
+  "task_id": 466,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Add 2 Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts to my wish list",
+  "template": 186,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 36,
+  "prompt_tokens": 124641,
+  "completion_tokens": 3838,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      88054,
+      2565
+    ],
+    "m2more": [
+      1,
+      5775,
+      173
+    ],
+    "wm": [
+      9,
+      22007,
+      868
+    ],
+    "value": [
+      9,
+      2129,
+      72
+    ],
+    "form": [
+      2,
+      6676,
+      160
+    ]
+  },
+  "llm_cache_hits": 5,
+  "mode_counts": {
+    "M0": 12,
+    "M1": 0,
+    "M2": 3
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 2,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 140.08533835411072,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('413', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.6691711631401963,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('[230] listitem '' [231] link 'My Wish List')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.04,
+        7.01,
+        7.01
+      ],
+      "outcomes": [
+        "Upon executing the command `fill('413', 'Hawaiian Bamboo Orchid Roots')`, the search field on the current page will be populated with the text \"Hawaiian Bamboo Orchid Roots\". Assuming the search functionality is enabled and operational despite the 'Search' button being disabled, this action would li",
+        "Upon executing the command `fill('413', 'Hawaiian Bamboo Orchid Roots #zc50')`, the search field on the current page will be populated with the text \"Hawaiian Bamboo Orchid Roots #zc50\". After filling the search field, if the search action is triggered, the page will likely refresh or navigate to a ",
+        "The agent will fill the search field with \"Hawaiian Bamboo Orchid Roots\" and trigger an autocomplete suggestion if available. This action will likely result in a search results page being displayed, showing products related to the query. No data will be created, modified, or deleted on the website i"
+      ],
+      "m2_cands": [
+        "fill('413', 'Hawaiian Bamboo Orchid Roots')",
+        "fill('413', 'Hawaiian Bamboo Orchid Roots #zc50')",
+        "fill('413', 'Hawaiian Bamboo Orchid Roots', True)"
+      ],
+      "m2_choice": "fill('413', 'Hawaiian Bamboo Orchid Roots #zc50')",
+      "rho_choice": 0.6696719152913371,
+      "form_fix": "click('[230] listitem '' [231] link 'My Wish List')",
+      "llm": {
+        "calls": 9,
+        "prompt_tokens": 22948,
+        "completion_tokens": 744
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('413', 'Hawaiian Bamboo Orchid Roots #zc50')",
+          1
+        ],
+        [
+          "fill('413', 'Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts')",
+          1
+        ],
+        [
+          "click('[413]')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.6696719152913371,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('[230] listitem '' [231] link 'My Wish List')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.01,
+        6.01,
+        2.01
+      ],
+      "outcomes": [
+        "Upon executing the command `fill('413', 'Hawaiian Bamboo Orchid Roots #zc50')`, the search field on the current page will be populated with the text \"Hawaiian Bamboo Orchid Roots #zc50\". After filling the search field, if the search action is triggered, the page will likely refresh or navigate to a ",
+        "The agent will input \"Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts\" into the search field. After submitting the search query, the page will refresh to display search results related to the entered product name. No data will be created, modified, or deleted on the website itself; o",
+        "Clicking on the element `[413]`, which is a combobox for search with autocomplete functionality, will likely open a dropdown or listbox showing suggested search terms based on user input or popular searches. This interaction itself does not create, modify, or delete any data on the website; it merel"
+      ],
+      "m2_cands": [
+        "fill('413', 'Hawaiian Bamboo Orchid Roots #zc50')",
+        "fill('413', 'Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts')",
+        "click('[413]')"
+      ],
+      "m2_choice": "fill('413', 'Hawaiian Bamboo Orchid Roots #zc50')",
+      "rho_choice": 0.6696719152913371,
+      "form_fix": "click('[230] listitem '' [231] link 'My Wish List')",
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 17203,
+        "completion_tokens": 624
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('413', 'Hawaiian Bamboo Orchid Roots')",
+          1
+        ],
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          1
+        ],
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.6691711631401963,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.01,
+        7.01,
+        6.01
+      ],
+      "outcomes": [
+        "Upon executing the command `fill('413', 'Hawaiian Bamboo Orchid Roots')`, the search field on the current page will be populated with the text \"Hawaiian Bamboo Orchid Roots\". Assuming the search functionality is enabled and operational despite the 'Search' button being disabled, this action would li",
+        "Upon executing the command to fill the search field with \"Hawaiian Bamboo Orchid Roots\", the page will likely refresh or update to display search results related to the query. No data will be created, modified, or deleted on the website itself; however, the search functionality will retrieve and pre",
+        "The agent will input \"Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts\" into the search field. After executing the search, the page will reload or navigate to a new results page displaying products that match the search query. No data on the website will be created, modified, or delet"
+      ],
+      "m2_cands": [
+        "fill('413', 'Hawaiian Bamboo Orchid Roots')",
+        "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+        "fill('[413]', 'Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts')"
+      ],
+      "m2_choice": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13843,
+        "completion_tokens": 520
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08204099409630862,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5851,
+        "completion_tokens": 156
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08204099409630862,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5868,
+        "completion_tokens": 157
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08204099409630862,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5885,
+        "completion_tokens": 177
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08204099409630862,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5902,
+        "completion_tokens": 189
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08204099409630862,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5897,
+        "completion_tokens": 158
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08204099409630862,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5892,
+        "completion_tokens": 159
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08204099409630862,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5892,
+        "completion_tokens": 159
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08204099409630862,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5892,
+        "completion_tokens": 159
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08204099409630862,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5892,
+        "completion_tokens": 159
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08204099409630862,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5892,
+        "completion_tokens": 159
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08204099409630862,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5892,
+        "completion_tokens": 159
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.08204099409630862,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('[413]', 'Hawaiian Bamboo Orchid Roots')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.14,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5892,
+        "completion_tokens": 159
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": 2027,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 06:20:09 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 07:56:40"
+}

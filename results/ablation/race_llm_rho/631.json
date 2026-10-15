@@ -1,0 +1,765 @@
+{
+  "task_id": 631,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Ask for product recommendations for running shoes within a budget of $100 in r/sports",
+  "template": 15,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 10,
+  "n_env_actions": 14,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 2,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 46,
+  "prompt_tokens": 28895,
+  "completion_tokens": 2513,
+  "llm_by_tag": {
+    "policy": [
+      10,
+      15188,
+      1783
+    ],
+    "rho": [
+      20,
+      2463,
+      90
+    ],
+    "m2more": [
+      1,
+      1567,
+      111
+    ],
+    "wm": [
+      5,
+      3303,
+      393
+    ],
+    "value": [
+      5,
+      1020,
+      40
+    ],
+    "form": [
+      1,
+      710,
+      80
+    ],
+    "progress": [
+      4,
+      4644,
+      16
+    ]
+  },
+  "llm_cache_hits": 25,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 8,
+    "M2": 2
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "URLEvaluator": 0.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 117.04932761192322,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "focus('54')",
+          1
+        ],
+        [
+          "click('54')",
+          1
+        ],
+        [
+          "fill('54', 'r/sports')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.1,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "focus('54')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1,
+        0.2
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 2986,
+        "completion_tokens": 180
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('54', 'r/sports')",
+          2
+        ],
+        [
+          "click('42')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.25,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('54', 'r/sports')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "typed_len": 0.04,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.25,
+        0.3
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 3018,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('57')",
+          2
+        ],
+        [
+          "click('54')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.2,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('57')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:notifications": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Notifications (0)",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:notifications": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/notifications",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        },
+        {
+          "action": "click('54')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.2,
+        0.2
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 2882,
+        "completion_tokens": 133
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('54', 'r/sports')",
+          1
+        ],
+        [
+          "click('62')",
+          1
+        ],
+        [
+          "click('54')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.25,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('54', 'r/sports')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "typed_len": 0.04,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.25,
+        0.85
+      ],
+      "llm": {
+        "calls": 3,
+        "prompt_tokens": 1807,
+        "completion_tokens": 248
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('54')",
+          1
+        ],
+        [
+          "click('62')",
+          1
+        ],
+        [
+          "click('57')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.2,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('54')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.2,
+        0.85
+      ],
+      "llm": {
+        "calls": 3,
+        "prompt_tokens": 1829,
+        "completion_tokens": 202
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('57')",
+          1
+        ],
+        [
+          "click('54')",
+          1
+        ],
+        [
+          "click('62')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.2,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('57')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:notifications": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Notifications (0)",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:notifications": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/notifications",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        },
+        {
+          "action": "click('54')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.2,
+        0.2
+      ],
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 2918,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('62')",
+          2
+        ],
+        [
+          "click('54')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.85,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('54')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.02,
+        8.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Submit\" link, the user will be directed to a submission page where they can create new content such as posts or articles. No data will be created, modified, or deleted immediately upon navigating to this page; however, the user will have the opportunity to input and submit new inf",
+        "Clicking on the searchbox with ID '54' will bring up the search input field where the user can type their search query. No immediate page change or data modification will occur; the action prepares the interface for the user to input search terms, after which submitting the search could potentially "
+      ],
+      "m2_cands": [
+        "click('62')",
+        "click('54')"
+      ],
+      "m2_choice": "click('54')",
+      "rho_choice": 0.2,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 3536,
+        "completion_tokens": 425
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('62')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.85,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.04,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Submit\" link, the user will be directed to a submission page where they can create new content such as posts or articles. No data will be created, modified, or deleted immediately upon navigating to this page; however, the user will have the opportunity to input and submit new inf",
+        "Clicking on the 'Notifications (0)' link will navigate to the notifications page where the user can view any new notifications. Since there are currently no notifications as indicated by the '(0)', the page will likely display a message indicating that there are no new notifications to show. No data",
+        "Focusing on an empty string likely means attempting to set focus to an unspecified element or clear the current focus. Given the current context, this action won't change the displayed page or modify any data; it will simply either remove focus from the current element (the search box) or have no ef"
+      ],
+      "m2_cands": [
+        "click('62')",
+        "click('57')",
+        "focus('')"
+      ],
+      "m2_choice": "click('62')",
+      "rho_choice": 0.85,
+      "llm": {
+        "calls": 11,
+        "prompt_tokens": 6680,
+        "completion_tokens": 624
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/r/sports')",
+          1
+        ],
+        [
+          "click('39')",
+          1
+        ],
+        [
+          "click('58')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.25,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/r/sports')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.25,
+        0.85
+      ],
+      "llm": {
+        "calls": 3,
+        "prompt_tokens": 1878,
+        "completion_tokens": 155
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The website returned a 404 error for the requested subreddit, and there are no actionable elements to navigate to the desired page.\")",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/r/sports')",
+          1
+        ],
+        [
+          "report_infeasible(\"The subreddit page r/sports is not available on this local instance, as a 404 error is returned.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.05,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The website returned a 404 error for the requested subreddit, and there are no actionable elements to navigate to the desired page.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:r": 0.5,
+            "path:sports": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/r/sports",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05,
+        0.1
+      ],
+      "llm": {
+        "calls": 3,
+        "prompt_tokens": 1361,
+        "completion_tokens": 273
+      }
+    }
+  ],
+  "method": "race_llm_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "llm"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 04:05:36"
+}

@@ -1,0 +1,282 @@
+{
+  "task_id": 117,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "What is the date when I made my first purchase on this site?",
+  "template": 161,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 3,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 9,
+  "prompt_tokens": 23650,
+  "completion_tokens": 690,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      15147,
+      417
+    ],
+    "wm": [
+      3,
+      7817,
+      249
+    ],
+    "value": [
+      3,
+      686,
+      24
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "The date of your first purchase on this site is 2/9/23.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "the date of your first purchase on this site is 2/9/23.",
+        "ref": "3/2/22",
+        "question": "What is the date when I made my first purchase on this site?",
+        "src": "string",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "Based on the provided information:\n\n- **Question:** What is the date when I made my first purchase on this site?\n- **Reference Answer:** 3/2/22\n- **Student Answer:** the date of your first purchase on this site is 2/9/23.\n\nThe student's answer provides a specific date (2/9/23) but it does not match ",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 20.804742574691772,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7697263202671181,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5763,
+        "completion_tokens": 94
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1530')",
+          1
+        ],
+        [
+          "click('1595')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"The date of your first purchase on this site was 3/11/23.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1530')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:all": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "View All",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7878441572540318,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4418,
+        "completion_tokens": 135
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"The date of your first purchase on this site is 2/9/23.\")",
+          1
+        ],
+        [
+          "send_msg_to_user(\"The date of your first purchase on this site, based on the visible orders, is 3/10/23.\")",
+          1
+        ],
+        [
+          "send_msg_to_user('The date when you made your first purchase on this site is 3/10/23.')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"The date of your first purchase on this site is 2/9/23.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.11003828003927651,
+      "wm_scores": [
+        8.01,
+        8.01,
+        8.01
+      ],
+      "outcomes": [
+        "The agent will inform the user that their first purchase on the site was made on 2/9/23, though this specific date does not appear in the provided accessibility tree, suggesting it might come from another part of the system or an external database. No page change will occur as a result of this messa",
+        "The agent will inform the user that their first purchase date, based on the visible orders, is 3/10/23. No page navigation will occur; the user will remain on the current \"My Orders\" history page. There will be no creation, modification, or deletion of data on the website as a result of this interac",
+        "The current page will remain as the order history page, showing the list of past orders for the user \"Emma Lopez\". No data on the website will be created, modified, or deleted; the agent will simply inform the user that their first purchase was made on 3/10/23 through a message displayed or read out"
+      ],
+      "m2_cands": [
+        "send_msg_to_user(\"The date of your first purchase on this site is 2/9/23.\")",
+        "send_msg_to_user(\"The date of your first purchase on this site, based on the visible orders, is 3/10/23.\")",
+        "send_msg_to_user('The date when you made your first purchase on this site is 3/10/23.')"
+      ],
+      "m2_choice": "send_msg_to_user(\"The date of your first purchase on this site is 2/9/23.\")",
+      "rho_choice": null,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13469,
+        "completion_tokens": 461
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:09:21"
+}

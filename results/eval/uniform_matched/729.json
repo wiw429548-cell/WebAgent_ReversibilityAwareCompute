@@ -1,0 +1,659 @@
+{
+  "task_id": 729,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "DisLike all submissions created by AdamCannon in subreddit UpliftingNews",
+  "template": 1510,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 11,
+  "n_env_actions": 11,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 16,
+  "prompt_tokens": 20129,
+  "completion_tokens": 2218,
+  "llm_by_tag": {
+    "policy": [
+      11,
+      17671,
+      1989
+    ],
+    "wm": [
+      2,
+      1357,
+      133
+    ],
+    "value": [
+      2,
+      378,
+      16
+    ],
+    "form": [
+      1,
+      723,
+      80
+    ]
+  },
+  "llm_cache_hits": 7,
+  "mode_counts": {
+    "M0": 10,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 99.85174655914307,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('54', 'UpliftingNews')",
+          2
+        ],
+        [
+          "click('42')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('54', 'UpliftingNews')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "typed_len": 0.065,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.748030082214612,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1514,
+        "completion_tokens": 112
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('54')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('54')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9876743551347609,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1543,
+        "completion_tokens": 79
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('54')",
+          2
+        ],
+        [
+          "click('117')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('54', 'AdamCannon submissions in UpliftingNews')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "typed_len": 0.195,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.10825040460991531,
+      "wm_scores": [
+        3.02,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the searchbox with the ID '54' will likely trigger a search for \"UpliftingNews\". The page will refresh or update to show results related to \"UpliftingNews\", but no data will be created, modified, or deleted; only the displayed content will change based on the search query.",
+        "After clicking on the \"Submissions\" link (ID 117), the page will likely transition to a new view that displays all user submissions across the forums. No data will be created, modified, or deleted with this action; it is purely navigational, intended to show existing content organized under the subm"
+      ],
+      "m2_cands": [
+        "click('54')",
+        "click('117')"
+      ],
+      "m2_choice": "click('54')",
+      "rho_choice": null,
+      "form_fix": "fill('54', 'AdamCannon submissions in UpliftingNews')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 4008,
+        "completion_tokens": 422
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('117') # Clicking on 'Submissions' to see if it leads to a page where we can filter by user or view specific posts.",
+          1
+        ],
+        [
+          "click('54')",
+          1
+        ],
+        [
+          "click('117')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('117') # Clicking on 'Submissions' to see if it leads to a page where we can filter by user or view specific posts.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.4737171812091141,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1578,
+        "completion_tokens": 242
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('54', 'user:AdamCannon submissions in UpliftingNews')",
+          1
+        ],
+        [
+          "fill('54', 'AdamCannon submissions in UpliftingNews')",
+          1
+        ],
+        [
+          "fill('54', 'subreddit UpliftingNews user AdamCannon submissions')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('54', 'user:AdamCannon submissions in UpliftingNews')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "typed_len": 0.22,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9859287422388867,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1584,
+        "completion_tokens": 154
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('117') # Click on 'Submissions' to attempt to navigate to a page where we can filter by user.",
+          1
+        ],
+        [
+          "click('117')",
+          1
+        ],
+        [
+          "fill('54', 'user:AdamCannon UpliftingNews submissions')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('117') # Click on 'Submissions' to attempt to navigate to a page where we can filter by user.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9941451323383603,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1637,
+        "completion_tokens": 181
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('54', 'user:AdamCannon submissions in UpliftingNews')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('54', 'user:AdamCannon submissions in UpliftingNews')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "typed_len": 0.22,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.5453271799316433,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1633,
+        "completion_tokens": 202
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('117') # Navigate to Submissions to potentially find a way to go to specific subreddits or filter by user.",
+          1
+        ],
+        [
+          "click('117') # Attempt to navigate to the Submissions page to look for filtering options or a different way to access user-specific submissions.",
+          1
+        ],
+        [
+          "click('117')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('117') # Navigate to Submissions to potentially find a way to go to specific subreddits or filter by user.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8871159071141292,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1673,
+        "completion_tokens": 211
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('54', 'user:AdamCannon UpliftingNews')",
+          1
+        ],
+        [
+          "fill('54', 'user:AdamCannon subreddit:UpliftingNews')",
+          1
+        ],
+        [
+          "click('117') # Click on 'Submissions' again to ensure we're on the right page, then we'll look for a way to navigate to the UpliftingNews subreddit.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('54', 'user:AdamCannon UpliftingNews')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "typed_len": 0.145,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8453744123909779,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1663,
+        "completion_tokens": 216
+      }
+    },
+    {
+      "candidates": [
+        [
+          "press('54', 'Enter')",
+          1
+        ],
+        [
+          "click('117') # Attempt to navigate to the Submissions page to look for filtering options.",
+          1
+        ],
+        [
+          "fill('54', 'UpliftingNews')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "press('54', 'Enter')",
+          "rollback": false,
+          "feat": {
+            "act=press": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "press_enter": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 38,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.5050910724281295,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1692,
+        "completion_tokens": 211
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible('There are no submissions by AdamCannon in the UpliftingNews subreddit to dislike.')",
+          1
+        ],
+        [
+          "report_infeasible(\"There are no submissions by AdamCannon in UpliftingNews to dislike.\")",
+          1
+        ],
+        [
+          "report_infeasible('There are no submissions by AdamCannon in the UpliftingNews subreddit.')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "report_infeasible('There are no submissions by AdamCannon in the UpliftingNews subreddit to dislike.')",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:search": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/search?q=user%3AAdamCannon+UpliftingNews",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 20,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8878157309602308,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1604,
+        "completion_tokens": 188
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:35:34"
+}

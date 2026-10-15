@@ -1,0 +1,509 @@
+{
+  "task_id": 118,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "I have jaw bruxism problem, show me something that could alleviate the problem.",
+  "template": 151,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 5,
+  "n_env_actions": 9,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 2,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 19,
+  "prompt_tokens": 52378,
+  "completion_tokens": 1372,
+  "llm_by_tag": {
+    "policy": [
+      5,
+      28636,
+      795
+    ],
+    "wm": [
+      5,
+      12231,
+      437
+    ],
+    "value": [
+      5,
+      1100,
+      37
+    ],
+    "form": [
+      2,
+      6596,
+      95
+    ],
+    "progress": [
+      2,
+      3815,
+      8
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 3,
+    "M2": 2
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 56.078219175338745,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('423', 'jaw bruxism')",
+          2
+        ],
+        [
+          "fill('423', 'jaw bruxism relief')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.6677502854258891,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('423', 'jaw bruxism')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.055,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        8.01
+      ],
+      "outcomes": [
+        "The agent will attempt to input \"jaw bruxism\" into the search field identified by the ID '423'. Since the search functionality is enabled, this action will likely trigger a search query for \"jaw bruxism\". The page will then reload or update to display search results related to \"jaw bruxism\", without",
+        "The agent will attempt to input \"jaw bruxism relief\" into the search field identified by the ID '423'. After submitting the search query, the page will likely refresh or navigate to a new search results page displaying products related to \"jaw bruxism relief\". No data will be created, modified, or d"
+      ],
+      "m2_cands": [
+        "fill('423', 'jaw bruxism')",
+        "fill('423', 'jaw bruxism relief')"
+      ],
+      "m2_choice": "fill('423', 'jaw bruxism')",
+      "rho_choice": 0.6677502854258891,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 14420,
+        "completion_tokens": 416
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1985')",
+          1
+        ],
+        [
+          "click('923')",
+          1
+        ],
+        [
+          "click('426')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.006350791961583788,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1985')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:page": 1.0,
+            "name:next": 1.0,
+            "ctx:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": " Page Next",
+            "context": "Page",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        },
+        {
+          "action": "click('923')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:health": 1.0,
+            "name:household": 1.0,
+            "kw:hold": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "menuitem",
+            "name": " Health & Household",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.006350791961583788,
+        0.037232381163317146
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7689,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1982')",
+          1
+        ],
+        [
+          "focus('425')",
+          1
+        ],
+        [
+          "click('1974')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.005747203876654737,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1982')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:diet": 1.0,
+            "name:sports": 1.0,
+            "name:nutrition": 1.0,
+            "name:item": 1.0,
+            "path:health": 0.5,
+            "path:household": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/health-household.html",
+          "element": {
+            "role": "link",
+            "name": "Diet & Sports Nutrition( 108 item )",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:health": 0.5,
+            "path:household": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/health-household.html?cat=49",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        },
+        {
+          "action": "focus('425')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "path:health": 0.5,
+            "path:household": 0.5,
+            "path:html": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/health-household.html",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.005747203876654737,
+        0.4067805388070297
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7599,
+        "completion_tokens": 197
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('425', 'jaw bruxism')",
+          1
+        ],
+        [
+          "fill('425', 'jaw bruxism', True)",
+          1
+        ],
+        [
+          "click('1978')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.6041088516264568,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('425', 'jaw bruxism')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.055,
+            "path:health": 0.5,
+            "path:household": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/health-household.html",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.01,
+        8.01,
+        0.01
+      ],
+      "outcomes": [
+        "Upon executing the command `fill('425', 'jaw bruxism')`, the search field on the current page will be populated with the term \"jaw bruxism\". After submitting this query, the page will refresh or navigate to a new search results page displaying items related to \"jaw bruxism\" within the Health & House",
+        "Upon executing the command to fill the search field with \"jaw bruxism\" and submit the form, the page will reload or navigate to a new search results page displaying items related to \"jaw bruxism\" under the Health & Household category. No data will be created, modified, or deleted on the website itse",
+        "Given the provided accessibility tree, there is no element with the identifier '1978'. Therefore, attempting to execute `click('1978')` would not result in any action being performed on the current page. No new page will be shown, and no data on the website will be created, modified, or deleted as a"
+      ],
+      "m2_cands": [
+        "fill('425', 'jaw bruxism')",
+        "fill('425', 'jaw bruxism', True)",
+        "click('1978')"
+      ],
+      "m2_choice": "fill('425', 'jaw bruxism')",
+      "rho_choice": 0.6041088516264568,
+      "form_fix": "fill('425', 'jaw bruxism')",
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 16970,
+        "completion_tokens": 446
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('430')",
+          2
+        ],
+        [
+          "click('1974')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.3421511517161422,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('430')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:health": 0.5,
+            "path:household": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/health-household.html",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.3421511517161422,
+        0.005525945387913081
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5700,
+        "completion_tokens": 149
+      }
+    }
+  ],
+  "method": "race",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 00:32:33"
+}

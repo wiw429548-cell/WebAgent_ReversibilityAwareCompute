@@ -1,0 +1,972 @@
+{
+  "task_id": 318,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "List the last names of the top 3 contributors to 2019-nCov repo, ranked by the number of commits?",
+  "template": 324,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 71,
+  "prompt_tokens": 91234,
+  "completion_tokens": 4022,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      36860,
+      2111
+    ],
+    "wm": [
+      23,
+      33065,
+      1473
+    ],
+    "value": [
+      23,
+      4908,
+      184
+    ],
+    "form": [
+      10,
+      16401,
+      254
+    ]
+  },
+  "llm_cache_hits": 42,
+  "mode_counts": {
+    "M0": 5,
+    "M1": 0,
+    "M2": 10
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 67.98096489906311,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('306')",
+          2
+        ],
+        [
+          "click('314')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05653728697880515,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('306')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=listitem": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "listitem",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 17,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        0.01
+      ],
+      "outcomes": [
+        "Clicking on the element with the identifier '306' will navigate to the 'All' projects view, displaying a comprehensive list of all available projects on the GitLab instance. No data will be created, modified, or deleted as this action is purely navigational.",
+        "Clicking on the element labeled 'A' (ID 314) will filter the project list to show only projects starting with the letter 'A'. No data on the website will be created, modified, or deleted; this action solely affects the display of existing data."
+      ],
+      "m2_cands": [
+        "click('306')",
+        "click('314')"
+      ],
+      "m2_choice": "click('306')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 14278,
+        "completion_tokens": 290
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('306')",
+          1
+        ],
+        [
+          "click('268')",
+          1
+        ],
+        [
+          "focus('269')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.030070694097677212,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('306')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=listitem": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects",
+          "element": {
+            "role": "listitem",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 17,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.01,
+        2.01,
+        5.01
+      ],
+      "outcomes": [
+        "Clicking on the element with the identifier '306' will navigate to the 'All' projects view, displaying a comprehensive list of all available projects within the GitLab instance. No data will be created, modified, or deleted as this action is purely navigational.",
+        "Clicking on the element with the identifier '268' will likely expand a section or dropdown menu related to filtering projects by name, as it contains a search box and a button labeled 'Name'. This interaction will not create, modify, or delete any data on the website; it will merely update the inter",
+        "Focusing on element '269', which is the searchbox labeled 'Filter by name', will bring the input field into focus, allowing the user to directly type in a project name to filter the displayed projects list. No data on the website will be created, modified, or deleted; this action only affects the us"
+      ],
+      "m2_cands": [
+        "click('306')",
+        "click('268')",
+        "focus('269')"
+      ],
+      "m2_choice": "click('306')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 17115,
+        "completion_tokens": 411
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('268')",
+          1
+        ],
+        [
+          "fill('269', '2019-nCov')",
+          1
+        ],
+        [
+          "click('314')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.7129524461880745,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('269', '2019-nCov')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "typed_len": 0.045,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.01,
+        7.01,
+        2.01
+      ],
+      "outcomes": [
+        "Clicking on the element with the identifier '268' will likely expand a section or dropdown menu related to filtering projects by name, as it contains a search box and a button labeled 'Name'. This interaction will not create, modify, or delete any data on the website; it will merely update the inter",
+        "The agent will fill the search box identified by index '269' with the query '2019-nCov'. This action will trigger a filter on the current page, likely showing projects related to the query '2019-nCov'. No data will be created, modified, or deleted; the change will only affect the display of the exis",
+        "Clicking on the element identified by '314' will filter the projects list to show only those projects starting with the letter 'A'. No data on the website will be created, modified, or deleted; this action solely affects the display of existing data."
+      ],
+      "m2_cands": [
+        "click('268')",
+        "fill('269', '2019-nCov')",
+        "click('314')"
+      ],
+      "m2_choice": "fill('269', '2019-nCov')",
+      "rho_choice": null,
+      "form_fix": "fill('269', '2019-nCov')",
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 17159,
+        "completion_tokens": 489
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          1
+        ],
+        [
+          "click('307')",
+          1
+        ],
+        [
+          "click('273')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.010961177733162504,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.01,
+        0.01,
+        2.01
+      ],
+      "outcomes": [
+        "Clicking on the searchbox with ID '269' will likely not change the page but allow the user to modify the search query for filtering projects by name. No data will be created, modified, or deleted; the action is intended for inputting or editing the search term to refine the displayed list of project",
+        "After clicking on the link labeled 'All', the page will refresh to display all projects accessible to the user, not just personal ones. No data will be created, modified, or deleted; the action only changes the filter applied to the project listing.",
+        "Clicking on the 'Name' button (element 273) will likely trigger a sorting action based on the project names. Given that the URL already includes `sort=name_asc`, clicking it again might either reverse the sort order to descending or reapply the ascending sort, potentially refreshing the list of proj"
+      ],
+      "m2_cands": [
+        "click('269')",
+        "click('307')",
+        "click('273')"
+      ],
+      "m2_choice": "click('269')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 5714,
+        "completion_tokens": 338
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          2
+        ],
+        [
+          "click('306')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.010961177733162504,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        2.01
+      ],
+      "outcomes": [
+        "Clicking on the searchbox with ID '269' will likely not change the page but allow the user to modify the search query for filtering projects by name. No data will be created, modified, or deleted; the action is intended for inputting or editing the search term to refine the displayed list of project",
+        "After clicking on the 'All' link (element [306]), the page will likely refresh or update to display all projects accessible to the user, not just personal ones. No data will be created, modified, or deleted; the action will only change the filter applied to the project listing."
+      ],
+      "m2_cands": [
+        "click('269')",
+        "click('306')"
+      ],
+      "m2_choice": "click('269')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 4682,
+        "completion_tokens": 262
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.010961177733162504,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1753,
+        "completion_tokens": 121
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.010961177733162504,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1761,
+        "completion_tokens": 150
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.010961177733162504,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1761,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          2
+        ],
+        [
+          "click('307')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.010961177733162504,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        0.01
+      ],
+      "outcomes": [
+        "Clicking on the searchbox with ID '269' will likely not change the page but allow the user to modify the search query for filtering projects by name. No data will be created, modified, or deleted; the action is intended for inputting or editing the search term to refine the displayed list of project",
+        "After clicking on the link labeled 'All', the page will refresh to display all projects accessible to the user, not just personal ones. No data will be created, modified, or deleted; the action only changes the filter applied to the project listing."
+      ],
+      "m2_cands": [
+        "click('269')",
+        "click('307')"
+      ],
+      "m2_choice": "click('269')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 4688,
+        "completion_tokens": 286
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          2
+        ],
+        [
+          "click('307')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.010961177733162504,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        0.01
+      ],
+      "outcomes": [
+        "Clicking on the searchbox with ID '269' will likely not change the page but allow the user to modify the search query for filtering projects by name. No data will be created, modified, or deleted; the action is intended for inputting or editing the search term to refine the displayed list of project",
+        "After clicking on the link labeled 'All', the page will refresh to display all projects accessible to the user, not just personal ones. No data will be created, modified, or deleted; the action only changes the filter applied to the project listing."
+      ],
+      "m2_cands": [
+        "click('269')",
+        "click('307')"
+      ],
+      "m2_choice": "click('269')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 4679,
+        "completion_tokens": 296
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          2
+        ],
+        [
+          "fill('269', '2019-nCov')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.010961177733162504,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('269', '2019-nCov')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "typed_len": 0.045,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        5.01
+      ],
+      "outcomes": [
+        "Clicking on the searchbox with ID '269' will likely not change the page but allow the user to modify the search query for filtering projects by name. No data will be created, modified, or deleted; the action is intended for inputting or editing the search term to refine the displayed list of project",
+        "Filling the search box with '2019-nCov' will likely filter the projects list to show only those related to '2019-nCov'. No data will be created, modified, or deleted; the action will merely update the displayed content based on the search criteria."
+      ],
+      "m2_cands": [
+        "click('269')",
+        "fill('269', '2019-nCov')"
+      ],
+      "m2_choice": "fill('269', '2019-nCov')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 4717,
+        "completion_tokens": 313
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          2
+        ],
+        [
+          "click('307')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.010961177733162504,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        2.01
+      ],
+      "outcomes": [
+        "Clicking on the searchbox with ID '269' will likely not change the page but allow the user to modify the search query for filtering projects by name. No data will be created, modified, or deleted; the action is intended for inputting or editing the search term to refine the displayed list of project",
+        "After clicking on the link labeled 'All', the page will refresh or navigate to display all projects available across the entire platform, not just personal ones. No data will be created, modified, or deleted; the action will only change the view to show a broader set of projects."
+      ],
+      "m2_cands": [
+        "click('269')",
+        "click('307')"
+      ],
+      "m2_choice": "click('269')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 4694,
+        "completion_tokens": 315
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.010961177733162504,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1761,
+        "completion_tokens": 154
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          2
+        ],
+        [
+          "click('273')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.010961177733162504,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        2.01
+      ],
+      "outcomes": [
+        "Clicking on the searchbox with ID '269' will likely not change the page but allow the user to modify the search query for filtering projects by name. No data will be created, modified, or deleted; the action is intended for inputting or editing the search term to refine the displayed list of project",
+        "Clicking on the 'Name' button (element 273) will likely trigger a sorting action based on the project names. Given that the URL already includes `sort=name_asc`, clicking it again might either reverse the sort order to descending or reapply the ascending sort, potentially refreshing the list of proj"
+      ],
+      "m2_cands": [
+        "click('269')",
+        "click('273')"
+      ],
+      "m2_choice": "click('269')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 4711,
+        "completion_tokens": 339
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('269')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.010961177733162504,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('269')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:filter": 1.0,
+            "name:by": 1.0,
+            "name:name": 1.0,
+            "path:dashboard": 0.5,
+            "path:projects": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/dashboard/projects?sort=name_asc&name=2019-nCov&sort=name_asc",
+          "element": {
+            "role": "searchbox",
+            "name": "Filter by name",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1761,
+        "completion_tokens": 124
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:57:16"
+}

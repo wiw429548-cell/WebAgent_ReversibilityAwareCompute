@@ -1,0 +1,960 @@
+{
+  "task_id": 574,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "I recently moved, my address is 111 Magnolia Path, Atlanta, GA, 30303, update my information on OneStopShopping accordingly",
+  "template": 165,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 17,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 31,
+  "prompt_tokens": 106545,
+  "completion_tokens": 2548,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      78861,
+      2216
+    ],
+    "wm": [
+      3,
+      6658,
+      270
+    ],
+    "value": [
+      3,
+      718,
+      24
+    ],
+    "form": [
+      1,
+      2982,
+      2
+    ],
+    "progress": [
+      9,
+      17326,
+      36
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 5,
+    "M1": 9,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 225.48139262199402,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.00778931282239435,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 668,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5791,
+        "completion_tokens": 99
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1537')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0058412395108952,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1537')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:manage": 1.0,
+            "name:addresses": 1.0,
+            "kw:add": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "Manage Addresses",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 669,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5058,
+        "completion_tokens": 108
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1540')",
+          2
+        ],
+        [
+          "click('1549')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.01522462384373815,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1540')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:change": 1.0,
+            "name:shipping": 1.0,
+            "name:address": 1.0,
+            "kw:change": 1.0,
+            "kw:ship": 1.0,
+            "kw:add": 1.0,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/",
+          "element": {
+            "role": "link",
+            "name": "Change Shipping Address",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 671,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 669,
+          "server_error": false
+        },
+        {
+          "action": "click('1549')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:new": 1.0,
+            "name:address": 1.0,
+            "kw:add": 1.0,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/",
+          "element": {
+            "role": "button",
+            "name": "Add New Address",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 671,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.01522462384373815,
+        0.047873787231744784
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5870,
+        "completion_tokens": 94
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1553', '111 Magnolia Path')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03255735118411714,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1553', '111 Magnolia Path')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.085,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/new/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address* Street Address: Line 1",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5254,
+        "completion_tokens": 107
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1564', 'United States')",
+          1
+        ],
+        [
+          "fill('1735', 'Atlanta')",
+          1
+        ],
+        [
+          "fill('1734', 'Atlanta')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.5037628390053333,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1564', 'United States')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:country": 1.0,
+            "ctx:address": 0.5,
+            "typed_len": 0.065,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/new/",
+          "element": {
+            "role": "combobox",
+            "name": "Country *",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.01,
+        2.01,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will select \"United States\" from the dropdown menu for the \"Country *\" field, ensuring that this required field is properly filled out. No immediate page change will occur; the user will remain on the \"Add New Address\" page. This action will update the form data with the selected country, ",
+        "The agent will fill in \"1735\" into the \"Phone Number\" field and \"Atlanta\" into the \"Street Address: Line 2\" field. No immediate page change is expected; the form will remain on the \"Add New Address\" page until further action like submission is taken. The data entered will be stored temporarily in th",
+        "The agent will fill in \"1734\" into the \"Phone Number\" field and \"Atlanta\" into the \"Street Address: Line 2\" field. No immediate page change is expected; the form will remain on the \"Add New Address\" page until further action like submission is taken. The data entered will be stored temporarily in th"
+      ],
+      "m2_cands": [
+        "fill('1564', 'United States')",
+        "fill('1735', 'Atlanta')",
+        "fill('1734', 'Atlanta')"
+      ],
+      "m2_choice": "fill('1564', 'United States')",
+      "rho_choice": 0.5037628390053333,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 15628,
+        "completion_tokens": 412
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1564', 'United States')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.2276872516041472,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('1564', 'United States')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:country": 1.0,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/new/",
+          "element": {
+            "role": "combobox",
+            "name": "Country *",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5380,
+        "completion_tokens": 118
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1559', 'Atlanta')",
+          2
+        ],
+        [
+          "fill('1560', 'Atlanta')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.03243877260576937,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1559', 'Atlanta')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.035,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/new/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03243877260576937,
+        0.15124737091081514
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7204,
+        "completion_tokens": 94
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1560', 'GA')",
+          1
+        ],
+        [
+          "fill('1559', 'GA')",
+          1
+        ],
+        [
+          "fill('1566', 'GA')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.15100546263316122,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1560', 'GA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=generic": 1.0,
+            "ctx:address": 0.5,
+            "typed_len": 0.01,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/new/",
+          "element": {
+            "role": "generic",
+            "name": "",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15100546263316122,
+        0.03237963994645014
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7206,
+        "completion_tokens": 103
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1560', 'GA')",
+          2
+        ],
+        [
+          "select_option('1560', 'GA')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.15100546263316122,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1560', 'GA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=generic": 1.0,
+            "ctx:address": 0.5,
+            "typed_len": 0.01,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/new/",
+          "element": {
+            "role": "generic",
+            "name": "",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15100546263316122,
+        0.04931021791353101
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7311,
+        "completion_tokens": 280
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1560', 'GA')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.15100546263316122,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1560', 'GA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=generic": 1.0,
+            "ctx:address": 0.5,
+            "typed_len": 0.01,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/new/",
+          "element": {
+            "role": "generic",
+            "name": "",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5390,
+        "completion_tokens": 135
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1560', 'GA')",
+          2
+        ],
+        [
+          "fill('1561', 'GA')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.15100546263316122,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1560', 'GA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=generic": 1.0,
+            "ctx:address": 0.5,
+            "typed_len": 0.01,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/new/",
+          "element": {
+            "role": "generic",
+            "name": "",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15100546263316122,
+        0.14703494734211917
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7309,
+        "completion_tokens": 286
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1560', 'GA')",
+          2
+        ],
+        [
+          "select_option('1560', 'GA')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.15100546263316122,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1560', 'GA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=generic": 1.0,
+            "ctx:address": 0.5,
+            "typed_len": 0.01,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/new/",
+          "element": {
+            "role": "generic",
+            "name": "",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15100546263316122,
+        0.04931021791353101
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7308,
+        "completion_tokens": 204
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1562', '30303')",
+          1
+        ],
+        [
+          "fill('1560', 'GA')",
+          1
+        ],
+        [
+          "select_option('1564', 'GA')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.15115056940475596,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1562', '30303')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=generic": 1.0,
+            "ctx:address": 0.5,
+            "typed_len": 0.025,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/new/",
+          "element": {
+            "role": "generic",
+            "name": "",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15115056940475596,
+        0.15100546263316122
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7310,
+        "completion_tokens": 210
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('1564', 'United States')",
+          1
+        ],
+        [
+          "fill('1560', '30303')",
+          1
+        ],
+        [
+          "fill('1559', 'Atlanta')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.2276872516041472,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "select_option('1564', 'United States')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:country": 1.0,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/new/",
+          "element": {
+            "role": "combobox",
+            "name": "Country *",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.2276872516041472,
+        0.15115056940475596
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7315,
+        "completion_tokens": 133
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1559', 'Atlanta, GA')",
+          1
+        ],
+        [
+          "click('1560')",
+          1
+        ],
+        [
+          "fill('1559', 'GA')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03248615386632978,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1559', 'Atlanta, GA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.055,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:new": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/new/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address: Line 2",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 446,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03248615386632978,
+        0.06762906144704005
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7211,
+        "completion_tokens": 165
+      }
+    }
+  ],
+  "method": "race",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 00:54:53"
+}

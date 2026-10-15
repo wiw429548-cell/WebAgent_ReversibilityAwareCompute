@@ -1,0 +1,1039 @@
+{
+  "task_id": 534,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Follow ['Jakub Klinkovský', 'Koushik', 'Vinta Chen'] on Gitlab",
+  "template": 330,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 23,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 4,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 29,
+  "prompt_tokens": 34585,
+  "completion_tokens": 1858,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      28552,
+      1802
+    ],
+    "progress": [
+      14,
+      6033,
+      56
+    ]
+  },
+  "llm_cache_hits": 3,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 15,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 164.58060789108276,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "goto('https://gitlab.com/JakubKlinkovsky')",
+          2
+        ],
+        [
+          "click('127')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('https://gitlab.com/JakubKlinkovsky')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.8276099690000306
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5253,
+        "completion_tokens": 103
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/users')",
+          1
+        ],
+        [
+          "fill('130', 'Jakub Klinkovský', False)",
+          1
+        ],
+        [
+          "goto('http://localhost:8023/JakubKlinkovsky')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/users')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:users": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/users",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false
+        },
+        {
+          "action": "fill('130', 'Jakub Klinkovský', False)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:search": 1.0,
+            "name:gitlab": 1.0,
+            "typed_len": 0.08,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "textbox",
+            "name": "Search GitLab",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 25,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.049439241835013956
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6717,
+        "completion_tokens": 144
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "click('911')",
+          1
+        ],
+        [
+          "goto('https://gitlab.com/JakubKlinkovsky')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.01914946635900303,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        },
+        {
+          "action": "click('911')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.01914946635900303,
+        0.017388274324944615
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6586,
+        "completion_tokens": 93
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023')",
+          1
+        ],
+        [
+          "click('a24')",
+          1
+        ],
+        [
+          "noop(500)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.034473619331111816,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 40,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        },
+        {
+          "action": "click('a24')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.034473619331111816,
+        0.02979260701761658
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2219,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('a1')",
+          2
+        ],
+        [
+          "click('911')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.02979260701761658,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('a1')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02979260701761658,
+        0.02979260701761658
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1149,
+        "completion_tokens": 147
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023')",
+          2
+        ],
+        [
+          "goto('http://localhost:8024')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.034473619331111816,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 41,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:8024')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.034473619331111816,
+        0.034473619331111816
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2208,
+        "completion_tokens": 137
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8024')",
+          1
+        ],
+        [
+          "noop()",
+          1
+        ],
+        [
+          "click('a1')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.034473619331111816,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8024')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.034473619331111816,
+        0.18010089841128557
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1189,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('a1')",
+          2
+        ],
+        [
+          "click('gitlab_link')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.02979260701761658,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('a1')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02979260701761658,
+        0.02979260701761658
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1186,
+        "completion_tokens": 125
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('b1')",
+          1
+        ],
+        [
+          "click('a3')",
+          1
+        ],
+        [
+          "click('a2')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02979260701761658,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('b1')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02979260701761658,
+        0.02979260701761658
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1157,
+        "completion_tokens": 146
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('a1')",
+          2
+        ],
+        [
+          "noop(500)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.02979260701761658,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('a1')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02979260701761658,
+        0.18010089841128557
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1157,
+        "completion_tokens": 131
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8025')",
+          1
+        ],
+        [
+          "goto('http://localhost:8024')",
+          1
+        ],
+        [
+          "goto('http://localhost:8024/gitlab')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.034473619331111816,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8025')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.034473619331111816,
+        0.034473619331111816
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1157,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 200)",
+          1
+        ],
+        [
+          "noop()",
+          1
+        ],
+        [
+          "click('c1')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03757888334391102,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "scroll(0, 200)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03757888334391102,
+        0.18010089841128557
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1186,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('search-container')",
+          1
+        ],
+        [
+          "goto('https://gitlab.com/JakubKlinkovsky')",
+          1
+        ],
+        [
+          "click('a4')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02979260701761658,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('search-container')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.02979260701761658,
+        0.034473619331111816
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1136,
+        "completion_tokens": 110
+      }
+    },
+    {
+      "candidates": [
+        [
+          "noop(500)",
+          1
+        ],
+        [
+          "click('search-input')",
+          1
+        ],
+        [
+          "click('a4')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.18010089841128557,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "noop(500)",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.18010089841128557,
+        0.02979260701761658
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1147,
+        "completion_tokens": 109
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8025/users')",
+          2
+        ],
+        [
+          "fill('search-container', 'Jakub Klinkovský')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.034473619331111816,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8025/users')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.034473619331111816,
+        0.07037040190079857
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1138,
+        "completion_tokens": 94
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:52:42"
+}

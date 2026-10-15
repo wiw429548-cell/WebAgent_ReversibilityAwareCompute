@@ -1,0 +1,99 @@
+# =====================================================================
+# RACE — Reversibility-Aware Compute allocation for wEb agents
+# =====================================================================
+seed: 2026
+budget_hours: 30              # wall-clock budget on 2x A5000 (~60 GPU-h); optional stages are skipped beyond it
+est_min_per_episode: 1.5      # prior for the budget estimate until real episode timings exist
+
+llm:
+  # served locally by run_all.py with vLLM (OpenAI-compatible API, tensor-parallel over the visible GPUs)
+  model: Qwen/Qwen2.5-32B-Instruct-AWQ
+  judge_model: null           # WebArena's fuzzy-match / unachievable judge (GPT-4 in the paper); null = llm.model
+  serve: true                 # false -> use an existing OpenAI-compatible endpoint (base_url / OPENAI_API_KEY)
+  base_url: http://127.0.0.1:8000/v1   # only used with serve: false (run_all exports the real URL otherwise)
+  port: 8000                  # first port tried; the next free port is used if taken
+  tp: null                    # tensor parallel size; null = number of visible GPUs (clamped to it)
+  # 32B-AWQ: ~19 GB weights; at TP=2 on 2x24 GB the KV cache holds ~80k tokens with gpu_mem 0.9, so 32768 fits.
+  # On a single 24 GB GPU run_all falls back to 12288 / 8192 tokens (logged in results/engine_log.jsonl).
+  max_model_len: 32768
+  gpu_mem: 0.90
+  request_timeout: 300
+  start_timeout_min: 40
+
+webarena:
+  # Site URLs: WA_HOST (env) > host (here) > localhost, with the standard WebArena ports below. Any WA_* variable
+  # set in the environment overrides the derived URL. A non-local host = remote WebArena (no container access:
+  # network-heuristic side-effect labels, resets through WA_FULL_RESET if provided).
+  host: null
+  urls:
+    WA_SHOPPING: ":7770"
+    WA_SHOPPING_ADMIN: ":7780/admin"
+    WA_REDDIT: ":9999"
+    WA_GITLAB: ":8023"
+    WA_WIKIPEDIA: ":8888/wikipedia_en_all_maxi_2022-05/A/User:The_other_Kiwix_guy/Landing"
+    WA_MAP: ":3000"
+    WA_HOMEPAGE: ":4399"
+  skip_sites: [map, wikipedia] # the OSM map and kiwix wikipedia stacks are not deployed by scripts/setup_webarena.sh
+  # verified: ServiceNow WebArena-Verified images (Docker Hub am1n3e/webarena-verified-<site>:0.1.0; same site data and DB
+  # credentials as the original images + upstream fixes; ~33 GB compressed, no download quota; pre-downloaded copies in
+  # downloads/docker_images are used). original: the original Google Drive tarballs (~208 GB, daily quota).
+  image_source: verified
+  container_cli: auto         # auto (docker, then podman) | docker | podman | none
+  reset: auto                 # auto | container (re-create the site containers) | remote (WA_FULL_RESET) | none
+  allow_no_reset: false       # true = run even if sites cannot be reset (results contaminated across methods)
+  order_readonly_first: true  # read-only tasks first (not affected by side effects of state-changing tasks)
+  # sites are reset to their initial state before every (method, lane) job
+  site_wait_min: 10           # a task starts only when its sites answer HTTP; after this wait the runner exits (76)
+                              # and run_all re-creates the site containers (container mode) or waits (remote mode)
+  settle_ms: 1500             # network-idle grace period after each action before the side-effect snapshot
+  max_relogins: 2             # re-logins per episode after a redirect to a login page (expired session)
+
+agent:
+  max_steps: 15
+  axtree_chars: 12000         # main prompt; clamped to the served context ((max_model_len - 4500) * 2.5 chars)
+  history_steps: 6
+  episode_timeout_min: 60     # wall-clock limit per episode (hung browser / site) -> environment error, retried
+
+methods:                      # u = normalised vote entropy, rho = predicted P(irreversible side effect)
+  react:        {n: 1, temperature: 0.0}
+  sc_vote3:     {n: 3, temperature: 0.7, vote: true}                     # self-consistency, same #samples as RACE
+  catts:        {n: 3, temperature: 0.7, vote: true, arbiter: true}      # CATTS: vote; LLM arbiter iff u > tau_u
+  wm_all:       {n: 5, temperature: 0.7, mode_all: M2}                   # WebDreamer-style lookahead every step
+  tryback_all:  {n: 3, temperature: 0.7, vote: true, m1_if_uncertain: true}  # real-env exploration, no rho check
+  confirm_rule: {n: 1, temperature: 0.0, race: true, use_u: false, rho_source: heuristic}  # keyword safeguard:
+                                                                         # rule-flagged step -> world model + form check
+  race:         {n: 3, temperature: 0.7, vote: true, race: true}
+  # compute-matched uniform allocation: same voting as RACE, RACE's M2 (+ form check) on a random share p of the
+  # steps; p is calibrated on RACE's measured tokens/step (race/compute_match.py -> results/compute_match.json)
+  uniform_matched: {n: 3, temperature: 0.7, vote: true, uniform_m2: true}
+  # ---- ablations
+  race_no_rho:        {n: 3, temperature: 0.7, vote: true, race: true, use_rho: false}  # uncertain -> M2 (+form check)
+  race_rho_only:      {n: 3, temperature: 0.7, vote: true, race: true, use_u: false}
+  race_no_m1:         {n: 3, temperature: 0.7, vote: true, race: true, use_m1: false}
+  race_no_formcheck:  {n: 3, temperature: 0.7, vote: true, race: true, form_check: false}
+  race_llm_rho:       {n: 3, temperature: 0.7, vote: true, race: true, rho_source: llm}
+  # ---- threshold sensitivity (tau_u is not varied: with n=3 votes u takes only the values 0, 0.58, 1)
+  race_tau_rho0.3:    {n: 3, temperature: 0.7, vote: true, race: true, race_overrides: {tau_rho: 0.3}}
+  race_tau_rho0.7:    {n: 3, temperature: 0.7, vote: true, race: true, race_overrides: {tau_rho: 0.7}}
+
+race:
+  tau_rho: 0.5                # predicted irreversible -> imagine-and-verify (M2)
+  tau_u: 0.5                  # normalised vote entropy above which a reversible step is explored (M1)
+  m1_max_tries: 2
+  m2_candidates: 3
+
+main_methods: [react, sc_vote3, catts, wm_all, tryback_all, confirm_rule, race, uniform_matched]  # uniform_matched last:
+                                                                         # it is calibrated on the finished race run
+ablation_methods: [race_no_rho, race_rho_only, race_no_m1, race_no_formcheck, race_llm_rho]
+ablation_subset_frac: 0.5     # ablations on a stratified half of the evaluation tasks (time budget)
+sensitivity_methods: [race_tau_rho0.3, race_tau_rho0.7]   # on the ablation subset
+variance_methods: [race]      # re-run with another sampling seed on the ablation subset
+variance_seed: 2027
+extra_backbones:              # generality across backbones (served after the ablations, then back to the main model)
+  - model: Qwen/Qwen2.5-14B-Instruct-AWQ
+    methods: [react, catts, race]
+    split: ablation
+
+collect:                      # predictor training data: WebArena tasks NOT in WebArena-Lite whose intent templates
+  n_tasks: null               # do not occur in WebArena-Lite (103 non-map tasks); null = all of them
+  policy: tryback_all

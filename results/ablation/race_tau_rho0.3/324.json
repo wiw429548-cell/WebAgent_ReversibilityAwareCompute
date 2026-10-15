@@ -1,0 +1,835 @@
+{
+  "task_id": 324,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Show me the \"chairs\" listings by ascending price.",
+  "template": 208,
+  "eval_types": [
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 30,
+  "prompt_tokens": 112274,
+  "completion_tokens": 2520,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      81741,
+      1844
+    ],
+    "m2more": [
+      1,
+      5761,
+      128
+    ],
+    "wm": [
+      4,
+      9743,
+      340
+    ],
+    "value": [
+      4,
+      827,
+      32
+    ],
+    "form": [
+      2,
+      6626,
+      160
+    ],
+    "progress": [
+      4,
+      7576,
+      16
+    ]
+  },
+  "llm_cache_hits": 29,
+  "mode_counts": {
+    "M0": 9,
+    "M1": 4,
+    "M2": 2
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 55.50034475326538,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('386', 'chairs', True)",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.6673317970746512,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('386', 'chairs')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.03,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.04,
+        7.02
+      ],
+      "outcomes": [
+        "The agent will input \"chairs\" into the search field labeled as 'Search'. Since the search function is enabled, this action will trigger a search query for \"chairs\". The page will then reload or navigate to a new page displaying search results related to chairs, without creating, modifying, or deleti",
+        "Upon executing the command `fill('386', 'chairs')`, the user will input \"chairs\" into the search field labeled as 'Search'. This action will trigger a search query for \"chairs\", leading to a new page displaying search results related to chairs available in the One Stop Market. No data will be create"
+      ],
+      "m2_cands": [
+        "fill('386', 'chairs', True)",
+        "fill('386', 'chairs')"
+      ],
+      "m2_choice": "fill('386', 'chairs', True)",
+      "rho_choice": 0.6673317970746512,
+      "form_fix": "fill('386', 'chairs')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 20121,
+        "completion_tokens": 499
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('391')",
+          2
+        ],
+        [
+          "click('1944')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.40653450861884005,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('391')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.02,
+        2.01
+      ],
+      "outcomes": [
+        "Upon executing the click action on element '391', which is the 'Search' button, the current page will likely refresh or navigate to a new page displaying search results for \"chairs\". No data will be created, modified, or deleted; however, the website will process the search query and update the cont",
+        "Given the provided accessibility tree, clicking on element '1944' is not directly described within the given structure, suggesting it might be an element outside the current view or part of a dynamically loaded content. Assuming it's a valid clickable element, such as a product link or a navigation "
+      ],
+      "m2_cands": [
+        "click('391')",
+        "click('1944')"
+      ],
+      "m2_choice": "click('391')",
+      "rho_choice": 0.40653450861884005,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 14372,
+        "completion_tokens": 389
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.15887092137915398,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5374,
+        "completion_tokens": 135
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          1
+        ],
+        [
+          "click('1502')",
+          1
+        ],
+        [
+          "select_option('1500', 'Price')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.15887092137915398,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15887092137915398,
+        0.044478793712228216
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7276,
+        "completion_tokens": 124
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          2
+        ],
+        [
+          "select_option('1500', 'Price')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.15887092137915398,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15887092137915398,
+        0.1189913527403678
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7284,
+        "completion_tokens": 142
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          2
+        ],
+        [
+          "select_option('1500', 'Price')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.15887092137915398,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15887092137915398,
+        0.1189913527403678
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7294,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.15887092137915398,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5408,
+        "completion_tokens": 122
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          2
+        ],
+        [
+          "select_option('1500', 'Price')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.15887092137915398,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.15887092137915398,
+        0.1189913527403678
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7300,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.15887092137915398,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5406,
+        "completion_tokens": 139
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.15887092137915398,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5407,
+        "completion_tokens": 116
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.15887092137915398,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5406,
+        "completion_tokens": 113
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.15887092137915398,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5407,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.15887092137915398,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5406,
+        "completion_tokens": 116
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.15887092137915398,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5407,
+        "completion_tokens": 127
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.15887092137915398,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=chairs",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5406,
+        "completion_tokens": 105
+      }
+    }
+  ],
+  "method": "race_tau_rho0.3",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 06:20:09 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 06:24:39"
+}

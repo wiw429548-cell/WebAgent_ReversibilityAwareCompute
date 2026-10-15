@@ -1,0 +1,276 @@
+{
+  "task_id": 103,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Display the list of issues in the kkroening/ffmpeg-python repository that have labels related to questions",
+  "template": 349,
+  "eval_types": [
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 4,
+  "n_env_actions": 4,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 4,
+  "prompt_tokens": 20738,
+  "completion_tokens": 153,
+  "llm_by_tag": {
+    "policy": [
+      4,
+      20738,
+      153
+    ]
+  },
+  "llm_cache_hits": 4,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "done",
+    "scores": {
+      "URLEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 17.313756227493286,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:8023/kkroening/ffmpeg-python')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:8023/kkroening/ffmpeg-python')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 43,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5249,
+        "completion_tokens": 50
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('322')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('322')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:issues": 1.0,
+            "ctx:project": 0.5,
+            "ctx:navigation": 0.5,
+            "ctx:karl": 0.5,
+            "ctx:kroening": 0.5,
+            "ctx:ffmpeg": 0.5,
+            "ctx:python": 0.5,
+            "ctx:gitlab": 0.5,
+            "path:kkroening": 0.5,
+            "path:ffmpeg": 0.5,
+            "path:python": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/kkroening/ffmpeg-python",
+          "element": {
+            "role": "link",
+            "name": "Issues",
+            "context": "Project navigation Karl Kroening / ffmpeg-python · GitLab",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 31,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5754,
+        "completion_tokens": 36
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1013')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1013')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:question": 1.0,
+            "ctx:labels": 0.5,
+            "path:kkroening": 0.5,
+            "path:ffmpeg": 0.5,
+            "path:python": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/kkroening/ffmpeg-python/-/issues",
+          "element": {
+            "role": "link",
+            "name": "question",
+            "context": "Labels",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 33,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5429,
+        "completion_tokens": 37
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"done\")",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"done\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:kkroening": 0.5,
+            "path:ffmpeg": 0.5,
+            "path:python": 0.5,
+            "path:issues": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/kkroening/ffmpeg-python/-/issues/?label_name%5B%5D=question",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4306,
+        "completion_tokens": 30
+      }
+    }
+  ],
+  "method": "confirm_rule",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "heuristic"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 23:28:01"
+}

@@ -1,0 +1,936 @@
+{
+  "task_id": 538,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Modify the address of order #299 to 456 Oak Avenue, New York, NY, 10001",
+  "template": 240,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 17,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 22,
+  "prompt_tokens": 90375,
+  "completion_tokens": 2327,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      76332,
+      2299
+    ],
+    "progress": [
+      7,
+      14043,
+      28
+    ]
+  },
+  "llm_cache_hits": 6,
+  "mode_counts": {
+    "M0": 8,
+    "M1": 7,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 152.88558745384216,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('850')",
+          2
+        ],
+        [
+          "click('156')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.020104559265465886,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 428,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 365,
+          "server_error": false
+        },
+        {
+          "action": "click('156')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sales": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " SALES",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.020104559265465886,
+        0.00253128734732836
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6366,
+        "completion_tokens": 104
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          2
+        ],
+        [
+          "click('156')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.020104559265465886,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.020104559265465886,
+        0.00253128734732836
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6504,
+        "completion_tokens": 123
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          2
+        ],
+        [
+          "click('156')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.020104559265465886,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.020104559265465886,
+        0.00253128734732836
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7175,
+        "completion_tokens": 157
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.020104559265465886,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5191,
+        "completion_tokens": 152
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          2
+        ],
+        [
+          "click('168')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.020104559265465886,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.020104559265465886,
+        0.002883571627010263
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7191,
+        "completion_tokens": 181
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.020104559265465886,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5199,
+        "completion_tokens": 183
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          2
+        ],
+        [
+          "click('156')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.020104559265465886,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.020104559265465886,
+        0.00253128734732836
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7189,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          2
+        ],
+        [
+          "click('156')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.020104559265465886,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.020104559265465886,
+        0.00253128734732836
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7189,
+        "completion_tokens": 140
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.020104559265465886,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5197,
+        "completion_tokens": 143
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.020104559265465886,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5197,
+        "completion_tokens": 167
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          2
+        ],
+        [
+          "click('156')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.020104559265465886,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.020104559265465886,
+        0.00253128734732836
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7189,
+        "completion_tokens": 144
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.020104559265465886,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5197,
+        "completion_tokens": 151
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.020104559265465886,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5197,
+        "completion_tokens": 178
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.020104559265465886,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5197,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.020104559265465886,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5197,
+        "completion_tokens": 195
+      }
+    }
+  ],
+  "method": "race_no_formcheck",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 03:42:30"
+}

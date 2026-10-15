@@ -1,0 +1,399 @@
+{
+  "task_id": 419,
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Set my gitlab status as Enjoying life.",
+  "template": 361,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 6,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 8,
+  "prompt_tokens": 36993,
+  "completion_tokens": 770,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      32603,
+      762
+    ],
+    "progress": [
+      2,
+      4390,
+      8
+    ]
+  },
+  "llm_cache_hits": 1,
+  "mode_counts": {
+    "M0": 3,
+    "M1": 3,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "done",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 63.279796838760376,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('175')",
+          1
+        ],
+        [
+          "click('64')",
+          1
+        ],
+        [
+          "click('201')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.008034101824031449,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('175')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:help": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "link",
+            "name": "Help",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008034101824031449,
+        0.19398385857193653
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7431,
+        "completion_tokens": 120
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('201') # Clicking on the user's profile link to navigate to the profile page.",
+          1
+        ],
+        [
+          "click('201')",
+          1
+        ],
+        [
+          "click('175')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.2051992694821977,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('201') # Clicking on the user's profile link to navigate to the profile page.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.2051992694821977,
+        0.006441279764816845
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7639,
+        "completion_tokens": 147
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('211')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.18348035077474292,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('211')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:set": 1.0,
+            "name:status": 1.0,
+            "kw:set": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "button",
+            "name": "Set status",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 29,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5424,
+        "completion_tokens": 87
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('919', 'Enjoying life.')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03690112314652062,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('919', 'Enjoying life.')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "in_form": 1.0,
+            "name:what": 1.0,
+            "name:s": 1.0,
+            "name:your": 1.0,
+            "name:status": 1.0,
+            "ctx:set": 0.5,
+            "ctx:a": 0.5,
+            "ctx:status": 0.5,
+            "typed_len": 0.07,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "textbox",
+            "name": "What's your status?",
+            "context": "Set a status",
+            "in_form": true
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5588,
+        "completion_tokens": 112
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('972')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.18750216424050098,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('972')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "in_form": 1.0,
+            "name:set": 1.0,
+            "name:status": 1.0,
+            "ctx:set": 0.5,
+            "ctx:a": 0.5,
+            "ctx:status": 0.5,
+            "ctx:projects": 0.5,
+            "ctx:dashboard": 0.5,
+            "ctx:gitlab": 0.5,
+            "kw:set": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": "button",
+            "name": "Set status",
+            "context": "Set a status Projects · Dashboard · GitLab",
+            "in_form": true
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 42,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5616,
+        "completion_tokens": 121
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"done\")",
+          1
+        ],
+        [
+          "go_back()",
+          1
+        ],
+        [
+          "click('201')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03176220409725453,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"done\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:8023/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 24,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03176220409725453,
+        0.01914946635900303
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5295,
+        "completion_tokens": 183
+      }
+    }
+  ],
+  "method": "race_tau_rho0.7",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "gitlab",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 06:20:09 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 07:05:01"
+}

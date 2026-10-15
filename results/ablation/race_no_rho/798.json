@@ -1,0 +1,1051 @@
+{
+  "task_id": 798,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Change the delivery address for my most recent order to 77 Massachusetts Ave, Cambridge, MA.",
+  "template": 191,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 81,
+  "prompt_tokens": 181269,
+  "completion_tokens": 4692,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      78877,
+      2187
+    ],
+    "wm": [
+      27,
+      60666,
+      2169
+    ],
+    "value": [
+      27,
+      5879,
+      216
+    ],
+    "form": [
+      12,
+      35847,
+      120
+    ]
+  },
+  "llm_cache_hits": 54,
+  "mode_counts": {
+    "M0": 3,
+    "M1": 0,
+    "M2": 12
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 85.54304885864258,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.00778931282239435,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5769,
+        "completion_tokens": 104
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1553')",
+          2
+        ],
+        [
+          "click('1498')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.007184076857744347,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1498')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:manage": 1.0,
+            "name:addresses": 1.0,
+            "kw:add": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "Manage Addresses",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.02,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '1553' will navigate to the order details page for order number 000000170. This action will not create, modify, or delete any data on the website; it will simply display the specific order's information.",
+        "Clicking on the 'Manage Addresses' link (ID: 1498) will navigate to a new page dedicated to managing addresses for the user Emma Lopez. This page will likely display a list of existing addresses along with options to add, edit, or delete addresses, thereby allowing modifications to the address book "
+      ],
+      "m2_cands": [
+        "click('1553')",
+        "click('1498')"
+      ],
+      "m2_choice": "click('1498')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13004,
+        "completion_tokens": 347
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1501')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.01522462384373815,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1501')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:change": 1.0,
+            "name:shipping": 1.0,
+            "name:address": 1.0,
+            "kw:change": 1.0,
+            "kw:ship": 1.0,
+            "kw:add": 1.0,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/",
+          "element": {
+            "role": "link",
+            "name": "Change Shipping Address",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3310,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1514', '77 Massachusetts Ave, Cambridge, MA')",
+          2
+        ],
+        [
+          "clear('1514')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.021698121087286547,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1514', '77 Massachusetts Ave, Cambridge, MA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.175,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address* Street Address: Line 1",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        3.01
+      ],
+      "outcomes": [
+        "The agent will update the value of the \"Street Address: Line 1\" field to \"77 Massachusetts Ave, Cambridge, MA\". This action will modify the address information for the customer's record with ID 26, specifically changing the street address to the new value provided. No other data on the website will ",
+        "The agent will clear the content of the \"Street Address: Line 1\" textbox, which is currently populated with '101 S San Mateo Dr'. This action will remove the street address from the form but will not immediately modify any data on the website until the form is submitted. The page will remain the sam"
+      ],
+      "m2_cands": [
+        "fill('1514', '77 Massachusetts Ave, Cambridge, MA')",
+        "clear('1514')"
+      ],
+      "m2_choice": "fill('1514', '77 Massachusetts Ave, Cambridge, MA')",
+      "rho_choice": null,
+      "form_fix": "fill('1514', '77 Massachusetts Ave, Cambridge, MA')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13139,
+        "completion_tokens": 364
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1696')",
+          1
+        ],
+        [
+          "click('1530') # This bid is not present in the given accessibility tree, it's an assumption based on typical web forms. The correct bid should be for a \"Save\" or \"Update\" button. Please provide the correct bid for the \"Save\" or \"Update\" button.",
+          1
+        ],
+        [
+          "click('1514')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.04800056565078249,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1696')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:palestinian": 1.0,
+            "name:territories": 1.0,
+            "ctx:country": 0.5,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "option",
+            "name": "Palestinian Territories",
+            "context": "Country * Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.01,
+        8.01,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '1696' will likely submit the address edit form, updating the address details for customer ID 26 with the values currently entered in the form fields. The page will then either refresh to show the updated address information or redirect to a confirmation page indicati",
+        "Given the context, clicking on a \"Save\" or \"Update\" button (assuming the correct bid is provided) will submit the form with the edited address details. The page will likely refresh or redirect to a confirmation page showing that the address information for customer ID 26 has been successfully update",
+        "Clicking on the textbox with ID '1514' will not change the page; it will simply place the cursor inside that textbox, allowing the user to edit the street address (\"77 Massachusetts Ave, Cambridge, MA\"). No data will be created, modified, or deleted until the user makes changes within this textbox a"
+      ],
+      "m2_cands": [
+        "click('1696')",
+        "click('1530') # This bid is not present in the given accessibility tree, it's an assumption based on typical web forms. The correct bid should be for a \"Save\" or \"Update\" button. Please provide the correct bid for the \"Save\" or \"Update\" button.",
+        "click('1514')"
+      ],
+      "m2_choice": "click('1696')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 15642,
+        "completion_tokens": 485
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1525')",
+          2
+        ],
+        [
+          "click('1705')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.21252346702120323,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1705')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:qatar": 1.0,
+            "ctx:country": 0.5,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "option",
+            "name": "Qatar",
+            "context": "Country * Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        7.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Country' dropdown (element ID '1525') will open a menu allowing the user to select a different country from the list provided. This action itself does not navigate to another page but modifies the data on the current page by changing the selected country value for the address being ",
+        "Clicking on the element with ID '1705' will likely submit the address edit form, updating the address details for customer ID 26 with the values currently entered in the form fields. The page will then either refresh to show the updated address information or redirect to a confirmation page indicati"
+      ],
+      "m2_cands": [
+        "click('1525')",
+        "click('1705')"
+      ],
+      "m2_choice": "click('1705')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13383,
+        "completion_tokens": 305
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1525')",
+          2
+        ],
+        [
+          "click('1696')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.21252346702120323,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1696')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:palestinian": 1.0,
+            "name:territories": 1.0,
+            "ctx:country": 0.5,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "option",
+            "name": "Palestinian Territories",
+            "context": "Country * Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Country' dropdown (element ID '1525') will open a menu allowing the user to select a different country from the list provided. This action itself does not navigate to another page but modifies the data on the current page by changing the selected country value for the address being ",
+        "Clicking on the element with ID '1696' will likely submit the address edit form, updating the address details for customer ID 26 with the values currently entered in the form fields. The page will then either refresh to show the updated address information or redirect to a confirmation page indicati"
+      ],
+      "m2_cands": [
+        "click('1525')",
+        "click('1696')"
+      ],
+      "m2_choice": "click('1696')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13391,
+        "completion_tokens": 322
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1696')",
+          2
+        ],
+        [
+          "click('1525')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.04800056565078249,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1696')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:palestinian": 1.0,
+            "name:territories": 1.0,
+            "ctx:country": 0.5,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "option",
+            "name": "Palestinian Territories",
+            "context": "Country * Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '1696' will likely submit the address edit form, updating the address details for customer ID 26 with the values currently entered in the form fields. The page will then either refresh to show the updated address information or redirect to a confirmation page indicati",
+        "Clicking on the 'Country' dropdown (element ID '1525') will open a menu allowing the user to select a different country from the list provided. This action itself does not navigate to another page but modifies the data on the current page by changing the selected country value for the address being "
+      ],
+      "m2_cands": [
+        "click('1696')",
+        "click('1525')"
+      ],
+      "m2_choice": "click('1696')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13393,
+        "completion_tokens": 359
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1525')",
+          2
+        ],
+        [
+          "click('1696')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.21252346702120323,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1696')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:palestinian": 1.0,
+            "name:territories": 1.0,
+            "ctx:country": 0.5,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "option",
+            "name": "Palestinian Territories",
+            "context": "Country * Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Country' dropdown (element ID '1525') will open a menu allowing the user to select a different country from the list provided. This action itself does not navigate to another page but modifies the data on the current page by changing the selected country value for the address being ",
+        "Clicking on the element with ID '1696' will likely submit the address edit form, updating the address details for customer ID 26 with the values currently entered in the form fields. The page will then either refresh to show the updated address information or redirect to a confirmation page indicati"
+      ],
+      "m2_cands": [
+        "click('1525')",
+        "click('1696')"
+      ],
+      "m2_choice": "click('1696')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13393,
+        "completion_tokens": 332
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1525')",
+          2
+        ],
+        [
+          "expand_dropdown('1525')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.21252346702120323,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1525')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:country": 1.0,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "combobox",
+            "name": "Country *",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Country' dropdown (element ID '1525') will open a menu allowing the user to select a different country from the list provided. This action itself does not navigate to another page but modifies the data on the current page by changing the selected country value for the address being ",
+        "Expanding the dropdown for the \"Country\" field (element ID 1525) will display a list of country options from which the user can select. This action itself does not modify any data on the website; it merely presents the available choices for the user to interact with. The currently selected country, "
+      ],
+      "m2_cands": [
+        "click('1525')",
+        "expand_dropdown('1525')"
+      ],
+      "m2_choice": "click('1525')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13402,
+        "completion_tokens": 374
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1514', '77 Massachusetts Ave, Cambridge, MA')",
+          2
+        ],
+        [
+          "click('1525')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.021698121087286547,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1514', '77 Massachusetts Ave, Cambridge, MA')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:street": 1.0,
+            "name:address": 1.0,
+            "name:line": 1.0,
+            "ctx:address": 0.5,
+            "kw:add": 1.0,
+            "typed_len": 0.175,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "textbox",
+            "name": "Street Address* Street Address: Line 1",
+            "context": "Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.02,
+        3.01
+      ],
+      "outcomes": [
+        "The agent will update the \"Street Address: Line 1\" field with the address \"77 Massachusetts Ave, Cambridge, MA\". This action modifies the address information for the user's record without immediately changing the displayed page. The changes will be saved upon submitting the form, but no new page wil",
+        "Clicking on the 'Country' dropdown (element ID '1525') will expand the list of country options. Selecting a new country from this list will modify the 'Country' field's value on the current page without navigating to a new page or deleting any data. The change will only take effect if the form is su"
+      ],
+      "m2_cands": [
+        "fill('1514', '77 Massachusetts Ave, Cambridge, MA')",
+        "click('1525')"
+      ],
+      "m2_choice": "fill('1514', '77 Massachusetts Ave, Cambridge, MA')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13114,
+        "completion_tokens": 312
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1696')",
+          1
+        ],
+        [
+          "click('1705')",
+          1
+        ],
+        [
+          "click('1694')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.04800056565078249,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1696')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:palestinian": 1.0,
+            "name:territories": 1.0,
+            "ctx:country": 0.5,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "option",
+            "name": "Palestinian Territories",
+            "context": "Country * Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.01,
+        7.01,
+        7.01
+      ],
+      "outcomes": [
+        "Clicking on the element with ID '1696' will likely submit the address edit form, updating the address details for customer ID 26 with the values currently entered in the form fields. The page will then either refresh to show the updated address information or redirect to a confirmation page indicati",
+        "Clicking on the element with ID '1705' will likely submit the address edit form, updating the address details for customer ID 26 with the values currently entered in the form fields. The page will then either refresh to show the updated address information or redirect to a confirmation page indicati",
+        "Clicking on the element with ID '1694' will likely submit the address edit form, updating the address details for customer ID 26 with the values currently entered in the form fields. The page will then likely redirect to a confirmation page or back to the customer's address book page, showing the up"
+      ],
+      "m2_cands": [
+        "click('1696')",
+        "click('1705')",
+        "click('1694')"
+      ],
+      "m2_choice": "click('1696')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 15561,
+        "completion_tokens": 392
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1525')",
+          1
+        ],
+        [
+          "click('1704')",
+          1
+        ],
+        [
+          "click('1696')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.21252346702120323,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1696')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:palestinian": 1.0,
+            "name:territories": 1.0,
+            "ctx:country": 0.5,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "option",
+            "name": "Palestinian Territories",
+            "context": "Country * Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.01,
+        5.01,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Country' dropdown (element ID '1525') will open a menu allowing the user to select a different country from the list provided. This action itself does not navigate to another page but modifies the data on the current page by changing the selected country value for the address being ",
+        "Clicking on the element with ID '1704' will likely submit the address edit form, updating the address details for customer ID 26 with the values currently entered in the form fields. The page will likely refresh or redirect to a confirmation page showing that the address has been successfully update",
+        "Clicking on the element with ID '1696' will likely submit the address edit form, updating the address details for customer ID 26 with the values currently entered in the form fields. The page will then either refresh to show the updated address information or redirect to a confirmation page indicati"
+      ],
+      "m2_cands": [
+        "click('1525')",
+        "click('1704')",
+        "click('1696')"
+      ],
+      "m2_choice": "click('1696')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 15829,
+        "completion_tokens": 406
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1525')",
+          2
+        ],
+        [
+          "click('1696')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.21252346702120323,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1696')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:palestinian": 1.0,
+            "name:territories": 1.0,
+            "ctx:country": 0.5,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "option",
+            "name": "Palestinian Territories",
+            "context": "Country * Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.02,
+        8.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Country' dropdown (element ID '1525') will open a menu allowing the user to select a different country from the list provided. This action itself does not navigate to another page but modifies the data on the current page by changing the selected country value for the address being ",
+        "Clicking on the element with ID '1696' will likely submit the address edit form, updating the address details for customer ID 26 with the values currently entered in the form fields. The page will then either refresh to show the updated address information or redirect to a confirmation page indicati"
+      ],
+      "m2_cands": [
+        "click('1525')",
+        "click('1696')"
+      ],
+      "m2_choice": "click('1696')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13393,
+        "completion_tokens": 342
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1696')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.04800056565078249,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1696')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:palestinian": 1.0,
+            "name:territories": 1.0,
+            "ctx:country": 0.5,
+            "ctx:address": 0.5,
+            "path:customer": 0.5,
+            "path:address": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/address/edit/id/26/",
+          "element": {
+            "role": "option",
+            "name": "Palestinian Territories",
+            "context": "Country * Address",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5546,
+        "completion_tokens": 134
+      }
+    }
+  ],
+  "method": "race_no_rho",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 02:01:43"
+}

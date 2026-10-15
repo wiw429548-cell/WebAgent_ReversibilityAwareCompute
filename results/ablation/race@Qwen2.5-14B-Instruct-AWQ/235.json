@@ -1,0 +1,1090 @@
+{
+  "task_id": 235,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Get the order number of my most recent under delivery order ",
+  "template": 213,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 23,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 1,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 4,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 29,
+  "prompt_tokens": 102193,
+  "completion_tokens": 2245,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      75567,
+      2189
+    ],
+    "progress": [
+      14,
+      26626,
+      56
+    ]
+  },
+  "llm_cache_hits": 8,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 14,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 94.8478524684906,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227', 'left')",
+          2
+        ],
+        [
+          "click('227', button='left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.00778931282239435,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('227', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        },
+        {
+          "action": "click('227', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.00778931282239435,
+        0.00778931282239435
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7653,
+        "completion_tokens": 167
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1614', 'left')",
+          2
+        ],
+        [
+          "click('1530')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.007392945220335631,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1614', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:orders": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "My Orders",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        },
+        {
+          "action": "click('1530')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:all": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "View All",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007392945220335631,
+        0.006770404244279714
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6339,
+        "completion_tokens": 86
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1530')",
+          2
+        ],
+        [
+          "click('1614', 'left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05672850331721465,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1530')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "3/11/23",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05672850331721465,
+        0.0077271139405912645
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6909,
+        "completion_tokens": 172
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1534', button='left')",
+          1
+        ],
+        [
+          "click('1533')",
+          1
+        ],
+        [
+          "click('1513')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.05501566186840518,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1534', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:view": 1.0,
+            "name:orderreorder": 1.0,
+            "ctx:orders": 0.5,
+            "kw:reorder": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "View OrderReorder",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 346,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:checkout": 0.5,
+            "path:cart": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/checkout/cart/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        },
+        {
+          "action": "click('1533')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05501566186840518,
+        0.05672850331721465
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6912,
+        "completion_tokens": 125
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1651')",
+          1
+        ],
+        [
+          "click('1533')",
+          1
+        ],
+        [
+          "click('1640')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.05672850331721465,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1651')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "000000189",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05672850331721465,
+        0.03367208706326813
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7186,
+        "completion_tokens": 196
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1657')",
+          1
+        ],
+        [
+          "click('1655')",
+          1
+        ],
+        [
+          "click('1651')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.007080494975750173,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1657')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:order": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "link",
+            "name": "View Order",
+            "context": "View OrderReorder Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/sales/order/view/order_id/189/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        },
+        {
+          "action": "click('1655')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:pending": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "Pending",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007080494975750173,
+        0.05664522189302408
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6927,
+        "completion_tokens": 112
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1651')",
+          2
+        ],
+        [
+          "click('1655')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05672850331721465,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1651')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "000000189",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05672850331721465,
+        0.05664522189302408
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6909,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1655')",
+          2
+        ],
+        [
+          "click('1651')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05664522189302408,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1655')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:pending": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "Pending",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05664522189302408,
+        0.05672850331721465
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6908,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1655')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.05664522189302408,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1655')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:pending": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "Pending",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5006,
+        "completion_tokens": 161
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1651')",
+          2
+        ],
+        [
+          "click('1679')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05672850331721465,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1651')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "000000189",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05672850331721465,
+        0.007080494975750173
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6908,
+        "completion_tokens": 189
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1651')",
+          2
+        ],
+        [
+          "click('1655')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05672850331721465,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1651')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "000000189",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05672850331721465,
+        0.05664522189302408
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6908,
+        "completion_tokens": 139
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1655')",
+          2
+        ],
+        [
+          "click('1657')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05664522189302408,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1655')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:pending": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "Pending",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05664522189302408,
+        0.007080494975750173
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6907,
+        "completion_tokens": 162
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1655')",
+          1
+        ],
+        [
+          "click('1651')",
+          1
+        ],
+        [
+          "send_msg_to_user('The order number of your most recent under-delivery order is 000000189.')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.05664522189302408,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1655')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:pending": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "Pending",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05664522189302408,
+        0.05672850331721465
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6907,
+        "completion_tokens": 175
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1655')",
+          1
+        ],
+        [
+          "click('1657')",
+          1
+        ],
+        [
+          "click('1645')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.05664522189302408,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1655')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:pending": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "Pending",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05664522189302408,
+        0.007080494975750173
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6907,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1651')",
+          2
+        ],
+        [
+          "click('1640')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.05672850331721465,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1651')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "gridcell",
+            "name": "000000189",
+            "context": "Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.05672850331721465,
+        0.05672850331721465
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6907,
+        "completion_tokens": 137
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:40:31"
+}

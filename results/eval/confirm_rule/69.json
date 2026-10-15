@@ -1,0 +1,815 @@
+{
+  "task_id": 69,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Among the top 10 post in \"books\" forum, is there any post talks about supporting local book stores? If so, tell me the organizations involved",
+  "template": 17,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 15,
+  "prompt_tokens": 76264,
+  "completion_tokens": 590,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      76264,
+      590
+    ]
+  },
+  "llm_cache_hits": 15,
+  "mode_counts": {
+    "M0": 15,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 72.38512444496155,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('42')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('42')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 18,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1531,
+        "completion_tokens": 46
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('544')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('544')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:books": 1.0,
+            "ctx:books": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "books — books",
+            "context": "books — books",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 18,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4464,
+        "completion_tokens": 22
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('190')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('190')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:friendly": 1.0,
+            "name:reminder": 1.0,
+            "name:bookshop": 1.0,
+            "name:org": 1.0,
+            "name:exists": 1.0,
+            "ctx:friendly": 0.5,
+            "ctx:reminder": 0.5,
+            "ctx:bookshop": 0.5,
+            "ctx:org": 0.5,
+            "ctx:exists": 0.5,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "link",
+            "name": "Friendly reminder bookshop.org exists.",
+            "context": "Friendly reminder bookshop.org exists.",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5487,
+        "completion_tokens": 28
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "path:friendly": 0.5,
+            "path:reminder": 0.5,
+            "path:bookshop": 0.5,
+            "path:org": 0.5,
+            "path:exists": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/books/59421/friendly-reminder-bookshop-org-exists",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 18,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5375,
+        "completion_tokens": 58
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('190')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('190')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:friendly": 1.0,
+            "name:reminder": 1.0,
+            "name:bookshop": 1.0,
+            "name:org": 1.0,
+            "name:exists": 1.0,
+            "ctx:friendly": 0.5,
+            "ctx:reminder": 0.5,
+            "ctx:bookshop": 0.5,
+            "ctx:org": 0.5,
+            "ctx:exists": 0.5,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "link",
+            "name": "Friendly reminder bookshop.org exists.",
+            "context": "Friendly reminder bookshop.org exists.",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5500,
+        "completion_tokens": 34
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "path:friendly": 0.5,
+            "path:reminder": 0.5,
+            "path:bookshop": 0.5,
+            "path:org": 0.5,
+            "path:exists": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/books/59421/friendly-reminder-bookshop-org-exists",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 18,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5267,
+        "completion_tokens": 50
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('190')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('190')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:friendly": 1.0,
+            "name:reminder": 1.0,
+            "name:bookshop": 1.0,
+            "name:org": 1.0,
+            "name:exists": 1.0,
+            "ctx:friendly": 0.5,
+            "ctx:reminder": 0.5,
+            "ctx:bookshop": 0.5,
+            "ctx:org": 0.5,
+            "ctx:exists": 0.5,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "link",
+            "name": "Friendly reminder bookshop.org exists.",
+            "context": "Friendly reminder bookshop.org exists.",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5513,
+        "completion_tokens": 37
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "path:friendly": 0.5,
+            "path:reminder": 0.5,
+            "path:bookshop": 0.5,
+            "path:org": 0.5,
+            "path:exists": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/books/59421/friendly-reminder-bookshop-org-exists",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 18,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5273,
+        "completion_tokens": 53
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('190')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('190')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:friendly": 1.0,
+            "name:reminder": 1.0,
+            "name:bookshop": 1.0,
+            "name:org": 1.0,
+            "name:exists": 1.0,
+            "ctx:friendly": 0.5,
+            "ctx:reminder": 0.5,
+            "ctx:bookshop": 0.5,
+            "ctx:org": 0.5,
+            "ctx:exists": 0.5,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "link",
+            "name": "Friendly reminder bookshop.org exists.",
+            "context": "Friendly reminder bookshop.org exists.",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5511,
+        "completion_tokens": 28
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "path:friendly": 0.5,
+            "path:reminder": 0.5,
+            "path:bookshop": 0.5,
+            "path:org": 0.5,
+            "path:exists": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/books/59421/friendly-reminder-bookshop-org-exists",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 18,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5270,
+        "completion_tokens": 50
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('190')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('190')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:friendly": 1.0,
+            "name:reminder": 1.0,
+            "name:bookshop": 1.0,
+            "name:org": 1.0,
+            "name:exists": 1.0,
+            "ctx:friendly": 0.5,
+            "ctx:reminder": 0.5,
+            "ctx:bookshop": 0.5,
+            "ctx:org": 0.5,
+            "ctx:exists": 0.5,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "link",
+            "name": "Friendly reminder bookshop.org exists.",
+            "context": "Friendly reminder bookshop.org exists.",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5511,
+        "completion_tokens": 28
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "path:friendly": 0.5,
+            "path:reminder": 0.5,
+            "path:bookshop": 0.5,
+            "path:org": 0.5,
+            "path:exists": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/books/59421/friendly-reminder-bookshop-org-exists",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 18,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5270,
+        "completion_tokens": 50
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('190')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('190')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:friendly": 1.0,
+            "name:reminder": 1.0,
+            "name:bookshop": 1.0,
+            "name:org": 1.0,
+            "name:exists": 1.0,
+            "ctx:friendly": 0.5,
+            "ctx:reminder": 0.5,
+            "ctx:bookshop": 0.5,
+            "ctx:org": 0.5,
+            "ctx:exists": 0.5,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "link",
+            "name": "Friendly reminder bookshop.org exists.",
+            "context": "Friendly reminder bookshop.org exists.",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5511,
+        "completion_tokens": 28
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "path:friendly": 0.5,
+            "path:reminder": 0.5,
+            "path:bookshop": 0.5,
+            "path:org": 0.5,
+            "path:exists": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/books/59421/friendly-reminder-bookshop-org-exists",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 18,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5270,
+        "completion_tokens": 50
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('190')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('190')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:friendly": 1.0,
+            "name:reminder": 1.0,
+            "name:bookshop": 1.0,
+            "name:org": 1.0,
+            "name:exists": 1.0,
+            "ctx:friendly": 0.5,
+            "ctx:reminder": 0.5,
+            "ctx:bookshop": 0.5,
+            "ctx:org": 0.5,
+            "ctx:exists": 0.5,
+            "path:f": 0.5,
+            "path:books": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/f/books",
+          "element": {
+            "role": "link",
+            "name": "Friendly reminder bookshop.org exists.",
+            "context": "Friendly reminder bookshop.org exists.",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5511,
+        "completion_tokens": 28
+      }
+    }
+  ],
+  "method": "confirm_rule",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "heuristic"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 23:28:30"
+}

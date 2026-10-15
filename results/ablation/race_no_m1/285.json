@@ -1,0 +1,223 @@
+{
+  "task_id": 285,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Show the least expensive switch card holder with a minimum storage capacity of 15 cards.",
+  "template": 207,
+  "eval_types": [
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 2,
+  "n_env_actions": 2,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 7,
+  "prompt_tokens": 20136,
+  "completion_tokens": 466,
+  "llm_by_tag": {
+    "policy": [
+      2,
+      11550,
+      286
+    ],
+    "wm": [
+      2,
+      4869,
+      140
+    ],
+    "value": [
+      2,
+      395,
+      16
+    ],
+    "form": [
+      1,
+      3322,
+      24
+    ]
+  },
+  "llm_cache_hits": 7,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "URLEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 10.985412836074829,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('386', 'switch card holder')",
+          2
+        ],
+        [
+          "click('835')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.6683357243599126,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('386', 'switch card holder with storage capacity of at least 15 cards')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.305,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.02,
+        2.01
+      ],
+      "outcomes": [
+        "Upon executing the command to fill the search field with \"switch card holder\", the website will likely display a new page or update the current one to show search results related to \"switch card holder\". This could include products or categories that match the search query. No data will be created, ",
+        "Clicking on the menu item with ID '835' labeled 'Office Products' will navigate to the Office Products category page within the One Stop Market website. This action will not create, modify, or delete any data; it will simply display products categorized under Office Products."
+      ],
+      "m2_cands": [
+        "fill('386', 'switch card holder')",
+        "click('835')"
+      ],
+      "m2_choice": "fill('386', 'switch card holder')",
+      "rho_choice": 0.6683357243599126,
+      "form_fix": "fill('386', 'switch card holder with storage capacity of at least 15 cards')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 14353,
+        "completion_tokens": 290
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The search did not return any switch card holders with a storage capacity of at least 15 cards.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"No switch card holders with a minimum storage capacity of 15 cards were found in the search results.\")",
+          1
+        ],
+        [
+          "click('391')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.02750748409404009,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The search did not return any switch card holders with a storage capacity of at least 15 cards.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5783,
+        "completion_tokens": 176
+      }
+    }
+  ],
+  "method": "race_no_m1",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 02:55:38"
+}

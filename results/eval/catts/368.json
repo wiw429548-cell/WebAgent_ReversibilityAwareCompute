@@ -1,0 +1,153 @@
+{
+  "task_id": 368,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "find discounted items.",
+  "template": 188,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 1,
+  "n_env_actions": 1,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 2,
+  "prompt_tokens": 10979,
+  "completion_tokens": 490,
+  "llm_by_tag": {
+    "policy": [
+      1,
+      5753,
+      460
+    ],
+    "arbiter": [
+      1,
+      5226,
+      30
+    ]
+  },
+  "llm_cache_hits": 1,
+  "mode_counts": {
+    "M0": 1,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 1,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "The discounted items are:\n1. Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz. with 20% off.\n2. V8 +Energy, Healthy Energy Drink, Steady Energy from Black and Green Tea, Pomegranate Blueberry, 8 Ounce Can ,Pack of 24 with 57% off.\n3. Belle Of The Ball Princess Sprinkle Mix| Wedding Colorful Sprinkles| Cake Cupcake Cookie Sprinkles| Ice cream Candy Sprinkles| Yellow Gold Red Royal Red Rose Icing Flowers Decorating Sprinkles, 8OZ with 63% off.\n4. So Delicious Dairy Free CocoWhip Light, Vegan, Non-GMO Project Verified, 9 oz. Tub with 78% off.\n5. Q Mixers Premium Ginger Ale: Real Ingredients & Less Sweet, 6.7 Fl Oz (24 Bottles) with 88% off.\n6. Stove Top Turkey Stuffing Mix (12 oz Boxes, Pack of 2) with 85% off.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 11.879777193069458,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "noop() # No immediate action needed as the information is present on the current page. We will proceed to analyze the page for discounted items.",
+          1
+        ],
+        [
+          "send_msg_to_user(\"The discounted items are:\\n1. Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz. with 20% off.\\n2. V8 +Energy, Healthy Energy Drink, Steady Energy from Black and Green Tea, Pomegranate Blueberry, 8 Ounce Can ,Pack of 24 with 57% off.\\n3. Belle Of The Ball Princess Sprinkle Mix| Wedding Colorful Sprinkles| Cake Cupcake Cookie Sprinkles| Ice cream Candy Sprinkles| Yellow Gold Red Royal Red Rose Icing Flowers Decorating Sprinkles, 8OZ with 63% off.\\n4. So Delicious Dairy Free CocoWhip Light, Vegan, Non-GMO Project Verified, 9 oz. Tub with 78% off.\\n5. Q Mixers Premium Ginger Ale: Real Ingredients & Less Sweet, 6.7 Fl Oz (24 Bottles) with 88% off.\\n6. Stove Top Turkey Stuffing Mix (12 oz Boxes, Pack of 2) with 85% off.\")",
+          1
+        ],
+        [
+          "click('1546') # Clicking on the first discount percentage to see if it leads to more details about the discount.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"The discounted items are:\\n1. Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz. with 20% off.\\n2. V8 +Energy, Healthy Energy Drink, Steady Energy from Black and Green Tea, Pomegranate Blueberry, 8 Ounce Can ,Pack of 24 with 57% off.\\n3. Belle Of The Ball Princess Sprinkle Mix| Wedding Colorful Sprinkles| Cake Cupcake Cookie Sprinkles| Ice cream Candy Sprinkles| Yellow Gold Red Royal Red Rose Icing Flowers Decorating Sprinkles, 8OZ with 63% off.\\n4. So Delicious Dairy Free CocoWhip Light, Vegan, Non-GMO Project Verified, 9 oz. Tub with 78% off.\\n5. Q Mixers Premium Ginger Ale: Real Ingredients & Less Sweet, 6.7 Fl Oz (24 Bottles) with 88% off.\\n6. Stove Top Turkey Stuffing Mix (12 oz Boxes, Pack of 2) with 85% off.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 1,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 10979,
+        "completion_tokens": 490
+      }
+    }
+  ],
+  "method": "catts",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:10:08"
+}

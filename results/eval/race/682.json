@@ -1,0 +1,1128 @@
+{
+  "task_id": 682,
+  "sites": [
+    "reddit",
+    "gitlab"
+  ],
+  "intent": "Find a GitLab repository related to chatGPT and make a Reddit post linking to it in a relevant subreddit",
+  "template": 116,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 25,
+  "n_state_changes": 1,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 5,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 31,
+  "prompt_tokens": 48224,
+  "completion_tokens": 2459,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      30871,
+      2194
+    ],
+    "progress": [
+      12,
+      13787,
+      48
+    ],
+    "wm": [
+      1,
+      792,
+      70
+    ],
+    "value": [
+      1,
+      202,
+      8
+    ],
+    "form": [
+      1,
+      842,
+      2
+    ],
+    "m2more": [
+      1,
+      1730,
+      137
+    ]
+  },
+  "llm_cache_hits": 25,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 12,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 0.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 96.3902223110199,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('26')",
+          2
+        ],
+        [
+          "goto('http://localhost:9999/gitlab')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.006167953423030172,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('26')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:jump": 1.0,
+            "name:to": 1.0,
+            "name:sidebar": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Jump to sidebar",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.006167953423030172,
+        0.040274651136156685
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2746,
+        "completion_tokens": 144
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 500)",
+          1
+        ],
+        [
+          "scroll(0, 200)",
+          1
+        ],
+        [
+          "focus('54')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.043878705085772504,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "scroll(0, 500)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.043878705085772504,
+        0.043878705085772504
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3166,
+        "completion_tokens": 196
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/gitlab')",
+          1
+        ],
+        [
+          "focus('54')",
+          1
+        ],
+        [
+          "click('62')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/gitlab')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:gitlab": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/gitlab",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 18,
+          "server_error": false
+        },
+        {
+          "action": "focus('54')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.09422141208550523
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2288,
+        "completion_tokens": 144
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('26')",
+          1
+        ],
+        [
+          "fill('54', 'chatGPT')",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/gitlab')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.006167953423030172,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('26')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:jump": 1.0,
+            "name:to": 1.0,
+            "name:sidebar": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Jump to sidebar",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.006167953423030172,
+        0.1877418578264086
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2799,
+        "completion_tokens": 131
+      }
+    },
+    {
+      "candidates": [
+        [
+          "scroll(0, 300)",
+          2
+        ],
+        [
+          "scroll(0, 500)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.043878705085772504,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "scroll(0, 300)",
+          "rollback": false,
+          "feat": {
+            "act=scroll": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.043878705085772504,
+        0.043878705085772504
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3222,
+        "completion_tokens": 156
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/gitlab')",
+          2
+        ],
+        [
+          "fill('54', 'chatGPT')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/gitlab')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:gitlab": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/gitlab",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 18,
+          "server_error": false
+        },
+        {
+          "action": "fill('54', 'chatGPT')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:postmill": 0.5,
+            "typed_len": 0.035,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.1877418578264086
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2335,
+        "completion_tokens": 205
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/gitlab')",
+          2
+        ],
+        [
+          "click('62')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/gitlab')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:gitlab": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/gitlab",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 18,
+          "server_error": false
+        },
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 22,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.005067546045833567
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2366,
+        "completion_tokens": 128
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/gitlab')",
+          2
+        ],
+        [
+          "fill('127', 'http://localhost:9999/gitlab/chatGPT-repo')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.04041446902109902,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/gitlab')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:gitlab": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/gitlab",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 22,
+          "server_error": false
+        },
+        {
+          "action": "fill('127', 'http://localhost:9999/gitlab/chatGPT-repo')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.205,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.04041446902109902,
+        0.029966903988287334
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2484,
+        "completion_tokens": 256
+      }
+    },
+    {
+      "candidates": [
+        [
+          "focus('137')",
+          2
+        ],
+        [
+          "fill('137', 'ChatGPT Repository Found!', True)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.008909744847475937,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "focus('137')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "name:is": 1.0,
+            "name:required": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "path:submit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Title This field is required.",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.008909744847475937,
+        0.01971479073881033
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3165,
+        "completion_tokens": 91
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('137', 'ChatGPT Repository Found')",
+          1
+        ],
+        [
+          "fill('137', 'ChatGPT Repository Found!')",
+          1
+        ],
+        [
+          "fill('137', 'ChatGPT Repository Discussion')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.019707503494010802,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('137', 'ChatGPT Repository Found')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:title": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "name:is": 1.0,
+            "name:required": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "typed_len": 0.12,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "textbox",
+            "name": "Title This field is required.",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.019707503494010802,
+        0.01971479073881033
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3184,
+        "completion_tokens": 106
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('378')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.07010907429540121,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('378')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1732,
+        "completion_tokens": 119
+      }
+    },
+    {
+      "candidates": [
+        [
+          "select_option('378', 'coolgithubprojects')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.05115532088842839,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "select_option('378', 'coolgithubprojects')",
+          "rollback": false,
+          "feat": {
+            "act=select_option": 1.0,
+            "role=combobox": 1.0,
+            "name:choose": 1.0,
+            "name:one": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "combobox",
+            "name": "Choose one…",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4081,
+        "completion_tokens": 144
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('483')",
+          2
+        ],
+        [
+          "click('378')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.04792025499329894,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('483')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=option": 1.0,
+            "name:coolgithubprojects": 1.0,
+            "ctx:choose": 0.5,
+            "ctx:one": 0.5,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "option",
+            "name": "coolgithubprojects",
+            "context": "Choose one…",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.04792025499329894,
+        0.07010907429540121
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5841,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('395')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.9825400828844786,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('395')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:create": 1.0,
+            "name:submission": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "kw:create": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "button",
+            "name": "Create submission",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.06
+      ],
+      "outcomes": [
+        "Upon clicking the \"Create submission\" button, the form data including the URL, title, body, and selected forum will be submitted. If the submission is successful, the page will likely refresh or redirect to a confirmation page or the home page, and a new submission will be created under the \"coolgit"
+      ],
+      "m2_cands": [
+        "click('395')"
+      ],
+      "m2_choice": "click('395')",
+      "rho_choice": 0.9825400828844786,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 5296,
+        "completion_tokens": 376
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/gitlab/explore')",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/gitlab')",
+          1
+        ],
+        [
+          "new_tab()",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.048086173471692924,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/gitlab/explore')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:coolgithubprojects": 0.5,
+            "path:chatgpt": 0.5,
+            "path:repository": 0.5,
+            "path:found": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/coolgithubprojects/2/chatgpt-repository-found",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:gitlab": 0.5,
+            "path:explore": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/gitlab/explore",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:9999/gitlab')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:f": 0.5,
+            "path:coolgithubprojects": 0.5,
+            "path:chatgpt": 0.5,
+            "path:repository": 0.5,
+            "path:found": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/f/coolgithubprojects/2/chatgpt-repository-found",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 2,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.048086173471692924,
+        0.048086173471692924
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3519,
+        "completion_tokens": 133
+      }
+    }
+  ],
+  "method": "race",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "multi",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "gitlab": 14,
+      "reddit": 12,
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:06:31"
+}

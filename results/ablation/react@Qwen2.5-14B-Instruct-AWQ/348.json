@@ -1,0 +1,596 @@
+{
+  "task_id": 348,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "How many reviews our shop received in May 2023?",
+  "template": 248,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 10,
+  "n_env_actions": 10,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 10,
+  "prompt_tokens": 37190,
+  "completion_tokens": 471,
+  "llm_by_tag": {
+    "policy": [
+      10,
+      37190,
+      471
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 10,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "Based on the results of my search, the shop received 1 review in May 2023.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "based on the results of my search, the shop received 1 review in may 2023.",
+        "ref": "0",
+        "question": "How many reviews our shop received in May 2023?",
+        "src": "string",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "**Judgement:** Incorrect\n\n**Explanation:** The reference answer states that the shop received 0 reviews in May 2023. However, the student's answer claims that the shop received 1 review in May 2023. Since the numbers do not match, the student's answer is incorrect.",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 37.7325963973999,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('339', 'left')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('339', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4260,
+        "completion_tokens": 37
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('370', 'left')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('370', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:by": 1.0,
+            "name:customers": 1.0,
+            "ctx:reports": 0.5,
+            "ctx:marketing": 0.5,
+            "ctx:products": 0.5,
+            "ctx:in": 0.5,
+            "ctx:cart": 0.5,
+            "ctx:search": 0.5,
+            "ctx:terms": 0.5,
+            "ctx:abandoned": 0.5,
+            "ctx:carts": 0.5,
+            "ctx:newsletter": 0.5,
+            "ctx:problem": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "By Customers",
+            "context": " REPORTS Reports  Marketing Products in Cart Search Terms Abandoned Carts Newsletter Problem Reports Reviews By Customers By Products Sales Orders Tax Invoiced Shipping Refunds Coupons PayPal Settle",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 143,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5113,
+        "completion_tokens": 33
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('331', 'left')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('331', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:customer": 0.5,
+            "ctx:reviews": 0.5,
+            "ctx:report": 0.5,
+            "ctx:reports": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:reports": 0.5,
+            "path:report": 0.5,
+            "path:review": 0.5,
+            "path:customer": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/reports/report_review/customer/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "Customer Reviews Report / Reviews / Reports / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2276,
+        "completion_tokens": 34
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('694', 'left')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('694', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:admin": 0.5,
+            "path:reports": 0.5,
+            "path:report": 0.5,
+            "path:review": 0.5,
+            "path:customer": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/reports/report_review/customer/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3132,
+        "completion_tokens": 55
+      }
+    },
+    {
+      "candidates": [
+        [
+          "hover('694')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "hover('694')",
+          "rollback": false,
+          "feat": {
+            "act=hover": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:admin": 0.5,
+            "path:reports": 0.5,
+            "path:report": 0.5,
+            "path:review": 0.5,
+            "path:customer": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/reports/report_review/customer/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3810,
+        "completion_tokens": 60
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('694', 'left')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('694', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:admin": 0.5,
+            "path:reports": 0.5,
+            "path:report": 0.5,
+            "path:review": 0.5,
+            "path:customer": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/reports/report_review/customer/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3798,
+        "completion_tokens": 39
+      }
+    },
+    {
+      "candidates": [
+        [
+          "hover('694')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "hover('694')",
+          "rollback": false,
+          "feat": {
+            "act=hover": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:admin": 0.5,
+            "path:reports": 0.5,
+            "path:report": 0.5,
+            "path:review": 0.5,
+            "path:customer": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/reports/report_review/customer/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3829,
+        "completion_tokens": 43
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('694', 'left')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('694', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:admin": 0.5,
+            "path:reports": 0.5,
+            "path:report": 0.5,
+            "path:review": 0.5,
+            "path:customer": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/reports/report_review/customer/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3806,
+        "completion_tokens": 47
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('671', 'May 2023')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('671', 'May 2023')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.04,
+            "path:admin": 0.5,
+            "path:reports": 0.5,
+            "path:report": 0.5,
+            "path:review": 0.5,
+            "path:customer": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/reports/report_review/customer/",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3826,
+        "completion_tokens": 65
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user('Based on the results of my search, the shop received 1 review in May 2023.')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user('Based on the results of my search, the shop received 1 review in May 2023.')",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:reports": 0.5,
+            "path:report": 0.5,
+            "path:review": 0.5,
+            "path:customer": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/reports/report_review/customer/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3340,
+        "completion_tokens": 58
+      }
+    }
+  ],
+  "method": "react",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 04:33:38",
+  "reward_provisional": 0.0,
+  "eval_provisional": {
+    "answer": "Based on the results of my search, the shop received 1 review in May 2023.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "based on the results of my search, the shop received 1 review in may 2023.",
+        "ref": "0",
+        "question": "How many reviews our shop received in May 2023?",
+        "src": "string",
+        "pending": true,
+        "score": 0.0
+      }
+    ],
+    "score": 0.0
+  },
+  "rejudged": {
+    "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+  }
+}

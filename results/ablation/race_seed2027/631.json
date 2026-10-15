@@ -1,0 +1,1091 @@
+{
+  "task_id": 631,
+  "sites": [
+    "reddit"
+  ],
+  "intent": "Ask for product recommendations for running shoes within a budget of $100 in r/sports",
+  "template": 15,
+  "eval_types": [
+    "url_match",
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 25,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 5,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 26,
+  "prompt_tokens": 44804,
+  "completion_tokens": 2896,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      32076,
+      2860
+    ],
+    "progress": [
+      11,
+      12728,
+      36
+    ]
+  },
+  "llm_cache_hits": 2,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 11,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "URLEvaluator": 0.0,
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 249.64778304100037,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('42')",
+          1
+        ],
+        [
+          "click('42') # Clicking on Forums to see if it leads us closer to the desired subreddit.",
+          1
+        ],
+        [
+          "click('26')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.007668884798031235,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('42')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:postmill": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        },
+        {
+          "action": "click('42') # Clicking on Forums to see if it leads us closer to the desired subreddit.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007668884798031235,
+        0.2051992694821977
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3132,
+        "completion_tokens": 193
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('50', 'r/sports')",
+          2
+        ],
+        [
+          "focus('50')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.1903511518248861,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('50', 'r/sports')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "typed_len": 0.04,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.1903511518248861,
+        0.09565141582827036
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6491,
+        "completion_tokens": 150
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('655')",
+          1
+        ],
+        [
+          "click('50')",
+          1
+        ],
+        [
+          "click('53')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.00626116346626867,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('655')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:next": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Next",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "path:by": 0.5,
+            "path:submissions": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums/by_submissions/2",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        },
+        {
+          "action": "click('50')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.00626116346626867,
+        0.08730857857483905
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6530,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('115')",
+          1
+        ],
+        [
+          "click('50')",
+          1
+        ],
+        [
+          "click('38')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.007862321435529613,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('115')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:tags": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Tags",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:tags": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/tags",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        },
+        {
+          "action": "click('50')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=searchbox": 1.0,
+            "name:search": 1.0,
+            "name:query": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "searchbox",
+            "name": "Search query",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 19,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007862321435529613,
+        0.08730857857483905
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 5992,
+        "completion_tokens": 175
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('115')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.007862321435529613,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('115')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:tags": 1.0,
+            "ctx:list": 0.5,
+            "ctx:of": 0.5,
+            "ctx:forums": 0.5,
+            "path:forums": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": "link",
+            "name": "Tags",
+            "context": "List of forums",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4496,
+        "completion_tokens": 142
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          2
+        ],
+        [
+          "click('62')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.01911178201218055,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:tags": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/tags",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false
+        },
+        {
+          "action": "click('62')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:submit": 1.0,
+            "ctx:postmill": 0.5,
+            "kw:submit": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/",
+          "element": {
+            "role": "link",
+            "name": "Submit",
+            "context": "Postmill",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.01911178201218055,
+        0.1936700511704846
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 2903,
+        "completion_tokens": 187
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('50')",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/r/sports')",
+          1
+        ],
+        [
+          "report_infeasible(\"The current page is not related to r/sports, and it's not possible to post a request for product recommendations for running shoes within a budget of $100 without navigating to the correct subreddit.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03495598148794728,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('50')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 23,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03495598148794728,
+        0.04041446902109902
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3002,
+        "completion_tokens": 235
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('40')",
+          1
+        ],
+        [
+          "goto('http://localhost:9999/forum/sports')",
+          1
+        ],
+        [
+          "fill('52', 'r/sports')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.01557222822369425,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('40')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:forums": 1.0,
+            "ctx:create": 0.5,
+            "ctx:submission": 0.5,
+            "path:submit": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": "link",
+            "name": "Forums",
+            "context": "Create submission",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 37,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:forums": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forums",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 45,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:9999/forum/sports')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:submit": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/submit",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.01557222822369425,
+        0.04041446902109902
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 3322,
+        "completion_tokens": 158
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forum/sports')",
+          2
+        ],
+        [
+          "click('12')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forum/sports')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:forum": 0.5,
+            "path:sports": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forum/sports",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.006155704580878549
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1367,
+        "completion_tokens": 199
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forum/sports')",
+          1
+        ],
+        [
+          "click('12')",
+          1
+        ],
+        [
+          "report_infeasible(\"The requested subreddit (r/sports) does not exist at the given URL, resulting in a 404 error.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forum/sports')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:forum": 0.5,
+            "path:sports": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forum/sports",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.006155704580878549
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1373,
+        "completion_tokens": 276
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forum/r/sports')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.040274651136156685,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forum/r/sports')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:forum": 0.5,
+            "path:sports": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forum/sports",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1111,
+        "completion_tokens": 185
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forum/r/sports')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.040274651136156685,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forum/r/sports')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:forum": 0.5,
+            "path:r": 0.5,
+            "path:sports": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forum/r/sports",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1123,
+        "completion_tokens": 178
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forum/r/sports')",
+          2
+        ],
+        [
+          "goto('http://localhost:9999/forum/r/running')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forum/r/sports')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:forum": 0.5,
+            "path:r": 0.5,
+            "path:sports": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forum/r/sports",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.040274651136156685
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1407,
+        "completion_tokens": 174
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forum/r/sports')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.040274651136156685,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forum/r/sports')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:forum": 0.5,
+            "path:r": 0.5,
+            "path:sports": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forum/r/sports",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1140,
+        "completion_tokens": 191
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:9999/forum/r/sports')",
+          2
+        ],
+        [
+          "report_infeasible(\"The requested subreddit page cannot be found, as indicated by the 404 error, making it impossible to ask for product recommendations.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.040274651136156685,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:9999/forum/r/sports')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:forum": 0.5,
+            "path:r": 0.5,
+            "path:sports": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:9999/forum/r/sports",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 4,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.040274651136156685,
+        0.02750748409404009
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 1415,
+        "completion_tokens": 289
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": 2027,
+  "annotation": "webarena-lite",
+  "lane": "reddit",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "reddit": 12
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 06:20:09 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 07:50:29"
+}

@@ -1,0 +1,971 @@
+{
+  "task_id": 548,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Add a new color blue to size S and M of Frankie Sweatshirt",
+  "template": 252,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 17,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 26,
+  "prompt_tokens": 108164,
+  "completion_tokens": 1898,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      85639,
+      1854
+    ],
+    "progress": [
+      11,
+      22525,
+      44
+    ]
+  },
+  "llm_cache_hits": 5,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 11,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 175.96384072303772,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('189', button='left')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.0023083566572779206,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('189', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:catalog": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CATALOG",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4261,
+        "completion_tokens": 75
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('201', button='left')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.002789273636068043,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('201', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:products": 1.0,
+            "ctx:catalog": 0.5,
+            "ctx:products": 0.5,
+            "ctx:categories": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Products",
+            "context": " CATALOG Catalog  Products Categories",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 593,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4374,
+        "completion_tokens": 78
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1811', button='left')",
+          2
+        ],
+        [
+          "click('1810', button='left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0020717151972911687,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1811', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:edit": 1.0,
+            "name:hollister": 1.0,
+            "name:backyard": 1.0,
+            "name:sweatshirt": 1.0,
+            "ctx:edit": 0.5,
+            "ctx:hollister": 0.5,
+            "ctx:backyard": 0.5,
+            "ctx:sweatshirt": 0.5,
+            "kw:edit": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "link",
+            "name": "Edit Hollister Backyard Sweatshirt",
+            "context": "Edit Hollister Backyard Sweatshirt",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 768,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 593,
+          "server_error": false
+        },
+        {
+          "action": "click('1810', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:edit": 1.0,
+            "name:hollister": 1.0,
+            "name:backyard": 1.0,
+            "name:sweatshirt": 1.0,
+            "kw:edit": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "gridcell",
+            "name": "Edit Hollister Backyard Sweatshirt",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 768,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0020717151972911687,
+        0.016157717904645975
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7820,
+        "completion_tokens": 115
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1810', button='left')",
+          2
+        ],
+        [
+          "click('1057')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.017461379558301217,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1810', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=columnheader": 1.0,
+            "name:weight": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": "columnheader",
+            "name": "Weight",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.017461379558301217,
+        0.01650004871722905
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7578,
+        "completion_tokens": 126
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1028', button='left')",
+          2
+        ],
+        [
+          "click('1087', button='left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.06178156379097009,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1028', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:advanced": 1.0,
+            "name:inventory": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": "button",
+            "name": "Advanced Inventory",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 386,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.06178156379097009,
+        0.009882159002349348
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7448,
+        "completion_tokens": 110
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1028', button='left')",
+          2
+        ],
+        [
+          "click('1057')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.06178156379097009,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1028', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:advanced": 1.0,
+            "name:inventory": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": "button",
+            "name": "Advanced Inventory",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.06178156379097009,
+        0.01650004871722905
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7449,
+        "completion_tokens": 112
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('905', button='left')",
+          1
+        ],
+        [
+          "click('1028', button='left')",
+          1
+        ],
+        [
+          "scroll(0, 200)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03226003278717313,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('905', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03226003278717313,
+        0.06178156379097009
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8118,
+        "completion_tokens": 151
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('905', button='left')",
+          1
+        ],
+        [
+          "click('3222', button='left')",
+          1
+        ],
+        [
+          "goto('http://localhost:7780/admin/catalog/product/edit/id/126/#attribute')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03226003278717313,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('905', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03226003278717313,
+        0.012143541748749164
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8171,
+        "completion_tokens": 172
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('905')",
+          1
+        ],
+        [
+          "click('905', button='left')",
+          1
+        ],
+        [
+          "click('3222')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.03226003278717313,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('905')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03226003278717313,
+        0.03226003278717313
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8169,
+        "completion_tokens": 126
+      }
+    },
+    {
+      "candidates": [
+        [
+          "hover('905')",
+          2
+        ],
+        [
+          "click('905')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.04330082426123191,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "hover('905')",
+          "rollback": false,
+          "feat": {
+            "act=hover": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.04330082426123191,
+        0.03226003278717313
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8164,
+        "completion_tokens": 134
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('905')",
+          2
+        ],
+        [
+          "click('905', button='left')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.03226003278717313,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('905')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03226003278717313,
+        0.03226003278717313
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8139,
+        "completion_tokens": 158
+      }
+    },
+    {
+      "candidates": [
+        [
+          "hover('905')",
+          1
+        ],
+        [
+          "click('903', button='left')",
+          1
+        ],
+        [
+          "click('905')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.04330082426123191,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "hover('905')",
+          "rollback": false,
+          "feat": {
+            "act=hover": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.04330082426123191,
+        0.06053158515586412
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8154,
+        "completion_tokens": 154
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('905')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03226003278717313,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('905')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6091,
+        "completion_tokens": 115
+      }
+    },
+    {
+      "candidates": [
+        [
+          "hover('905')",
+          1
+        ],
+        [
+          "click('905')",
+          1
+        ],
+        [
+          "click('903')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.04330082426123191,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "hover('905')",
+          "rollback": false,
+          "feat": {
+            "act=hover": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.04330082426123191,
+        0.03226003278717313
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8145,
+        "completion_tokens": 141
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('905')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.03226003278717313,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('905')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:add": 1.0,
+            "name:attribute": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/126/",
+          "element": {
+            "role": "button",
+            "name": "Add Attribute",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 384,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 6083,
+        "completion_tokens": 131
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 06:02:26"
+}

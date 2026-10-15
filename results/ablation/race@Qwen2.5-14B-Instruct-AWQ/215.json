@@ -1,0 +1,304 @@
+{
+  "task_id": 215,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "What are the key aspects that the customers don't like about Circe ice fleece",
+  "template": 249,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 2,
+  "n_env_actions": 4,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 1,
+  "n_server_errors": 0,
+  "relogins": [
+    "shopping_admin:failed",
+    "shopping_admin:failed"
+  ],
+  "llm_calls": 3,
+  "prompt_tokens": 7805,
+  "completion_tokens": 331,
+  "llm_by_tag": {
+    "policy": [
+      2,
+      6013,
+      327
+    ],
+    "progress": [
+      1,
+      1792,
+      4
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 2,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 1.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "n/a",
+        "ref": "N/A",
+        "question": "What are the key aspects that the customers don't like about Circe ice fleece",
+        "src": "string",
+        "pending": false,
+        "score": 1.0,
+        "parsable": true,
+        "response": "The student's answer \"n/a\" is semantically equivalent to the reference answer \"N/A\". Both indicate that the information is not achievable.\n\nJudgement: Correct",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 42.53472876548767,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:7780/admin/review/product/list/key/yourkey/')",
+          1
+        ],
+        [
+          "goto('http://localhost:7780/admin/review/product/list/')",
+          1
+        ],
+        [
+          "click('207')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.01521602342874323,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:7780/admin/review/product/list/key/yourkey/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 138,
+          "server_error": false,
+          "relogin": "shopping_admin:failed",
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:review": 0.5,
+            "path:product": 0.5,
+            "path:list": 0.5,
+            "path:key": 0.5,
+            "path:yourkey": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/review/product/list/key/yourkey/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        },
+        {
+          "action": "goto('http://localhost:7780/admin/review/product/list/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:blank": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "about:blank",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 138,
+          "server_error": false,
+          "relogin": "shopping_admin:failed"
+        }
+      ],
+      "m1_rhos": [
+        0.01521602342874323,
+        0.01521602342874323
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6055,
+        "completion_tokens": 168
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"The requested page does not exist.\")",
+          1
+        ],
+        [
+          "goto('http://localhost:7780/admin/review/product/list/key/yourkey/')",
+          1
+        ],
+        [
+          "report_infeasible('The current page shows a 404 error, indicating that the requested resource is not available at this URL.')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.011506676631615297,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "report_infeasible(\"The requested page does not exist.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:review": 0.5,
+            "path:product": 0.5,
+            "path:list": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/review/product/list/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.011506676631615297,
+        0.016976966083226963
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 1750,
+        "completion_tokens": 163
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:39:21",
+  "reward_provisional": 0.0,
+  "eval_provisional": {
+    "answer": "N/A",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "n/a",
+        "ref": "N/A",
+        "question": "What are the key aspects that the customers don't like about Circe ice fleece",
+        "src": "string",
+        "pending": true,
+        "score": 0.0
+      }
+    ],
+    "score": 0.0
+  },
+  "rejudged": {
+    "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "task_id": 4,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "What are the top-3 best-selling product in Jan 2023",
+  "template": 279,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 2,
+  "n_env_actions": 2,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 2,
+  "prompt_tokens": 8540,
+  "completion_tokens": 411,
+  "llm_by_tag": {
+    "policy": [
+      2,
+      8540,
+      411
+    ]
+  },
+  "llm_cache_hits": 1,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 18.69911503791809,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('723')",
+          1
+        ],
+        [
+          "report_infeasible(\"There is no option to filter or sort the best-selling products by a specific time period such as Jan 2023.\")",
+          1
+        ],
+        [
+          "click('a464')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.0023361232095391745,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('723')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:go": 1.0,
+            "name:to": 1.0,
+            "name:advanced": 1.0,
+            "name:reporting": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Go to Advanced Reporting ",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 111,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4263,
+        "completion_tokens": 189
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"The top-3 best-selling products in Jan 2023 are: Quest Lumaflex™ Band, Sprite Yoga Strap 6 foot, and Sprite Stasis Ball 65 cm.\")",
+          1
+        ],
+        [
+          "click('723')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"The top-3 best-selling products in Jan 2023 are: 1. Quest Lumaflex™ Band, 2. Sprite Yoga Strap 6 foot, 3. Sprite Stasis Ball 65 cm.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.018926933191912895,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"The top-3 best-selling products in Jan 2023 are: Quest Lumaflex™ Band, Sprite Yoga Strap 6 foot, and Sprite Stasis Ball 65 cm.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:en": 0.5,
+            "path:docs": 0.5,
+            "path:commerce": 0.5,
+            "path:admin": 0.5,
+            "path:start": 0.5,
+            "path:reporting": 0.5,
+            "path:reports": 0.5,
+            "path:menu": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "https://experienceleague.adobe.com/en/docs/commerce-admin/start/reporting/reports-menu",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 59,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4277,
+        "completion_tokens": 222
+      }
+    }
+  ],
+  "method": "race_rho_only",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 02:24:27"
+}

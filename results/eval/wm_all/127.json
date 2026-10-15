@@ -1,0 +1,176 @@
+{
+  "task_id": 127,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "What brands appear most frequently among the top search terms?",
+  "template": 1001,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 1,
+  "n_env_actions": 1,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 7,
+  "prompt_tokens": 11499,
+  "completion_tokens": 625,
+  "llm_by_tag": {
+    "policy": [
+      1,
+      4257,
+      285
+    ],
+    "wm": [
+      3,
+      6538,
+      316
+    ],
+    "value": [
+      3,
+      704,
+      24
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "The top search terms are: hollister, Joust Bag, Antonia Racer Tank, tanks, WP10.",
+    "scores": {
+      "StringEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 16.686962842941284,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('918')",
+          2
+        ],
+        [
+          "click('908')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"The top search terms are: hollister, Joust Bag, Antonia Racer Tank, tanks, WP10.\")",
+          1
+        ],
+        [
+          "send_msg_to_user(\"Based on the top search terms, the brands that appear most frequently are Hollister and Nike.\")",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"The top search terms are: hollister, Joust Bag, Antonia Racer Tank, tanks, WP10.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        2.01,
+        6.01
+      ],
+      "outcomes": [
+        "Given the provided accessibility tree, clicking on element '918' does not directly correspond to any clickable elements listed. Assuming it's a typo and referring to one of the clickable elements like a tab or a link, the action would likely navigate to a different section or page within the admin d",
+        "Given the provided accessibility tree, clicking on element '908' does not directly correspond to an identifiable action or link within the visible structure. Assuming it's a typo or out-of-sync index, if we consider a plausible interaction like clicking on one of the listed orders (e.g., Sarah Mille",
+        "Based on the provided accessibility tree and the action described, it seems that the agent will send a message to the user with top search terms without directly interacting with the current dashboard page's content. No data on the website will be created, modified, or deleted as a result of this ac"
+      ],
+      "m2_cands": [
+        "click('918')",
+        "click('908')",
+        "send_msg_to_user(\"The top search terms are: hollister, Joust Bag, Antonia Racer Tank, tanks, WP10.\")"
+      ],
+      "m2_choice": "send_msg_to_user(\"The top search terms are: hollister, Joust Bag, Antonia Racer Tank, tanks, WP10.\")",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 11499,
+        "completion_tokens": 625
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:56:18"
+}

@@ -1,0 +1,400 @@
+{
+  "task_id": 127,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "What brands appear most frequently among the top search terms?",
+  "template": 1001,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 6,
+  "prompt_tokens": 23125,
+  "completion_tokens": 286,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      23125,
+      286
+    ]
+  },
+  "llm_cache_hits": 5,
+  "mode_counts": {
+    "M0": 6,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "The top search terms include 'nike', 'hollister', and 'Joust Bag'. These could be considered brand names.",
+    "scores": {
+      "StringEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 21.17835783958435,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('908')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('908')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=table": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "table",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 147,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4257,
+        "completion_tokens": 35
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('222')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('222')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:marketing": 1.0,
+            "ctx:antonia": 0.5,
+            "ctx:racer": 0.5,
+            "ctx:tank": 0.5,
+            "ctx:search": 0.5,
+            "ctx:terms": 0.5,
+            "ctx:seo": 0.5,
+            "ctx:marketing": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:search": 0.5,
+            "path:term": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/search/term/edit/id/13/",
+          "element": {
+            "role": "link",
+            "name": " MARKETING",
+            "context": "Antonia Racer Tank / Search Terms / SEO & Search / Marketing / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2222,
+        "completion_tokens": 53
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('266')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('266')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:url": 1.0,
+            "name:rewrites": 1.0,
+            "ctx:marketing": 0.5,
+            "ctx:promotions": 0.5,
+            "ctx:catalog": 0.5,
+            "ctx:price": 0.5,
+            "ctx:rule": 0.5,
+            "ctx:cart": 0.5,
+            "ctx:rules": 0.5,
+            "ctx:communications": 0.5,
+            "ctx:email": 0.5,
+            "ctx:templates": 0.5,
+            "path:admin": 0.5,
+            "path:search": 0.5,
+            "path:term": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/search/term/edit/id/13/",
+          "element": {
+            "role": "link",
+            "name": "URL Rewrites",
+            "context": " MARKETING Marketing  Promotions Catalog Price Rule Cart Price Rules Communications Email Templates Newsletter Templates Newsletter Queue Newsletter Subscribers SEO & Search URL Rewrites Search Term",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 198,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2682,
+        "completion_tokens": 38
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('358')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('358')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:reports": 1.0,
+            "ctx:url": 0.5,
+            "ctx:rewrites": 0.5,
+            "ctx:seo": 0.5,
+            "ctx:search": 0.5,
+            "ctx:marketing": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:url": 0.5,
+            "path:rewrite": 0.5,
+            "path:index": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/url_rewrite/index/",
+          "element": {
+            "role": "link",
+            "name": " REPORTS",
+            "context": "URL Rewrites / SEO & Search / Marketing / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5437,
+        "completion_tokens": 51
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('375')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('375')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:search": 1.0,
+            "name:terms": 1.0,
+            "ctx:reports": 0.5,
+            "ctx:marketing": 0.5,
+            "ctx:products": 0.5,
+            "ctx:in": 0.5,
+            "ctx:cart": 0.5,
+            "ctx:search": 0.5,
+            "ctx:terms": 0.5,
+            "ctx:abandoned": 0.5,
+            "ctx:carts": 0.5,
+            "ctx:newsletter": 0.5,
+            "ctx:problem": 0.5,
+            "path:admin": 0.5,
+            "path:url": 0.5,
+            "path:rewrite": 0.5,
+            "path:index": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/url_rewrite/index/",
+          "element": {
+            "role": "link",
+            "name": "Search Terms",
+            "context": " REPORTS Reports  Marketing Products in Cart Search Terms Abandoned Carts Newsletter Problem Reports Reviews By Customers By Products Sales Orders Tax Invoiced Shipping Refunds Coupons PayPal Settle",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 143,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5339,
+        "completion_tokens": 41
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"The top search terms include 'nike', 'hollister', and 'Joust Bag'. These could be considered brand names.\")",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.02,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"The top search terms include 'nike', 'hollister', and 'Joust Bag'. These could be considered brand names.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:search": 0.5,
+            "path:term": 0.5,
+            "path:report": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/search/term/report/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3188,
+        "completion_tokens": 68
+      }
+    }
+  ],
+  "method": "confirm_rule",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "heuristic"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 23:32:21"
+}

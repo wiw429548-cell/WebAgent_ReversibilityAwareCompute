@@ -1,0 +1,1005 @@
+{
+  "task_id": 387,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Who gave 4 or 5 stars for phone cases from EYZUTAK",
+  "template": 1356,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 19,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 2,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 27,
+  "prompt_tokens": 104361,
+  "completion_tokens": 2970,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      83575,
+      2624
+    ],
+    "progress": [
+      5,
+      9532,
+      20
+    ],
+    "wm": [
+      3,
+      7317,
+      224
+    ],
+    "value": [
+      3,
+      617,
+      24
+    ],
+    "form": [
+      1,
+      3320,
+      78
+    ]
+  },
+  "llm_cache_hits": 2,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 12,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 111.84104418754578,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('386', 'phone cases')",
+          1
+        ],
+        [
+          "fill('386', 'phone cases from EYZUTAK')",
+          1
+        ],
+        [
+          "fill('386', 'EYZUTAK phone case')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.6677502854258891,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('386', 'EYZUTAK phone cases')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.095,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.01,
+        7.01,
+        7.01
+      ],
+      "outcomes": [
+        "Upon executing the command to fill the search field with \"phone cases\", the page will reload or update to display search results related to phone cases. No data will be created, modified, or deleted on the website itself; however, the search query will be processed, and the current view will change ",
+        "After executing the command to fill the search field with \"phone cases from EYZUTAK\", the page will reload or update to display search results for phone cases from the brand EYZUTAK. No data will be created, modified, or deleted on the website itself; however, the search query will be processed, and",
+        "Upon executing the command to fill the search field with \"EYZUTAK phone case\", the website will likely display a new page or update the current one to show search results related to \"EYZUTAK phone case\". No data will be created, modified, or deleted on the website itself; however, the server may log"
+      ],
+      "m2_cands": [
+        "fill('386', 'phone cases')",
+        "fill('386', 'phone cases from EYZUTAK')",
+        "fill('386', 'EYZUTAK phone case')"
+      ],
+      "m2_choice": "fill('386', 'phone cases')",
+      "rho_choice": 0.6677502854258891,
+      "form_fix": "fill('386', 'EYZUTAK phone cases')",
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 17020,
+        "completion_tokens": 495
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('391')",
+          2
+        ],
+        [
+          "click('1948')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.40653450861884005,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('391')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 238,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:result": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/catalogsearch/result/?q=EYZUTAK+phone+cases",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        },
+        {
+          "action": "click('1948')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:page": 1.0,
+            "name:next": 1.0,
+            "ctx:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": " Page Next",
+            "context": "Page",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.40653450861884005,
+        0.006350791961583788
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7682,
+        "completion_tokens": 126
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1496')",
+          2
+        ],
+        [
+          "click('1948')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.007796781752556394,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1496')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:pcs": 1.0,
+            "name:balls": 1.0,
+            "name:cake": 1.0,
+            "name:topper": 1.0,
+            "name:mini": 1.0,
+            "name:balloons": 1.0,
+            "name:pearl": 1.0,
+            "name:pick": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "link",
+            "name": "20 PCS Balls Cake Topper Mini Balloons Cake Topper Pearl Balls Cake Pick Foam Ball Cupcake Topper Baking Decoration Supplies Toothpick Party Wedding Anniversary Birthday Baby Shower Cake Decoration",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 261,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:pcs": 0.5,
+            "path:balls": 0.5,
+            "path:cake": 0.5,
+            "path:topper": 0.5,
+            "path:mini": 0.5,
+            "path:balloons": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/20-pcs-balls-cake-topper-mini-balloons-cake-topper-pearl-balls-cake-pick-foam-ball-cupcake-topper-baking-decoration-supplies-toothpick-party-wedding-anniversary-birthday-baby-shower-cake-decoration.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        },
+        {
+          "action": "click('1948')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=generic": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "generic",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.007796781752556394,
+        0.04806321811055461
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7629,
+        "completion_tokens": 183
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1138')",
+          2
+        ],
+        [
+          "fill('386', 'phone case EYZUTAK', True)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.03941444060622814,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1138')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=menuitem": 1.0,
+            "name:cell": 1.0,
+            "name:phones": 1.0,
+            "name:accessories": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "menuitem",
+            "name": " Cell Phones & Accessories",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 239,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.03941444060622814,
+        0.6683357243599126
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5712,
+        "completion_tokens": 183
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          2
+        ],
+        [
+          "fill('388', 'EYZUTAK phone case')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.14005902139809054,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.14005902139809054,
+        0.6056316196362074
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5512,
+        "completion_tokens": 173
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          2
+        ],
+        [
+          "click('1576')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.14005902139809054,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.14005902139809054,
+        0.006103672752513215
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7412,
+        "completion_tokens": 210
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          2
+        ],
+        [
+          "click('1576')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.14005902139809054,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.14005902139809054,
+        0.006103672752513215
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7412,
+        "completion_tokens": 184
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          2
+        ],
+        [
+          "click('1576')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.14005902139809054,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.14005902139809054,
+        0.006103672752513215
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7412,
+        "completion_tokens": 226
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          2
+        ],
+        [
+          "fill('388', 'EYZUTAK phone cases')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.14005902139809054,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.14005902139809054,
+        0.605721691826251
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5510,
+        "completion_tokens": 174
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          2
+        ],
+        [
+          "fill('388', 'EYZUTAK')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.14005902139809054,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.14005902139809054,
+        0.6046403531002807
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5510,
+        "completion_tokens": 171
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          2
+        ],
+        [
+          "fill('388', 'EYZUTAK')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.14005902139809054,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.14005902139809054,
+        0.6046403531002807
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5510,
+        "completion_tokens": 171
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.14005902139809054,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5510,
+        "completion_tokens": 166
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          2
+        ],
+        [
+          "fill('388', 'EYZUTAK')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.14005902139809054,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.14005902139809054,
+        0.6046403531002807
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5510,
+        "completion_tokens": 171
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.14005902139809054,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5510,
+        "completion_tokens": 166
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1500')",
+          2
+        ],
+        [
+          "fill('388', 'EYZUTAK')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.14005902139809054,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('1500')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:cell": 0.5,
+            "path:phones": 0.5,
+            "path:accessories": 0.5,
+            "path:html": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/cell-phones-accessories.html",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.14005902139809054,
+        0.6046403531002807
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5510,
+        "completion_tokens": 171
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": 2027,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 06:20:09 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 07:48:59"
+}

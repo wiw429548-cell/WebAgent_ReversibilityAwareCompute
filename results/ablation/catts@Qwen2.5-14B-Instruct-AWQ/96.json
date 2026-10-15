@@ -1,0 +1,351 @@
+{
+  "task_id": 96,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Tell me the status of my latest order and when will it arrive",
+  "template": 193,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 4,
+  "n_env_actions": 4,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 8,
+  "prompt_tokens": 35101,
+  "completion_tokens": 812,
+  "llm_by_tag": {
+    "policy": [
+      4,
+      19164,
+      505
+    ],
+    "arbiter": [
+      4,
+      15937,
+      307
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 4,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 4,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "Your latest order is currently in a Pending status as of May 2, 2023. The shipping method used is Flat Rate - Fixed, but the exact delivery date is not specified.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "your latest order is currently in a pending status as of may 2, 2023. the shipping method used is flat rate - fixed, but the exact delivery date is not specified.",
+        "ref": "The last order was canceled. It will never arrive.",
+        "question": "Tell me the status of my latest order and when will it arrive",
+        "src": "string",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "Based on the provided information:\n\n- **Question**: \"Tell me the status of my latest order and when will it arrive.\"\n- **Reference Answer**: \"The last order was canceled. It will never arrive.\"\n- **Student Answer**: \"Your latest order is currently in a pending status as of May 2, 2023. The shipping ",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 30.70500898361206,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('227', 'left')",
+          2
+        ],
+        [
+          "click('227')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('227', 'left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:my": 1.0,
+            "name:account": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "My Account",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 10706,
+        "completion_tokens": 156
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1530')",
+          1
+        ],
+        [
+          "click('1530', 'left')",
+          1
+        ],
+        [
+          "click('1534', 'left')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1530')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:all": 1.0,
+            "path:customer": 0.5,
+            "path:account": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/customer/account/",
+          "element": {
+            "role": "link",
+            "name": "View All",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 220,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 0,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8039,
+        "completion_tokens": 272
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1530')",
+          2
+        ],
+        [
+          "click('1502')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1502')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:view": 1.0,
+            "name:order": 1.0,
+            "ctx:view": 0.5,
+            "ctx:orderreorder": 0.5,
+            "ctx:orders": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:history": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/history/",
+          "element": {
+            "role": "link",
+            "name": "View Order",
+            "context": "View OrderReorder Orders",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 219,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 1,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 9113,
+        "completion_tokens": 205
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1479')",
+          1
+        ],
+        [
+          "send_msg_to_user(\"Your latest order is currently in a Pending status as of May 2, 2023. The shipping method used is Flat Rate - Fixed, but the exact delivery date is not specified.\")",
+          1
+        ],
+        [
+          "click('1547')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"Your latest order is currently in a Pending status as of May 2, 2023. The shipping method used is Flat Rate - Fixed, but the exact delivery date is not specified.\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/sales/order/view/order_id/189/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "arbiter": {
+        "choice": 1,
+        "parsed": true
+      },
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7243,
+        "completion_tokens": 179
+      }
+    }
+  ],
+  "method": "catts",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 05:00:31",
+  "reward_provisional": 0.0,
+  "eval_provisional": {
+    "answer": "Your latest order is currently in a Pending status as of May 2, 2023. The shipping method used is Flat Rate - Fixed, but the exact delivery date is not specified.",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "your latest order is currently in a pending status as of may 2, 2023. the shipping method used is flat rate - fixed, but the exact delivery date is not specified.",
+        "ref": "The last order was canceled. It will never arrive.",
+        "question": "Tell me the status of my latest order and when will it arrive",
+        "src": "string",
+        "pending": true,
+        "score": 0.0
+      }
+    ],
+    "score": 0.0
+  },
+  "rejudged": {
+    "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+  }
+}

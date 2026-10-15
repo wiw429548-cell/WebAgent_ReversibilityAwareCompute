@@ -1,0 +1,697 @@
+{
+  "task_id": 538,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Modify the address of order #299 to 456 Oak Avenue, New York, NY, 10001",
+  "template": 240,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 12,
+  "n_env_actions": 12,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [
+    "shopping_admin:failed",
+    "shopping_admin:failed"
+  ],
+  "llm_calls": 18,
+  "prompt_tokens": 75036,
+  "completion_tokens": 948,
+  "llm_by_tag": {
+    "policy": [
+      12,
+      61572,
+      534
+    ],
+    "m2more": [
+      1,
+      5351,
+      161
+    ],
+    "wm": [
+      2,
+      4585,
+      198
+    ],
+    "value": [
+      2,
+      505,
+      16
+    ],
+    "form": [
+      1,
+      3023,
+      39
+    ]
+  },
+  "llm_cache_hits": 16,
+  "mode_counts": {
+    "M0": 11,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 114.8314414024353,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('850')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 428,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4275,
+        "completion_tokens": 36
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('818')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('818')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:edit": 1.0,
+            "ctx:information": 0.5,
+            "kw:edit": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "link",
+            "name": "Edit",
+            "context": "Information",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 365,
+          "server_error": false,
+          "relogin": "shopping_admin:failed"
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5524,
+        "completion_tokens": 33
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('748', '456 Oak Avenue')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('748', '456 Oak Avenue')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.07,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:address": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/address/address_id/597/",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5234,
+        "completion_tokens": 47
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 428,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4341,
+        "completion_tokens": 81
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('818')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('818')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:edit": 1.0,
+            "ctx:information": 0.5,
+            "kw:edit": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "link",
+            "name": "Edit",
+            "context": "Information",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 365,
+          "server_error": false,
+          "relogin": "shopping_admin:failed"
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5576,
+        "completion_tokens": 38
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('748', '456 Oak Avenue')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('748', '456 Oak Avenue')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.07,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:address": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/address/address_id/597/",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5286,
+        "completion_tokens": 42
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('850')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 428,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4393,
+        "completion_tokens": 37
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('818')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('818')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:edit": 1.0,
+            "ctx:information": 0.5,
+            "kw:edit": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "link",
+            "name": "Edit",
+            "context": "Information",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 365,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5620,
+        "completion_tokens": 53
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('748', '456 Oak Avenue')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('748', '456 Oak Avenue')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.07,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:address": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/address/address_id/597/",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5322,
+        "completion_tokens": 54
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('750', 'New York')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('750', 'New York')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.04,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:address": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/address/address_id/597/",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5325,
+        "completion_tokens": 40
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('750', 'New York, NY, 10001')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.1,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('750', 'New York, NY, 10001')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "typed_len": 0.095,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:address": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/address/address_id/597/",
+          "element": {
+            "role": "textbox",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5325,
+        "completion_tokens": 38
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('695')",
+          1
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.8,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('695')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:save": 1.0,
+            "name:order": 1.0,
+            "name:address": 1.0,
+            "kw:save": 1.0,
+            "kw:add": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:address": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/address/address_id/597/",
+          "element": {
+            "role": "button",
+            "name": "Save Order Address",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 429,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        7.03,
+        3.01
+      ],
+      "outcomes": [
+        "Upon clicking the \"Save Order Address\" button (ID 695), the form data containing the address information for order address ID 597 will be submitted. This action will update the existing order address details in the database with the values currently entered in the form fields, such as the name and a",
+        "The agent will modify the content of the second textbox under the \"Street Address\" field, changing its value to \"New York, NY, 10001\". This action will update the address information for the order associated with address ID 597 within the Magento Admin interface, but it will not save the changes unt"
+      ],
+      "m2_cands": [
+        "click('695')",
+        "fill('750', 'New York, NY, 10001')"
+      ],
+      "m2_choice": "click('695')",
+      "rho_choice": 0.8,
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 18815,
+        "completion_tokens": 449
+      }
+    }
+  ],
+  "method": "confirm_rule",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": {
+    "source": "heuristic"
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 23:54:36"
+}

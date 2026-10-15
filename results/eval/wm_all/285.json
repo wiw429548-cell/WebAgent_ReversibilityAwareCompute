@@ -1,0 +1,504 @@
+{
+  "task_id": 285,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Show the least expensive switch card holder with a minimum storage capacity of 15 cards.",
+  "template": 207,
+  "eval_types": [
+    "url_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 38,
+  "prompt_tokens": 64189,
+  "completion_tokens": 3218,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      22245,
+      1557
+    ],
+    "m2more": [
+      2,
+      8330,
+      255
+    ],
+    "wm": [
+      15,
+      30141,
+      1286
+    ],
+    "value": [
+      15,
+      3473,
+      120
+    ]
+  },
+  "llm_cache_hits": 31,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 6
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "N/A",
+    "scores": {
+      "URLEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 31.97645616531372,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('386', 'switch card holder')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('386', 'switch card holder')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.09,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.07,
+        2.01
+      ],
+      "outcomes": [
+        "Upon executing the command to fill the search field with \"switch card holder\", the website will likely display a new page or update the current one to show search results related to \"switch card holder\". This could include products or categories that match the search query. No data will be created, ",
+        "Executing the command `fill('386', 'switch card holder', True)` suggests an attempt to interact with the element identified by `386`, which is a combobox used for searching. However, since the term \"switch card holder\" does not seem to be a valid search query or option within the context provided, t"
+      ],
+      "m2_cands": [
+        "fill('386', 'switch card holder')",
+        "fill('386', 'switch card holder', True)"
+      ],
+      "m2_choice": "fill('386', 'switch card holder')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 16885,
+        "completion_tokens": 572
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('389')",
+          2
+        ],
+        [
+          "click('391')",
+          2
+        ],
+        [
+          "click('1948')",
+          1
+        ]
+      ],
+      "u": 0.6554587535412857,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('389')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:advanced": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "Advanced Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 216,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        6.02,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on the 'Advanced Search' link (ID 389) will navigate to the advanced search page of the One Stop Market website. This action will not create, modify, or delete any data on the website; it will simply display additional search options for the user to refine their search criteria.",
+        "Upon executing the command `click('391')`, the \"Search\" button will be activated, triggering a search query based on the current input value in the search field, which is \"switch card holder\". This action will likely lead to a new page being displayed that shows search results related to \"switch car",
+        "Given the provided accessibility tree, clicking on an element with the ID `1948` is not directly described within the given structure. Assuming this ID corresponds to one of the interactive elements like a product link or a button, the action would likely navigate to a new page displaying detailed i"
+      ],
+      "m2_cands": [
+        "click('389')",
+        "click('391')",
+        "click('1948')"
+      ],
+      "m2_choice": "click('389')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13712,
+        "completion_tokens": 523
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1496', '15 cards')",
+          1
+        ],
+        [
+          "fill('1496', 'switch card holder')",
+          1
+        ],
+        [
+          "fill('1486', 'switch card holder')",
+          1
+        ],
+        [
+          "report_infeasible(\"The current page does not provide specific fields to filter switch card holders by product name and minimum storage capacity.\")",
+          1
+        ],
+        [
+          "click('1518')",
+          1
+        ]
+      ],
+      "u": 1.0000000000000002,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1496', 'switch card holder')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:description": 1.0,
+            "ctx:search": 0.5,
+            "ctx:settings": 0.5,
+            "typed_len": 0.09,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/",
+          "element": {
+            "role": "textbox",
+            "name": "Description",
+            "context": "Search Settings",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.01,
+        7.01,
+        7.01
+      ],
+      "outcomes": [
+        "The agent will fill in the \"Description\" field (element 1496) with the text \"15 cards\". After submitting this information, the page will likely reload or redirect to a results page displaying products that match the advanced search criteria, including the description containing \"15 cards\". No data o",
+        "Filling the \"Description\" field (element 1496) with the text \"switch card holder\" will not immediately change or delete any data on the website. The action will input the specified text into the search criteria for advanced product search. Submitting the form could potentially display a new page sho",
+        "Filling the textbox with ID '1486' with the value 'switch card holder' will input this text into the 'Product Name' field on the current advanced search page. No data will be created, modified, or deleted on the website until the 'Search' button is clicked, which would then likely display search res"
+      ],
+      "m2_cands": [
+        "fill('1496', '15 cards')",
+        "fill('1496', 'switch card holder')",
+        "fill('1486', 'switch card holder')"
+      ],
+      "m2_choice": "fill('1496', 'switch card holder')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 8070,
+        "completion_tokens": 698
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1509', '0')",
+          2
+        ],
+        [
+          "fill('1486', '15')",
+          1
+        ],
+        [
+          "fill('1501', '15 cards')",
+          1
+        ],
+        [
+          "fill('1509', '15')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1501', '15 cards')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:short": 1.0,
+            "name:description": 1.0,
+            "ctx:search": 0.5,
+            "ctx:settings": 0.5,
+            "typed_len": 0.04,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/",
+          "element": {
+            "role": "textbox",
+            "name": "Short Description",
+            "context": "Search Settings",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.02,
+        2.01,
+        3.01
+      ],
+      "outcomes": [
+        "The agent will fill in the \"Price\" textbox with the value '0'. This action alone will not change any data on the website; it merely updates the form input on the current page, preparing for a potential search query. No data is created, modified, or deleted until the search is actually executed.",
+        "The agent will fill in the \"Product Name\" textbox with the value '15'. This action alone will not change any data on the website; it merely updates the input field on the current advanced search page. No data is created, modified, or deleted until a form submission occurs, such as clicking the 'Sear",
+        "The agent will fill in the \"Short Description\" field with the text \"15 cards\". This action will update the form data on the current advanced search page but will not immediately modify or create any data on the website until the \"Search\" button is clicked, which is not part of the described action. "
+      ],
+      "m2_cands": [
+        "fill('1509', '0')",
+        "fill('1486', '15')",
+        "fill('1501', '15 cards')"
+      ],
+      "m2_choice": "fill('1501', '15 cards')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 8096,
+        "completion_tokens": 448
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1518')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1518')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 217,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        6.08
+      ],
+      "outcomes": [
+        "Upon clicking the \"Search\" button with ID '1518', the website will submit the advanced search query based on the current form inputs, including the short description \"15 cards\" and description \"switch card holder\". The page will likely refresh or navigate to a results page displaying products that m"
+      ],
+      "m2_cands": [
+        "click('1518')"
+      ],
+      "m2_choice": "click('1518')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 6998,
+        "completion_tokens": 373
+      }
+    },
+    {
+      "candidates": [
+        [
+          "report_infeasible(\"There are no items matching the search criteria for a switch card holder with a minimum storage capacity of 15 cards.\")",
+          2
+        ],
+        [
+          "report_infeasible(\"No items match the specified criteria of being a 'switch card holder' with a minimum storage capacity of 15 cards.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"The search did not return any items that match the criteria of being a switch card holder with a minimum storage capacity of 15 cards.\")",
+          1
+        ],
+        [
+          "report_infeasible('No items match the search criteria for a switch card holder with a minimum storage capacity of 15 cards.')",
+          1
+        ]
+      ],
+      "u": 0.8277293767706428,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "report_infeasible(\"There are no items matching the search criteria for a switch card holder with a minimum storage capacity of 15 cards.\")",
+          "rollback": false,
+          "feat": {
+            "act=report_infeasible": 1.0,
+            "role=": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/result/?name=&sku=&description=switch+card+holder&short_description=15+cards&price%5Bfrom%5D=&price%5Bto%5D=&price%5Bcurrency%5D=USD",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        8.02,
+        3.01,
+        7.01
+      ],
+      "outcomes": [
+        "The agent will report that there are no items matching the specified search criteria for a switch card holder with a minimum storage capacity of 15 cards. The current page displaying the advanced search results will remain unchanged, as no data on the website will be created, modified, or deleted; i",
+        "The agent will report that no items match the specified criteria of being a 'switch card holder' with a minimum storage capacity of 15 cards. The current page displaying the advanced search results will remain unchanged, showing the message \"We can't find any items matching these search criteria.\" N",
+        "The agent will report that the current search did not yield any results matching the specified criteria for a switch card holder capable of holding at least 15 cards. No new pages will be shown as a result of this action; the user remains on the same advanced search results page. No data on the webs"
+      ],
+      "m2_cands": [
+        "report_infeasible(\"There are no items matching the search criteria for a switch card holder with a minimum storage capacity of 15 cards.\")",
+        "report_infeasible(\"No items match the specified criteria of being a 'switch card holder' with a minimum storage capacity of 15 cards.\")",
+        "report_infeasible(\"The search did not return any items that match the criteria of being a switch card holder with a minimum storage capacity of 15 cards.\")"
+      ],
+      "m2_choice": "report_infeasible(\"There are no items matching the search criteria for a switch card holder with a minimum storage capacity of 15 cards.\")",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 10428,
+        "completion_tokens": 604
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:53:19 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:57:37"
+}

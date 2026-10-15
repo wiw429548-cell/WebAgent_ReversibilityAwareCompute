@@ -1,0 +1,860 @@
+{
+  "task_id": 506,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Buy the highest rated product from the meat substitute category within a budget between 100 and 200.",
+  "template": 172,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 31,
+  "prompt_tokens": 107713,
+  "completion_tokens": 3322,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      75247,
+      2385
+    ],
+    "m2more": [
+      3,
+      13653,
+      350
+    ],
+    "wm": [
+      5,
+      9650,
+      368
+    ],
+    "value": [
+      5,
+      1143,
+      40
+    ],
+    "form": [
+      3,
+      8020,
+      179
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 12,
+    "M1": 0,
+    "M2": 3
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 156.89093112945557,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "fill('387', 'meat substitute')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('387', 'meat substitute')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.075,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.3525321454175092,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5781,
+        "completion_tokens": 182
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1950')",
+          2
+        ],
+        [
+          "fill('387', 'meat substitute')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1950')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:page": 1.0,
+            "name:next": 1.0,
+            "ctx:page": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": " Page Next",
+            "context": "Page",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 459,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6755650052735547,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5791,
+        "completion_tokens": 176
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('387', 'meat substitute', True)",
+          1
+        ],
+        [
+          "report_infeasible(\"There are no meat substitute products within the $100-$200 budget range.\")",
+          1
+        ],
+        [
+          "report_infeasible(\"There are no products in the meat substitute category within the specified price range.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('387', 'meat substitute', True)",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.075,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 224,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6387821644200891,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5699,
+        "completion_tokens": 206
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('387', 'meat substitute category')",
+          1
+        ],
+        [
+          "fill('387', 'meat substitute', True)",
+          1
+        ],
+        [
+          "fill('387', 'meat substitute')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('387', 'meat substitute category')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "typed_len": 0.12,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 223,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8286391987941961,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5728,
+        "completion_tokens": 138
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('390')",
+          1
+        ],
+        [
+          "click('1498')",
+          1
+        ],
+        [
+          "fill('387', 'meat substitutes')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('390')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:advanced": 1.0,
+            "name:search": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/?pbaocw=2",
+          "element": {
+            "role": "link",
+            "name": "Advanced Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 438,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.33872702462952375,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5744,
+        "completion_tokens": 188
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1488', 'meat substitute')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('meat substitute', 'Category')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=": 1.0,
+            "typed_len": 0.04,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.0238907256210652,
+      "wm_scores": [
+        5.04,
+        1.01,
+        3.01
+      ],
+      "outcomes": [
+        "Upon executing the command to fill the textbox with ID '1488' with the value 'meat substitute', the current page will remain the same, displaying the advanced search form. The data inputted ('meat substitute') will be stored temporarily within the 'Product Name' field of the search settings section,",
+        "Clicking on the 'Home' link (element ID 1462) will navigate the user back to the homepage of the website. No data on the website will be created, modified, or deleted as a result of this action; it is purely a navigation event.",
+        "Clicking on the element with the ID '1230' (which corresponds to the 'Grocery & Gourmet Food' menu item) will navigate to the category page for 'Grocery & Gourmet Food'. This action will not create, modify, or delete any data on the website; it will simply change the displayed content to show produc"
+      ],
+      "m2_cands": [
+        "fill('1488', 'meat substitute')",
+        "click('1462')",
+        "click('1230')"
+      ],
+      "m2_choice": "fill('1488', 'meat substitute')",
+      "rho_choice": null,
+      "form_fix": "fill('meat substitute', 'Category')",
+      "llm": {
+        "calls": 9,
+        "prompt_tokens": 12390,
+        "completion_tokens": 626
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1488', 'meat substitute')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1488', 'meat substitute')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:product": 1.0,
+            "name:name": 1.0,
+            "ctx:search": 0.5,
+            "ctx:settings": 0.5,
+            "typed_len": 0.075,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/",
+          "element": {
+            "role": "textbox",
+            "name": "Product Name",
+            "context": "Search Settings",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.46176783376564146,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2590,
+        "completion_tokens": 181
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1520')",
+          1
+        ],
+        [
+          "fill('1511', '100')",
+          1
+        ],
+        [
+          "fill('1488', 'meat substitute')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1520')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:search": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/",
+          "element": {
+            "role": "button",
+            "name": "Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 457,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6988843195695615,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 2591,
+        "completion_tokens": 127
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1510')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1510')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/result/?name=meat+substitute&sku=&description=&short_description=&price%5Bfrom%5D=&price%5Bto%5D=&price%5Bcurrency%5D=USD",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.002052386949976892,
+      "wm_scores": [
+        6.06
+      ],
+      "outcomes": [
+        "Clicking on the combobox element with id '1510' will expand the dropdown menu allowing the user to select a different sorting option for the search results. This action will not create, modify, or delete any data on the website; it will only update the display order of the products listed on the cur"
+      ],
+      "m2_cands": [
+        "click('1510')"
+      ],
+      "m2_choice": "click('1510')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 16879,
+        "completion_tokens": 331
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1510')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1510')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/result/?name=meat+substitute&sku=&description=&short_description=&price%5Bfrom%5D=&price%5Bto%5D=&price%5Bcurrency%5D=USD",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.13416430940302249,
+      "wm_scores": [
+        6.06
+      ],
+      "outcomes": [
+        "Clicking on the combobox element with ID '1510' will expand the dropdown menu allowing the user to select a different sorting option for the search results. No data will be created, modified, or deleted; the action will only change the sort order of the displayed items based on the user's selection."
+      ],
+      "m2_cands": [
+        "click('1510')"
+      ],
+      "m2_choice": "click('1510')",
+      "rho_choice": null,
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 16850,
+        "completion_tokens": 413
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1510')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1510')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/result/?name=meat+substitute&sku=&description=&short_description=&price%5Bfrom%5D=&price%5Bto%5D=&price%5Bcurrency%5D=USD",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.8466549238216139,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5536,
+        "completion_tokens": 141
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1510')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1510')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/result/?name=meat+substitute&sku=&description=&short_description=&price%5Bfrom%5D=&price%5Bto%5D=&price%5Bcurrency%5D=USD",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.2826248190082943,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5538,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1510')",
+          2
+        ],
+        [
+          "select_option('1510', ['Price'])",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1510')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/result/?name=meat+substitute&sku=&description=&short_description=&price%5Bfrom%5D=&price%5Bto%5D=&price%5Bcurrency%5D=USD",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.5087110546567999,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5535,
+        "completion_tokens": 105
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1510')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1510')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/result/?name=meat+substitute&sku=&description=&short_description=&price%5Bfrom%5D=&price%5Bto%5D=&price%5Bcurrency%5D=USD",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.40323306568059536,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5531,
+        "completion_tokens": 106
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1510')",
+          2
+        ],
+        [
+          "report_infeasible(\"None of the products in the meat substitute category fall within the specified budget range of 100 to 200.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1510')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:sort": 1.0,
+            "name:by": 1.0,
+            "path:catalogsearch": 0.5,
+            "path:advanced": 0.5,
+            "path:result": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/catalogsearch/advanced/result/?name=meat+substitute&sku=&description=&short_description=&price%5Bfrom%5D=&price%5Bto%5D=&price%5Bcurrency%5D=USD",
+          "element": {
+            "role": "combobox",
+            "name": "Sort By",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 222,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.29037979746447107,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5530,
+        "completion_tokens": 238
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:34:11"
+}

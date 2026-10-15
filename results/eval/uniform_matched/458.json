@@ -1,0 +1,883 @@
+{
+  "task_id": 458,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Reduce the price of this product by $5",
+  "template": 247,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 20,
+  "prompt_tokens": 89525,
+  "completion_tokens": 2611,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      81329,
+      2358
+    ],
+    "wm": [
+      2,
+      4696,
+      157
+    ],
+    "value": [
+      2,
+      417,
+      16
+    ],
+    "form": [
+      1,
+      3083,
+      80
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 14,
+    "M1": 0,
+    "M2": 1
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 1,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 151.8662896156311,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "focus('985')",
+          2
+        ],
+        [
+          "click('985')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "focus('985')",
+          "rollback": false,
+          "feat": {
+            "act=focus": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.22908525108833544,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5368,
+        "completion_tokens": 112
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '27.00')",
+          2
+        ],
+        [
+          "fill('985', str(float('32.00') - 5))",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('985', '27.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.025,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.3256467121347306,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5374,
+        "completion_tokens": 133
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '22.00')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('985', '22.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.025,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.3791479305942147,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5389,
+        "completion_tokens": 144
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '17.00')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('985', '17.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.025,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.16794830696760243,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5404,
+        "completion_tokens": 181
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '12.00')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('985', '12.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.025,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7834263206231782,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5419,
+        "completion_tokens": 197
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '7.00')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('985', '7.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6016387500497125,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5434,
+        "completion_tokens": 165
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '2.00')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('985', '2.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.45747311200936025,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5446,
+        "completion_tokens": 155
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '-3.00')",
+          2
+        ],
+        [
+          "fill('985', '0.00')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('985', '-3.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.025,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.20431084788508613,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5452,
+        "completion_tokens": 178
+      }
+    },
+    {
+      "candidates": [
+        [
+          "clear('985')",
+          1
+        ],
+        [
+          "fill('985', '2.00')",
+          1
+        ],
+        [
+          "fill('985', '17.00') # After confirming, reduce the price by $5.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "clear('985')",
+          "rollback": false,
+          "feat": {
+            "act=clear": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.9446749235411289,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5451,
+        "completion_tokens": 298
+      }
+    },
+    {
+      "candidates": [
+        [
+          "clear('985')",
+          2
+        ],
+        [
+          "fill('985', '5.00')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "clear('985')",
+          "rollback": false,
+          "feat": {
+            "act=clear": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.7578898412938706,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5441,
+        "completion_tokens": 121
+      }
+    },
+    {
+      "candidates": [
+        [
+          "clear('985')",
+          2
+        ],
+        [
+          "fill('985', '5.00')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "clear('985')",
+          "rollback": false,
+          "feat": {
+            "act=clear": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.38406258129374393,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5434,
+        "completion_tokens": 119
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '5.00')",
+          2
+        ],
+        [
+          "clear('985')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('985', '5.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.6388811739923952,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5427,
+        "completion_tokens": 139
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '0.00')",
+          2
+        ],
+        [
+          "clear('985')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('985', '0.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.1117288539553698,
+      "wm_scores": [
+        2.02,
+        2.01
+      ],
+      "outcomes": [
+        "The agent will change the value of the \"Price\" field to '0.00'. This action will modify the price data for the product \"Minerva LumaTech™ V-Tee-S-Blue\" with SKU 'WS08-S-Blue' on the current page without immediately saving the changes. The page will remain the same, displaying the product's details u",
+        "The agent will clear the value in the \"Price\" field for the product being edited, setting it to an empty state. This action modifies the current product data by removing the price information, but these changes will only be saved if the \"Save\" button is subsequently clicked. No other pages will be s"
+      ],
+      "m2_cands": [
+        "fill('985', '0.00')",
+        "clear('985')"
+      ],
+      "m2_choice": "fill('985', '0.00')",
+      "rho_choice": null,
+      "form_fix": "fill('985', '0.00')",
+      "llm": {
+        "calls": 6,
+        "prompt_tokens": 13626,
+        "completion_tokens": 371
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '5.00')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('985', '5.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.44726542553194903,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5430,
+        "completion_tokens": 133
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('985', '0.00')",
+          2
+        ],
+        [
+          "clear('985')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('985', '0.00')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:price": 1.0,
+            "typed_len": 0.02,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/1481/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Price * $",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 361,
+          "server_error": false
+        }
+      ],
+      "uniform_draw": 0.30985050525762503,
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5430,
+        "completion_tokens": 165
+      }
+    }
+  ],
+  "method": "uniform_matched",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": 0.1483,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 01:31:20"
+}

@@ -1,0 +1,1272 @@
+{
+  "task_id": 768,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "5 blue Cronus yoga pants with size 33 arrived, update the stock",
+  "template": 241,
+  "eval_types": [
+    "program_html"
+  ],
+  "requires_state_change": true,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 27,
+  "n_state_changes": 5,
+  "n_state_changes_in_rollbacks": 5,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 6,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 28,
+  "prompt_tokens": 106913,
+  "completion_tokens": 1676,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      79893,
+      1624
+    ],
+    "progress": [
+      13,
+      27020,
+      52
+    ]
+  },
+  "llm_cache_hits": 5,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 13,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "HTMLContentEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 366.56488037109375,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('189', button='left')",
+          2
+        ],
+        [
+          "click('189')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0023083566572779206,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('189', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:catalog": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CATALOG",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 722,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0023083566572779206,
+        0.0023083566572779206
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 6282,
+        "completion_tokens": 83
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('201', button='left')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.002789273636068043,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('201', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:products": 1.0,
+            "ctx:catalog": 0.5,
+            "ctx:products": 0.5,
+            "ctx:categories": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Products",
+            "context": " CATALOG Catalog  Products Categories",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 931,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4377,
+        "completion_tokens": 89
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('120', button='left')",
+          1
+        ],
+        [
+          "click('1421')",
+          1
+        ],
+        [
+          "scroll(0, 500)",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.010186433350268231,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('120', button='left')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 722,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.010186433350268231,
+        0.0035031573591898205
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7884,
+        "completion_tokens": 144
+      }
+    },
+    {
+      "candidates": [
+        [
+          "goto('http://localhost:7780/admin/catalog/product/edit/id/120/')",
+          1
+        ],
+        [
+          "click('1901')",
+          1
+        ],
+        [
+          "goto('http://localhost:7780/admin/catalog/product/edit/key/blue-cronus-yoga-pants/')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": 0.011824469096098165,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "goto('http://localhost:7780/admin/catalog/product/edit/id/120/')",
+          "rollback": false,
+          "feat": {
+            "act=goto": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1083,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/120/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 931,
+          "server_error": false
+        },
+        {
+          "action": "click('1901')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=gridcell": 1.0,
+            "name:hollister": 1.0,
+            "name:backyard": 1.0,
+            "name:sweatshirt": 1.0,
+            "name:l": 1.0,
+            "name:red": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "gridcell",
+            "name": "Hollister Backyard Sweatshirt-L-Red",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1083,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.011824469096098165,
+        0.017712692822835024
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 8133,
+        "completion_tokens": 193
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1009', '5')",
+          2
+        ],
+        [
+          "click('1009')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0077526576386974305,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1009', '5')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:quantity": 1.0,
+            "typed_len": 0.005,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Quantity",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 722,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0077526576386974305,
+        0.003177380334249838
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7499,
+        "completion_tokens": 86
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('876')",
+          2
+        ],
+        [
+          "fill('1009', '5 blue Cronus yoga pants with size 33')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.45716476654343563,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('876')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:save": 1.0,
+            "ctx:save": 0.5,
+            "kw:save": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "button",
+            "name": "Save",
+            "context": "Save",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 1087,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/set/9/type/simple/store/0/back/edit/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1083,
+          "server_error": false
+        },
+        {
+          "action": "fill('1009', '5 blue Cronus yoga pants with size 33')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:quantity": 1.0,
+            "typed_len": 0.185,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Quantity",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 722,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.45716476654343563,
+        0.007857799569113661
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7494,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1009', '5')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": 0.004478113812848644,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "fill('1009', '5')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:quantity": 1.0,
+            "name:please": 1.0,
+            "name:enter": 1.0,
+            "name:a": 1.0,
+            "name:valid": 1.0,
+            "name:number": 1.0,
+            "name:in": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "typed_len": 0.005,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Quantity Please enter a valid number in this field.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 722,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5403,
+        "completion_tokens": 87
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('876')",
+          2
+        ],
+        [
+          "fill('1009', '5 blue Cronus yoga pants with size 33 arrived')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.45716476654343563,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('876')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:save": 1.0,
+            "ctx:save": 0.5,
+            "kw:save": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "button",
+            "name": "Save",
+            "context": "Save",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 1087,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/set/9/type/simple/store/0/back/edit/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1083,
+          "server_error": false
+        },
+        {
+          "action": "fill('1009', '5 blue Cronus yoga pants with size 33 arrived')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:quantity": 1.0,
+            "typed_len": 0.225,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Quantity",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 722,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.45716476654343563,
+        0.00788135587913935
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7494,
+        "completion_tokens": 138
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('876')",
+          2
+        ],
+        [
+          "fill('1009', '5')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.45716476654343563,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('876')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:save": 1.0,
+            "ctx:save": 0.5,
+            "kw:save": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "button",
+            "name": "Save",
+            "context": "Save",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 724,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.45716476654343563,
+        0.004478113812848644
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7482,
+        "completion_tokens": 80
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1009', '5')",
+          2
+        ],
+        [
+          "click('876')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.004478113812848644,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1009', '5')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:quantity": 1.0,
+            "name:please": 1.0,
+            "name:enter": 1.0,
+            "name:a": 1.0,
+            "name:valid": 1.0,
+            "name:number": 1.0,
+            "name:in": 1.0,
+            "name:this": 1.0,
+            "name:field": 1.0,
+            "typed_len": 0.005,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Quantity Please enter a valid number in this field.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 722,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.004478113812848644,
+        0.45716476654343563
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7484,
+        "completion_tokens": 87
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('876')",
+          2
+        ],
+        [
+          "clear('1009')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.45716476654343563,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('876')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:save": 1.0,
+            "ctx:save": 0.5,
+            "kw:save": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "button",
+            "name": "Save",
+            "context": "Save",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 1085,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/set/9/type/simple/store/0/back/edit/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1083,
+          "server_error": false
+        },
+        {
+          "action": "clear('1009')",
+          "rollback": false,
+          "feat": {
+            "act=clear": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:quantity": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Quantity",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 722,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.45716476654343563,
+        0.0032045432748278625
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7493,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1009', '5')",
+          2
+        ],
+        [
+          "clear('1009')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0077526576386974305,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1009', '5')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:quantity": 1.0,
+            "typed_len": 0.005,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Quantity",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 722,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0077526576386974305,
+        0.0032045432748278625
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7492,
+        "completion_tokens": 82
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('876')",
+          2
+        ],
+        [
+          "click('1147')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.45716476654343563,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('876')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:save": 1.0,
+            "ctx:save": 0.5,
+            "kw:save": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "button",
+            "name": "Save",
+            "context": "Save",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 1087,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/set/9/type/simple/store/0/back/edit/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1083,
+          "server_error": false
+        },
+        {
+          "action": "click('1147')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=textbox": 1.0,
+            "name:to": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "textbox",
+            "name": "To",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 722,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.45716476654343563,
+        0.002707441071927405
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7478,
+        "completion_tokens": 121
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('876')",
+          2
+        ],
+        [
+          "fill('1147', '2023-04-15')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.45716476654343563,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('876')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:save": 1.0,
+            "ctx:save": 0.5,
+            "kw:save": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "button",
+            "name": "Save",
+            "context": "Save",
+            "in_form": false
+          },
+          "state_changed": true,
+          "label_source": "db",
+          "net_mutation": true,
+          "n_requests": 1087,
+          "server_error": false,
+          "rolled_back": true
+        },
+        {
+          "action": "go_back()",
+          "rollback": true,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "path:set": 0.5,
+            "path:type": 0.5,
+            "path:simple": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/set/9/type/simple/store/0/back/edit/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1083,
+          "server_error": false
+        },
+        {
+          "action": "fill('1147', '2023-04-15')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:to": 1.0,
+            "typed_len": 0.05,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "textbox",
+            "name": "To",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 722,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.45716476654343563,
+        0.006632842194759418
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7454,
+        "completion_tokens": 101
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1009', '5')",
+          2
+        ],
+        [
+          "fill('1009', '5 blue Cronus yoga pants with size 33')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": 0.0077526576386974305,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('1009', '5')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:global": 1.0,
+            "name:quantity": 1.0,
+            "typed_len": 0.005,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "path:edit": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/edit/id/121/",
+          "element": {
+            "role": "textbox",
+            "name": "[global] Quantity",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 722,
+          "server_error": false
+        }
+      ],
+      "m1_rhos": [
+        0.0077526576386974305,
+        0.007857799569113661
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7464,
+        "completion_tokens": 110
+      }
+    }
+  ],
+  "method": "race",
+  "split": "ablation",
+  "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": false,
+  "predictor": {
+    "source": "learned",
+    "path": "reversibility_model.pkl",
+    "mtime": 1792040647.729519
+  },
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Fri Oct 16 04:27:39 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-16 06:09:36"
+}

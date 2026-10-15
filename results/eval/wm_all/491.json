@@ -1,0 +1,1079 @@
+{
+  "task_id": 491,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Notify Sarah Miller in their most recent pending order with message \"the order is ready to be shipped soon!\"",
+  "template": 280,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 79,
+  "prompt_tokens": 181128,
+  "completion_tokens": 7592,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      82067,
+      3853
+    ],
+    "m2more": [
+      4,
+      22252,
+      638
+    ],
+    "wm": [
+      30,
+      69738,
+      2861
+    ],
+    "value": [
+      30,
+      7071,
+      240
+    ]
+  },
+  "llm_cache_hits": 39,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 15
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 99.8275694847107,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('156')",
+          4
+        ],
+        [
+          "click('850')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('850')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=row": 1.0,
+            "name:http": 1.0,
+            "name:localhost": 1.0,
+            "name:admin": 1.0,
+            "name:sales": 1.0,
+            "name:order": 1.0,
+            "name:view": 1.0,
+            "name:id": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "row",
+            "name": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 214,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.04,
+        6.01
+      ],
+      "outcomes": [
+        "Clicking on the 'SALES' link will navigate to the sales management section of the Magento Admin panel. This page will display various sales-related metrics and tools, such as orders, invoices, and shipments, but no data will be created, modified, or deleted simply by navigating to this section.",
+        "Clicking on the element with the ID '850' will navigate to the order details page for the specific order associated with Sarah Miller. The new page will display detailed information about this particular order, including items purchased and total cost. No data will be created, modified, or deleted a"
+      ],
+      "m2_cands": [
+        "click('156')",
+        "click('850')"
+      ],
+      "m2_choice": "click('850')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9004,
+        "completion_tokens": 316
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1059')",
+          4
+        ],
+        [
+          "click('1065')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1059')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:notify": 1.0,
+            "name:customer": 1.0,
+            "name:by": 1.0,
+            "name:email": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "checkbox",
+            "name": "Notify Customer by Email",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.04,
+        3.01
+      ],
+      "outcomes": [
+        "Given the current context and the action `click('1059')`, it seems this click event is intended to interact with an element not fully detailed in the provided accessibility tree. Assuming element `1059` corresponds to an action like editing or modifying an item related to the order, such as updating",
+        "Clicking on element '1065' will likely navigate to the invoice creation page for the selected order, based on the context provided. No data will be immediately created, modified, or deleted upon this action; however, the subsequent steps taken on the invoice creation page could result in the generat"
+      ],
+      "m2_cands": [
+        "click('1059')",
+        "click('1065')"
+      ],
+      "m2_choice": "click('1059')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10645,
+        "completion_tokens": 500
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1059')",
+          3
+        ],
+        [
+          "focus('1055')",
+          2
+        ]
+      ],
+      "u": 0.4181656600790517,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1059')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:notify": 1.0,
+            "name:customer": 1.0,
+            "name:by": 1.0,
+            "name:email": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "checkbox",
+            "name": " Notify Customer by Email",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.03,
+        2.02
+      ],
+      "outcomes": [
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l",
+        "The command `focus('1055')` does not correspond to any element in the provided accessibility tree, suggesting it may target an element not currently visible or part of the current view. As such, no page change, data creation, modification, or deletion will occur based on this action alone. The curre"
+      ],
+      "m2_cands": [
+        "click('1059')",
+        "focus('1055')"
+      ],
+      "m2_choice": "click('1059')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10672,
+        "completion_tokens": 462
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1059')",
+          4
+        ],
+        [
+          "click('1051')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1059')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:notify": 1.0,
+            "name:customer": 1.0,
+            "name:by": 1.0,
+            "name:email": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "checkbox",
+            "name": "Notify Customer by Email",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.04,
+        3.01
+      ],
+      "outcomes": [
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l",
+        "Given the action `click('1051')`, it appears the agent is clicking on an element that is not fully described in the provided accessibility tree. Assuming this element corresponds to an action such as editing or modifying an item within the order details, the next page shown could be a form for updat"
+      ],
+      "m2_cands": [
+        "click('1059')",
+        "click('1051')"
+      ],
+      "m2_choice": "click('1059')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10710,
+        "completion_tokens": 511
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1059')",
+          3
+        ],
+        [
+          "click('740')",
+          1
+        ],
+        [
+          "fill('1055', 'the order is ready to be shipped soon!')",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1059')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:notify": 1.0,
+            "name:customer": 1.0,
+            "name:by": 1.0,
+            "name:email": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "checkbox",
+            "name": " Notify Customer by Email",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.03,
+        1.01,
+        3.01
+      ],
+      "outcomes": [
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l",
+        "Clicking on the \"Hold\" button (element [740]) will change the status of the order with ID 299 to \"On Hold\". This action will update the order status in the backend database, reflecting that the order is currently being held and cannot proceed until it is released. The current page will likely refres",
+        "The agent will attempt to fill in the value '1055' with the comment 'the order is ready to be shipped soon!' somewhere on the current page, likely in a field related to order notes or comments. However, given the provided structure, there isn't an explicit field for such input. Assuming there is an "
+      ],
+      "m2_cands": [
+        "click('1059')",
+        "click('740')",
+        "fill('1055', 'the order is ready to be shipped soon!')"
+      ],
+      "m2_choice": "click('1059')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13304,
+        "completion_tokens": 613
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1059')",
+          4
+        ],
+        [
+          "click('744')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1059')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:notify": 1.0,
+            "name:customer": 1.0,
+            "name:by": 1.0,
+            "name:email": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "checkbox",
+            "name": "Notify Customer by Email",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.04,
+        3.01
+      ],
+      "outcomes": [
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l",
+        "Upon clicking the \"Ship\" button (element ID 744), the system will process the shipping of the order with ID 299. This action will update the order status to reflect that it has been shipped, and may also generate a shipping label or notification. No new pages will be shown; instead, the current page"
+      ],
+      "m2_cands": [
+        "click('1059')",
+        "click('744')"
+      ],
+      "m2_choice": "click('1059')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10695,
+        "completion_tokens": 513
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1055', 'the order is ready to be shipped soon!')",
+          3
+        ],
+        [
+          "click('1051')",
+          1
+        ],
+        [
+          "click('1059')",
+          1
+        ]
+      ],
+      "u": 0.5904362833084089,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1055', 'the order is ready to be shipped soon!')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:comment": 1.0,
+            "ctx:information": 0.5,
+            "kw:comment": 1.0,
+            "typed_len": 0.19,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "textbox",
+            "name": "Comment",
+            "context": "Information",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.03,
+        3.01,
+        3.01
+      ],
+      "outcomes": [
+        "The agent will attempt to fill in the value '1055' with the comment 'the order is ready to be shipped soon!' somewhere on the current page, likely in a field related to order notes or comments. However, given the provided structure, there isn't an explicit field for such input. Assuming there is an ",
+        "Given the action `click('1051')`, it appears the agent is clicking on an element that is not fully described in the provided accessibility tree. Assuming this element corresponds to an action such as editing or modifying an item within the order details, the next page shown could be a form for updat",
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l"
+      ],
+      "m2_cands": [
+        "fill('1055', 'the order is ready to be shipped soon!')",
+        "click('1051')",
+        "click('1059')"
+      ],
+      "m2_choice": "fill('1055', 'the order is ready to be shipped soon!')",
+      "llm": {
+        "calls": 7,
+        "prompt_tokens": 13353,
+        "completion_tokens": 668
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1059')",
+          4
+        ],
+        [
+          "click('1065')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1059')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:notify": 1.0,
+            "name:customer": 1.0,
+            "name:by": 1.0,
+            "name:email": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "checkbox",
+            "name": " Notify Customer by Email",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.04,
+        2.01
+      ],
+      "outcomes": [
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l",
+        "Clicking on element '1065' will likely navigate to the product details page for the second item listed in the \"Items Ordered\" section, which is the \"Marco Lightweight Active Hoodie\". No data will be created, modified, or deleted; the action primarily serves to view more detailed information about th"
+      ],
+      "m2_cands": [
+        "click('1059')",
+        "click('1065')"
+      ],
+      "m2_choice": "click('1059')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10692,
+        "completion_tokens": 407
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1059')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1059')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:notify": 1.0,
+            "name:customer": 1.0,
+            "name:by": 1.0,
+            "name:email": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "checkbox",
+            "name": "Notify Customer by Email",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.08
+      ],
+      "outcomes": [
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l"
+      ],
+      "m2_cands": [
+        "click('1059')"
+      ],
+      "m2_choice": "click('1059')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 13710,
+        "completion_tokens": 525
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1059')",
+          3
+        ],
+        [
+          "click('1065')",
+          2
+        ]
+      ],
+      "u": 0.4181656600790517,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1059')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:notify": 1.0,
+            "name:customer": 1.0,
+            "name:by": 1.0,
+            "name:email": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "checkbox",
+            "name": " Notify Customer by Email",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.03,
+        2.02
+      ],
+      "outcomes": [
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l",
+        "Clicking on element '1065' will likely navigate to the product details page for the second item listed in the \"Items Ordered\" section, which is the \"Marco Lightweight Active Hoodie\". No data will be created, modified, or deleted; the action primarily serves to view more detailed information about th"
+      ],
+      "m2_cands": [
+        "click('1059')",
+        "click('1065')"
+      ],
+      "m2_choice": "click('1059')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10692,
+        "completion_tokens": 474
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1059')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1059')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:notify": 1.0,
+            "name:customer": 1.0,
+            "name:by": 1.0,
+            "name:email": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "checkbox",
+            "name": "Notify Customer by Email",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.08
+      ],
+      "outcomes": [
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l"
+      ],
+      "m2_cands": [
+        "click('1059')"
+      ],
+      "m2_choice": "click('1059')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 13710,
+        "completion_tokens": 476
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1065')",
+          4
+        ],
+        [
+          "click('1059')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1059')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:notify": 1.0,
+            "name:customer": 1.0,
+            "name:by": 1.0,
+            "name:email": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "checkbox",
+            "name": " Notify Customer by Email",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        2.04,
+        3.01
+      ],
+      "outcomes": [
+        "Clicking on element '1065' will likely navigate to the product details page for the second item listed in the \"Items Ordered\" section, which is the \"Marco Lightweight Active Hoodie\". No data will be created, modified, or deleted; the action primarily serves to view more detailed information about th",
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l"
+      ],
+      "m2_cands": [
+        "click('1065')",
+        "click('1059')"
+      ],
+      "m2_choice": "click('1059')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10692,
+        "completion_tokens": 425
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1059')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1059')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:notify": 1.0,
+            "name:customer": 1.0,
+            "name:by": 1.0,
+            "name:email": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "checkbox",
+            "name": "Notify Customer by Email",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.08
+      ],
+      "outcomes": [
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l"
+      ],
+      "m2_cands": [
+        "click('1059')"
+      ],
+      "m2_choice": "click('1059')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 13710,
+        "completion_tokens": 474
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('1055', 'the order is ready to be shipped soon!')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "fill('1055', 'the order is ready to be shipped soon!')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:comment": 1.0,
+            "ctx:information": 0.5,
+            "kw:comment": 1.0,
+            "typed_len": 0.19,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "textbox",
+            "name": "Comment",
+            "context": "Information",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.05,
+        2.02,
+        3.01
+      ],
+      "outcomes": [
+        "The agent will attempt to fill in the value '1055' with the comment 'the order is ready to be shipped soon!' somewhere on the current page, likely in a field related to order notes or comments. However, given the provided structure, there isn't an explicit field for such input. Assuming there is an ",
+        "Clicking on element '1065' will likely navigate to the product details page for the second item listed in the \"Items Ordered\" section, which is the \"Marco Lightweight Active Hoodie\". No data will be created, modified, or deleted; the action primarily serves to view more detailed information about th",
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l"
+      ],
+      "m2_cands": [
+        "fill('1055', 'the order is ready to be shipped soon!')",
+        "click('1065')",
+        "click('1059')"
+      ],
+      "m2_choice": "fill('1055', 'the order is ready to be shipped soon!')",
+      "llm": {
+        "calls": 8,
+        "prompt_tokens": 18847,
+        "completion_tokens": 825
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1059')",
+          4
+        ],
+        [
+          "click('1065')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('1059')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=checkbox": 1.0,
+            "name:notify": 1.0,
+            "name:customer": 1.0,
+            "name:by": 1.0,
+            "name:email": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:order": 0.5,
+            "path:view": 0.5,
+            "path:id": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/order/view/order_id/299/",
+          "element": {
+            "role": "checkbox",
+            "name": " Notify Customer by Email",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.04,
+        2.01
+      ],
+      "outcomes": [
+        "Given the current context and the action `click('1059')`, it seems the agent is attempting to interact with an element not fully detailed in the provided accessibility tree. Assuming this element corresponds to an action like editing or modifying an item within the order details, clicking it would l",
+        "Clicking on element '1065' will likely navigate to the product details page for the second item listed in the \"Items Ordered\" section, which is the \"Marco Lightweight Active Hoodie\". No data will be created, modified, or deleted; the action primarily serves to view more detailed information about th"
+      ],
+      "m2_cands": [
+        "click('1059')",
+        "click('1065')"
+      ],
+      "m2_choice": "click('1059')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 10692,
+        "completion_tokens": 403
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 21:35:26 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 21:48:17"
+}

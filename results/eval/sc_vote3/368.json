@@ -1,0 +1,848 @@
+{
+  "task_id": 368,
+  "sites": [
+    "shopping"
+  ],
+  "intent": "find discounted items.",
+  "template": 188,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": false,
+  "n_steps": 15,
+  "n_env_actions": 15,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 15,
+  "prompt_tokens": 67866,
+  "completion_tokens": 2494,
+  "llm_by_tag": {
+    "policy": [
+      15,
+      67866,
+      2494
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 15,
+    "M1": 0,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "whatever",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 81.673987865448,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('1549')",
+          1
+        ],
+        [
+          "click('1549') # Click on the first product link to check if it's discounted. However, based on the tree, I will directly look for the discount percentage text near each product. Let's start with the first one.",
+          1
+        ],
+        [
+          "click('1560') # Click on the first discount percentage to confirm it's a discounted item.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1549')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=strong": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 260,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5753,
+        "completion_tokens": 146
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1556')",
+          1
+        ],
+        [
+          "fill('473', 'discounted items')",
+          1
+        ],
+        [
+          "click('275')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1556')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:home": 1.0,
+            "ctx:pre": 0.5,
+            "ctx:baked": 0.5,
+            "ctx:gingerbread": 0.5,
+            "ctx:house": 0.5,
+            "ctx:kit": 0.5,
+            "ctx:value": 0.5,
+            "ctx:pack": 0.5,
+            "ctx:oz": 0.5,
+            "ctx:of": 0.5,
+            "ctx:total": 0.5,
+            "path:pre": 0.5,
+            "path:baked": 0.5,
+            "path:gingerbread": 0.5,
+            "path:house": 0.5,
+            "path:kit": 0.5,
+            "path:value": 0.5,
+            "path:pack": 0.5,
+            "path:oz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html",
+          "element": {
+            "role": "link",
+            "name": "Home",
+            "context": "Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz.",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3323,
+        "completion_tokens": 152
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1549') # Click on the first product to see if it has a discount.",
+          2
+        ],
+        [
+          "click('1549') # Click on the first product link to see if it has a discount.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1549') # Click on the first product to see if it has a discount.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 260,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5768,
+        "completion_tokens": 130
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1556') # Navigate back to the home page to look for a discounts section.",
+          1
+        ],
+        [
+          "click('1556')",
+          1
+        ],
+        [
+          "go_back()",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1556') # Navigate back to the home page to look for a discounts section.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:pre": 0.5,
+            "path:baked": 0.5,
+            "path:gingerbread": 0.5,
+            "path:house": 0.5,
+            "path:kit": 0.5,
+            "path:value": 0.5,
+            "path:pack": 0.5,
+            "path:oz": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3355,
+        "completion_tokens": 126
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1549')",
+          2
+        ],
+        [
+          "click('1549') # Click on the first item with a discount to examine it.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1549')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=strong": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "strong",
+            "name": "",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 260,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5814,
+        "completion_tokens": 193
+      }
+    },
+    {
+      "candidates": [
+        [
+          "go_back()",
+          2
+        ],
+        [
+          "click('1556')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "go_back()",
+          "rollback": false,
+          "feat": {
+            "act=go_back": 1.0,
+            "role=": 1.0,
+            "path:pre": 0.5,
+            "path:baked": 0.5,
+            "path:gingerbread": 0.5,
+            "path:house": 0.5,
+            "path:kit": 0.5,
+            "path:value": 0.5,
+            "path:pack": 0.5,
+            "path:oz": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3387,
+        "completion_tokens": 140
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1550') # Click on the first item to check if it's discounted.",
+          1
+        ],
+        [
+          "click('1549') # Click on the first product to check if it has a discount.",
+          1
+        ],
+        [
+          "send_msg_to_user(\"Found a discounted item: Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz. with a 20% discount.\")",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1550') # Click on the first item to check if it's discounted.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 260,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5828,
+        "completion_tokens": 171
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('473')",
+          1
+        ],
+        [
+          "click('1556') # Click on the 'Home' link to return to the home page.",
+          1
+        ],
+        [
+          "click('1556') # Navigate back to the home page to look for a discounts section.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('473')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=combobox": 1.0,
+            "name:search": 1.0,
+            "path:pre": 0.5,
+            "path:baked": 0.5,
+            "path:gingerbread": 0.5,
+            "path:house": 0.5,
+            "path:kit": 0.5,
+            "path:value": 0.5,
+            "path:pack": 0.5,
+            "path:oz": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html",
+          "element": {
+            "role": "combobox",
+            "name": " Search",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3405,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1556') # Navigate back to the home page to look for a discounts section.",
+          2
+        ],
+        [
+          "fill('473', 'discounted items', True)",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1556') # Navigate back to the home page to look for a discounts section.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:pre": 0.5,
+            "path:baked": 0.5,
+            "path:gingerbread": 0.5,
+            "path:house": 0.5,
+            "path:kit": 0.5,
+            "path:value": 0.5,
+            "path:pack": 0.5,
+            "path:oz": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3406,
+        "completion_tokens": 167
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1550') # Click on the first discounted item to view more details.",
+          1
+        ],
+        [
+          "click('1550')",
+          1
+        ],
+        [
+          "click('1589') # Click on the product with a visible discount to view more details.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1550') # Click on the first discounted item to view more details.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 260,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5840,
+        "completion_tokens": 174
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1556') # Clicking on 'Home' to navigate back to the homepage.",
+          1
+        ],
+        [
+          "click('1556')",
+          1
+        ],
+        [
+          "click('1556') # Navigate back to the home page to look for a discounts section.",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1556') # Clicking on 'Home' to navigate back to the homepage.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:pre": 0.5,
+            "path:baked": 0.5,
+            "path:gingerbread": 0.5,
+            "path:house": 0.5,
+            "path:kit": 0.5,
+            "path:value": 0.5,
+            "path:pack": 0.5,
+            "path:oz": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3402,
+        "completion_tokens": 171
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1550') # Click on the first discounted item to view more details.",
+          2
+        ],
+        [
+          "click('1550')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1550') # Click on the first discounted item to view more details.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 260,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5852,
+        "completion_tokens": 149
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1556') # Click on 'Home' to navigate back to the homepage.",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1556') # Click on 'Home' to navigate back to the homepage.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:pre": 0.5,
+            "path:baked": 0.5,
+            "path:gingerbread": 0.5,
+            "path:house": 0.5,
+            "path:kit": 0.5,
+            "path:value": 0.5,
+            "path:pack": 0.5,
+            "path:oz": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3432,
+        "completion_tokens": 228
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1550')",
+          2
+        ],
+        [
+          "click('1550') # Click on the first discounted item to view more details.",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1550')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:pre": 1.0,
+            "name:baked": 1.0,
+            "name:gingerbread": 1.0,
+            "name:house": 1.0,
+            "name:kit": 1.0,
+            "name:value": 1.0,
+            "name:pack": 1.0,
+            "name:oz": 1.0,
+            "name:of": 1.0,
+            "name:total": 1.0,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7770/",
+          "element": {
+            "role": "link",
+            "name": "Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz.",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 260,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5868,
+        "completion_tokens": 187
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('1556') # Navigate back to the home page to look for a discounts section.",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('1556') # Navigate back to the home page to look for a discounts section.",
+          "rollback": false,
+          "feat": {
+            "act=noop": 1.0,
+            "role=": 1.0,
+            "path:pre": 0.5,
+            "path:baked": 0.5,
+            "path:gingerbread": 0.5,
+            "path:house": 0.5,
+            "path:kit": 0.5,
+            "path:value": 0.5,
+            "path:pack": 0.5,
+            "path:oz": 0.5,
+            "is_nav": 1.0
+          },
+          "url": "http://localhost:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 237,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 3433,
+        "completion_tokens": 196
+      }
+    }
+  ],
+  "method": "sc_vote3",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping": 11
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 19:20:13"
+}

@@ -1,0 +1,410 @@
+{
+  "task_id": 186,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Give me the product names and the sizes of the products that have 2-3 units left",
+  "template": 368,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 0.0,
+  "success": false,
+  "terminated": true,
+  "n_steps": 6,
+  "n_env_actions": 6,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 9,
+  "prompt_tokens": 37647,
+  "completion_tokens": 1117,
+  "llm_by_tag": {
+    "policy": [
+      6,
+      31194,
+      1105
+    ],
+    "progress": [
+      3,
+      6453,
+      12
+    ]
+  },
+  "llm_cache_hits": 0,
+  "mode_counts": {
+    "M0": 2,
+    "M1": 4,
+    "M2": 0
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "Product: Balboa Persistence Tee, Quantity: 0.0000\nProduct: Zoltan Gym Tee, Quantity: 0.0000\nProduct: Viktor LumaTech™ Pant, Quantity: 0.0000\nProduct: Aero Daily Fitness Tee, Quantity: 0.0000\nProduct: Ryker LumaTech™ Tee (V-neck), Quantity: 0.0000",
+    "scores": {
+      "StringEvaluator": 0.0
+    },
+    "judge": [
+      {
+        "kind": "fuzzy",
+        "pred": "product: balboa persistence tee, quantity: 0.0000\nproduct: zoltan gym tee, quantity: 0.0000\nproduct: viktor lumatech™ pant, quantity: 0.0000\nproduct: aero daily fitness tee, quantity: 0.0000\nproduct: ryker lumatech™ tee (v-neck), quantity: 0.0000",
+        "ref": "Eos V-Neck Hoodie: S",
+        "question": "Give me the product names and the sizes of the products that have 2-3 units left",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "Based on the provided information:\n\n- **Question**: Give me the product names and the sizes of the products that have 2-3 units left.\n- **Reference Answer**: Eos V-Neck Hoodie: S\n- **Student Answer**: \n  - product: balboa persistence tee, quantity: 0.0000\n  - product: zoltan gym tee, quantity: 0.000",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      },
+      {
+        "kind": "fuzzy",
+        "pred": "product: balboa persistence tee, quantity: 0.0000\nproduct: zoltan gym tee, quantity: 0.0000\nproduct: viktor lumatech™ pant, quantity: 0.0000\nproduct: aero daily fitness tee, quantity: 0.0000\nproduct: ryker lumatech™ tee (v-neck), quantity: 0.0000",
+        "ref": "Minera Luma Tech V-Tee: XS",
+        "question": "Give me the product names and the sizes of the products that have 2-3 units left",
+        "pending": false,
+        "score": 0.0,
+        "parsable": true,
+        "response": "Based on the provided information:\n\n- **Question**: Give me the product names and the sizes of the products that have 2-3 units left.\n- **Reference Answer**: Minera Luma Tech V-Tee: XS\n- **Student Answer**: \n  - product: balboa persistence tee, quantity: 0.0000\n  - product: zoltan gym tee, quantity:",
+        "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+      }
+    ],
+    "score": 0.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 121.87202215194702,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('189')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('189')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:catalog": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " CATALOG",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4185,
+        "completion_tokens": 169
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('201')",
+          3
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M0",
+      "executed": [
+        {
+          "action": "click('201')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:products": 1.0,
+            "ctx:catalog": 0.5,
+            "ctx:products": 0.5,
+            "ctx:categories": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Products",
+            "context": " CATALOG Catalog  Products Categories",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 209,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 4294,
+        "completion_tokens": 141
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('890')",
+          2
+        ],
+        [
+          "report_infeasible(\"There are no products with 2-3 units left in stock according to the current data.\")",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "click('890')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=button": 1.0,
+            "name:filters": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "button",
+            "name": "Filters",
+            "context": "",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 1,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7945,
+        "completion_tokens": 178
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('935', '2')",
+          2
+        ],
+        [
+          "fill('940', '3')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('935', '2')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:from": 1.0,
+            "ctx:quantity": 0.5,
+            "typed_len": 0.005,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "textbox",
+            "name": "from",
+            "context": "Quantity",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7785,
+        "completion_tokens": 203
+      }
+    },
+    {
+      "candidates": [
+        [
+          "fill('940', '3')",
+          2
+        ],
+        [
+          "click('1722')",
+          1
+        ]
+      ],
+      "u": 0.5793801642856949,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "fill('940', '3')",
+          "rollback": false,
+          "feat": {
+            "act=fill": 1.0,
+            "role=textbox": 1.0,
+            "name:to": 1.0,
+            "ctx:quantity": 0.5,
+            "typed_len": 0.005,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": "textbox",
+            "name": "to",
+            "context": "Quantity",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 2,
+        "prompt_tokens": 7791,
+        "completion_tokens": 175
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"Product: Balboa Persistence Tee, Quantity: 0.0000\\nProduct: Zoltan Gym Tee, Quantity: 0.0000\\nProduct: Viktor LumaTech™ Pant, Quantity: 0.0000\\nProduct: Aero Daily Fitness Tee, Quantity: 0.0000\\nProduct: Ryker LumaTech™ Tee (V-neck), Quantity: 0.0000\")",
+          1
+        ],
+        [
+          "click('1777')",
+          1
+        ],
+        [
+          "click('1375')",
+          1
+        ]
+      ],
+      "u": 0.9999999999999998,
+      "rho_top": null,
+      "mode": "M1",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"Product: Balboa Persistence Tee, Quantity: 0.0000\\nProduct: Zoltan Gym Tee, Quantity: 0.0000\\nProduct: Viktor LumaTech™ Pant, Quantity: 0.0000\\nProduct: Aero Daily Fitness Tee, Quantity: 0.0000\\nProduct: Ryker LumaTech™ Tee (V-neck), Quantity: 0.0000\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:catalog": 0.5,
+            "path:product": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/catalog/product/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "llm": {
+        "calls": 1,
+        "prompt_tokens": 5647,
+        "completion_tokens": 251
+      }
+    }
+  ],
+  "method": "tryback_all",
+  "split": "collect",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.569,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 16:45:24 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 16:50:36"
+}

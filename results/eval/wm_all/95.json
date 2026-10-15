@@ -1,0 +1,297 @@
+{
+  "task_id": 95,
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Telll me the grand total of invoice 000000002.",
+  "template": 274,
+  "eval_types": [
+    "string_match"
+  ],
+  "requires_state_change": false,
+  "reward": 1.0,
+  "success": true,
+  "terminated": true,
+  "n_steps": 3,
+  "n_env_actions": 3,
+  "n_state_changes": 0,
+  "n_state_changes_in_rollbacks": 0,
+  "n_delayed_changes": 0,
+  "n_rollbacks": 0,
+  "n_server_errors": 0,
+  "relogins": [],
+  "llm_calls": 14,
+  "prompt_tokens": 27987,
+  "completion_tokens": 1090,
+  "llm_by_tag": {
+    "policy": [
+      3,
+      11852,
+      618
+    ],
+    "wm": [
+      5,
+      10893,
+      322
+    ],
+    "value": [
+      5,
+      977,
+      38
+    ],
+    "m2more": [
+      1,
+      4265,
+      112
+    ]
+  },
+  "llm_cache_hits": 7,
+  "mode_counts": {
+    "M0": 0,
+    "M1": 0,
+    "M2": 3
+  },
+  "n_arbiter": 0,
+  "n_form_fixes": 0,
+  "eval": {
+    "answer": "$39.64",
+    "scores": {
+      "StringEvaluator": 1.0
+    },
+    "judge": [],
+    "score": 1.0
+  },
+  "judge_pending": false,
+  "label_sources": [
+    "db"
+  ],
+  "time_sec": 26.56276845932007,
+  "started": true,
+  "error": null,
+  "steps": [
+    {
+      "candidates": [
+        [
+          "click('156')",
+          5
+        ]
+      ],
+      "u": 0.0,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('156')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:sales": 1.0,
+            "ctx:dashboard": 0.5,
+            "ctx:magento": 0.5,
+            "ctx:admin": 0.5,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": " SALES",
+            "context": "Dashboard / Magento Admin",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        3.08
+      ],
+      "outcomes": [
+        "Clicking on the 'SALES' link will navigate to the sales management section of the Magento Admin panel. This page will display various sales-related metrics and tools, such as orders, invoices, and shipments, but no data will be created, modified, or deleted simply by navigating to this section."
+      ],
+      "m2_cands": [
+        "click('156')"
+      ],
+      "m2_choice": "click('156')",
+      "llm": {
+        "calls": 4,
+        "prompt_tokens": 10891,
+        "completion_tokens": 392
+      }
+    },
+    {
+      "candidates": [
+        [
+          "click('171')",
+          4
+        ],
+        [
+          "click('156')",
+          1
+        ]
+      ],
+      "u": 0.31091750708257115,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "click('171')",
+          "rollback": false,
+          "feat": {
+            "act=click": 1.0,
+            "role=link": 1.0,
+            "name:invoices": 1.0,
+            "ctx:sales": 0.5,
+            "ctx:orders": 0.5,
+            "ctx:invoices": 0.5,
+            "ctx:shipments": 0.5,
+            "ctx:credit": 0.5,
+            "ctx:memos": 0.5,
+            "ctx:billing": 0.5,
+            "ctx:agreements": 0.5,
+            "ctx:transactions": 0.5,
+            "ctx:braintree": 0.5,
+            "ctx:virtual": 0.5,
+            "kw:invoice": 1.0,
+            "path:admin": 0.5,
+            "path:dashboard": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/admin/dashboard/",
+          "element": {
+            "role": "link",
+            "name": "Invoices",
+            "context": " SALES Sales  Orders Invoices Shipments Credit Memos Billing Agreements Transactions Braintree Virtual Terminal",
+            "in_form": false
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 193,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        5.04,
+        3.01
+      ],
+      "outcomes": [
+        "After clicking on the 'Invoices' link, the page will navigate to the invoices section of the sales management area within the Magento Admin Panel. No data will be created, modified, or deleted as a result of this action; it will simply display a list of existing invoices for review and management.",
+        "Clicking on the 'SALES' link (element [156]) will navigate to the sales overview page within the Magento Admin panel. This action will not create, modify, or delete any data; it will simply display a new page with sales-related information such as orders, invoices, and shipments."
+      ],
+      "m2_cands": [
+        "click('171')",
+        "click('156')"
+      ],
+      "m2_choice": "click('171')",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 9126,
+        "completion_tokens": 320
+      }
+    },
+    {
+      "candidates": [
+        [
+          "send_msg_to_user(\"$39.64\")",
+          3
+        ],
+        [
+          "click('1159')",
+          2
+        ]
+      ],
+      "u": 0.4181656600790517,
+      "rho_top": null,
+      "mode": "M2",
+      "executed": [
+        {
+          "action": "send_msg_to_user(\"$39.64\")",
+          "rollback": false,
+          "feat": {
+            "act=send_msg_to_user": 1.0,
+            "role=": 1.0,
+            "path:admin": 0.5,
+            "path:sales": 0.5,
+            "path:invoice": 0.5,
+            "is_nav": 0.0
+          },
+          "url": "http://localhost:7780/admin/sales/invoice/",
+          "element": {
+            "role": null,
+            "name": null,
+            "context": null,
+            "in_form": null
+          },
+          "state_changed": false,
+          "label_source": "db",
+          "net_mutation": false,
+          "n_requests": 0,
+          "server_error": false
+        }
+      ],
+      "wm_scores": [
+        10.03,
+        8.02
+      ],
+      "outcomes": [
+        "The agent will send a message to the user with the amount \"$39.64\", which corresponds to one of the invoice amounts listed on the current page. No page change will occur as a result of this action. Additionally, no data on the website will be created, modified, or deleted; the operation is purely in",
+        "Clicking on the 'View' link for invoice '000000002' will navigate to a detailed view page for that specific invoice. This action will not create, modify, or delete any data; it will simply display more detailed information about the selected invoice."
+      ],
+      "m2_cands": [
+        "send_msg_to_user(\"$39.64\")",
+        "click('1159')"
+      ],
+      "m2_choice": "send_msg_to_user(\"$39.64\")",
+      "llm": {
+        "calls": 5,
+        "prompt_tokens": 7970,
+        "completion_tokens": 378
+      }
+    }
+  ],
+  "method": "wm_all",
+  "split": "eval",
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "seed": null,
+  "annotation": "webarena-lite",
+  "lane": "shopping_admin",
+  "judge_model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "judge_served": true,
+  "predictor": null,
+  "probe_sites": [
+    "gitlab",
+    "reddit",
+    "shopping",
+    "shopping_admin"
+  ],
+  "probe_broken_sites": [],
+  "probe_info": {
+    "active": {
+      "shopping_admin": 18
+    },
+    "dropped": {},
+    "broken": []
+  },
+  "engine": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "tp_requested": 2,
+    "tp": 2,
+    "attempt": 1,
+    "max_model_len": 32768,
+    "gpu_mem": 0.9,
+    "enforce_eager": false,
+    "errors": [],
+    "fallback": false,
+    "argv": "run_all.py vllm-server",
+    "time": "Thu Oct 15 17:08:28 2026"
+  },
+  "m2_prob": null,
+  "llm_truncations": 0,
+  "finished_at": "2026-10-15 20:50:52"
+}
